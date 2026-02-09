@@ -49,7 +49,7 @@ export function FinalCTA() {
             Request Early Access
           </button>
           <a 
-            href="https://youtu.be/Mgck6m2Flz0?si=bFzgfqnZ6hTLmU7p"
+            href="https://www.youtube.com/watch?v=SWFSRVs4fHI"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-purple-600 transition-all flex items-center gap-2"

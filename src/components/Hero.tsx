@@ -259,7 +259,7 @@ export function Hero() {
                 <Zap size={20} className="group-hover:rotate-12 transition-transform" aria-hidden="true" />
               </button>
               <a 
-                href="https://youtu.be/Mgck6m2Flz0?si=bFzgfqnZ6hTLmU7p"
+                href="https://www.youtube.com/watch?v=SWFSRVs4fHI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-white/70 backdrop-blur-md border-2 border-gray-900 text-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg"
