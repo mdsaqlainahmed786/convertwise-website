@@ -5,6 +5,8 @@
 
   export default defineConfig({
     plugins: [react()],
+    publicDir: 'public',
+    appType: 'spa',
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -56,5 +58,8 @@
     server: {
       port: 3000,
       open: true,
+      hmr: {
+        overlay: true,
+      },
     },
   });

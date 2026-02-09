@@ -1,4 +1,4 @@
-# ConvertWise Landing Page
+# ConvertWise
 
 A modern, responsive landing page for ConvertWise - an AI-powered sales automation platform. Built with React, TypeScript, and Vite.
 

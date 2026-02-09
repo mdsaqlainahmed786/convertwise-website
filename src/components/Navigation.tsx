@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -9,11 +9,6 @@ export function Navigation() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
   const location = useLocation();
-
-  // Debug: Log state changes
-  useEffect(() => {
-    console.log('Dialog state changed:', isDialogOpen);
-  }, [isDialogOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,7 +21,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200" style={{ zIndex: 50 }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-12">
@@ -53,16 +48,10 @@ export function Navigation() {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log('Get Started button clicked!', isDialogOpen);
                 setIsDialogOpen(true);
-                console.log('Dialog state set to true');
               }}
-              onMouseDown={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-              }}
-              className="px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors cursor-pointer relative z-50"
-              style={{ pointerEvents: 'auto', zIndex: 50 }}
+              className="px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors cursor-pointer active:bg-purple-800"
+              style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}
               aria-label="Get started with ConvertWise AI sales automation platform"
             >
               Get Started
@@ -105,7 +94,6 @@ export function Navigation() {
         <div 
           className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
           onClick={() => {
-            console.log('Backdrop clicked, closing dialog');
             setIsDialogOpen(false);
           }}
           style={{ zIndex: 9999 }}
@@ -114,7 +102,6 @@ export function Navigation() {
             className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative"
             onClick={(e) => {
               e.stopPropagation();
-              console.log('Dialog content clicked, preventing close');
             }}
             style={{ zIndex: 10000 }}
           >

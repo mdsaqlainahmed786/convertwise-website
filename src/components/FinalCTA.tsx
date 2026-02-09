@@ -48,10 +48,15 @@ export function FinalCTA() {
           <button className="px-8 py-4 bg-white text-purple-600 rounded-full hover:bg-gray-100 transition-all transform hover:scale-105">
             Request Early Access
           </button>
-          <button className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-purple-600 transition-all flex items-center gap-2">
+          <a 
+            href="https://youtu.be/Mgck6m2Flz0?si=bFzgfqnZ6hTLmU7p"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-purple-600 transition-all flex items-center gap-2"
+          >
             <Play size={20} />
             Watch 2-Minute Demo
-          </button>
+          </a>
         </div>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm opacity-90">

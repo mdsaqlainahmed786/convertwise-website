@@ -2,22 +2,50 @@ import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { Linkedin, Lightbulb, Eye, Target, Zap, Award, TrendingUp, Users, Briefcase, Rocket, User } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { OrganizationSchema } from './seo/OrganizationSchema';
+import { BreadcrumbListSchema } from './seo/BreadcrumbListSchema';
 
 export function About() {
+  const siteUrl = 'https://convertwise.site';
+  const pageUrl = `${siteUrl}/about`;
+  const title = 'About Us - ConvertWise | AI Sales Automation Platform';
+  const description = 'Learn about ConvertWise founders Nilansh Gupta and Archit Dhir. We\'re transforming sales through AI-powered automation, helping businesses achieve 7x ROI and 150% more qualified leads with meeting intelligence software.';
+  const keywords = 'ConvertWise founders, AI sales automation team, sales automation experts, meeting intelligence software creators, Nilansh Gupta, Archit Dhir';
+  const ogImage = `${siteUrl}/og-image.jpg`;
+
   return (
     <>
       <Helmet>
-        <title>About Us - ConvertWise | AI Sales Automation</title>
-        <meta 
-          name="description" 
-          content="Learn about ConvertWise founders Nilansh Gupta and Archit Dhir, and how we're transforming sales through AI-powered automation." 
-        />
-        <meta property="og:title" content="About Us - ConvertWise | AI Sales Automation" />
-        <meta 
-          property="og:description" 
-          content="Learn about ConvertWise founders Nilansh Gupta and Archit Dhir, and how we're transforming sales through AI-powered automation." 
-        />
+        {/* Primary Meta Tags */}
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="ConvertWise" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:creator" content="@ConvertWise" />
+        <meta name="twitter:site" content="@ConvertWise" />
       </Helmet>
+      <OrganizationSchema />
+      <BreadcrumbListSchema />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-orange-50">
         {/* Subtle grid pattern */}
@@ -158,7 +186,7 @@ export function About() {
             >
               <ImageWithFallback
                 src="/assets/image1.jpg"
-                alt="ConvertWise Journey"
+                alt="ConvertWise AI sales automation platform team working on meeting intelligence software"
                 className="w-full h-full object-cover aspect-video"
               />
             </motion.div>
@@ -171,7 +199,7 @@ export function About() {
             >
               <ImageWithFallback
                 src="/assets/image2.jpg"
-                alt="ConvertWise Journey"
+                alt="AI-powered sales automation tools helping businesses achieve 7x ROI and increased lead generation"
                 className="w-full h-full object-cover aspect-video"
               />
             </motion.div>
@@ -184,7 +212,7 @@ export function About() {
             >
               <ImageWithFallback
                 src="/assets/image3.jpg"
-                alt="ConvertWise Journey"
+                alt="Real-time meeting intelligence and sales coaching AI transforming business sales processes"
                 className="w-full h-full object-cover aspect-video"
               />
             </motion.div>
@@ -283,7 +311,7 @@ export function About() {
                 color: 'blue'
               },
               {
-                icon: Target,
+                icon: Users,
                 title: 'Customer Success',
                 description: 'Your growth is our success—we\'re invested in your results',
                 color: 'green'
@@ -301,7 +329,7 @@ export function About() {
                 color: 'purple'
               }
             ].map((value, index) => {
-              const Icon = value.icon;
+              const IconComponent = value.icon;
               const colorClasses = {
                 purple: 'from-purple-600 to-purple-700',
                 blue: 'from-blue-600 to-blue-700',
@@ -319,7 +347,7 @@ export function About() {
                   className="bg-white/60 backdrop-blur-xl rounded-2xl p-6 shadow-lg border border-white/80 hover:shadow-xl transition-shadow"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-br ${colorClasses[value.color as keyof typeof colorClasses]} rounded-xl flex items-center justify-center mb-4`}>
-                    <Icon className="text-white" size={24} />
+                    {IconComponent && <IconComponent className="text-white" size={24} />}
                   </div>
                   <h3 className="text-xl font-medium mb-2 text-gray-900">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
@@ -448,18 +476,20 @@ export function About() {
               className="bg-white/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80"
             >
               <div className="flex flex-col items-center text-center mb-6">
-                <div className="relative mb-4 group">
-                  <div className="w-32 h-32 rounded-full border-4 border-orange-200 shadow-lg overflow-hidden bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
-                    <ImageWithFallback
-                      src="/assets/archit.avif"
-                      alt="Archit Dhir"
-                      className="w-full h-full object-cover object-center"
-                      style={{
-                        aspectRatio: '1 / 1',
-                        objectFit: 'cover',
-                        objectPosition: 'center'
-                      }}
-                    />
+                <div className="relative mb-4">
+                  <ImageWithFallback
+                    src="/assets/archit.png"
+                    alt="Archit Dhir"
+                    className="w-32 h-32 rounded-full object-cover object-center border-4 border-orange-200 shadow-lg transition-transform duration-200 hover:scale-105"
+                    style={{
+                      aspectRatio: '1 / 1',
+                      objectFit: 'cover',
+                      objectPosition: 'center'
+                    }}
+                  />
+                  {/* Fallback placeholder if image doesn't exist */}
+                  <div className="absolute inset-0 w-32 h-32 rounded-full bg-gradient-to-br from-orange-100 to-orange-200 border-4 border-orange-200 shadow-lg flex items-center justify-center opacity-0 pointer-events-none" id="archit-placeholder">
+                    <User className="text-orange-600" size={48} />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-2 text-gray-900">Archit Dhir</h3>

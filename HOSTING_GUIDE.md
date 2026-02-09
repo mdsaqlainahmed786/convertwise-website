@@ -277,6 +277,55 @@ Upload everything inside the `build/` folder to `public_html/`
 - Hostinger Support: https://www.hostinger.com/contact
 - Hostinger Knowledge Base: https://support.hostinger.com/
 
+---
+
+# Hosting Guide for Microsoft Azure
+
+Your app is a **Vite + React (SPA)** build that outputs static files into the `build/` folder. The most “Azure-native” way to host this is **Azure Static Web Apps** (fast global CDN, free HTTPS, and automatic deploys).
+
+## Method A: Azure Static Web Apps (Recommended)
+
+### Step 1: Push the project to GitHub
+Azure Static Web Apps deploys from a GitHub repo (via GitHub Actions).
+
+### Step 2: Create the Static Web App in Azure
+1. In the Azure Portal, search **Static Web Apps** → **Create**
+2. Fill:
+   - **Deployment source**: GitHub
+   - **Repository / Branch**: your repo + main branch
+3. **Build details** (important):
+   - **App location**: `/Convertwise-website`
+   - **Api location**: *(leave empty)*
+   - **Output location**: `build`
+
+Azure will create a GitHub Action workflow automatically.
+
+### Step 3: SPA routing (React Router)
+This repo includes `staticwebapp.config.json` so refreshing routes like `/about` won’t 404.
+
+### Step 4: Verify
+After the GitHub Action finishes, open the Static Web App URL and test:
+- Home page
+- Direct navigation to `/about` and a hard refresh
+
+## Method B: Azure Storage Static Website (Quick + Cheap)
+If you just want static hosting (no CI/CD), you can also use a Storage Account:
+1. Create **Storage account** → open it → **Static website** → Enable
+2. Set:
+   - **Index document name**: `index.html`
+   - **Error document path**: `index.html` (SPA fallback)
+3. Upload the **contents** of your `build/` folder into the `$web` container
+
+## Method C: Azure App Service (Only if you really want a “Node server”)
+App Service can run a Node process, but for a Vite SPA this is usually overkill compared to Static Web Apps.
+
+If you still want it:
+1. Create **App Service** (Linux) with **Node 20 LTS**
+2. Configure deployment from GitHub
+3. Ensure your app serves the built `build/` folder (e.g., via Nginx, or a small Express server)
+
+
+
 
 
 

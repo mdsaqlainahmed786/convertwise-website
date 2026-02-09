@@ -8,10 +8,12 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <main role="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );

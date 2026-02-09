@@ -72,7 +72,7 @@ export function EveryDay() {
                 <div className="aspect-video bg-gradient-to-br from-purple-900/40 to-blue-900/40 rounded-2xl overflow-hidden mb-6 border border-purple-500/20">
                   <ImageWithFallback 
                     src="https://images.unsplash.com/photo-1745847768380-2caeadbb3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMGRlYWx8ZW58MXx8fHwxNzY1MTkzODM2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Business deal"
+                    alt="Successful business deal closed with AI sales automation and meeting intelligence software"
                     className="w-full h-full object-cover opacity-70"
                   />
                 </div>
@@ -114,7 +114,7 @@ export function EveryDay() {
                 <div className="aspect-video bg-gradient-to-br from-red-900/40 to-gray-900/60 rounded-2xl overflow-hidden mb-6 border border-red-500/30 relative">
                   <ImageWithFallback 
                     src="https://images.unsplash.com/photo-1758525747606-9e2676af8234?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJlc3NlZCUyMGJ1c2luZXNzbWFuJTIwZnJ1c3RyYXRlZHxlbnwxfHx8fDE3NjUxNzk1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Frustrated businessman"
+                    alt="Sales professional struggling without AI sales automation tools and meeting intelligence software"
                     className="w-full h-full object-cover opacity-50"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -335,7 +335,7 @@ export function EveryDay() {
                 <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
                   <ImageWithFallback 
                     src="https://images.unsplash.com/photo-1760346547318-7e309662467d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHZpZGVvJTIwY2FsbCUyMG1lZXRpbmclMjBzY3JlZW58ZW58MXx8fHwxNzY1MjgyNzkwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Business meeting video call"
+                    alt="Real-time meeting intelligence software analyzing video call with AI sales automation and live coaching"
                     className="w-full h-full object-cover"
                   />
                   {/* Glassy overlay with pulse effect */}

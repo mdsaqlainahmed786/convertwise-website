@@ -251,14 +251,23 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8 relative">
-              <button className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full hover:from-purple-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+              <button 
+                className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full hover:from-purple-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2"
+                aria-label="Transform your next meeting with ConvertWise AI sales automation"
+              >
                 <span>Transform Your Next Meeting</span>
-                <Zap size={20} className="group-hover:rotate-12 transition-transform" />
+                <Zap size={20} className="group-hover:rotate-12 transition-transform" aria-hidden="true" />
               </button>
-              <button className="px-8 py-4 bg-white/70 backdrop-blur-md border-2 border-gray-900 text-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg">
-                <Play size={20} />
+              <a 
+                href="https://youtu.be/Mgck6m2Flz0?si=bFzgfqnZ6hTLmU7p"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-white/70 backdrop-blur-md border-2 border-gray-900 text-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg"
+                aria-label="Watch 2-minute demo of ConvertWise meeting intelligence software"
+              >
+                <Play size={20} aria-hidden="true" />
                 <span>Watch 2-Min Demo</span>
-              </button>
+              </a>
             </div>
 
             {/* Trust indicators in glass panel */}
