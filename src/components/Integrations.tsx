@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function Integrations() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-purple-50/30 to-orange-50/30 relative overflow-hidden">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 dark:from-gray-800 via-purple-50/30 dark:via-purple-900/20 to-orange-50/30 dark:to-orange-900/20 relative overflow-hidden transition-colors">
       {/* Animated background particles */}
       <motion.div
         className="absolute top-10 left-10 w-2 h-2 bg-purple-400 rounded-full opacity-30"
@@ -33,7 +33,7 @@ export function Integrations() {
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <motion.p 
-          className="mb-8 text-gray-600"
+          className="mb-8 text-gray-600 dark:text-gray-400"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -94,7 +94,7 @@ function IntegrationItem({
       >
         {icon}
       </motion.div>
-      <span className="text-xl">{name}</span>
+      <span className="text-xl text-gray-900 dark:text-white">{name}</span>
     </motion.div>
   );
 }

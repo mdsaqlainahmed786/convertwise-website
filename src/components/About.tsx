@@ -47,7 +47,7 @@ export function About() {
       <OrganizationSchema />
       <BreadcrumbListSchema />
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-orange-50">
+      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-purple-50 dark:from-purple-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         {/* Subtle grid pattern */}
         <div 
           className="absolute inset-0 opacity-[0.02]"
@@ -123,10 +123,10 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="mb-6 text-5xl sm:text-6xl lg:text-7xl bg-gradient-to-br from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent leading-tight">
+            <h1 className="mb-6 text-5xl sm:text-6xl lg:text-7xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent leading-tight">
               About ConvertWise
             </h1>
-            <p className="mb-8 text-xl sm:text-2xl text-gray-700">
+            <p className="mb-8 text-xl sm:text-2xl text-gray-700 dark:text-gray-300">
               Transforming Sales Through AI-Powered Automation
             </p>
           </motion.div>
@@ -134,7 +134,7 @@ export function About() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,10 +143,10 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="mb-8 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="mb-8 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
               Our Story
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 ConvertWise was born from a decade of real-world experience in digital marketing and sales automation. Our founders, Nilansh Gupta and Archit Dhir, built their expertise at Digital Patron, where they helped businesses achieve extraordinary results—driving 150% more qualified leads and up to 7x ROI for clients.
               </p>
@@ -162,7 +162,7 @@ export function About() {
       </section>
 
       {/* Images Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -171,7 +171,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
               Our Journey
             </h2>
           </motion.div>
@@ -221,7 +221,7 @@ export function About() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-orange-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 dark:from-purple-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -230,7 +230,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
               Mission & Vision
             </h2>
           </motion.div>
@@ -242,17 +242,17 @@ export function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80"
+              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 dark:from-purple-500 to-purple-700 dark:to-purple-600 rounded-2xl flex items-center justify-center">
                   <Target className="text-white" size={24} />
                 </div>
-                <h3 className="text-3xl bg-gradient-to-br from-purple-600 to-purple-700 bg-clip-text text-transparent">
+                <h3 className="text-3xl bg-gradient-to-br from-purple-600 dark:from-purple-400 to-purple-700 dark:to-purple-500 bg-clip-text text-transparent">
                   Mission
                 </h3>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 To empower sales teams with AI technology that handles repetitive tasks, so they can focus on building relationships and closing deals. We believe every business deserves enterprise-grade sales automation, regardless of size or budget.
               </p>
             </motion.div>
@@ -263,17 +263,17 @@ export function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80"
+              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-600 dark:to-orange-500 rounded-2xl flex items-center justify-center">
                   <Eye className="text-white" size={24} />
                 </div>
-                <h3 className="text-3xl bg-gradient-to-br from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                <h3 className="text-3xl bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-600 dark:to-orange-500 bg-clip-text text-transparent">
                   Vision
                 </h3>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 To become the world's most trusted AI sales automation platform, transforming how businesses approach lead generation, nurturing, and conversion. We envision a future where AI handles the grunt work, and humans focus on strategic relationships.
               </p>
             </motion.div>
@@ -282,7 +282,7 @@ export function About() {
       </section>
 
       {/* Our Values Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -291,7 +291,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
               Our Values
             </h2>
           </motion.div>
@@ -344,13 +344,13 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/60 backdrop-blur-xl rounded-2xl p-6 shadow-lg border border-white/80 hover:shadow-xl transition-shadow"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-lg border border-white/80 dark:border-gray-700/80 hover:shadow-xl transition-all"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-br ${colorClasses[value.color as keyof typeof colorClasses]} rounded-xl flex items-center justify-center mb-4`}>
                     {IconComponent && <IconComponent className="text-white" size={24} />}
                   </div>
-                  <h3 className="text-xl font-medium mb-2 text-gray-900">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  <h3 className="text-xl font-medium mb-2 text-gray-900 dark:text-white">{value.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400">{value.description}</p>
                 </motion.div>
               );
             })}
@@ -359,7 +359,7 @@ export function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-orange-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 dark:from-purple-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -368,7 +368,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
               By The Numbers
             </h2>
           </motion.div>
@@ -388,15 +388,15 @@ export function About() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 shadow-lg border border-white/80 text-center hover:shadow-xl transition-shadow"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-8 shadow-lg border border-white/80 dark:border-gray-700/80 text-center hover:shadow-xl transition-all"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 dark:from-purple-500 to-orange-500 dark:to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Icon className="text-white" size={32} />
                   </div>
-                  <div className="text-4xl sm:text-5xl mb-2 bg-gradient-to-br from-purple-600 to-orange-500 bg-clip-text text-transparent font-bold">
+                  <div className="text-4xl sm:text-5xl mb-2 bg-gradient-to-br from-purple-600 dark:from-purple-400 to-orange-500 dark:to-orange-400 bg-clip-text text-transparent font-bold">
                     {stat.number}
                   </div>
-                  <div className="text-gray-700">{stat.label}</div>
+                  <div className="text-gray-700 dark:text-gray-300">{stat.label}</div>
                 </motion.div>
               );
             })}
@@ -405,7 +405,7 @@ export function About() {
       </section>
 
       {/* Founding Team Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -414,7 +414,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-purple-900 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
               Founding Team
             </h2>
           </motion.div>
@@ -426,14 +426,14 @@ export function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80"
+              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="relative mb-4">
                   <ImageWithFallback
                     src="/assets/Nilansh.png"
                     alt="Nilansh Gupta"
-                    className="w-32 h-32 rounded-full object-cover object-center border-4 border-purple-200 shadow-lg transition-transform duration-200 hover:scale-105"
+                    className="w-32 h-32 rounded-full object-cover object-center border-4 border-purple-200 dark:border-purple-700 shadow-lg transition-transform duration-200 hover:scale-105"
                     style={{
                       aspectRatio: '1 / 1',
                       objectFit: 'cover',
@@ -445,23 +445,23 @@ export function About() {
                     <User className="text-purple-600" size={48} />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-gray-900">Nilansh Gupta</h3>
-                <p className="text-purple-600 mb-4">Co-Founder & CEO</p>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Nilansh Gupta</h3>
+                <p className="text-purple-600 dark:text-purple-400 mb-4">Co-Founder & CEO</p>
                 <a
                   href="https://www.linkedin.com/in/nilansh-gupta/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-700 hover:text-purple-600 transition-colors"
+                  className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                 >
                   <Linkedin size={20} />
                   <span>LinkedIn</span>
                 </a>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Nilansh Gupta is the visionary co-founder of ConvertWise, bringing over a decade of expertise in digital marketing and AI-driven solutions. His relentless passion for innovation and client success fueled his work at Digital Patron, where he achieved impressive results—driving 150% more qualified leads and up to 7x ROI for clients. As a pioneering AI marketing expert, Nilansh identified the bottlenecks in traditional sales processes and envisioned ConvertWise as the solution.
               </p>
-              <div className="pt-4 border-t border-gray-200">
-                <p className="text-sm text-gray-600 italic">
+              <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                <p className="text-sm text-gray-600 dark:text-gray-400 italic">
                   Compassionate Leader • Strategic Problem-Solver • AI Marketing Expert
                 </p>
               </div>
@@ -473,14 +473,14 @@ export function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80"
+              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="relative mb-4">
                   <ImageWithFallback
                     src="/assets/archit.png"
                     alt="Archit Dhir"
-                    className="w-32 h-32 rounded-full object-cover object-center border-4 border-orange-200 shadow-lg transition-transform duration-200 hover:scale-105"
+                    className="w-32 h-32 rounded-full object-cover object-center border-4 border-orange-200 dark:border-orange-700 shadow-lg transition-transform duration-200 hover:scale-105"
                     style={{
                       aspectRatio: '1 / 1',
                       objectFit: 'cover',
@@ -492,23 +492,23 @@ export function About() {
                     <User className="text-orange-600" size={48} />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-gray-900">Archit Dhir</h3>
-                <p className="text-orange-600 mb-4">Co-Founder & CTO</p>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Archit Dhir</h3>
+                <p className="text-orange-600 dark:text-orange-400 mb-4">Co-Founder & CTO</p>
                 <a
                   href="https://www.linkedin.com/in/archit-dhir-23420a321/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-700 hover:text-orange-600 transition-colors"
+                  className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
                 >
                   <Linkedin size={20} />
                   <span>LinkedIn</span>
                 </a>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Archit Dhir, the co-founder of ConvertWise, is a master technologist with an impressive background in PPC, email marketing, and marketing automation, backed by an MBA. His innovative and data-driven strategies have consistently boosted client revenue by 200% and achieved industry-leading conversion rates at Digital Patron. Archit's technical expertise ensures that ConvertWise delivers exceptional value and performance.
               </p>
-              <div className="pt-4 border-t border-gray-200">
-                <p className="text-sm text-gray-600 italic">
+              <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                <p className="text-sm text-gray-600 dark:text-gray-400 italic">
                   Visionary Thinker • Technical Architect • Creative Problem-Solver
                 </p>
               </div>

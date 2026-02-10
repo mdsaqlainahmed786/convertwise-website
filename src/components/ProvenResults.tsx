@@ -6,14 +6,14 @@ import { AIParticles } from './backgrounds/AIParticles';
 
 export function ProvenResults() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 relative overflow-hidden transition-colors">
       {/* AI-themed background layers */}
       <ScanningGrid />
       <AIParticles />
       
       {/* Background decorations */}
       <motion.div 
-        className="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full blur-3xl opacity-50"
+        className="absolute top-0 right-0 w-96 h-96 bg-purple-100 dark:bg-purple-900/30 rounded-full blur-3xl opacity-50 dark:opacity-30 transition-colors"
         animate={{
           scale: [1, 1.2, 1],
           x: [0, 30, 0],
@@ -25,7 +25,7 @@ export function ProvenResults() {
         }}
       />
       <motion.div 
-        className="absolute bottom-0 left-0 w-96 h-96 bg-orange-100 rounded-full blur-3xl opacity-50"
+        className="absolute bottom-0 left-0 w-96 h-96 bg-orange-100 dark:bg-orange-900/30 rounded-full blur-3xl opacity-50 dark:opacity-30 transition-colors"
         animate={{
           scale: [1.2, 1, 1.2],
           x: [0, -30, 0],
@@ -72,14 +72,14 @@ export function ProvenResults() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-purple-100 to-orange-100 rounded-full">
-            <Award className="text-purple-600" size={16} />
-            <span className="text-purple-700">Proven Results</span>
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-purple-100 dark:from-purple-900/30 to-orange-100 dark:to-orange-900/30 rounded-full transition-colors">
+            <Award className="text-purple-600 dark:text-purple-400" size={16} />
+            <span className="text-purple-700 dark:text-purple-300">Proven Results</span>
           </div>
-          <h2 className="mb-4 text-4xl sm:text-5xl">
+          <h2 className="mb-4 text-4xl sm:text-5xl text-gray-900 dark:text-white">
             The ConvertWise Impact
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 dark:text-gray-400">
             Real outcomes from early partners across SaaS, MedTech, and Services
           </p>
         </motion.div>
@@ -95,34 +95,34 @@ export function ProvenResults() {
             transition={{ delay: 0.2 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <div className="relative bg-white p-8 rounded-3xl border-2 border-gray-200 hover:border-purple-300 hover:shadow-2xl transition-all">
+            <div className="relative bg-white dark:bg-gray-800 p-8 rounded-3xl border-2 border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-2xl transition-all">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
                   <motion.div 
-                    className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl flex items-center justify-center text-white shadow-lg"
+                    className="w-16 h-16 bg-gradient-to-br from-purple-600 dark:from-purple-500 to-purple-800 dark:to-purple-700 rounded-2xl flex items-center justify-center text-white shadow-lg"
                     whileHover={{ rotate: 10, scale: 1.1 }}
                   >
                     <Target size={32} />
                   </motion.div>
                 </div>
                 <div className="flex-1">
-                  <div className="text-5xl mb-2 bg-gradient-to-br from-purple-600 to-purple-800 bg-clip-text text-transparent">
+                  <div className="text-5xl mb-2 bg-gradient-to-br from-purple-600 dark:from-purple-400 to-purple-800 dark:to-purple-600 bg-clip-text text-transparent">
                     87%
                   </div>
-                  <h3 className="mb-3">Avg Confidence Score</h3>
-                  <p className="text-gray-600 mb-6">
+                  <h3 className="mb-3 text-gray-900 dark:text-white">Avg Confidence Score</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">
                     Live Agent surfaces perfect ROI moments in real-time.
                   </p>
                   
                   {/* Mini chart visualization */}
-                  <div className="space-y-3 bg-purple-50 p-4 rounded-xl">
+                  <div className="space-y-3 bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl transition-colors">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-600">Perfect Moments</span>
-                      <span className="text-purple-700">43 across 18 demos</span>
+                      <span className="text-gray-600 dark:text-gray-400">Perfect Moments</span>
+                      <span className="text-purple-700 dark:text-purple-400">43 across 18 demos</span>
                     </div>
-                    <div className="h-2 bg-purple-200 rounded-full overflow-hidden">
+                    <div className="h-2 bg-purple-200 dark:bg-purple-800 rounded-full overflow-hidden">
                       <motion.div 
-                        className="h-full bg-gradient-to-r from-purple-600 to-purple-800 rounded-full"
+                        className="h-full bg-gradient-to-r from-purple-600 dark:from-purple-400 to-purple-800 dark:to-purple-600 rounded-full"
                         initial={{ width: 0 }}
                         whileInView={{ width: '87%' }}
                         viewport={{ once: true }}
@@ -130,8 +130,8 @@ export function ProvenResults() {
                       />
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-600">Pricing Hesitation Detected</span>
-                      <span className="text-purple-700">67% before voiced</span>
+                      <span className="text-gray-600 dark:text-gray-400">Pricing Hesitation Detected</span>
+                      <span className="text-purple-700 dark:text-purple-400">67% before voiced</span>
                     </div>
                   </div>
                 </div>
@@ -148,27 +148,27 @@ export function ProvenResults() {
             transition={{ delay: 0.4 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <div className="relative bg-white p-8 rounded-3xl border-2 border-gray-200 hover:border-orange-300 hover:shadow-2xl transition-all">
+            <div className="relative bg-white dark:bg-gray-800 p-8 rounded-3xl border-2 border-gray-200 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600 hover:shadow-2xl transition-all">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
                   <motion.div 
-                    className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center text-white shadow-lg"
+                    className="w-16 h-16 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-700 dark:to-orange-600 rounded-2xl flex items-center justify-center text-white shadow-lg"
                     whileHover={{ rotate: -10, scale: 1.1 }}
                   >
                     <Clock size={32} />
                   </motion.div>
                 </div>
                 <div className="flex-1">
-                  <div className="text-5xl mb-2 bg-gradient-to-br from-orange-500 to-orange-700 bg-clip-text text-transparent">
+                  <div className="text-5xl mb-2 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-700 dark:to-orange-600 bg-clip-text text-transparent">
                     14hrs
                   </div>
-                  <h3 className="mb-3">Time Saved Per Week</h3>
-                  <p className="text-gray-600 mb-6">
+                  <h3 className="mb-3 text-gray-900 dark:text-white">Time Saved Per Week</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">
                     Eliminates manual note-taking, CRM updates, and follow-up drafting.
                   </p>
                   
                   {/* Tasks visualization */}
-                  <div className="space-y-2 bg-orange-50 p-4 rounded-xl">
+                  <div className="space-y-2 bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl transition-colors">
                     <motion.div 
                       className="flex items-center gap-3"
                       initial={{ opacity: 0, x: -20 }}
@@ -176,8 +176,8 @@ export function ProvenResults() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.6 }}
                     >
-                      <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white text-xs">✓</div>
-                      <span className="text-sm text-gray-700">Zero manual entry required</span>
+                      <div className="w-6 h-6 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-700 dark:to-orange-600 rounded-full flex items-center justify-center text-white text-xs">✓</div>
+                      <span className="text-sm text-gray-700 dark:text-gray-300">Zero manual entry required</span>
                     </motion.div>
                     <motion.div 
                       className="flex items-center gap-3"
@@ -186,8 +186,8 @@ export function ProvenResults() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.7 }}
                     >
-                      <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white text-xs">✓</div>
-                      <span className="text-sm text-gray-700">3.2× team capacity increase</span>
+                      <div className="w-6 h-6 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-700 dark:to-orange-600 rounded-full flex items-center justify-center text-white text-xs">✓</div>
+                      <span className="text-sm text-gray-700 dark:text-gray-300">3.2× team capacity increase</span>
                     </motion.div>
                     <motion.div 
                       className="flex items-center gap-3"
@@ -196,8 +196,8 @@ export function ProvenResults() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.8 }}
                     >
-                      <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white text-xs">✓</div>
-                      <span className="text-sm text-gray-700">Auto-generated follow-ups</span>
+                      <div className="w-6 h-6 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-700 dark:to-orange-600 rounded-full flex items-center justify-center text-white text-xs">✓</div>
+                      <span className="text-sm text-gray-700 dark:text-gray-300">Auto-generated follow-ups</span>
                     </motion.div>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ function CaseStudyCard({
   
   return (
     <motion.div 
-      className="group bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-transparent hover:shadow-2xl transition-all"
+      className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-700 hover:border-transparent dark:hover:border-transparent hover:shadow-2xl transition-all"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -291,13 +291,13 @@ function CaseStudyCard({
         {results.map((result, index) => (
           <motion.div 
             key={index} 
-            className="flex items-start gap-3 text-gray-700"
+            className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: delay + 0.1 * (index + 1) }}
           >
-            <div className={`mt-0.5 text-${color === 'purple' ? 'purple' : 'orange'}-600`}>
+            <div className={`mt-0.5 ${color === 'purple' ? 'text-purple-600 dark:text-purple-400' : 'text-orange-600 dark:text-orange-400'}`}>
               {result.icon}
             </div>
             <span className="text-sm">{result.text}</span>
