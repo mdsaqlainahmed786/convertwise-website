@@ -7,6 +7,7 @@ import { TheProblem } from './TheProblem';
 import { ProvenResults } from './ProvenResults';
 import { WhyDifferent } from './WhyDifferent';
 import { EveryDay } from './EveryDay';
+import { HowItWorks } from './HowItWorks';
 import { ExclusiveAccess } from './ExclusiveAccess';
 import { FinalCTA } from './FinalCTA';
 import { OrganizationSchema } from './seo/OrganizationSchema';
@@ -71,6 +72,7 @@ export function Home() {
       <ProvenResults />
       <WhyDifferent />
       <EveryDay />
+      <HowItWorks />
       <ExclusiveAccess />
       <FinalCTA />
     </>
