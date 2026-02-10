@@ -46,6 +46,14 @@ const features: FeatureSlide[] = [
     image: '/assets/all-agents.jpeg',
   },
   {
+    id: 'audit-agent',
+    title: 'Audit Agent',
+    description: [
+      'Audit Agent analyzes your current pitch deck, demo flow, and past meeting recordings to identify weak points and optimization opportunities.',
+    ],
+    image: '/assets/audit-agent.jpeg',
+  },
+  {
     id: 'upload',
     title: 'Pitch Deck Upload',
     description: [
@@ -77,7 +85,7 @@ const features: FeatureSlide[] = [
     title: 'Outcome',
     description: [
       'The outcome of the meeting.',
-      'The outcome of the meeting is the outcome of the meeting.',
+      'AI-powered analysis of the meeting outcome.',
     ],
     image: '/assets/outcome-agent.jpeg',
   },
