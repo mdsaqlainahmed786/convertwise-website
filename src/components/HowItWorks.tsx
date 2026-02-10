@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Monitor, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Monitor, ChevronLeft, ChevronRight, AlertCircle } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -36,15 +36,15 @@ const features: FeatureSlide[] = [
     ],
     image: '/assets/leads.jpeg',
   },
-  {
-    id: 'all-agents',
-    title: 'All Agents',
-    description: [
-      'All agents in one place.',
-      'Audit Agent, Prep Agent, Live Agent, and Live Meeting Intelligence.',
-    ],
-    image: '/assets/all-agents.jpeg',
-  },
+//   {
+//     id: 'all-agents',
+//     title: 'All Agents',
+//     description: [
+//       'All agents in one place.',
+//       'Audit Agent, Prep Agent, Live Agent, and Live Meeting Intelligence.',
+//     ],
+//     image: '/assets/all-agents.jpeg',
+//   },
   {
     id: 'audit-agent',
     title: 'Audit Agent',
@@ -134,20 +134,36 @@ export function HowItWorks() {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
         <motion.div 
-          className="text-center mb-8"
+          className="text-left mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center gap-2 mb-3 px-3 py-1.5 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-full shadow-sm">
-            <Monitor className="text-white" size={14} />
-            <span className="text-white text-sm">Platform Overview</span>
+          <div className="flex justify-center mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-full shadow-sm">
+              <Monitor className="text-white" size={14} />
+              <span className="text-white text-sm">How it Works</span>
+            </div>
           </div>
-          <h2 className="mb-3 text-3xl sm:text-4xl lg:text-5xl text-white font-bold">
-            The only customer engagement platform you'll ever need
+          <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          
+          <h2 className="mb-6 text-4xl sm:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto">
+            The Only Meeting Intelligence{' '}
+            <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+              Engagement Platform
+            </span>{' '}
+            You'll Need
           </h2>
-          <p className="text-base sm:text-lg text-white/90 max-w-3xl mx-auto">
-            Bring data together, power it with AI, and deliver personalized customer experiences, at scale.
+        </motion.div>
+          <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto text-left leading-relaxed">
+            <span className="text-white">Bring data together, </span>
+            <span className="text-orange-500">power it with AI</span>
+            <span className="text-white">, and deliver personalized customer experiences, at scale.</span>
           </p>
         </motion.div>
 
@@ -170,8 +186,8 @@ export function HowItWorks() {
                     transition={{ duration: 0.5 }}
                     className="relative"
                   >
-                    <div className="relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-xl border-2 border-white/20 dark:border-gray-700">
-                      <div className="aspect-[16/10] bg-gradient-to-br from-gray-50 dark:from-gray-900 to-gray-100 dark:to-gray-800 flex items-center justify-center">
+                    <div className="relative bg-white/10 dark:bg-white/5 backdrop-blur-xl rounded-xl overflow-hidden shadow-2xl border border-white/20 dark:border-white/10">
+                      <div className="aspect-[16/10] bg-gradient-to-br from-white/5 dark:from-white/5 to-white/10 dark:to-white/10 flex items-center justify-center backdrop-blur-sm">
                         <ImageWithFallback
                           src={feature.image}
                           alt={feature.title}
