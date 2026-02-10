@@ -43,7 +43,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${
+      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${
         isDark ? 'bg-blue-600' : 'bg-gray-300'
       }`}
       aria-label="Toggle theme"
@@ -51,14 +51,14 @@ export function ThemeToggle() {
       aria-checked={isDark}
     >
       <span
-        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 flex items-center justify-center ${
+        className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-md transition-all duration-300 ease-in-out flex items-center justify-center ${
           isDark ? 'translate-x-6' : 'translate-x-1'
         }`}
       >
         {isDark ? (
-          <Moon className="h-3 w-3 text-gray-600" />
+          <Moon className="h-3.5 w-3.5 text-gray-700" />
         ) : (
-          <Sun className="h-3 w-3 text-gray-600" />
+          <Sun className="h-3.5 w-3.5 text-gray-700" />
         )}
       </span>
     </button>
