@@ -152,7 +152,7 @@ export function HowItWorks() {
           className="text-center mb-16"
         >
           
-          <h2 className="mb-6 text-4xl sm:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto">
+          <h2 className="mb-6 text-white text-4xl sm:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto">
             The Only Meeting Intelligence{' '}
             <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
               Engagement Platform
@@ -160,7 +160,7 @@ export function HowItWorks() {
             You'll Need
           </h2>
         </motion.div>
-          <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto text-left leading-relaxed">
+          <p className="text-lg sm:text-xl text-center text-white/90 max-w-3xl mx-auto leading-relaxed">
             <span className="text-white">Bring data together, </span>
             <span className="text-orange-500">power it with AI</span>
             <span className="text-white">, and deliver personalized customer experiences, at scale.</span>
