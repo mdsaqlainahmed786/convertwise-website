@@ -448,11 +448,13 @@ export function Hero() {
               <X size={20} className="text-white" />
             </button>
             <iframe
-              src="https://www.youtube.com/embed/SWFSRVs4fHI?autoplay=1"
+              src="https://www.youtube-nocookie.com/embed/SWFSRVs4fHI?autoplay=1&enablejsapi=1&modestbranding=1&rel=0&origin=https://convertwise.site"
               title="ConvertWise Demo Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
+              frameBorder="0"
               className="w-full h-full"
+              loading="lazy"
             />
           </div>
         </div>
