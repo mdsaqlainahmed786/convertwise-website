@@ -1,5 +1,6 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { Monitor, ChevronLeft, ChevronRight, AlertCircle } from 'lucide-react';
+import { Monitor, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -8,7 +9,6 @@ import {
 } from './ui/carousel';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
-import { useEffect, useState } from 'react';
 
 interface FeatureSlide {
   id: string;
