@@ -4,6 +4,8 @@ import { Linkedin, Lightbulb, Eye, Target, Zap, Award, TrendingUp, Users, Briefc
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { OrganizationSchema } from './seo/OrganizationSchema';
 import { BreadcrumbListSchema } from './seo/BreadcrumbListSchema';
+import architImage from '../assets/archit.png';
+import nilanshImage from '../assets/Nilansh.png';
 
 export function About() {
   const siteUrl = 'https://convertwise.site';
@@ -431,7 +433,7 @@ export function About() {
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="relative mb-4">
                   <ImageWithFallback
-                    src="/assets/Nilansh.png"
+                    src={nilanshImage}
                     alt="Nilansh Gupta"
                     className="w-32 h-32 rounded-full object-cover object-center border-4 border-purple-200 dark:border-purple-700 shadow-lg transition-transform duration-200 hover:scale-105"
                     style={{
@@ -478,7 +480,7 @@ export function About() {
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="relative mb-4">
                   <ImageWithFallback
-                    src="/assets/archit.png"
+                    src={architImage}
                     alt="Archit Dhir"
                     className="w-32 h-32 rounded-full object-cover object-center border-4 border-orange-200 dark:border-orange-700 shadow-lg transition-transform duration-200 hover:scale-105"
                     style={{
