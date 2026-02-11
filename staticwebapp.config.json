@@ -1,4 +1,14 @@
 {
+  "routes": [
+    {
+      "route": "/*",
+      "redirect": "https://www.convertwise.site/:splat",
+      "statusCode": 301,
+      "conditions": {
+        "host": ["convertwise.site"]
+      }
+    }
+  ],
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
@@ -20,5 +30,3 @@
     ]
   }
 }
-
-
