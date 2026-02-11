@@ -28,6 +28,25 @@
     </head>
 
     <body>
+      <script>
+        (function() {
+          try {
+            const theme = localStorage.getItem('convertwise-theme') || 'light';
+            const root = document.documentElement;
+            root.classList.remove('light', 'dark');
+            if (theme === 'dark' || theme === 'light') {
+              root.classList.add(theme);
+              root.setAttribute('data-theme', theme);
+            } else {
+              root.classList.add('light');
+              root.setAttribute('data-theme', 'light');
+            }
+          } catch (e) {
+            // Fallback if localStorage fails
+            document.documentElement.classList.add('light');
+          }
+        })();
+      </script>
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
     </body>

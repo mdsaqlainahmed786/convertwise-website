@@ -5,7 +5,7 @@ import { DataStream } from './backgrounds/DataStream';
 
 export function FinalCTA() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-orange-500 text-white relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 dark:from-purple-700 to-orange-500 dark:to-orange-600 text-white relative overflow-hidden transition-colors">
       {/* AI-themed background layers */}
       <CircuitBoard />
       <DataStream />
