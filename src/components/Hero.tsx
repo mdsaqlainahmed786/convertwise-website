@@ -1,8 +1,10 @@
-import { Play, Sparkles, TrendingUp, Zap, Brain, Target, Users } from 'lucide-react';
+import { useState } from 'react';
+import { Play, Sparkles, TrendingUp, Zap, Brain, Target, Users, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-purple-50 dark:from-purple-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
       {/* Subtle grid pattern */}
@@ -258,16 +260,14 @@ export function Hero() {
                 <span>Transform Your Next Meeting</span>
                 <Zap size={20} className="group-hover:rotate-12 transition-transform" aria-hidden="true" />
               </button>
-              <a 
-                href="https://youtu.be/Mgck6m2Flz0?si=bFzgfqnZ6hTLmU7p"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all flex items-center justify-center gap-2 shadow-lg"
+              <button 
+                onClick={() => setIsVideoOpen(true)}
+                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all flex cursor-pointer items-center justify-center gap-2 shadow-lg"
                 aria-label="Watch 2-minute demo of ConvertWise meeting intelligence software"
               >
                 <Play size={20} aria-hidden="true" />
                 <span>Watch 2-Min Demo</span>
-              </a>
+              </button>
             </div>
 
             {/* Trust indicators in glass panel */}
@@ -429,6 +429,34 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      {isVideoOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <div 
+            className="relative w-full max-w-5xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+              aria-label="Close video"
+            >
+              <X size={20} className="text-white" />
+            </button>
+            <iframe
+              src="https://www.youtube.com/embed/SWFSRVs4fHI?autoplay=1"
+              title="ConvertWise Demo Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
