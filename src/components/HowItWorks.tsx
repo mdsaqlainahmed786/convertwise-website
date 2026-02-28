@@ -13,6 +13,7 @@ import { Button } from './ui/button';
 interface FeatureSlide {
   id: string;
   title: string;
+  alt: string;
   description: string[];
   image: string;
 }
@@ -21,6 +22,7 @@ const features: FeatureSlide[] = [
   {
     id: 'dashboard',
     title: 'Sales Dashboard',
+    alt: 'Nimitai AI sales dashboard showing pipeline value, confidence scores, and meeting preparation status',
     description: [
       'Get a comprehensive overview of your sales pipeline, conversion rates, and upcoming meetings.',
       'Track key metrics like pipeline value, confidence scores, and meeting preparation status all in one place.',
@@ -30,6 +32,7 @@ const features: FeatureSlide[] = [
   {
     id: 'audit',
     title: 'Sales Audit Report',
+    alt: 'AI-powered sales call audit report with SWOT analysis, win probability scoring, and coaching recommendations',
     description: [
       'AI-powered analysis of your sales calls with detailed SWOT insights.',
       'Understand your strengths, identify weaknesses, and get actionable recommendations to improve your win probability.',
@@ -39,6 +42,7 @@ const features: FeatureSlide[] = [
 //   {
 //     id: 'all-agents',
 //     title: 'All Agents',
+//     alt: 'All Nimitai AI agents overview — Audit Agent, Prep Agent, Live Agent, and Meeting Intelligence',
 //     description: [
 //       'All agents in one place.',
 //       'Audit Agent, Prep Agent, Live Agent, and Live Meeting Intelligence.',
@@ -48,6 +52,7 @@ const features: FeatureSlide[] = [
   {
     id: 'audit-agent',
     title: 'Audit Agent',
+    alt: 'Nimitai Audit Agent analyzing pitch deck and sales call recordings to identify weak points and objection patterns',
     description: [
       'Audit Agent analyzes your current pitch deck, demo flow, and past meeting recordings to identify weak points and optimization opportunities.',
     ],
@@ -56,6 +61,7 @@ const features: FeatureSlide[] = [
   {
     id: 'upload',
     title: 'Pitch Deck Upload',
+    alt: 'Uploading a sales pitch deck into Nimitai for AI analysis and personalized coaching flow creation',
     description: [
       'Upload your pitch deck and let our AI analyze your content.',
       'The system creates a personalized practice flow tailored to your presentation style and key talking points.',
@@ -65,6 +71,7 @@ const features: FeatureSlide[] = [
   {
     id: 'prep',
     title: 'Virtual Prep Session',
+    alt: 'Nimitai virtual sales prep session with AI coach providing real-time feedback on confidence, pace, and clarity',
     description: [
       'Practice with your AI coach before important meetings.',
       'Get real-time feedback on your confidence, pace, clarity, and engagement while receiving personalized coaching insights.',
@@ -74,6 +81,7 @@ const features: FeatureSlide[] = [
   {
     id: 'live-coaching',
     title: 'Live Meeting Intelligence',
+    alt: 'Nimitai live meeting intelligence dashboard showing participant emotions, talk ratios, and real-time AI sales coaching',
     description: [
       'Real-time AI copilot provides live insights during your meetings.',
       'Track participant emotions, engagement levels, talk ratios, and receive instant guidance to optimize your sales conversations.',
@@ -83,6 +91,7 @@ const features: FeatureSlide[] = [
   {
     id: 'outcome',
     title: 'Outcome',
+    alt: 'Nimitai AI-powered meeting outcome analysis with deal risk signals and next-step recommendations',
     description: [
       'The outcome of the meeting.',
       'AI-powered analysis of the meeting outcome.',
@@ -126,99 +135,147 @@ export function HowItWorks() {
   const currentFeature = features[current - 1] || features[0];
 
   return (
-    <section 
-      className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-600 dark:from-purple-900 via-purple-500 dark:via-purple-800 to-orange-500 dark:to-orange-700 relative overflow-hidden transition-colors"
+    <section
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#070B18] relative overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
+      {/* Top accent line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
+
+      {/* Mesh gradient orbs */}
+      <motion.div
+        className="absolute -top-32 right-0 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[160px] opacity-[0.09]"
+        animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, -30, 0] }}
+        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-0 -left-32 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[150px] opacity-[0.08]"
+        animate={{ scale: [1.15, 1, 1.15], x: [0, -30, 0], y: [0, 25, 0] }}
+        transition={{ duration: 28, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-amber-700 rounded-full blur-[130px] opacity-[0.07]"
+        animate={{ scale: [1, 1.3, 1], rotate: [0, 6, 0] }}
+        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut", delay: 6 }}
+      />
+
+      {/* Subtle dot grid */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(232,148,34,0.8) 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
+        }}
+      />
+
+      {/* Floating sparkles */}
+      {[
+        { left: '10%', top: '20%', delay: 0 },
+        { left: '30%', top: '60%', delay: 1.2 },
+        { left: '60%', top: '25%', delay: 0.6 },
+        { left: '80%', top: '70%', delay: 1.8 },
+        { left: '90%', top: '40%', delay: 0.3 },
+      ].map((p, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-0.5 h-0.5 rounded-full bg-[#E89422]"
+          style={{ left: p.left, top: p.top }}
+          animate={{ y: [0, -60, -120], opacity: [0, 0.7, 0] }}
+          transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: p.delay, ease: "easeOut" }}
+        />
+      ))}
+
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
-        <motion.div 
-          className="text-left mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex justify-center mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-full shadow-sm">
-              <Monitor className="text-white" size={14} />
-              <span className="text-white text-sm">How it Works</span>
-            </div>
-          </div>
+        <div className="text-center mb-10">
           <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          
-          <h2 className="mb-6 text-white text-4xl sm:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto">
-            The Only Meeting Intelligence{' '}
-            <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Engagement Platform
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#E89422]/10 backdrop-blur-sm border border-[#E89422]/25 rounded-full mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 200, damping: 22 }}
+          >
+            <Monitor className="text-[#E89422]" size={14} />
+            <span className="text-[#E89422] text-sm tracking-wide">How it Works</span>
+          </motion.div>
+
+          <motion.h2
+            className="mb-5 text-white text-4xl sm:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 70, damping: 20, delay: 0.1 }}
+          >
+            How Nimitai's{' '}
+            <span className="bg-gradient-to-r from-[#F5B040] to-[#E89422] bg-clip-text text-transparent">
+              AI Meeting Intelligence
             </span>{' '}
-            You'll Need
-          </h2>
-        </motion.div>
-          <p className="text-lg sm:text-xl text-center text-white/90 max-w-3xl mx-auto leading-relaxed">
-            <span className="text-white">Bring data together, </span>
-            <span className="text-orange-500">power it with AI</span>
-            <span className="text-white">, and deliver personalized customer experiences, at scale.</span>
-          </p>
-        </motion.div>
+            Works
+          </motion.h2>
+
+          <motion.p
+            className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 70, damping: 20, delay: 0.2 }}
+          >
+            Three specialized AI agents handle pre-call preparation, live signal detection, and post-call analysis — giving your sales team a complete intelligence advantage at every stage of the deal.
+          </motion.p>
+        </div>
 
         {/* Main Image Display */}
-        <div className="relative mb-6">
+        <motion.div
+          className="relative mb-6"
+          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 55, damping: 20, delay: 0.25 }}
+        >
+          {/* Glow behind the card */}
+          <div className="absolute inset-0 bg-[#E89422]/10 rounded-2xl blur-2xl scale-95 pointer-events-none" />
           <Carousel
             setApi={setApi}
-            opts={{
-              align: "center",
-              loop: true,
-            }}
+            opts={{ align: "center", loop: true }}
             className="w-full"
           >
             <CarouselContent>
               {features.map((feature) => (
                 <CarouselItem key={feature.id} className="basis-full">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="relative"
-                  >
-                    <div className="relative bg-white/10 dark:bg-white/5 backdrop-blur-xl rounded-xl overflow-hidden shadow-2xl border border-white/20 dark:border-white/10">
-                      <div className="aspect-[16/10] bg-gradient-to-br from-white/5 dark:from-white/5 to-white/10 dark:to-white/10 flex items-center justify-center backdrop-blur-sm">
-                        <ImageWithFallback
-                          src={feature.image}
-                          alt={feature.title}
-                          className="w-full h-full object-contain p-3"
-                        />
-                      </div>
+                  <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+                    {/* Inner top highlight */}
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
+                    <div className="aspect-[16/10] flex items-center justify-center">
+                      <ImageWithFallback
+                        src={feature.image}
+                        alt={feature.alt}
+                        className="w-full h-full object-contain p-3"
+                      />
                     </div>
-                  </motion.div>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
           </Carousel>
-        </div>
+        </motion.div>
 
         {/* Description */}
         <motion.div
           key={current}
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="text-center mb-6"
+          transition={{ type: "spring", stiffness: 120, damping: 20 }}
+          className="text-center mb-8"
         >
-          <p className="text-base sm:text-lg text-white/95 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">
             {currentFeature.description[0]}
-            <br />
-            {currentFeature.description[1]}
+            {currentFeature.description[1] && <> {currentFeature.description[1]}</>}
           </p>
         </motion.div>
 
         {/* Navigation Controls */}
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-4">
           <Button
             variant="outline"
             size="icon"
@@ -227,32 +284,32 @@ export function HowItWorks() {
               setIsPaused(true);
               setTimeout(() => setIsPaused(false), 3000);
             }}
-            className="rounded-full h-10 w-10 border-2 border-white/30 bg-white/10 dark:bg-white/5 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-white/10 transition-colors"
+            className="rounded-full h-10 w-10 border border-white/15 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#E89422]/40 transition-all text-white"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="h-5 w-5 text-white" />
+            <ChevronLeft className="h-4 w-4" />
           </Button>
-          
-          {/* Dots Indicator */}
-          <div className="flex gap-2">
+
+          <div className="flex gap-2 items-center">
             {Array.from({ length: count }).map((_, index) => (
-              <button
+              <motion.button
                 key={index}
                 onClick={() => {
                   api?.scrollTo(index);
                   setIsPaused(true);
                   setTimeout(() => setIsPaused(false), 3000);
                 }}
-                className={`h-2 rounded-full transition-all ${
+                className={`h-1.5 rounded-full transition-all ${
                   index + 1 === current
-                    ? 'w-8 bg-white'
-                    : 'w-2 bg-white/40 hover:bg-white/60'
+                    ? 'w-8 bg-[#E89422]'
+                    : 'w-1.5 bg-white/25 hover:bg-white/40'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
+                whileHover={{ scale: 1.2 }}
               />
             ))}
           </div>
-          
+
           <Button
             variant="outline"
             size="icon"
@@ -261,13 +318,16 @@ export function HowItWorks() {
               setIsPaused(true);
               setTimeout(() => setIsPaused(false), 3000);
             }}
-            className="rounded-full h-10 w-10 border-2 border-white/30 bg-white/10 dark:bg-white/5 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-white/10 transition-colors"
+            className="rounded-full h-10 w-10 border border-white/15 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#E89422]/40 transition-all text-white"
             aria-label="Next slide"
           >
-            <ChevronRight className="h-5 w-5 text-white" />
+            <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
       </div>
+
+      {/* Bottom accent line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/20 to-transparent" />
     </section>
   );
 }

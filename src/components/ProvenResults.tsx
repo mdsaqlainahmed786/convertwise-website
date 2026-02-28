@@ -6,132 +6,111 @@ import { AIParticles } from './backgrounds/AIParticles';
 
 export function ProvenResults() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 relative overflow-hidden transition-colors">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50/80 dark:from-gray-900 via-white dark:via-gray-900 to-orange-50/60 dark:to-gray-900 relative overflow-hidden transition-colors">
       {/* AI-themed background layers */}
       <ScanningGrid />
       <AIParticles />
-      
-      {/* Background decorations */}
-      <motion.div 
-        className="absolute top-0 right-0 w-96 h-96 bg-purple-100 dark:bg-purple-900/30 rounded-full blur-3xl opacity-50 dark:opacity-30 transition-colors"
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 30, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <motion.div 
-        className="absolute bottom-0 left-0 w-96 h-96 bg-orange-100 dark:bg-orange-900/30 rounded-full blur-3xl opacity-50 dark:opacity-30 transition-colors"
-        animate={{
-          scale: [1.2, 1, 1.2],
-          x: [0, -30, 0],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-      />
 
-      {/* Floating particles */}
+      {/* Mesh orbs — light mode only (dark handled by ScanningGrid/AIParticles) */}
       <motion.div
-        className="absolute top-40 left-1/4 w-3 h-3 bg-purple-400 rounded-full opacity-20"
-        animate={{
-          y: [0, -100, 0],
-          opacity: [0.2, 0.5, 0.2]
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
+        className="absolute -top-16 right-0 w-[500px] h-[500px] bg-amber-200 rounded-full blur-[100px] opacity-30 dark:opacity-10 transition-opacity"
+        animate={{ scale: [1, 1.2, 1], x: [0, 30, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-40 right-1/4 w-2 h-2 bg-orange-400 rounded-full opacity-20"
-        animate={{
-          y: [0, 80, 0],
-          opacity: [0.2, 0.5, 0.2]
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2
-        }}
+        className="absolute bottom-0 -left-16 w-[450px] h-[450px] bg-orange-200 rounded-full blur-[100px] opacity-25 dark:opacity-10 transition-opacity"
+        animate={{ scale: [1.15, 1, 1.15], x: [0, -25, 0] }}
+        transition={{ duration: 26, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-yellow-100 rounded-full blur-[120px] opacity-20 dark:opacity-5 transition-opacity"
+        animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+      />
+      {/* Floating sparkles */}
+      {[
+        { left: '10%', top: '30%', delay: 0 },
+        { left: '30%', top: '60%', delay: 1 },
+        { left: '70%', top: '40%', delay: 0.5 },
+        { left: '85%', top: '65%', delay: 1.5 },
+      ].map((p, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1.5 h-1.5 rounded-full bg-[#E89422]"
+          style={{ left: p.left, top: p.top }}
+          animate={{ y: [0, -70, -140], opacity: [0, 0.5, 0], scale: [0.5, 1, 0.5] }}
+          transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: p.delay, ease: "easeOut" }}
+        />
+      ))}
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 70, damping: 20 }}
         >
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-purple-100 dark:from-purple-900/30 to-orange-100 dark:to-orange-900/30 rounded-full transition-colors">
-            <Award className="text-purple-600 dark:text-purple-400" size={16} />
-            <span className="text-purple-700 dark:text-purple-300">Proven Results</span>
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-amber-100 dark:from-[#1A1000]/30 to-orange-100 dark:to-orange-900/30 rounded-full transition-colors">
+            <Award className="text-[#E89422] dark:text-[#F5B040]" size={16} />
+            <span className="text-[#C47010] dark:text-[#F5B040]">Conversation Intelligence Results</span>
           </div>
           <h2 className="mb-4 text-4xl sm:text-5xl text-gray-900 dark:text-white">
-            The ConvertWise Impact
+            Real Results From AI Meeting Intelligence in the Field
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Real outcomes from early partners across SaaS, MedTech, and Services
+            Real outcomes from B2B sales teams using Nimitai AI conversation intelligence across SaaS, MedTech, and Services
           </p>
         </motion.div>
 
         {/* Hero stats with visuals */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Confidence Score Card */}
-          <motion.div 
+          <motion.div
             className="relative group"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -30, filter: "blur(6px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.15 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <div className="relative bg-white dark:bg-gray-800 p-8 rounded-3xl border-2 border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-2xl transition-all">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
+            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md p-8 rounded-3xl border border-amber-100/80 dark:border-gray-700 hover:border-amber-300 dark:hover:border-[#E89422] shadow-lg hover:shadow-2xl shadow-amber-100/50 dark:shadow-none transition-all">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
                   <motion.div 
-                    className="w-16 h-16 bg-gradient-to-br from-purple-600 dark:from-purple-500 to-purple-800 dark:to-purple-700 rounded-2xl flex items-center justify-center text-white shadow-lg"
+                    className="w-16 h-16 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-[#C47010] rounded-2xl flex items-center justify-center text-white shadow-lg"
                     whileHover={{ rotate: 10, scale: 1.1 }}
                   >
                     <Target size={32} />
                   </motion.div>
                 </div>
                 <div className="flex-1">
-                  <div className="text-5xl mb-2 bg-gradient-to-br from-purple-600 dark:from-purple-400 to-purple-800 dark:to-purple-600 bg-clip-text text-transparent">
+                  <div className="text-5xl mb-2 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-[#C47010] bg-clip-text text-transparent">
                     87%
                   </div>
-                  <h3 className="mb-3 text-gray-900 dark:text-white">Avg Confidence Score</h3>
+                  <h3 className="mb-3 text-gray-900 dark:text-white">AI Conversation Intelligence Score</h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-6">
-                    Live Agent surfaces perfect ROI moments in real-time.
+                    Nimitai AI meeting intelligence surfaces perfect ROI moments and buying signals in real time.
                   </p>
                   
                   {/* Mini chart visualization */}
-                  <div className="space-y-3 bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl transition-colors">
+                  <div className="space-y-3 bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl transition-colors">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-600 dark:text-gray-400">Perfect Moments</span>
-                      <span className="text-purple-700 dark:text-purple-400">43 across 18 demos</span>
+                      <span className="text-[#C47010] dark:text-[#F5B040]">43 across 18 demos</span>
                     </div>
-                    <div className="h-2 bg-purple-200 dark:bg-purple-800 rounded-full overflow-hidden">
-                      <motion.div 
-                        className="h-full bg-gradient-to-r from-purple-600 dark:from-purple-400 to-purple-800 dark:to-purple-600 rounded-full"
+                    <div className="h-2 bg-amber-200 dark:bg-amber-800 rounded-full overflow-hidden">
+                      <motion.div
+                        className="h-full bg-gradient-to-r from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-[#C47010] rounded-full"
                         initial={{ width: 0 }}
                         whileInView={{ width: '87%' }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1.5, delay: 0.5 }}
+                        transition={{ duration: 1.6, delay: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
                       />
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-600 dark:text-gray-400">Pricing Hesitation Detected</span>
-                      <span className="text-purple-700 dark:text-purple-400">67% before voiced</span>
+                      <span className="text-[#C47010] dark:text-[#F5B040]">67% before voiced</span>
                     </div>
                   </div>
                 </div>
@@ -140,15 +119,15 @@ export function ProvenResults() {
           </motion.div>
           
           {/* Time Saved Card */}
-          <motion.div 
+          <motion.div
             className="relative group"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 30, filter: "blur(6px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.3 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <div className="relative bg-white dark:bg-gray-800 p-8 rounded-3xl border-2 border-gray-200 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600 hover:shadow-2xl transition-all">
+            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md p-8 rounded-3xl border border-orange-100/80 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600 shadow-lg hover:shadow-2xl shadow-orange-100/50 dark:shadow-none transition-all">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
                   <motion.div 
@@ -164,7 +143,7 @@ export function ProvenResults() {
                   </div>
                   <h3 className="mb-3 text-gray-900 dark:text-white">Time Saved Per Week</h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-6">
-                    Eliminates manual note-taking, CRM updates, and follow-up drafting.
+                    AI sales call recording eliminates manual note-taking, CRM updates, and follow-up drafting.
                   </p>
                   
                   {/* Tasks visualization */}
@@ -216,7 +195,7 @@ export function ProvenResults() {
               { icon: <Zap size={16} />, text: '43 perfect ROI moments surfaced' },
               { icon: <TrendingUp size={16} />, text: '67% pricing objections detected early' }
             ]}
-            color="purple"
+            color="amber"
             delay={0.2}
           />
           
@@ -240,7 +219,7 @@ export function ProvenResults() {
               { icon: <Target size={16} />, text: '156 high-value opportunities closed' },
               { icon: <BarChart3 size={16} />, text: '$1.2M additional revenue in Q1' }
             ]}
-            color="purple"
+            color="amber"
             delay={0.6}
           />
         </div>
@@ -259,25 +238,32 @@ function CaseStudyCard({
   title: string;
   image: string;
   results: Array<{ icon: React.ReactNode; text: string }>;
-  color: 'purple' | 'orange';
+  color: 'amber' | 'orange';
   delay: number;
 }) {
-  const bgColor = color === 'purple' ? 'from-purple-600 to-purple-800' : 'from-orange-500 to-orange-700';
-  
+  const bgColor = color === 'amber' ? 'from-[#E89422] to-[#963C00]' : 'from-orange-500 to-orange-700';
+  const altMap: Record<string, string> = {
+    'Texas SaaS': 'Texas SaaS team using Nimitai AI sales call intelligence — 87% confidence score across 18 demos',
+    'Paris MedTech': 'Paris MedTech team using conversation intelligence software — $250K pipeline in 21 days',
+    'Digitalpatron': 'Digitalpatron using AI meeting intelligence — 89% conversion rate increase',
+  };
+  const imageAlt = altMap[title] ?? `${title} - Nimitai AI conversation intelligence success story showing increased win rates and deal performance`;
+
   return (
-    <motion.div 
-      className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-700 hover:border-transparent dark:hover:border-transparent hover:shadow-2xl transition-all"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+    <motion.div
+      className="group bg-white/70 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-amber-100/60 dark:border-gray-700 hover:border-transparent dark:hover:border-transparent shadow-md shadow-amber-50 dark:shadow-none hover:shadow-2xl transition-colors"
+      initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true }}
-      transition={{ delay }}
-      whileHover={{ y: -5 }}
+      transition={{ type: "spring", stiffness: 65, damping: 20, delay }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      whileTap={{ scale: 0.99 }}
     >
       {/* Image header */}
       <div className="relative h-48 overflow-hidden">
         <ImageWithFallback 
           src={image} 
-          alt={`${title} - ConvertWise AI sales automation success story showing increased ROI and lead generation`}
+          alt={imageAlt}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -297,7 +283,7 @@ function CaseStudyCard({
             viewport={{ once: true }}
             transition={{ delay: delay + 0.1 * (index + 1) }}
           >
-            <div className={`mt-0.5 ${color === 'purple' ? 'text-purple-600 dark:text-purple-400' : 'text-orange-600 dark:text-orange-400'}`}>
+            <div className={`mt-0.5 ${color === 'amber' ? 'text-[#E89422] dark:text-[#F5B040]' : 'text-orange-600 dark:text-orange-400'}`}>
               {result.icon}
             </div>
             <span className="text-sm">{result.text}</span>

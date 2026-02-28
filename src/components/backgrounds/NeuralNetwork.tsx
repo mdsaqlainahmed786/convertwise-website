@@ -99,12 +99,12 @@ export function NeuralNetwork() {
         {/* Gradients */}
         <defs>
           <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#9333ea" />
+            <stop offset="0%" stopColor="#E89422" />
             <stop offset="100%" stopColor="#f97316" />
           </linearGradient>
           <radialGradient id="gradient-node">
             <stop offset="0%" stopColor="#f97316" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#9333ea" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#E89422" stopOpacity="0.8" />
           </radialGradient>
         </defs>
       </svg>

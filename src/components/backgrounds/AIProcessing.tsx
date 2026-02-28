@@ -13,7 +13,7 @@ export function AIProcessing() {
             style={{
               width: 100 + ring * 60,
               height: 100 + ring * 60,
-              borderColor: ring % 2 === 0 ? 'rgba(147,51,234,0.3)' : 'rgba(249,115,22,0.3)',
+              borderColor: ring % 2 === 0 ? 'rgba(232,148,34,0.3)' : 'rgba(249,115,22,0.3)',
             }}
             animate={{
               rotate: ring % 2 === 0 ? 360 : -360,
@@ -37,7 +37,7 @@ export function AIProcessing() {
 
         {/* Central core */}
         <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-orange-500"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-[#E89422] to-orange-500"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.5, 0.8, 0.5],
@@ -53,7 +53,7 @@ export function AIProcessing() {
         {[0, 60, 120, 180, 240, 300].map((angle, index) => (
           <motion.div
             key={angle}
-            className="absolute top-1/2 left-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-orange-500 to-purple-500"
+            className="absolute top-1/2 left-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-orange-500 to-amber-500"
             style={{
               transformOrigin: '0 0',
             }}
@@ -123,7 +123,7 @@ export function AIProcessing() {
             />
             <defs>
               <linearGradient id="processing-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#9333ea" />
+                <stop offset="0%" stopColor="#E89422" />
                 <stop offset="100%" stopColor="#f97316" />
               </linearGradient>
             </defs>

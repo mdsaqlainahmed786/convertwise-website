@@ -9,13 +9,13 @@ export function BreadcrumbListSchema() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://convertwise.site"
+        "item": "https://nimitai.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://convertwise.site/about"
+        "item": "https://nimitai.com/about"
       }
     ]
   };
@@ -28,4 +28,3 @@ export function BreadcrumbListSchema() {
     </Helmet>
   );
 }
-
