@@ -8,11 +8,11 @@ import architImage from '../assets/archit.png';
 import nilanshImage from '../assets/Nilansh.png';
 
 export function About() {
-  const siteUrl = 'https://convertwise.site';
+  const siteUrl = 'https://nimitai.com';
   const pageUrl = `${siteUrl}/about`;
-  const title = 'About Us - ConvertWise | AI Sales Automation Platform';
-  const description = 'Learn about ConvertWise founders Nilansh Gupta and Archit Dhir. We\'re transforming sales through AI-powered automation, helping businesses achieve 7x ROI and 150% more qualified leads with meeting intelligence software.';
-  const keywords = 'ConvertWise founders, AI sales automation team, sales automation experts, meeting intelligence software creators, Nilansh Gupta, Archit Dhir';
+  const title = 'About Nimitai — AI Meeting Intelligence & Conversation Intelligence for B2B Sales';
+  const description = 'Nimitai is AI meeting intelligence software built by founders Nilansh Gupta and Archit Dhir. We record and analyze B2B sales calls to surface coaching insights, objection patterns, and deal risks — the Gong alternative built for startup sales teams.';
+  const keywords = 'Nimitai founders, AI meeting intelligence team, conversation intelligence startup, sales call intelligence creators, Nilansh Gupta, Archit Dhir, Gong alternative founders';
   const ogImage = `${siteUrl}/og-image.jpg`;
 
   return (
@@ -34,7 +34,7 @@ export function About() {
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="ConvertWise" />
+        <meta property="og:site_name" content="Nimitai" />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter */}
@@ -43,25 +43,25 @@ export function About() {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@ConvertWise" />
-        <meta name="twitter:site" content="@ConvertWise" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
       </Helmet>
       <OrganizationSchema />
       <BreadcrumbListSchema />
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-purple-50 dark:from-purple-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
+      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-violet-50 dark:from-violet-900/20 via-white dark:via-gray-900 to-[#EDE8FC] dark:to-violet-900/20 transition-colors">
         {/* Subtle grid pattern */}
         <div 
           className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: 'linear-gradient(rgba(147, 51, 234, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(147, 51, 234, 0.3) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(232, 148, 34, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(232, 148, 34, 0.3) 1px, transparent 1px)',
             backgroundSize: '80px 80px'
           }}
         />
 
         {/* 4 Moving gradient orbs */}
         <motion.div 
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-200 to-purple-100 rounded-full blur-[120px] opacity-40"
+          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -89,7 +89,7 @@ export function About() {
         />
 
         <motion.div 
-          className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-gradient-to-br from-pink-200 to-purple-100 rounded-full blur-[110px] opacity-30"
+          className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-gradient-to-br from-pink-200 to-amber-100 rounded-full blur-[110px] opacity-30"
           animate={{
             x: [0, -60, 0],
             y: [0, 40, 0],
@@ -125,8 +125,8 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="mb-6 text-5xl sm:text-6xl lg:text-7xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent leading-tight">
-              About ConvertWise
+            <h1 className="mb-6 text-5xl sm:text-6xl lg:text-7xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight">
+              About Nimitai
             </h1>
             <p className="mb-8 text-xl sm:text-2xl text-gray-700 dark:text-gray-300">
               Transforming Sales Through AI-Powered Automation
@@ -145,18 +145,18 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="mb-8 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
+            <h2 className="mb-8 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Our Story
             </h2>
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
-                ConvertWise was born from a decade of real-world experience in digital marketing and sales automation. Our founders, Nilansh Gupta and Archit Dhir, built their expertise at Digital Patron, where they helped businesses achieve extraordinary results—driving 150% more qualified leads and up to 7x ROI for clients.
+                Nimitai was born from a decade of real-world experience in digital marketing and sales automation. Our founders, Nilansh Gupta and Archit Dhir, built their expertise at Digital Patron, where they helped businesses achieve extraordinary results—driving 150% more qualified leads and up to 7x ROI for clients.
               </p>
               <p>
                 Through years of managing campaigns and optimizing sales workflows, they identified a critical gap: businesses were losing countless opportunities due to manual, time-consuming sales processes. Sales teams spent hours on repetitive tasks—researching prospects, writing follow-ups, scheduling calls—instead of focusing on what they do best: closing deals.
               </p>
               <p>
-                In 2024, armed with deep expertise in AI-driven marketing and a passion for innovation, they launched ConvertWise—an AI-powered sales automation platform that eliminates busywork and supercharges conversion rates.
+                In 2024, armed with deep expertise in AI-driven marketing and a passion for innovation, they launched Nimitai—an AI-powered sales automation platform that eliminates busywork and supercharges conversion rates.
               </p>
             </div>
           </motion.div>
@@ -173,7 +173,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Our Journey
             </h2>
           </motion.div>
@@ -188,7 +188,7 @@ export function About() {
             >
               <ImageWithFallback
                 src="/assets/image1.jpg"
-                alt="ConvertWise AI sales automation platform team working on meeting intelligence software"
+                alt="Nimitai AI sales automation platform team working on meeting intelligence software"
                 className="w-full h-full object-cover aspect-video"
               />
             </motion.div>
@@ -223,7 +223,7 @@ export function About() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 dark:from-purple-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-violet-50 dark:from-violet-900/20 via-white dark:via-gray-900 to-[#EDE8FC] dark:to-violet-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -232,7 +232,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Mission & Vision
             </h2>
           </motion.div>
@@ -247,10 +247,10 @@ export function About() {
               className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 dark:from-purple-500 to-purple-700 dark:to-purple-600 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-[#C47010] rounded-2xl flex items-center justify-center">
                   <Target className="text-white" size={24} />
                 </div>
-                <h3 className="text-3xl bg-gradient-to-br from-purple-600 dark:from-purple-400 to-purple-700 dark:to-purple-500 bg-clip-text text-transparent">
+                <h3 className="text-3xl bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-amber-500 bg-clip-text text-transparent">
                   Mission
                 </h3>
               </div>
@@ -293,7 +293,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Our Values
             </h2>
           </motion.div>
@@ -304,7 +304,7 @@ export function About() {
                 icon: Lightbulb,
                 title: 'Innovation',
                 description: 'We constantly push boundaries to deliver cutting-edge AI solutions',
-                color: 'purple'
+                color: 'amber'
               },
               {
                 icon: Eye,
@@ -328,12 +328,12 @@ export function About() {
                 icon: Award,
                 title: 'Excellence',
                 description: 'We set high standards and consistently exceed expectations',
-                color: 'purple'
+                color: 'amber'
               }
             ].map((value, index) => {
               const IconComponent = value.icon;
               const colorClasses = {
-                purple: 'from-purple-600 to-purple-700',
+                amber: 'from-[#E89422] to-[#963C00]',
                 blue: 'from-blue-600 to-blue-700',
                 green: 'from-green-600 to-green-700',
                 orange: 'from-orange-500 to-orange-600'
@@ -361,7 +361,7 @@ export function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 dark:from-purple-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-violet-50 dark:from-violet-900/20 via-white dark:via-gray-900 to-[#EDE8FC] dark:to-violet-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -370,7 +370,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               By The Numbers
             </h2>
           </motion.div>
@@ -392,10 +392,10 @@ export function About() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-8 shadow-lg border border-white/80 dark:border-gray-700/80 text-center hover:shadow-xl transition-all"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 dark:from-purple-500 to-orange-500 dark:to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-orange-500 dark:to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Icon className="text-white" size={32} />
                   </div>
-                  <div className="text-4xl sm:text-5xl mb-2 bg-gradient-to-br from-purple-600 dark:from-purple-400 to-orange-500 dark:to-orange-400 bg-clip-text text-transparent font-bold">
+                  <div className="text-4xl sm:text-5xl mb-2 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-orange-500 dark:to-orange-400 bg-clip-text text-transparent font-bold">
                     {stat.number}
                   </div>
                   <div className="text-gray-700 dark:text-gray-300">{stat.label}</div>
@@ -416,7 +416,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-purple-900 dark:via-purple-300 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Founding Team
             </h2>
           </motion.div>
@@ -435,7 +435,7 @@ export function About() {
                   <ImageWithFallback
                     src={nilanshImage}
                     alt="Nilansh Gupta"
-                    className="w-32 h-32 rounded-full object-cover object-center border-4 border-purple-200 dark:border-purple-700 shadow-lg transition-transform duration-200 hover:scale-105"
+                    className="w-32 h-32 rounded-full object-cover object-center border-4 border-violet-200 dark:border-[#E89422] shadow-lg transition-transform duration-200 hover:scale-105"
                     style={{
                       aspectRatio: '1 / 1',
                       objectFit: 'cover',
@@ -443,24 +443,24 @@ export function About() {
                     }}
                   />
                   {/* Fallback placeholder if image doesn't exist */}
-                  <div className="absolute inset-0 w-32 h-32 rounded-full bg-gradient-to-br from-purple-100 to-purple-200 border-4 border-purple-200 shadow-lg flex items-center justify-center opacity-0 pointer-events-none" id="nilansh-placeholder">
-                    <User className="text-purple-600" size={48} />
+                  <div className="absolute inset-0 w-32 h-32 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 border-4 border-amber-200 shadow-lg flex items-center justify-center opacity-0 pointer-events-none" id="nilansh-placeholder">
+                    <User className="text-[#E89422]" size={48} />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Nilansh Gupta</h3>
-                <p className="text-purple-600 dark:text-purple-400 mb-4">Co-Founder & CEO</p>
+                <p className="text-[#E89422] dark:text-[#F5B040] mb-4">Co-Founder & CEO</p>
                 <a
                   href="https://www.linkedin.com/in/nilansh-gupta/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#E89422] dark:hover:text-[#F5B040] transition-colors"
                 >
                   <Linkedin size={20} />
                   <span>LinkedIn</span>
                 </a>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Nilansh Gupta is the visionary co-founder of ConvertWise, bringing over a decade of expertise in digital marketing and AI-driven solutions. His relentless passion for innovation and client success fueled his work at Digital Patron, where he achieved impressive results—driving 150% more qualified leads and up to 7x ROI for clients. As a pioneering AI marketing expert, Nilansh identified the bottlenecks in traditional sales processes and envisioned ConvertWise as the solution.
+                Nilansh Gupta is the visionary co-founder of Nimitai, bringing over a decade of expertise in digital marketing and AI-driven solutions. His relentless passion for innovation and client success fueled his work at Digital Patron, where he achieved impressive results—driving 150% more qualified leads and up to 7x ROI for clients. As a pioneering AI marketing expert, Nilansh identified the bottlenecks in traditional sales processes and envisioned Nimitai as the solution.
               </p>
               <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                 <p className="text-sm text-gray-600 dark:text-gray-400 italic">
@@ -507,7 +507,7 @@ export function About() {
                 </a>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Archit Dhir, the co-founder of ConvertWise, is a master technologist with an impressive background in PPC, email marketing, and marketing automation, backed by an MBA. His innovative and data-driven strategies have consistently boosted client revenue by 200% and achieved industry-leading conversion rates at Digital Patron. Archit's technical expertise ensures that ConvertWise delivers exceptional value and performance.
+                Archit Dhir, the co-founder of Nimitai, is a master technologist with an impressive background in PPC, email marketing, and marketing automation, backed by an MBA. His innovative and data-driven strategies have consistently boosted client revenue by 200% and achieved industry-leading conversion rates at Digital Patron. Archit's technical expertise ensures that Nimitai delivers exceptional value and performance.
               </p>
               <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                 <p className="text-sm text-gray-600 dark:text-gray-400 italic">

@@ -4,10 +4,11 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "ConvertWise",
-    "url": "https://convertwise.site",
-    "logo": "https://convertwise.site/convertwiselogo1.svg",
-    "description": "AI-powered sales automation platform that helps businesses achieve 7x ROI and 150% more qualified leads through meeting intelligence and sales automation.",
+    "name": "Nimitai",
+    "alternateName": "REN AI Technologies Private Limited",
+    "url": "https://nimitai.com",
+    "logo": "https://nimitai.com/convertwiselogo1.svg",
+    "description": "Nimitai is AI meeting intelligence and conversation intelligence software built for B2B SaaS sales teams. Records sales calls, surfaces coaching insights, objection patterns, deal risk signals, and win/loss analysis at $149/month flat.",
     "foundingDate": "2024",
     "founders": [
       {
@@ -25,13 +26,13 @@ export function OrganizationSchema() {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "hello@convertwise.site",
+      "email": "hello@nimitai.com",
       "telephone": "+91-9915494146",
       "contactType": "Customer Service"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/convertwise",
-      "https://twitter.com/ConvertWise"
+      "https://www.linkedin.com/company/nimitai",
+      "https://twitter.com/nimitaihq"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -47,4 +48,3 @@ export function OrganizationSchema() {
     </Helmet>
   );
 }
-

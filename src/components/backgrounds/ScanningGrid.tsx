@@ -10,7 +10,7 @@ export function ScanningGrid() {
             <path
               d="M 40 0 L 0 0 0 40"
               fill="none"
-              stroke="rgba(147,51,234,0.2)"
+              stroke="rgba(232,148,34,0.2)"
               strokeWidth="0.5"
             />
           </pattern>
@@ -25,7 +25,7 @@ export function ScanningGrid() {
 
       {/* Scanning line - vertical */}
       <motion.div
-        className="absolute top-0 w-full h-32 bg-gradient-to-b from-transparent via-purple-500/30 to-transparent blur-sm"
+        className="absolute top-0 w-full h-32 bg-gradient-to-b from-transparent via-amber-500/30 to-transparent blur-sm"
         animate={{
           y: ['-10%', '110%'],
         }}
@@ -81,7 +81,7 @@ export function ScanningGrid() {
             />
             <defs>
               <linearGradient id="corner-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#9333ea" />
+                <stop offset="0%" stopColor="#E89422" />
                 <stop offset="100%" stopColor="#f97316" />
               </linearGradient>
             </defs>

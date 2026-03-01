@@ -31,7 +31,7 @@ export function AIParticles() {
             left: `${particle.initialX}%`,
             top: `${particle.initialY}%`,
             background: Math.random() > 0.5 
-              ? 'radial-gradient(circle, rgba(147,51,234,0.6) 0%, rgba(147,51,234,0) 70%)'
+              ? 'radial-gradient(circle, rgba(232,148,34,0.6) 0%, rgba(232,148,34,0) 70%)'
               : 'radial-gradient(circle, rgba(249,115,22,0.6) 0%, rgba(249,115,22,0) 70%)',
           }}
           animate={{

@@ -13,7 +13,7 @@ export function DataVisualization() {
         {bars.map((bar) => (
           <motion.div
             key={bar.id}
-            className="flex-1 rounded-t-lg bg-gradient-to-t from-purple-500 to-orange-500"
+            className="flex-1 rounded-t-lg bg-gradient-to-t from-[#E89422] to-orange-500"
             initial={{ height: 0 }}
             animate={{
               height: [`${bar.height}%`, `${(bar.height + 20) % 80}%`, `${bar.height}%`],
@@ -47,7 +47,7 @@ export function DataVisualization() {
         />
         <defs>
           <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#9333ea" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#E89422" stopOpacity="0.8" />
             <stop offset="50%" stopColor="#c084fc" stopOpacity="0.8" />
             <stop offset="100%" stopColor="#f97316" stopOpacity="0.8" />
           </linearGradient>
@@ -58,7 +58,7 @@ export function DataVisualization() {
       {[15, 35, 55, 75].map((x, index) => (
         <motion.div
           key={index}
-          className="absolute w-3 h-3 rounded-full bg-gradient-to-br from-purple-500 to-orange-500"
+          className="absolute w-3 h-3 rounded-full bg-gradient-to-br from-[#E89422] to-orange-500"
           style={{
             left: `${x}%`,
             top: `${20 + Math.random() * 30}%`,

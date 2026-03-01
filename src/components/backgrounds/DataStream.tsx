@@ -18,7 +18,7 @@ export function DataStream() {
         >
           {/* Vertical line */}
           <motion.div
-            className="w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent"
+            className="w-px h-full bg-gradient-to-b from-transparent via-amber-500 to-transparent"
             animate={{
               opacity: [0.1, 0.5, 0.1],
             }}
@@ -34,7 +34,7 @@ export function DataStream() {
           {[0, 1, 2].map((point) => (
             <motion.div
               key={point}
-              className="absolute left-1/2 -translate-x-1/2 px-2 py-1 text-xs font-mono bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded"
+              className="absolute left-1/2 -translate-x-1/2 px-2 py-1 text-xs font-mono bg-gradient-to-r from-[#E89422] to-orange-500 text-white rounded"
               initial={{ y: -20 }}
               animate={{
                 y: ['0%', '120%'],

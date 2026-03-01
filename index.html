@@ -7,23 +7,41 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       
       <!-- Primary Meta Tags -->
-      <title>ConvertWise - AI Sales Automation Platform | Meeting Intelligence Software</title>
-      <meta name="description" content="Transform your sales process with AI-powered automation. ConvertWise helps businesses achieve 7x ROI and 150% more qualified leads through meeting intelligence and sales automation." />
-      <meta name="keywords" content="AI sales automation, meeting intelligence software, sales automation platform, AI meeting assistant, sales coaching AI" />
-      <meta name="author" content="ConvertWise" />
-      <meta name="theme-color" content="#9333ea" />
+      <title>Nimitai — AI Meeting Intelligence for Sales Teams | Gong Alternative</title>
+      <meta name="description" content="Nimitai records your sales calls and uses AI to surface coaching insights, objection patterns, and deal risks. Purpose-built for B2B SaaS founders and early-stage teams. $149/mo, setup in 30 minutes." />
+      <meta name="keywords" content="AI meeting intelligence, sales call recording software, gong alternative, conversation intelligence software, sales coaching AI, meeting intelligence for startups" />
+      <meta name="author" content="Nimitai" />
+      <meta name="theme-color" content="#E89422" />
+
+      <!-- Open Graph -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://nimitai.com/" />
+      <meta property="og:title" content="Nimitai — AI Meeting Intelligence for Sales Teams" />
+      <meta property="og:description" content="Records your sales calls and uses AI to surface coaching insights, objection patterns, and deal risks. Purpose-built for B2B SaaS founders. $149/mo." />
+      <meta property="og:image" content="https://nimitai.com/og-image.jpg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Nimitai AI meeting intelligence dashboard" />
+      <meta property="og:site_name" content="Nimitai" />
+
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@NimitaiHQ" />
+      <meta name="twitter:title" content="Nimitai — AI Meeting Intelligence for Sales Teams" />
+      <meta name="twitter:description" content="Records your sales calls and uses AI to surface coaching insights, objection patterns, and deal risks. $149/mo, setup in 30 minutes." />
+      <meta name="twitter:image" content="https://nimitai.com/og-image.jpg" />
       
       <!-- Favicon -->
       <link rel="icon" type="image/svg+xml" href="/convertwiselogo1.svg" />
       <link rel="apple-touch-icon" href="/convertwiselogo1.svg" />
       
       <!-- Canonical URL -->
-      <link rel="canonical" href="https://convertwise.site" />
+      <link rel="canonical" href="https://nimitai.com" />
+
+      <!-- Sitemap discovery -->
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       
-      <!-- Preconnect for Performance -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link rel="dns-prefetch" href="https://convertwise.site" />
+      <link rel="dns-prefetch" href="https://nimitai.com" />
       
       <!-- Additional Meta Tags -->
       <meta name="format-detection" content="telephone=no" />
@@ -31,13 +49,25 @@
       
       <!-- Permissions Policy for YouTube Embed -->
       <meta http-equiv="Permissions-Policy" content="autoplay=*, fullscreen=*, picture-in-picture=*" />
+
+      <!-- Google Analytics 4 -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TP0Q6ZX5D"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9TP0Q6ZX5D', {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      </script>
     </head>
 
     <body>
       <script>
         (function() {
           try {
-            const theme = localStorage.getItem('convertwise-theme') || 'light';
+            const theme = localStorage.getItem('nimitai-theme') || 'light';
             const root = document.documentElement;
             root.classList.remove('light', 'dark');
             if (theme === 'dark' || theme === 'light') {
@@ -55,6 +85,23 @@
       </script>
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
+
+      <!-- SPA route change tracking for GA4 -->
+      <script>
+        // Track route changes in the React SPA
+        (function() {
+          var _pushState = history.pushState;
+          history.pushState = function() {
+            _pushState.apply(this, arguments);
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'page_view', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            }
+          };
+        })();
+      </script>
     </body>
   </html>
   

@@ -4,20 +4,14 @@ export function WebSiteSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "ConvertWise",
-    "url": "https://convertwise.site",
-    "description": "AI-powered sales automation platform and meeting intelligence software",
+    "name": "Nimitai",
+    "alternateName": "Nimitai AI Meeting Intelligence",
+    "url": "https://nimitai.com",
+    "description": "AI meeting intelligence and conversation intelligence software for B2B SaaS sales teams. The Gong alternative at $149/month flat.",
     "publisher": {
       "@type": "Organization",
-      "name": "ConvertWise"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://convertwise.site/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
+      "name": "Nimitai",
+      "url": "https://nimitai.com"
     }
   };
 
@@ -29,4 +23,3 @@ export function WebSiteSchema() {
     </Helmet>
   );
 }
-
