@@ -1,15 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { RelatedArticles } from '../../components/blog/BlogShell';
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
   headline: 'Best Sales Call Recording Software for Startups in 2026: An Honest Comparison',
   datePublished: '2026-02-26',
-  dateModified: '2026-02-26',
+  dateModified: '2026-03-02',
   author: {
-    '@type': 'Organization',
-    name: 'Nimitai',
+    '@type': 'Person',
+    name: 'Nilansh Gupta',
+    url: 'https://linkedin.com/in/nilanshgupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -373,7 +375,7 @@ export function BestSalesCallRecording() {
                 Nimitai is the best sales call recording software for startup teams — conversation intelligence and AI meeting intelligence at startup pricing. Connect your calendar, record your next sales call, and receive a full AI coaching report automatically. Setup takes under 30 minutes.
               </p>
               <a
-                href="#"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-[#C47010] rounded-full hover:bg-amber-50 transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-semibold"
               >
                 Start using Nimitai free for 14 days
@@ -464,6 +466,12 @@ export function BestSalesCallRecording() {
               ))}
             </div>
           </div>
+
+          <RelatedArticles links={[
+            { to: '/blog/how-to-analyze-sales-calls', label: 'How to Analyze Sales Calls with AI' },
+            { to: '/blog/conversation-intelligence-guide', label: 'The Complete Conversation Intelligence Guide' },
+            { to: '/blog/sales-call-analytics', label: 'Sales Call Analytics: Metrics That Matter' },
+          ]} />
 
           {/* Back to blog */}
           <div className="pt-8 border-t border-gray-100 dark:border-gray-800">

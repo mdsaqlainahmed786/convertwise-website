@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function LiveIntelligence() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#070B18] text-white relative overflow-hidden">
+    <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#070B18] text-white relative overflow-hidden">
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
@@ -23,7 +23,7 @@ export function LiveIntelligence() {
 
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
           {/* Left content */}
           <div>
             <motion.div
@@ -144,7 +144,7 @@ export function LiveIntelligence() {
               {/* Meeting participants */}
               <div className="p-4 border-b border-white/[0.08]">
                 <div className="text-sm text-gray-400 mb-3">Participants (4)</div>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   <ParticipantCard name="Archit" emotion="😊" engagement={92} color="green" />
                   <ParticipantCard name="Shreedhar" emotion="🤔" engagement={78} color="blue" />
                   <ParticipantCard name="Lisa" emotion="👍" engagement={85} color="amber" />
@@ -204,12 +204,12 @@ export function LiveIntelligence() {
             </div>
 
             {/* Floating metric cards */}
-            <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#E89422] to-[#963C00] p-4 rounded-2xl shadow-2xl border border-[#E89422]/30">
+            <div className="hidden sm:block absolute -bottom-6 -left-6 bg-gradient-to-br from-[#E89422] to-[#963C00] p-4 rounded-2xl shadow-2xl border border-[#E89422]/30">
               <div className="text-3xl mb-1">43</div>
               <div className="text-xs text-[#F5B040]">Moments Detected</div>
             </div>
 
-            <div className="absolute -top-6 -right-6 bg-gradient-to-br from-[#963C00] to-[#963C00] p-4 rounded-2xl shadow-2xl border border-orange-400/30">
+            <div className="hidden sm:block absolute -top-6 -right-6 bg-gradient-to-br from-[#963C00] to-[#963C00] p-4 rounded-2xl shadow-2xl border border-orange-400/30">
               <div className="text-3xl mb-1">92%</div>
               <div className="text-xs text-orange-200">Success Rate</div>
             </div>

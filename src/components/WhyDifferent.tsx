@@ -4,7 +4,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function WhyDifferent() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white dark:from-gray-900 via-amber-50 dark:via-[#1A1000]/20 to-orange-50 dark:to-orange-900/20 relative overflow-hidden transition-colors">
+    <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white dark:from-gray-900 via-amber-50 dark:via-[#1A1000]/20 to-orange-50 dark:to-orange-900/20 relative overflow-hidden transition-colors">
       {/* Mesh gradient orbs — CSS (no JS) */}
       <div
         className="absolute -top-20 right-0 w-[500px] h-[500px] bg-amber-200 dark:bg-amber-900/10 rounded-full blur-[110px] opacity-35 dark:opacity-20 transition-opacity animate-ambient-float-a"
@@ -21,7 +21,7 @@ export function WhyDifferent() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

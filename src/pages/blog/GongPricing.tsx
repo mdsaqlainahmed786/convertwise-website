@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { RelatedArticles } from '../../components/blog/BlogShell';
 import {
   ChevronDown,
   ChevronUp,
@@ -466,7 +467,7 @@ export function GongPricing() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
                 Start Free Trial
@@ -485,6 +486,16 @@ export function GongPricing() {
               No credit card required. 14-day free trial.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-3xl mx-auto">
+          <RelatedArticles links={[
+            { to: '/blog/gong-competitors-alternatives', label: 'Top 10 Gong Competitors & Alternatives (2026)' },
+            { to: '/blog/gong-vs-nimitai', label: 'Gong vs Nimitai: Full Feature Comparison' },
+            { to: '/blog/revenue-intelligence-platforms-2026', label: 'Revenue Intelligence Platforms to Watch in 2026' },
+          ]} />
         </div>
       </section>
     </>

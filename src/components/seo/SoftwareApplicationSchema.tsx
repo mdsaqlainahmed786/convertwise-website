@@ -32,7 +32,7 @@ export function SoftwareApplicationSchema() {
       "Real-Time AI Sales Coaching During Calls",
       "Speaker-Diarized Transcription"
     ],
-    "screenshot": "https://nimitai.com/og-image.jpg",
+    "screenshot": "https://nimitai.com/og-image.png",
     "url": "https://nimitai.com"
   };
 

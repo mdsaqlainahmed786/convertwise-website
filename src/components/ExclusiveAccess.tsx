@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
+import { trackCtaClick } from '../lib/analytics';
 
 const benefits = [
   {
@@ -25,17 +26,8 @@ const benefits = [
 ];
 
 export function ExclusiveAccess() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setEmail('');
-  };
-
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-[#0A0400] relative overflow-hidden">
+    <section className="py-16 sm:py-32 px-4 sm:px-6 lg:px-8 bg-[#0A0400] relative overflow-hidden">
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
@@ -116,40 +108,21 @@ export function ExclusiveAccess() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: 'spring', stiffness: 80, damping: 20, delay: 0.35 }}
-          className="max-w-md mx-auto mb-20"
+          className="max-w-md mx-auto mb-20 flex justify-center"
         >
-          {!submitted ? (
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3"
-              aria-label="Apply for Nimitai founding access"
-            >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your work email address"
-                className="flex-1 px-5 py-3.5 bg-white/[0.04] border border-white/10 rounded-full text-white placeholder-gray-600 focus:outline-none focus:border-[#E89422]/50 transition-colors text-sm"
-                aria-label="Work email for Nimitai AI meeting intelligence waitlist"
-              />
-              <motion.button
-                type="submit"
-                className="px-6 py-3.5 bg-[#E89422] text-[#070B18] font-semibold rounded-full text-sm whitespace-nowrap shadow-lg shadow-[#E89422]/20"
-                whileHover={{ scale: 1.03, backgroundColor: '#C47010' }}
-                whileTap={{ scale: 0.97 }}
-                aria-label="Apply for Nimitai founding access"
-              >
-                Apply for Access
-              </motion.button>
-            </form>
-          ) : (
-            <div className="text-center py-4 px-6 border border-[#E89422]/25 rounded-full bg-[#E89422]/[0.07]">
-              <p className="text-[#E89422] text-sm font-medium">
-                You're on the list. We'll reach out within 48 hours.
-              </p>
-            </div>
-          )}
+          <motion.a
+            href="https://nilanshgupta.typeform.com/to/UNvZIrgu"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCtaClick('exclusive_access_apply')}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#E89422] text-[#070B18] font-semibold rounded-full text-sm shadow-lg shadow-[#E89422]/20"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            aria-label="Apply for Nimitai founding access"
+          >
+            Apply for Founding Access
+            <ArrowRight size={18} />
+          </motion.a>
         </motion.div>
 
         {/* Divider */}
@@ -199,7 +172,7 @@ export function ExclusiveAccess() {
         >
           Nimitai is{' '}
           <a
-            href="/ai-meeting-intelligence-software"
+            href="/"
             className="text-gray-500 hover:text-[#E89422] transition-colors underline-offset-2 underline"
           >
             an AI meeting intelligence platform

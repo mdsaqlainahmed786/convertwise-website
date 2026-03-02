@@ -1,15 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { RelatedArticles } from '../../components/blog/BlogShell';
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
   headline: 'What Is Conversation Intelligence Software? Complete Guide 2026',
   datePublished: '2026-02-26',
-  dateModified: '2026-02-26',
+  dateModified: '2026-03-02',
   author: {
-    '@type': 'Organization',
-    name: 'Nimitai',
+    '@type': 'Person',
+    name: 'Nilansh Gupta',
+    url: 'https://linkedin.com/in/nilanshgupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -244,7 +246,7 @@ export function ConversationIntelligenceGuide() {
                 Nimitai delivers all five use cases above — deal risk, coaching, objection intelligence, win/loss analysis — at startup pricing. No implementation project. Setup in under 30 minutes.
               </p>
               <a
-                href="#"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-[#C47010] rounded-full hover:bg-amber-50 transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-semibold"
               >
                 Try Nimitai free for 14 days
@@ -383,6 +385,12 @@ export function ConversationIntelligenceGuide() {
               ))}
             </div>
           </div>
+
+          <RelatedArticles links={[
+            { to: '/blog/gong-competitors-alternatives', label: 'Top 10 Gong Competitors & Alternatives (2026)' },
+            { to: '/blog/ai-notetaker-vs-conversation-intelligence', label: 'AI Notetaker vs Conversation Intelligence: What\'s the Difference?' },
+            { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time Sales Coaching with AI' },
+          ]} />
 
           {/* Back to blog */}
           <div className="pt-8 border-t border-gray-100 dark:border-gray-800">

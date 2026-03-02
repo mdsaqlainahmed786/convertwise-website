@@ -266,7 +266,7 @@ export function FathomAlternative() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a
-                href="#"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
                 Start Free Trial
@@ -534,7 +534,7 @@ export function FathomAlternative() {
             </p>
 
             <a
-              href="#"
+              href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
             >
               Start Free Trial

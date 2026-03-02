@@ -136,7 +136,7 @@ export function HowItWorks() {
 
   return (
     <section
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#070B18] relative overflow-hidden"
+      className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#070B18] relative overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
