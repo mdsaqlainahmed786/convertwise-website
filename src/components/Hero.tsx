@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Play, Sparkles, TrendingUp, Zap, Brain, Target, Users, X } from 'lucide-react';
 import { motion, animate as motionAnimate } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { trackCtaClick, trackVideoPlay } from '../lib/analytics';
 
 export function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -65,7 +66,7 @@ export function Hero() {
             {/* H1 */}
             <div className="overflow-hidden mb-6">
               <motion.h1
-                className="text-5xl sm:text-6xl lg:text-7xl bg-gradient-to-br from-gray-900 dark:from-white via-[#C47010] dark:via-[#F5B040] to-[#E89422] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight"
+                className="text-4xl sm:text-5xl lg:text-7xl bg-gradient-to-br from-gray-900 dark:from-white via-[#C47010] dark:via-[#F5B040] to-[#E89422] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight"
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
@@ -99,7 +100,10 @@ export function Hero() {
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: 0.36 }}
             >
               <motion.a
-                href="#waitlist"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackCtaClick('hero_apply_founding_access')}
                 className="group px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full flex items-center justify-center gap-2 shadow-xl"
                 aria-label="Apply for Nimitai AI meeting intelligence founding access — waitlist"
                 whileHover={{ scale: 1.04 }}
@@ -109,7 +113,7 @@ export function Hero() {
                 <Zap size={20} className="group-hover:rotate-12 transition-transform" aria-hidden="true" />
               </motion.a>
               <button
-                onClick={() => setIsVideoOpen(true)}
+                onClick={() => { setIsVideoOpen(true); trackVideoPlay(); }}
                 className="px-8 py-4 bg-white/70 dark:bg-white/[0.06] backdrop-blur-md border-2 border-gray-900 dark:border-white/20 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-white/10 hover:text-white dark:hover:text-white transition-all flex cursor-pointer items-center justify-center gap-2 shadow-lg"
                 aria-label="Watch 2-minute demo of Nimitai conversation intelligence software"
               >
@@ -125,17 +129,17 @@ export function Hero() {
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.45 }}
               className="bg-white/60 dark:bg-white/[0.04] backdrop-blur-xl border border-white/80 dark:border-white/[0.08] rounded-2xl p-6 shadow-lg relative transition-colors"
             >
-              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-700 dark:text-gray-300">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-gray-700 dark:text-gray-300">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0" />
                   <span>Private beta · waitlist open</span>
                 </div>
-                <div className="w-px h-4 bg-gray-300 dark:bg-white/10" />
+                <div className="hidden sm:block w-px h-4 bg-gray-300 dark:bg-white/10" />
                 <div className="flex items-center gap-2">
                   <Users className="text-[#E89422]" size={18} />
                   <span>412+ founders on waitlist</span>
                 </div>
-                <div className="w-px h-4 bg-gray-300 dark:bg-white/10" />
+                <div className="hidden sm:block w-px h-4 bg-gray-300 dark:bg-white/10" />
                 <div className="flex items-center gap-2">
                   <Target className="text-[#E89422]" size={18} />
                   <span>Starting at $149/seat/month</span>
@@ -249,7 +253,7 @@ export function Hero() {
 
             {/* Floating stat card — bottom left */}
             <motion.div
-              className="absolute -bottom-6 -left-6 bg-white/70 dark:bg-gray-900/90 backdrop-blur-xl p-5 rounded-2xl shadow-xl border border-white/80 dark:border-white/[0.08] transition-colors"
+              className="hidden sm:block absolute -bottom-6 -left-6 bg-white/70 dark:bg-gray-900/90 backdrop-blur-xl p-5 rounded-2xl shadow-xl border border-white/80 dark:border-white/[0.08] transition-colors"
               initial={{ opacity: 0, scale: 0.92, x: 12, y: 6 }}
               animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
@@ -262,7 +266,7 @@ export function Hero() {
 
             {/* Floating stat card — top right */}
             <motion.div
-              className="absolute -top-6 -right-6 bg-white/70 dark:bg-gray-900/90 backdrop-blur-xl p-5 rounded-2xl shadow-xl border border-white/80 dark:border-white/[0.08] transition-colors"
+              className="hidden sm:block absolute -top-6 -right-6 bg-white/70 dark:bg-gray-900/90 backdrop-blur-xl p-5 rounded-2xl shadow-xl border border-white/80 dark:border-white/[0.08] transition-colors"
               initial={{ opacity: 0, scale: 0.92, x: -12, y: -6 }}
               animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.58 }}

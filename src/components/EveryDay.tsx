@@ -6,7 +6,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function EveryDay() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0A0400] text-white relative overflow-hidden">
+    <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#0A0400] text-white relative overflow-hidden">
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 

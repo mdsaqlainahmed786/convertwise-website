@@ -281,7 +281,9 @@ export function Pricing() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a
-                href="#"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
                 Apply for Founding Access
@@ -326,7 +328,9 @@ export function Pricing() {
                   ))}
                 </ul>
                 <a
-                  href="#"
+                  href="https://nilanshgupta.typeform.com/to/UNvZIrgu"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center px-6 py-4 bg-white text-[#C47010] font-semibold rounded-2xl hover:bg-amber-50 transition-colors transform hover:scale-[1.02] shadow-lg"
                 >
                   Join the Waitlist
@@ -358,7 +362,7 @@ export function Pricing() {
                 ))}
               </ul>
               <a
-                href="#"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
                 className="block w-full text-center px-6 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-2xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors transform hover:scale-[1.02] shadow-lg"
               >
                 Contact Us for Annual
@@ -509,7 +513,7 @@ export function Pricing() {
             </p>
 
             <a
-              href="#"
+              href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
             >
               Join the Waitlist

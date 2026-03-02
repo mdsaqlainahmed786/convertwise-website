@@ -6,7 +6,7 @@ import { AIParticles } from './backgrounds/AIParticles';
 
 export function ProvenResults() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50/80 dark:from-gray-900 via-white dark:via-gray-900 to-orange-50/60 dark:to-gray-900 relative overflow-hidden transition-colors">
+    <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50/80 dark:from-gray-900 via-white dark:via-gray-900 to-orange-50/60 dark:to-gray-900 relative overflow-hidden transition-colors">
       {/* AI-themed background layers */}
       <ScanningGrid />
       <AIParticles />
@@ -18,7 +18,7 @@ export function ProvenResults() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,7 +37,7 @@ export function ProvenResults() {
         </motion.div>
 
         {/* Hero stats with visuals */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-16">
           {/* Confidence Score Card */}
           <motion.div
             className="relative group"
@@ -47,11 +47,11 @@ export function ProvenResults() {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md p-8 rounded-3xl border border-amber-100/80 dark:border-gray-700 hover:border-amber-300 dark:hover:border-[#E89422] shadow-lg hover:shadow-2xl shadow-amber-100/50 dark:shadow-none transition-all">
-              <div className="flex items-start gap-6">
+            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md p-4 sm:p-8 rounded-3xl border border-amber-100/80 dark:border-gray-700 hover:border-amber-300 dark:hover:border-[#E89422] shadow-lg hover:shadow-2xl shadow-amber-100/50 dark:shadow-none transition-all">
+              <div className="flex items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <motion.div 
-                    className="w-16 h-16 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-[#C47010] rounded-2xl flex items-center justify-center text-white shadow-lg"
+                  <motion.div
+                    className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-[#C47010] rounded-2xl flex items-center justify-center text-white shadow-lg"
                     whileHover={{ rotate: 10, scale: 1.1 }}
                   >
                     <Target size={32} />
@@ -100,11 +100,11 @@ export function ProvenResults() {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md p-8 rounded-3xl border border-orange-100/80 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600 shadow-lg hover:shadow-2xl shadow-orange-100/50 dark:shadow-none transition-all">
-              <div className="flex items-start gap-6">
+            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md p-4 sm:p-8 rounded-3xl border border-orange-100/80 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600 shadow-lg hover:shadow-2xl shadow-orange-100/50 dark:shadow-none transition-all">
+              <div className="flex items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <motion.div 
-                    className="w-16 h-16 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-700 dark:to-orange-600 rounded-2xl flex items-center justify-center text-white shadow-lg"
+                  <motion.div
+                    className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-700 dark:to-orange-600 rounded-2xl flex items-center justify-center text-white shadow-lg"
                     whileHover={{ rotate: -10, scale: 1.1 }}
                   >
                     <Clock size={32} />

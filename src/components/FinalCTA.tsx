@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { CircuitBoard } from './backgrounds/CircuitBoard';
 import { DataStream } from './backgrounds/DataStream';
+import { trackCtaClick } from '../lib/analytics';
 
 const proofPoints = [
   'Private beta · founding teams only',
@@ -12,7 +13,7 @@ const proofPoints = [
 
 export function FinalCTA() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#070B18] relative overflow-hidden">
+    <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#070B18] relative overflow-hidden">
       {/* AI-themed background layers */}
       <CircuitBoard />
       <DataStream />
@@ -73,7 +74,10 @@ export function FinalCTA() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10"
         >
           <motion.a
-            href="#waitlist"
+            href="https://nilanshgupta.typeform.com/to/UNvZIrgu"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCtaClick('final_cta_apply_founding_access')}
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#E89422] text-[#070B18] font-semibold rounded-full shadow-lg"
             aria-label="Apply for Nimitai founding access — AI conversation intelligence for sales teams"
             whileHover={{ scale: 1.05 }}

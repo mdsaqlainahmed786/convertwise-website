@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { RelatedArticles } from '../../components/blog/BlogShell';
 import {
   ChevronDown,
   ChevronUp,
@@ -518,7 +519,7 @@ export function GongCompetitors() {
 
                 <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
                   <a
-                    href="#"
+                    href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
                     className="block w-full text-center px-4 py-3 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-semibold rounded-xl hover:from-[#C47010] hover:to-[#963C00] transition-colors shadow-lg"
                   >
                     Try Nimitai Free
@@ -567,7 +568,7 @@ export function GongCompetitors() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
                 Start 14-Day Free Trial
@@ -586,6 +587,16 @@ export function GongCompetitors() {
               No credit card required. Join 47+ B2B sales teams using Nimitai.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-3xl mx-auto">
+          <RelatedArticles links={[
+            { to: '/blog/gong-pricing-2026', label: 'Gong Pricing 2026: Complete Breakdown' },
+            { to: '/blog/conversation-intelligence-guide', label: 'The Complete Conversation Intelligence Guide' },
+            { to: '/blog/gong-vs-nimitai', label: 'Gong vs Nimitai: Full Feature Comparison' },
+          ]} />
         </div>
       </section>
     </>

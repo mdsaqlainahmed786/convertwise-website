@@ -732,12 +732,14 @@ export function BlogShell({
               >
                 <Calendar size={16} /> Book a Demo
               </a>
-              <Link
-                to="/"
+              <a
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 rounded-full hover:border-[#E89422]/50 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
               >
                 Join the Waitlist <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-5 text-xs text-gray-400 dark:text-gray-600">
               <a href={COMPANY_LINKEDIN} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-[#0A66C2] transition-colors"><Linkedin size={12} /> LinkedIn</a>

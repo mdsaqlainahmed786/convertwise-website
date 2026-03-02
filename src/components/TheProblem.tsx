@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function TheProblem() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative overflow-hidden">
+    <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative overflow-hidden">
       {/* Static gradient orbs — subtle CSS animation */}
       <div className="absolute -top-20 right-0 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[140px] opacity-12 animate-ambient-float-a" aria-hidden />
       <div className="absolute -bottom-20 -left-10 w-[500px] h-[500px] bg-[#963C00] rounded-full blur-[130px] opacity-12 animate-ambient-float-b" aria-hidden />
@@ -20,7 +20,7 @@ export function TheProblem() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -39,7 +39,7 @@ export function TheProblem() {
         </motion.div>
 
         {/* Stats grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           <StatCard
             icon={<AlertTriangle size={32} />}
             stat="70%"

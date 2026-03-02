@@ -1,15 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { RelatedArticles } from '../../components/blog/BlogShell';
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
   headline: 'Sales Call Best Practices for SaaS Founders in 2026',
   datePublished: '2026-02-26',
-  dateModified: '2026-02-26',
+  dateModified: '2026-03-02',
   author: {
-    '@type': 'Organization',
-    name: 'Nimitai',
+    '@type': 'Person',
+    name: 'Nilansh Gupta',
+    url: 'https://linkedin.com/in/nilanshgupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -204,7 +206,7 @@ export function SalesCallBestPractices() {
                 Nimitai automatically analyses every call you record and surfaces the coaching signals you missed in real time — talk ratio, objection patterns, next-step clarity, and more.
               </p>
               <a
-                href="#"
+                href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-[#C47010] rounded-full hover:bg-amber-50 transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-semibold"
               >
                 Try Nimitai free for 14 days
@@ -262,6 +264,12 @@ export function SalesCallBestPractices() {
               ))}
             </div>
           </div>
+
+          <RelatedArticles links={[
+            { to: '/blog/how-to-increase-close-rate', label: 'How to Increase Your Sales Close Rate' },
+            { to: '/blog/how-to-analyze-sales-calls', label: 'How to Analyze Sales Calls with AI' },
+            { to: '/blog/ai-objection-handling', label: 'AI-Powered Objection Handling for Sales Teams' },
+          ]} />
 
           {/* Back to blog */}
           <div className="pt-8 border-t border-gray-100 dark:border-gray-800">

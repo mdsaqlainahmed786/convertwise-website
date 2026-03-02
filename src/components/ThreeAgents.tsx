@@ -274,14 +274,14 @@ function AuditModal({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white p-8 rounded-t-3xl">
+        <div className="sticky top-0 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white p-4 sm:p-8 rounded-t-3xl">
           <div className="flex items-start justify-between">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
-                <Search size={32} />
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
+                <Search size={24} />
               </div>
               <div>
-                <h2 className="text-3xl mb-2">Audit Agent</h2>
+                <h2 className="text-xl sm:text-3xl mb-2">Audit Agent</h2>
                 <p className="text-amber-100">Before You Even Book The Call</p>
                 <p className="text-sm text-[#F5B040] mt-2">
                   Analyzes your current pitch deck, demo flow, and past meeting recordings.
@@ -298,7 +298,7 @@ function AuditModal({ onClose }: { onClose: () => void }) {
         </div>
 
         {/* Content */}
-        <div className="p-8 space-y-8">
+        <div className="p-4 sm:p-8 space-y-6 sm:space-y-8">
           {/* Audit Insights */}
           <div>
             <h3 className="text-2xl mb-6 text-gray-900 dark:text-white">Audit Insights</h3>
@@ -325,16 +325,16 @@ function AuditModal({ onClose }: { onClose: () => void }) {
           </div>
 
           {/* Confidence Score */}
-          <div className="bg-gradient-to-br from-amber-50 dark:from-amber-900/20 to-orange-50 dark:to-orange-900/20 rounded-2xl p-8 border-2 border-amber-200 dark:border-amber-800/50">
+          <div className="bg-gradient-to-br from-amber-50 dark:from-amber-900/20 to-orange-50 dark:to-orange-900/20 rounded-2xl p-4 sm:p-8 border-2 border-amber-200 dark:border-amber-800/50">
             <h3 className="text-2xl mb-6 text-gray-900 dark:text-white">Confidence Score</h3>
-            <div className="flex items-center justify-center gap-8 mb-6">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 mb-6 flex-wrap">
               <div className="text-center">
-                <div className="text-5xl mb-2 text-gray-400 dark:text-gray-500">34%</div>
+                <div className="text-3xl sm:text-5xl mb-2 text-gray-400 dark:text-gray-500">34%</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">baseline</div>
               </div>
               <div className="text-4xl text-[#E89422] dark:text-[#F5B040]">→</div>
               <div className="text-center">
-                <div className="text-5xl mb-2 bg-gradient-to-r from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-orange-400 bg-clip-text text-transparent">55%</div>
+                <div className="text-3xl sm:text-5xl mb-2 bg-gradient-to-r from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-orange-400 bg-clip-text text-transparent">55%</div>
                 <div className="text-sm text-[#E89422] dark:text-[#F5B040]">with Nimitai</div>
               </div>
             </div>
@@ -381,14 +381,14 @@ function PrepModal({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 bg-gradient-to-r from-[#963C00] to-[#963C00] text-white p-8 rounded-t-3xl">
+        <div className="sticky top-0 bg-gradient-to-r from-[#963C00] to-[#963C00] text-white p-4 sm:p-8 rounded-t-3xl">
           <div className="flex items-start justify-between">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
-                <Zap size={32} />
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
+                <Zap size={24} />
               </div>
               <div>
-                <h2 className="text-3xl mb-2">Prep Agent</h2>
+                <h2 className="text-xl sm:text-3xl mb-2">Prep Agent</h2>
                 <p className="text-orange-100">Walk Into Every Meeting Like You're Psychic</p>
                 <p className="text-sm text-orange-200 mt-2">
                   Pulls every shred of intel on your prospect and compiles it into a 90-second battle card.
@@ -405,7 +405,7 @@ function PrepModal({ onClose }: { onClose: () => void }) {
         </div>
 
         {/* Content */}
-        <div className="p-8 space-y-8">
+        <div className="p-4 sm:p-8 space-y-6 sm:space-y-8">
           {/* What You Get */}
           <div>
             <h3 className="text-2xl mb-6 text-gray-900 dark:text-white">What You Get</h3>
@@ -442,14 +442,14 @@ function PrepModal({ onClose }: { onClose: () => void }) {
           {/* Confidence Score */}
           <div className="bg-gradient-to-br from-orange-50 dark:from-orange-900/20 to-amber-50 dark:to-amber-900/20 rounded-2xl p-8 border-2 border-orange-200 dark:border-orange-800/50">
             <h3 className="text-2xl mb-6 text-gray-900 dark:text-white">Confidence Score</h3>
-            <div className="flex items-center justify-center gap-8 mb-6">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 mb-6 flex-wrap">
               <div className="text-center">
-                <div className="text-5xl mb-2 text-gray-400 dark:text-gray-500">55%</div>
+                <div className="text-3xl sm:text-5xl mb-2 text-gray-400 dark:text-gray-500">55%</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">after audit</div>
               </div>
               <div className="text-4xl text-orange-600 dark:text-orange-400">→</div>
               <div className="text-center">
-                <div className="text-5xl mb-2 bg-gradient-to-r from-orange-500 dark:from-[#963C00] to-[#963C00] dark:to-[#F5B040] bg-clip-text text-transparent">78%</div>
+                <div className="text-3xl sm:text-5xl mb-2 bg-gradient-to-r from-orange-500 dark:from-[#963C00] to-[#963C00] dark:to-[#F5B040] bg-clip-text text-transparent">78%</div>
                 <div className="text-sm text-orange-600 dark:text-orange-400">after prep</div>
               </div>
             </div>
@@ -496,14 +496,14 @@ function LiveModal({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 bg-gradient-to-r from-[#E89422] via-[#C47010] to-orange-600 text-white p-8 rounded-t-3xl">
+        <div className="sticky top-0 bg-gradient-to-r from-[#E89422] via-[#C47010] to-orange-600 text-white p-4 sm:p-8 rounded-t-3xl">
           <div className="flex items-start justify-between">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
-                <Eye size={32} />
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
+                <Eye size={24} />
               </div>
               <div>
-                <h2 className="text-3xl mb-2">Live Agent</h2>
+                <h2 className="text-xl sm:text-3xl mb-2">Live Agent</h2>
                 <p className="text-amber-100">Real-Time Coaching While You're In The Room</p>
                 <p className="text-sm text-[#F5B040] mt-2">
                   Sits in your meeting window, analyzes facial expressions and engagement signals.
@@ -520,7 +520,7 @@ function LiveModal({ onClose }: { onClose: () => void }) {
         </div>
 
         {/* Content */}
-        <div className="p-8 space-y-8">
+        <div className="p-4 sm:p-8 space-y-6 sm:space-y-8">
           {/* Live Signals */}
           <div>
             <h3 className="text-2xl mb-6 text-gray-900 dark:text-white">Real-Time Signals</h3>
@@ -547,7 +547,7 @@ function LiveModal({ onClose }: { onClose: () => void }) {
           </div>
 
           {/* Confidence Score */}
-          <div className="bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-800/50 to-orange-50 dark:to-orange-900/20 rounded-2xl p-8 border-2 border-amber-200 dark:border-amber-800/50">
+          <div className="bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-800/50 to-orange-50 dark:to-orange-900/20 rounded-2xl p-4 sm:p-8 border-2 border-amber-200 dark:border-amber-800/50">
             <h3 className="text-2xl mb-6 text-gray-900 dark:text-white">Live Confidence Score</h3>
             <div className="text-center mb-6">
               <div className="text-6xl mb-2 bg-gradient-to-r from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-orange-400 bg-clip-text text-transparent">87%</div>
