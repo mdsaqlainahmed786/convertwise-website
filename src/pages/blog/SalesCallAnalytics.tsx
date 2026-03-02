@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'motion/react';
+
 import { Link } from 'react-router-dom';
 import { BarChart3 } from 'lucide-react';
 import { BlogShell, PullQuote, CalendlyCTA, RelatedArticles, StatStrip } from '../../components/blog/BlogShell';
@@ -81,12 +81,8 @@ export function SalesCallAnalytics() {
 
         <div className="not-prose space-y-6 my-8">
           {metrics.map((metric, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
-              transition={{ duration: 0.3, delay: 0.04 * i }}
+            <div
+              key={i}
               className="rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
             >
               <div className="flex items-center gap-4 px-6 py-4 bg-amber-50 dark:bg-amber-900/20 border-b border-gray-200 dark:border-gray-700">
@@ -104,7 +100,7 @@ export function SalesCallAnalytics() {
                   <p className="text-sm text-gray-700 dark:text-gray-300"><span className="font-semibold text-gray-900 dark:text-white">What to do:</span> {metric.actionable}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

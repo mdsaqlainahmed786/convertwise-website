@@ -11,10 +11,6 @@ export function ProvenResults() {
       <AIParticles />
 
       {/* Static orbs */}
-      <div className="absolute -top-16 right-0 w-[500px] h-[500px] bg-amber-200 rounded-full blur-[100px] opacity-30 dark:opacity-10 transition-opacity" aria-hidden />
-      <div className="absolute bottom-0 -left-16 w-[450px] h-[450px] bg-orange-200 rounded-full blur-[100px] opacity-25 dark:opacity-10 transition-opacity" aria-hidden />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-yellow-100 rounded-full blur-[120px] opacity-20 dark:opacity-5 transition-opacity" aria-hidden />
-
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-amber-100 dark:from-[#1A1000]/30 to-orange-100 dark:to-orange-900/30 rounded-full transition-colors">
@@ -32,7 +28,7 @@ export function ProvenResults() {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-sm p-8 rounded-3xl border border-amber-100/80 dark:border-gray-700 hover:border-amber-300 dark:hover:border-[#E89422] shadow-lg hover:shadow-2xl shadow-amber-100/50 dark:shadow-none transition-all">
+            <div className="relative bg-white/95 dark:bg-gray-800/90 p-8 rounded-3xl border border-amber-100/80 dark:border-gray-700 hover:border-amber-300 dark:hover:border-[#E89422] shadow-lg hover:shadow-2xl shadow-amber-100/50 dark:shadow-none transition-colors">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-[#C47010] rounded-2xl flex items-center justify-center text-white shadow-lg">
@@ -69,7 +65,7 @@ export function ProvenResults() {
           
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-sm p-8 rounded-3xl border border-orange-100/80 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600 shadow-lg hover:shadow-2xl shadow-orange-100/50 dark:shadow-none transition-all">
+            <div className="relative bg-white/95 dark:bg-gray-800/90 p-8 rounded-3xl border border-orange-100/80 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600 shadow-lg hover:shadow-2xl shadow-orange-100/50 dark:shadow-none transition-colors">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-700 dark:to-orange-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
@@ -171,7 +167,7 @@ function CaseStudyCard({
 
   return (
     <div
-      className="group bg-white/70 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-amber-100/60 dark:border-gray-700 hover:border-transparent dark:hover:border-transparent shadow-md shadow-amber-50 dark:shadow-none hover:shadow-2xl transition-colors"
+      className="group bg-white/95 dark:bg-gray-800/90 rounded-2xl overflow-hidden border border-amber-100/60 dark:border-gray-700 hover:border-transparent dark:hover:border-transparent shadow-md shadow-amber-50 dark:shadow-none hover:shadow-2xl transition-colors"
     >
       {/* Image header */}
       <div className="relative h-48 overflow-hidden">

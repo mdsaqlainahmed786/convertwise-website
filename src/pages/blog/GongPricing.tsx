@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'motion/react';
 import {
   ChevronDown,
   ChevronUp,
@@ -99,13 +98,9 @@ function FAQAccordion() {
       {faqs.map((faq, i) => {
         const isOpen = openIndex === i;
         return (
-          <motion.div
+          <div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25, delay: i * 0.08 }}
-            className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
+            className="bg-white/95 dark:bg-gray-800/60 rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
           >
             <button
               className="w-full flex items-center justify-between gap-4 p-8 text-left"
@@ -122,7 +117,7 @@ function FAQAccordion() {
             {isOpen && (
               <div className="px-8 pb-8 text-gray-700 dark:text-gray-300 leading-relaxed">{faq.answer}</div>
             )}
-          </motion.div>
+          </div>
         );
       })}
     </div>
@@ -194,44 +189,29 @@ export function GongPricing() {
         />
 
         {/* Gradient orbs */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-orange-100 rounded-full blur-[120px] opacity-35" />
-
         <div className="max-w-4xl mx-auto relative z-10">
           {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
+          <div
+            className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/95 dark:bg-gray-800/70 border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
           >
             <TrendingUp className="text-[#E89422] dark:text-[#F5B040]" size={16} />
             <span className="text-[#C47010] dark:text-[#F5B040] text-sm font-medium">Gong Pricing 2026 — Real Numbers</span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25, delay: 0.1 }}
+          <h1
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent"
           >
             Gong Pricing in 2026: How Much Does It Actually Cost?
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25, delay: 0.2 }}
+          <p
             className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed"
           >
             Gong doesn't publish pricing. Here's what real customers pay — and why 80% of sales teams can't afford it.
-          </motion.p>
+          </p>
 
           {/* Author byline */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25, delay: 0.3 }}
+          <div
             className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 pt-6"
           >
             <span className="inline-flex items-center gap-2">
@@ -246,7 +226,7 @@ export function GongPricing() {
               <TrendingUp size={15} className="text-[#E89422]" />
               8 min read
             </span>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -259,12 +239,8 @@ export function GongPricing() {
             <article className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">
 
               {/* Section 1 */}
-              <motion.div
+              <div
                 id="why-no-public-pricing"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25 }}
               >
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 mt-0">
                   Why Gong Doesn't Show Pricing Publicly
@@ -278,28 +254,20 @@ export function GongPricing() {
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                   Most users discover real Gong pricing only after going through a multi-week sales process: demo, discovery call, technical evaluation, and finally a quote. By that point, many teams are already invested in the evaluation and less likely to walk away.
                 </p>
-              </motion.div>
+              </div>
 
               {/* Callout box */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25, delay: 0.1 }}
+              <div
                 className="not-prose bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 my-8"
               >
                 <p className="text-gray-700 dark:text-gray-300 font-medium text-sm leading-relaxed">
                   <strong className="text-gray-900 dark:text-white">The bottom line:</strong> Gong's opaque pricing is a feature of their business model, not a bug. It's designed to maximize deal size and prevent easy price comparisons.
                 </p>
-              </motion.div>
+              </div>
 
               {/* Section 2 */}
-              <motion.div
+              <div
                 id="what-gong-costs"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25 }}
               >
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   What Gong Actually Costs in 2026
@@ -327,15 +295,11 @@ export function GongPricing() {
                     </tbody>
                   </table>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Section 3 */}
-              <motion.div
+              <div
                 id="whats-included"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25 }}
               >
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   What's Included in Gong's Price
@@ -364,15 +328,11 @@ export function GongPricing() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
 
               {/* Section 4 */}
-              <motion.div
+              <div
                 id="priced-out"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25 }}
               >
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   Why 80% of Sales Teams Get Priced Out of Gong
@@ -386,27 +346,19 @@ export function GongPricing() {
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                   Enterprise-scale customers with 50–500 reps can amortize the implementation cost and seat minimums across their org. For a startup, the economics just don't work — which is why most early-stage sales teams either go without conversation intelligence or look for Gong alternatives.
                 </p>
-              </motion.div>
+              </div>
 
               {/* Callout box */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25, delay: 0.1 }}
+              <div
                 className="not-prose bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 my-8"
               >
                 <p className="text-gray-700 dark:text-gray-300 font-medium text-sm leading-relaxed">
                   <strong className="text-gray-900 dark:text-white">The math for a 5-person team:</strong> Gong minimum = 15 seats x $1,400/seat = $21,000/year + $8,000 implementation = $29,000 first-year cost. That's roughly 16x more expensive than Nimitai for a team that's 3x smaller than Gong's minimum.
                 </p>
-              </motion.div>
+              </div>
 
               {/* Section 5 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25 }}
+              <div
               >
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   The Best Gong Alternative for Startup Pricing
@@ -440,17 +392,14 @@ export function GongPricing() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
             </article>
 
             {/* Table of contents sidebar */}
             <aside className="hidden lg:block">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.25, delay: 0.4 }}
-                className="sticky top-28 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+              <div
+                className="sticky top-28 bg-white/95 dark:bg-gray-800/60 rounded-3xl p-6 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
               >
                 <div className="text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">In This Article</div>
                 <ul className="space-y-3">
@@ -469,12 +418,12 @@ export function GongPricing() {
                 <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
                   <a
                     href="/pricing"
-                    className="block w-full text-center px-4 py-3 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-semibold rounded-xl hover:from-[#C47010] hover:to-[#963C00] transition-all shadow-lg"
+                    className="block w-full text-center px-4 py-3 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-semibold rounded-xl hover:from-[#C47010] hover:to-[#963C00] transition-colors shadow-lg"
                   >
                     See Nimitai Pricing
                   </a>
                 </div>
-              </motion.div>
+              </div>
             </aside>
 
           </div>
@@ -484,11 +433,7 @@ export function GongPricing() {
       {/* ── FAQ ─────────────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -497,7 +442,7 @@ export function GongPricing() {
             <p className="text-gray-700 dark:text-gray-300 text-lg">
               Answers to the most common questions about Gong's cost structure.
             </p>
-          </motion.div>
+          </div>
 
           <FAQAccordion />
         </div>
@@ -506,15 +451,10 @@ export function GongPricing() {
       {/* ── BOTTOM CTA ──────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="text-center"
           >
             <div className="relative inline-block mb-10">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#E89422]/20 to-[#C47010]/20 rounded-3xl blur-xl" />
               <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight">
                 Get Gong-Level Intelligence at $149/Month
               </h2>
@@ -527,14 +467,14 @@ export function GongPricing() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#"
-                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
                 Start Free Trial
                 <Zap size={18} />
               </a>
               <a
                 href="/pricing"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 shadow-lg"
+                className="px-8 py-4 bg-white/95 dark:bg-gray-800/70 border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-colors inline-flex items-center gap-2 shadow-lg"
               >
                 See Nimitai Pricing vs Gong
                 <ArrowRight size={18} />
@@ -544,7 +484,7 @@ export function GongPricing() {
             <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
               No credit card required. 14-day free trial.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

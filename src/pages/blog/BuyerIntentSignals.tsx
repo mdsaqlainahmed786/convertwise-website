@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'motion/react';
+
 import { Link } from 'react-router-dom';
 import {
   BlogShell,
@@ -149,13 +149,9 @@ export function BuyerIntentSignals() {
 
         <div className="not-prose space-y-5 my-10">
           {intentSignals.map((signal, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
-              transition={{ duration: 0.3, delay: i * 0.06 }}
-              className="rounded-2xl border border-gray-100 dark:border-gray-700/80 bg-white dark:bg-gray-800/40 overflow-hidden hover:border-amber-200/70 dark:hover:border-amber-700/40 hover:shadow-sm transition-all"
+            <div
+              key={i}
+              className="rounded-2xl border border-gray-100 dark:border-gray-700/80 bg-white dark:bg-gray-800/40 overflow-hidden hover:border-amber-200/70 dark:hover:border-amber-700/40 hover:shadow-sm transition-colors"
             >
               {/* Header */}
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 bg-gradient-to-r from-gray-50 dark:from-gray-800/60 to-white dark:to-gray-800/20">
@@ -183,7 +179,7 @@ export function BuyerIntentSignals() {
                   {signal.why}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

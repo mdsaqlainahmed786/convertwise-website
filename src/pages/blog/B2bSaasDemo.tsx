@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'motion/react';
+
 import { Link } from 'react-router-dom';
 import { BlogShell, PullQuote, Callout, CalendlyCTA, RelatedArticles, StatStrip } from '../../components/blog/BlogShell';
 
@@ -96,12 +96,8 @@ export function B2bSaasDemo() {
 
         <div className="not-prose space-y-5 my-8">
           {tactics.map((tactic, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
-              transition={{ duration: 0.3, delay: 0.03 * i }}
+            <div
+              key={i}
               className="rounded-2xl border border-gray-200 dark:border-gray-700 p-6"
             >
               <div className="flex items-start gap-4">
@@ -114,7 +110,7 @@ export function B2bSaasDemo() {
                   <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{tactic.body}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

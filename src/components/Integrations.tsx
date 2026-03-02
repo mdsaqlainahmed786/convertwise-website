@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { GoogleMeetIcon, MicrosoftTeamsIcon, ZoomIcon } from './icons/PlatformIcons';
 
 export function Integrations() {
@@ -15,15 +14,11 @@ export function Integrations() {
       />
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        <motion.p
+        <p
           className="mb-10 text-gray-400 text-sm tracking-wide uppercase"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: 'spring', stiffness: 90, damping: 20 }}
         >
           Easily integrates with your existing meeting tools
-        </motion.p>
+        </p>
 
         <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
           <IntegrationItem
@@ -66,13 +61,8 @@ function IntegrationItem({
   delay: number;
 }) {
   return (
-    <motion.div
-      className="flex items-center gap-4 px-6 py-4 bg-white/[0.04] border border-white/[0.08] rounded-2xl hover:bg-white/[0.07] hover:border-[#E89422]/25 transition-all group"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ type: 'spring', stiffness: 80, damping: 20, delay }}
-      whileHover={{ y: -4, scale: 1.03 }}
+    <div
+      className="flex items-center gap-4 px-6 py-4 bg-white/[0.04] border border-white/[0.08] rounded-2xl hover:bg-white/[0.07] hover:border-[#E89422]/25 transition-colors group"
     >
       <div
         className={`w-11 h-11 bg-gradient-to-br ${gradient} rounded-xl flex items-center justify-center text-white shadow-lg`}
@@ -80,6 +70,6 @@ function IntegrationItem({
         {icon}
       </div>
       <span className="text-lg text-white/90 group-hover:text-white transition-colors">{name}</span>
-    </motion.div>
+    </div>
   );
 }

@@ -4,10 +4,6 @@ export function TheProblem() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative overflow-hidden">
       {/* Static gradient orbs — subtle CSS animation */}
-      <div className="absolute -top-20 right-0 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[140px] opacity-12" aria-hidden />
-      <div className="absolute -bottom-20 -left-10 w-[500px] h-[500px] bg-[#963C00] rounded-full blur-[130px] opacity-12" aria-hidden />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-red-700 rounded-full blur-[120px] opacity-8" aria-hidden />
-
       {/* Grid pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -19,7 +15,7 @@ export function TheProblem() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white/10 rounded-full border border-white/20">
             <AlertTriangle className="text-orange-400" size={16} />
             <span className="text-white">Why Sales Teams Lose Deals They Should Win</span>
           </div>
@@ -62,7 +58,7 @@ export function TheProblem() {
         </div>
 
         <div className="text-center">
-          <div className="inline-block p-8 bg-gradient-to-r from-orange-500/12 to-red-500/12 backdrop-blur-sm border border-orange-500/25 rounded-3xl shadow-lg shadow-orange-900/20">
+          <div className="inline-block p-8 bg-gradient-to-r from-orange-500/12 to-red-500/12 border border-orange-500/25 rounded-3xl shadow-lg shadow-orange-900/20">
             <p className="text-3xl sm:text-4xl bg-gradient-to-r from-[#963C00] to-red-400 bg-clip-text text-transparent">
               $200B in revenue vanishes annually
             </p>
@@ -98,7 +94,7 @@ function StatCard({
 
   return (
     <div 
-      className={`bg-white/8 backdrop-blur-sm border ${colors.border} rounded-2xl p-6 hover:bg-white/12 shadow-lg transition-colors`}
+      className={`bg-white/8 border ${colors.border} rounded-2xl p-6 hover:bg-white/12 shadow-lg transition-colors`}
     >
       <div 
         className={`inline-flex p-3 bg-gradient-to-br ${colors.bg} bg-opacity-20 rounded-xl mb-4 ${colors.icon}`}

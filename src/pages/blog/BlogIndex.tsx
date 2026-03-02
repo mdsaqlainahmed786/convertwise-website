@@ -200,17 +200,20 @@ export function BlogIndex() {
       <section className="bg-white dark:bg-gray-900 transition-colors py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {posts.map((post) => (
+            {posts.map((post, i) => (
               <article
                 key={post.slug}
-                className="bg-white/60 dark:bg-gray-800/60 rounded-3xl overflow-hidden shadow-lg border border-white/80 dark:border-gray-700/80 flex flex-col group hover:shadow-xl transition-shadow"
+                className="bg-white/95 dark:bg-gray-800/60 rounded-3xl overflow-hidden shadow-lg border border-white/80 dark:border-gray-700/80 flex flex-col group hover:shadow-xl transition-shadow"
               >
                 {/* Thumbnail */}
                 <Link to={post.slug} className="block overflow-hidden">
                   <img
                     src={post.image}
                     alt=""
-                    loading="lazy"
+                    width={1200}
+                    height={630}
+                    loading={i < 4 ? 'eager' : 'lazy'}
+                    decoding="async"
                     className="w-full aspect-[1200/630] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
                   />
                 </Link>
@@ -262,7 +265,7 @@ export function BlogIndex() {
       {/* Bottom CTA */}
       <section className="bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="bg-white/60 dark:bg-gray-800/60 rounded-3xl p-12 shadow-lg border border-white/80 dark:border-gray-700/80">
+          <div className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-12 shadow-lg border border-white/80 dark:border-gray-700/80">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Ready to turn your calls into coaching?
             </h2>
@@ -271,7 +274,7 @@ export function BlogIndex() {
             </p>
             <a
               href="#"
-              className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all inline-flex items-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors inline-flex items-center gap-2"
             >
               Try Nimitai free for 14 days
               <span aria-hidden="true">→</span>

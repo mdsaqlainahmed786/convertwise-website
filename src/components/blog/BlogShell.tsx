@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence, useInView } from 'motion/react';
+import { useInView } from 'motion/react';
 import { Linkedin, Twitter, Link2, Calendar, ArrowRight, Check, TrendingUp, Lightbulb } from 'lucide-react';
 
 /* ─── Constants ─────────────────────────────────────────────── */
@@ -80,10 +80,9 @@ function ReadingProgress() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 h-0.5 bg-gray-200/30 dark:bg-gray-800/30 pointer-events-none">
-      <motion.div
+      <div
         className="h-full bg-gradient-to-r from-[#E89422] to-[#963C00]"
-        style={{ width: `${progress}%` }}
-        transition={{ ease: 'linear', duration: 0.1 }}
+        style={{ width: `${progress}%`, transition: 'width 0.1s linear' }}
       />
     </div>
   );
@@ -129,12 +128,10 @@ function ShareButtons({ title }: { title: string }) {
         className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 transition-colors text-xs font-medium"
         aria-label="Copy link"
       >
-        <AnimatePresence mode="wait">
-          {copied
-            ? <motion.span key="check" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="flex items-center gap-1 text-green-600"><Check size={13} /> Copied!</motion.span>
-            : <motion.span key="link" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="flex items-center gap-1"><Link2 size={13} /> Copy</motion.span>
-          }
-        </AnimatePresence>
+        {copied
+          ? <span className="flex items-center gap-1 text-green-600"><Check size={13} /> Copied!</span>
+          : <span className="flex items-center gap-1"><Link2 size={13} /> Copy</span>
+        }
       </button>
     </div>
   );
@@ -171,7 +168,7 @@ function TableOfContents({ items }: { items: TocItem[] }) {
         <button
           key={item.id}
           onClick={() => scrollTo(item.id)}
-          className={`block w-full text-left text-sm py-1.5 pl-3 border-l-2 transition-all ${
+          className={`block w-full text-left text-sm py-1.5 pl-3 border-l-2 transition-colors ${
             active === item.id
               ? 'border-[#E89422] text-[#C47010] dark:text-[#F5B040] font-medium'
               : 'border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
@@ -212,11 +209,7 @@ function AuthorCard({ authorKey }: { authorKey: AuthorKey }) {
 /* ─── Calendly CTA ───────────────────────────────────────────── */
 export function CalendlyCTA({ headline = "Book a 20-minute demo", sub = "See Nimitai in a live sales call — no slides, no pitch deck, just real-time intelligence on a real conversation." }: { headline?: string; sub?: string }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.05 }}
-      transition={{ duration: 0.3 }}
+    <div
       className="rounded-2xl bg-gradient-to-br from-[#E89422]/12 via-orange-500/6 to-amber-400/4 border border-[#E89422]/30 p-6 sm:p-7 flex flex-col sm:flex-row items-center gap-5 my-12"
     >
       <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#E89422] to-[#963C00] flex items-center justify-center shadow-lg">
@@ -230,11 +223,11 @@ export function CalendlyCTA({ headline = "Book a 20-minute demo", sub = "See Nim
         href={CALENDLY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-semibold rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all shadow-lg hover:shadow-xl whitespace-nowrap hover:scale-105"
+        className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-semibold rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors shadow-lg hover:shadow-xl whitespace-nowrap hover:scale-105"
       >
         Book a Call <ArrowRight size={15} />
       </a>
-    </motion.div>
+    </div>
   );
 }
 
@@ -258,19 +251,15 @@ export function StatStrip({ stats }: { stats: { number: string; label: string }[
   return (
     <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-px my-12 overflow-hidden rounded-2xl border border-amber-100/80 dark:border-amber-900/30 bg-amber-100/30 dark:bg-amber-900/10 shadow-sm">
       {stats.map((s, i) => (
-        <motion.div
-          key={s.label}
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ duration: 0.4, delay: i * 0.07 }}
+        <div
+          key={s.label}
           className="bg-white dark:bg-gray-900 p-5 text-center"
         >
           <div className="text-3xl sm:text-4xl font-black text-[#E89422] tabular-nums leading-none mb-1.5">
             <AnimatedNumber value={s.number} />
           </div>
           <div className="text-xs text-gray-500 dark:text-gray-400 leading-tight">{s.label}</div>
-        </motion.div>
+        </div>
       ))}
     </div>
   );
@@ -309,11 +298,7 @@ export function Callout({
 /* ─── Key Takeaway ───────────────────────────────────────────── */
 export function KeyTakeaway({ children, title = 'Key Takeaway' }: { children: React.ReactNode; title?: string }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.05 }}
-      transition={{ duration: 0.35 }}
+    <div
       className="not-prose my-12 relative overflow-hidden rounded-2xl"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50/40 to-white dark:from-[#1A0A00] dark:via-amber-950/30 dark:to-gray-900 border border-amber-200/60 dark:border-amber-700/30 rounded-2xl" />
@@ -329,7 +314,7 @@ export function KeyTakeaway({ children, title = 'Key Takeaway' }: { children: Re
           {children}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -365,11 +350,7 @@ export function BarViz({
 }) {
   const max = Math.max(...bars.map((b) => b.value));
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 14 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.05 }}
-      transition={{ duration: 0.4 }}
+    <div
       className="not-prose my-12 p-6 sm:p-8 rounded-2xl bg-white dark:bg-gray-800/60 border border-gray-100 dark:border-gray-700 shadow-sm"
     >
       {title && (
@@ -391,12 +372,9 @@ export function BarViz({
               </div>
             </div>
             <div className="h-2.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: `${(bar.value / max) * 100}%` }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: i * 0.05 }}
+              <div
                 className={`h-full rounded-full ${bar.color ?? 'bg-gradient-to-r from-[#E89422] to-[#963C00]'}`}
+                style={{ width: `${(bar.value / max) * 100}%` }}
               />
             </div>
           </div>
@@ -407,7 +385,7 @@ export function BarViz({
           {caption}
         </p>
       )}
-    </motion.div>
+    </div>
   );
 }
 
@@ -420,13 +398,9 @@ export function NumberedInsights({
   return (
     <div className="not-prose space-y-5 my-10">
       {items.map((item, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, x: -12 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ duration: 0.35, delay: i * 0.04 }}
-          className="flex gap-5 p-5 sm:p-6 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/80 hover:border-amber-200/80 dark:hover:border-amber-700/40 hover:shadow-sm transition-all group"
+        <div
+          key={i}
+          className="flex gap-5 p-5 sm:p-6 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/80 hover:border-amber-200/80 dark:hover:border-amber-700/40 hover:shadow-sm transition-colors group"
         >
           <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-[#E89422] to-[#963C00] text-white font-black text-sm flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
             {item.number}
@@ -444,7 +418,7 @@ export function NumberedInsights({
               </div>
             )}
           </div>
-        </motion.div>
+        </div>
       ))}
     </div>
   );
@@ -497,18 +471,14 @@ export function InsightGrid({
   return (
     <div className="not-prose my-10 grid sm:grid-cols-2 gap-4">
       {items.map((item, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ duration: 0.3, delay: i * 0.06 }}
+        <div
+          key={i}
           className="p-5 rounded-xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700"
         >
           <span className="text-2xl mb-3 block">{item.icon}</span>
           <p className="font-bold text-gray-900 dark:text-white text-sm mb-1.5">{item.title}</p>
           <p className="text-sm text-gray-600 dark:text-gray-400 leading-[1.65]">{item.body}</p>
-        </motion.div>
+        </div>
       ))}
     </div>
   );
@@ -524,9 +494,9 @@ export function RelatedArticles({ links }: { links: { to: string; label: string 
           <Link
             key={link.to}
             to={link.to}
-            className="flex items-center gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-[#E89422]/50 hover:bg-gradient-to-r hover:from-amber-50 hover:to-transparent dark:hover:from-amber-900/10 dark:hover:to-transparent transition-all group"
+            className="flex items-center gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-[#E89422]/50 hover:bg-gradient-to-r hover:from-amber-50 hover:to-transparent dark:hover:from-amber-900/10 dark:hover:to-transparent transition-colors group"
           >
-            <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-gradient-to-br from-[#E89422]/20 to-orange-500/10 flex items-center justify-center group-hover:from-[#E89422]/30 transition-all">
+            <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-gradient-to-br from-[#E89422]/20 to-orange-500/10 flex items-center justify-center group-hover:from-[#E89422]/30 transition-colors">
               <ArrowRight size={13} className="text-[#E89422] group-hover:translate-x-0.5 transition-transform" />
             </div>
             <span className="text-sm text-gray-700 dark:text-gray-300 font-medium leading-snug">{link.label}</span>
@@ -603,7 +573,7 @@ export function BlogShell({
             <span className="text-gray-600 dark:text-gray-400 truncate max-w-[260px]">{title}</span>
           </nav>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+          <div>
             <span className={`inline-block mb-5 px-3.5 py-1 rounded-full text-[0.7rem] font-bold uppercase tracking-[0.15em] ${categoryClass}`}>
               {category}
             </span>
@@ -642,7 +612,7 @@ export function BlogShell({
 
               <ShareButtons title={pageTitle} />
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -715,7 +685,7 @@ export function BlogShell({
                       href={CALENDLY_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-1.5 w-full py-2.5 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-xs font-semibold rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all hover:shadow-md"
+                      className="flex items-center justify-center gap-1.5 w-full py-2.5 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-xs font-semibold rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors hover:shadow-md"
                     >
                       <Calendar size={13} /> Book a Call
                     </a>
@@ -738,16 +708,12 @@ export function BlogShell({
       {/* Bottom CTA */}
       <section className="bg-gradient-to-br from-amber-50 dark:from-[#0A0400] via-white dark:via-gray-900 to-orange-50 dark:to-gray-900 py-24 px-4 sm:px-6 lg:px-8 transition-colors border-t border-gray-100 dark:border-gray-800">
         <div className="max-w-2xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-10 sm:p-12 shadow-xl border border-white/90 dark:border-gray-700/80"
+          <div
+            className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-10 sm:p-12 shadow-xl border border-white/90 dark:border-gray-700/80"
           >
             <div className="flex justify-center mb-5">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E89422]/10 border border-[#E89422]/20 text-[#C47010] dark:text-[#F5B040] text-xs font-bold">
-                <span className="w-1.5 h-1.5 bg-[#E89422] rounded-full animate-pulse" />
+                <span className="w-1.5 h-1.5 bg-[#E89422] rounded-full" />
                 Beta live · 500+ on waitlist
               </span>
             </div>
@@ -762,13 +728,13 @@ export function BlogShell({
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all shadow-lg hover:shadow-xl font-semibold text-sm hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors shadow-lg hover:shadow-xl font-semibold text-sm hover:scale-[1.02]"
               >
                 <Calendar size={16} /> Book a Demo
               </a>
               <Link
                 to="/"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 rounded-full hover:border-[#E89422]/50 hover:text-gray-900 dark:hover:text-white transition-all text-sm"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 rounded-full hover:border-[#E89422]/50 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
               >
                 Join the Waitlist <ArrowRight size={16} />
               </Link>
@@ -778,7 +744,7 @@ export function BlogShell({
               <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"><Twitter size={12} /> Twitter</a>
               <Link to="/blog" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">← More articles</Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

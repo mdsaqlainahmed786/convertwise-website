@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'motion/react';
+
 import { Link } from 'react-router-dom';
 import { BlogShell, PullQuote, Callout, CalendlyCTA, RelatedArticles, StatStrip } from '../../components/blog/BlogShell';
 
@@ -104,12 +104,8 @@ export function AiObjectionHandling() {
 
         <div className="not-prose space-y-6 my-8">
           {objections.map((obj, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
-              transition={{ duration: 0.3, delay: 0.05 * i }}
+            <div
+              key={i}
               className="rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
             >
               <div className="p-5 bg-amber-50 dark:bg-amber-900/20 border-b border-gray-200 dark:border-gray-700">
@@ -129,7 +125,7 @@ export function AiObjectionHandling() {
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#C47010] dark:text-[#F5B040] mb-1">How AI helps</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{obj.aiAdvantage}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

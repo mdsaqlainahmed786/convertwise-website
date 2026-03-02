@@ -1,5 +1,4 @@
 import { Star, Quote } from 'lucide-react';
-import { motion } from 'motion/react';
 
 const testimonials = [
   {
@@ -38,21 +37,10 @@ export function Testimonials() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50/60 dark:from-gray-900 via-white dark:via-gray-900 to-orange-50/40 dark:to-gray-900 relative overflow-hidden transition-colors">
       {/* Subtle background orbs */}
-      <div
-        className="absolute -top-20 right-0 w-[500px] h-[500px] bg-amber-100 rounded-full blur-[120px] opacity-40 dark:opacity-[0.06]"
-      />
-      <div
-        className="absolute bottom-0 -left-10 w-[400px] h-[400px] bg-orange-100 rounded-full blur-[100px] opacity-35 dark:opacity-[0.05]"
-      />
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <motion.div
-          className="text-center mb-14"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        <div
+          className="text-center mb-14"
         >
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-amber-100 dark:from-[#1A1000]/40 to-orange-100 dark:to-orange-900/30 rounded-full transition-colors">
             <Star className="text-[#E89422] dark:text-[#F5B040]" size={15} fill="currentColor" />
@@ -67,19 +55,14 @@ export function Testimonials() {
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Founding teams using Nimitai AI conversation intelligence to close more deals, coach faster, and cut the manual work out of B2B sales.
           </p>
-        </motion.div>
+        </div>
 
         {/* Cards */}
         <div className="grid lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
-              whileHover={{ y: -6, transition: { type: 'spring', stiffness: 350, damping: 24 } }}
-              className="relative group bg-white/80 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-7 border border-amber-100/70 dark:border-gray-700 hover:border-[#E89422]/40 dark:hover:border-[#E89422]/30 shadow-md shadow-amber-50/50 dark:shadow-none hover:shadow-xl hover:shadow-amber-100/30 dark:hover:shadow-none transition-all"
+            <div
+              key={t.name}
+              className="relative group bg-white dark:bg-gray-800/90 rounded-3xl p-7 border border-amber-100/70 dark:border-gray-700 hover:border-[#E89422]/40 dark:hover:border-[#E89422]/30 shadow-md shadow-amber-50/50 dark:shadow-none hover:shadow-xl hover:shadow-amber-100/30 dark:hover:shadow-none hover:-translate-y-1.5 transition-[transform,border-color,box-shadow] duration-200"
             >
               {/* Quote icon */}
               <div className="mb-5">
@@ -119,17 +102,13 @@ export function Testimonials() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom stat bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-amber-100/60 dark:border-gray-700 p-6"
+        <div
+          className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 bg-white/95 dark:bg-gray-800/60 rounded-2xl border border-amber-100/60 dark:border-gray-700 p-6"
         >
           {[
             { stat: '31%', label: 'Avg close rate increase' },
@@ -144,7 +123,7 @@ export function Testimonials() {
               <div className="text-xs text-gray-500 dark:text-gray-400">{item.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

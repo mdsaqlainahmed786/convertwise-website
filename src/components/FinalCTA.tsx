@@ -19,20 +19,11 @@ export function FinalCTA() {
       {/* Top teal accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/20 to-transparent" />
 
-      <div
-        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-[0.08]"
-        style={{ background: '#E89422' }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-3xl opacity-[0.06]"
-        style={{ background: '#C47010' }}
-      />
-
       <div className="max-w-3xl mx-auto text-center relative z-10">
         <div
           className="inline-flex items-center gap-2 border border-[#E89422]/25 bg-[#E89422]/5 rounded-full px-5 py-2 text-xs text-[#E89422] tracking-widest uppercase mb-8"
         >
-          <span className="w-1.5 h-1.5 bg-[#E89422] rounded-full animate-pulse" />
+          <span className="w-1.5 h-1.5 bg-[#E89422] rounded-full" />
           Waitlist Now Open
         </div>
 

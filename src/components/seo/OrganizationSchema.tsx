@@ -7,7 +7,7 @@ export function OrganizationSchema() {
     "name": "Nimitai",
     "alternateName": "REN AI Technologies Private Limited",
     "url": "https://nimitai.com",
-    "logo": "https://nimitai.com/convertwiselogo1.svg",
+    "logo": "https://nimitai.com/nimitai-logo.png",
     "description": "Nimitai is AI meeting intelligence and conversation intelligence software built for B2B SaaS sales teams. Records sales calls, surfaces coaching insights, objection patterns, deal risk signals, and win/loss analysis at $149/month flat.",
     "foundingDate": "2024",
     "founders": [

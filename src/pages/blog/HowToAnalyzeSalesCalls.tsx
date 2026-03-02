@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -43,11 +42,7 @@ export function HowToAnalyzeSalesCalls() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
           >
             <div className="mb-6 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
               <Link to="/blog" className="hover:text-[#C47010] dark:hover:text-[#F5B040] transition-colors">
@@ -71,7 +66,7 @@ export function HowToAnalyzeSalesCalls() {
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
               Sales call analysis is where the gap between a 20% and 40% close rate becomes visible. This guide covers how to analyze sales calls systematically — the key metrics, the objection patterns, and how AI conversation intelligence software automates the entire sales call analysis process so your team can coach faster and close more.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -91,11 +86,7 @@ export function HowToAnalyzeSalesCalls() {
         <div className="max-w-3xl mx-auto">
 
           {/* Intro */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
@@ -104,14 +95,10 @@ export function HowToAnalyzeSalesCalls() {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
               AI changes this dynamic fundamentally. Instead of reviewing the calls you happen to remember or the ones that felt wrong, AI analysis covers every call automatically. It surfaces patterns you couldn't see by listening to five calls in isolation — because the signal only becomes visible at 20 or 50 calls. The question shifts from "what went wrong on that call?" to "what do all my lost deals have in common?" That is a different, and far more powerful, question.
             </p>
-          </motion.div>
+          </div>
 
           {/* Why Most Sales Call Analysis Fails */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Why Sales Call Analysis Drives Better Close Rates</h2>
@@ -124,14 +111,10 @@ export function HowToAnalyzeSalesCalls() {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-5">
               The third reason is the scale of pattern recognition. Even if you analyzed every sales call consistently, you cannot simultaneously track talk ratios, question counts, objection timing, next-step specificity, and competitor mentions across 50 calls. Analyzing sales calls with AI does exactly this — cross-dimensional pattern synthesis that would take a human hundreds of hours to approximate manually.
             </p>
-          </motion.div>
+          </div>
 
           {/* The 5 Patterns */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">The 5 Most Important Metrics When Analyzing Sales Calls</h2>
@@ -245,14 +228,10 @@ export function HowToAnalyzeSalesCalls() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Mid-article CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <div className="bg-gradient-to-r from-[#E89422] to-[#963C00] rounded-3xl p-8 text-center shadow-xl">
@@ -262,20 +241,16 @@ export function HowToAnalyzeSalesCalls() {
               </p>
               <a
                 href="#"
-                className="px-8 py-4 bg-white text-[#C47010] rounded-full hover:bg-amber-50 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-semibold"
+                className="px-8 py-4 bg-white text-[#C47010] rounded-full hover:bg-amber-50 transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-semibold"
               >
                 Try Nimitai free for 14 days
                 <span aria-hidden="true">→</span>
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* How to Set Up AI Call Analysis */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">How AI Conversation Intelligence Automates Sales Call Analysis</h2>
@@ -307,7 +282,7 @@ export function HowToAnalyzeSalesCalls() {
               ].map((item) => (
                 <div
                   key={item.step}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors flex items-start gap-4"
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors flex items-start gap-4"
                 >
                   <span className="flex-shrink-0 w-9 h-9 rounded-full bg-amber-100 dark:bg-amber-900/40 text-[#C47010] dark:text-[#F5B040] flex items-center justify-center font-bold">
                     {item.step}
@@ -319,14 +294,10 @@ export function HowToAnalyzeSalesCalls() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* What to Do With the Data */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Automate Your Sales Call Analysis with Nimitai</h2>
@@ -342,14 +313,10 @@ export function HowToAnalyzeSalesCalls() {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               Once next-step confirmation becomes automatic, move to talk ratio. Then question quality. Then objection surfacing timing. Each improvement compounds on the previous one. Over a quarter of consistent coaching, the aggregate effect on close rate is significant — not because you changed your product or your pricing, but because you changed the quality of the conversation.
             </p>
-          </motion.div>
+          </div>
 
           {/* FAQ */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
@@ -370,14 +337,14 @@ export function HowToAnalyzeSalesCalls() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">{item.q}</h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.a}</p>
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Back to blog */}
           <div className="pt-8 border-t border-gray-100 dark:border-gray-800">

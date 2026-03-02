@@ -10,10 +10,6 @@ export function EveryDay() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
       {/* Static gradient orbs */}
-      <div className="absolute -top-32 right-0 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.08]" />
-      <div className="absolute bottom-0 -left-32 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[160px] opacity-[0.07]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[400px] bg-red-800 rounded-full blur-[150px] opacity-[0.06]" />
-
       {/* Subtle dot grid */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -23,11 +19,10 @@ export function EveryDay() {
         }}
       />
 
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Main headline */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-red-500/15 backdrop-blur-sm rounded-full border border-red-500/25">
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-red-500/15 rounded-full border border-red-500/25">
             <AlertCircle className="text-red-400" size={14} />
             <span className="text-red-300 text-sm">The Painful Truth</span>
           </div>
@@ -44,8 +39,7 @@ export function EveryDay() {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             <div className="relative">
-              <div className="absolute inset-0 bg-[#E89422]/10 rounded-3xl blur-xl" />
-              <div className="relative bg-white/[0.05] backdrop-blur-sm border border-white/[0.08] rounded-3xl p-8 h-full">
+              <div className="relative bg-white/[0.05] border border-white/[0.08] rounded-3xl p-8 h-full">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-xl flex items-center justify-center">
                     <CheckCircle size={24} />
@@ -63,15 +57,15 @@ export function EveryDay() {
 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-lg">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    <div className="w-2 h-2 bg-green-400 rounded-full" />
                     <p className="text-white">Perfect prospect</p>
                   </div>
                   <div className="flex items-center gap-3 text-lg">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    <div className="w-2 h-2 bg-green-400 rounded-full" />
                     <p className="text-white">Great conversation</p>
                   </div>
                   <div className="flex items-center gap-3 text-lg">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full" />
                     <p className="text-gray-300">"We need to think about it..."</p>
                   </div>
                 </div>
@@ -80,8 +74,7 @@ export function EveryDay() {
 
             {/* Right: The Reality */}
             <div className="relative">
-              <div className="absolute inset-0 bg-red-500/15 rounded-3xl blur-xl" />
-              <div className="relative bg-red-500/[0.08] backdrop-blur-sm border border-red-500/25 rounded-3xl p-8 h-full">
+              <div className="relative bg-red-500/[0.08] border border-red-500/25 rounded-3xl p-8 h-full">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center">
                     <XCircle size={24} />
@@ -103,7 +96,7 @@ export function EveryDay() {
                   </div>
                 </div>
 
-                <div className="bg-red-500/15 backdrop-blur-sm border border-red-500/25 rounded-xl p-6 text-center">
+                <div className="bg-red-500/15 border border-red-500/25 rounded-xl p-6 text-center">
                   <p className="text-2xl text-red-200">"We went with someone else."</p>
                 </div>
               </div>
@@ -112,8 +105,7 @@ export function EveryDay() {
 
           {/* The Critical Moment */}
           <div className="relative">
-            <div className="absolute inset-0 bg-orange-500/15 rounded-3xl blur-2xl" />
-            <div className="relative bg-white/[0.04] backdrop-blur-sm border border-orange-500/25 rounded-3xl p-8 sm:p-12">
+            <div className="relative bg-white/[0.04] border border-orange-500/25 rounded-3xl p-8 sm:p-12">
               {/* Inner top highlight */}
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#963C00]/30 to-transparent rounded-t-3xl" />
 
@@ -137,23 +129,14 @@ export function EveryDay() {
 
         {/* The Solution CTA */}
         <div className="relative">
-          <div
-            className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-amber-500 to-amber-300 rounded-full blur-[100px] opacity-20"
-            aria-hidden
-          />
-          <div
-            className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-gradient-to-br from-[#963C00] to-[#E89422] rounded-full blur-[110px] opacity-15"
-            aria-hidden
-          />
-
-          <div className="relative bg-white/[0.05] backdrop-blur-sm border border-white/[0.12] rounded-3xl overflow-hidden shadow-2xl shadow-black/40">
+          <div className="relative bg-white/[0.05] border border-white/[0.12] rounded-3xl overflow-hidden shadow-2xl shadow-black/40">
             {/* Inner top highlight */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/35 to-transparent" />
 
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center p-8 sm:p-12 lg:p-16">
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E89422]/10 backdrop-blur-sm border border-[#E89422]/25 rounded-full mb-6">
-                  <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E89422]/10 border border-[#E89422]/25 rounded-full mb-6">
+                  <div className="w-2 h-2 rounded-full bg-green-400" />
                   <span className="text-sm text-[#F5B040]">AI-Powered Intelligence</span>
                 </div>
 
@@ -173,7 +156,7 @@ export function EveryDay() {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-3 p-4 bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] rounded-xl hover:bg-white/[0.07] hover:border-[#E89422]/20 transition-colors"
+                      className="flex items-center gap-3 p-4 bg-white/[0.04] border border-white/[0.08] rounded-xl hover:bg-white/[0.07] hover:border-[#E89422]/20 transition-colors"
                     >
                       <div className={`w-2 h-2 ${item.dot} rounded-full`} />
                       <span className="text-white/90">{item.text}</span>
@@ -191,16 +174,16 @@ export function EveryDay() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0400]/60 via-transparent to-transparent" />
 
-                  <div className="absolute top-6 left-6 bg-green-500/90 backdrop-blur-sm px-4 py-2 rounded-full border border-white/25 shadow-lg">
+                  <div className="absolute top-6 left-6 bg-green-500/90 px-4 py-2 rounded-full border border-white/25 shadow-lg">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                      <div className="w-2 h-2 bg-white rounded-full" />
                       <span className="text-white text-sm">Perfect moment detected</span>
                     </div>
                   </div>
 
-                  <div className="absolute bottom-6 right-6 bg-blue-500/90 backdrop-blur-sm px-4 py-2 rounded-full border border-white/25 shadow-lg">
+                  <div className="absolute bottom-6 right-6 bg-blue-500/90 px-4 py-2 rounded-full border border-white/25 shadow-lg">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                      <div className="w-2 h-2 bg-white rounded-full" />
                       <span className="text-white text-sm">High engagement</span>
                     </div>
                   </div>
@@ -240,7 +223,7 @@ function CriticalMoment({
 
   return (
     <div
-      className={`${colors.bgOpacity} backdrop-blur-sm border ${colors.border} rounded-2xl p-6 text-center hover:bg-white/[0.06] transition-colors`}
+      className={`${colors.bgOpacity} border ${colors.border} rounded-2xl p-6 text-center hover:bg-white/[0.06] transition-colors`}
     >
       <div className={`inline-flex p-3 bg-gradient-to-br ${colors.bg} rounded-xl mb-3 ${colors.text}`}>
         {icon}

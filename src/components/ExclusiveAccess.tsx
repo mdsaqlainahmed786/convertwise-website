@@ -39,8 +39,6 @@ export function ExclusiveAccess() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
       {/* Static gradient orbs */}
-      <div className="absolute -top-40 -right-20 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.07]" />
-      <div className="absolute -bottom-32 -left-20 w-[500px] h-[500px] bg-orange-700 rounded-full blur-[160px] opacity-[0.06]" />
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
         style={{ background: 'radial-gradient(circle, rgba(232,148,34,0.06) 0%, transparent 70%)' }}
@@ -55,11 +53,10 @@ export function ExclusiveAccess() {
         }}
       />
 
-
       <div className="max-w-3xl mx-auto relative z-10">
         <div className="flex justify-center mb-10">
-          <div className="inline-flex items-center gap-2.5 border border-[#E89422]/25 bg-[#E89422]/[0.07] rounded-full px-5 py-2 backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 bg-[#E89422] rounded-full animate-pulse" />
+          <div className="inline-flex items-center gap-2.5 border border-[#E89422]/25 bg-[#E89422]/[0.07] rounded-full px-5 py-2">
+            <span className="w-1.5 h-1.5 bg-[#E89422] rounded-full" />
             <span className="text-[#E89422] text-xs tracking-[0.2em] uppercase font-medium">
               Private Beta · Application Open
             </span>
@@ -126,7 +123,7 @@ export function ExclusiveAccess() {
           {benefits.map((b) => (
             <div
               key={b.title}
-              className="flex items-start gap-4 p-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-sm hover:border-[#E89422]/25 hover:bg-white/[0.05] transition-colors cursor-default"
+              className="flex items-start gap-4 p-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-[#E89422]/25 hover:bg-white/[0.05] transition-colors cursor-default"
             >
               <span className="text-[#E89422] text-base mt-0.5 flex-shrink-0" aria-hidden="true">
                 {b.icon}

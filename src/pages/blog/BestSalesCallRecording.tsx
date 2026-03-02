@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -103,11 +102,7 @@ export function BestSalesCallRecording() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
           >
             <div className="mb-6 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
               <Link to="/blog" className="hover:text-[#C47010] dark:hover:text-[#F5B040] transition-colors">
@@ -131,7 +126,7 @@ export function BestSalesCallRecording() {
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
               Choosing the right sales call recording software is one of the highest-leverage decisions an early-stage sales team makes. The best sales call recording tools don't just capture what was said — they use conversation intelligence and AI meeting intelligence to surface why deals close and why they don't. We compared 7 sales call recording software tools side by side so you don't have to.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -151,11 +146,7 @@ export function BestSalesCallRecording() {
         <div className="max-w-3xl mx-auto">
 
           {/* How We Evaluated */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">How We Evaluated These Sales Call Recording Tools</h2>
@@ -178,14 +169,10 @@ export function BestSalesCallRecording() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* The 7 Tools */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Sales Call Recording Software Comparison: 7 Tools Reviewed Honestly</h2>
@@ -329,14 +316,10 @@ export function BestSalesCallRecording() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Comparison Table */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Sales Call Recording Software Comparison: Features & Pricing</h2>
@@ -378,14 +361,10 @@ export function BestSalesCallRecording() {
                 </tbody>
               </table>
             </div>
-          </motion.div>
+          </div>
 
           {/* Mid-article CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <div className="bg-gradient-to-r from-[#E89422] to-[#963C00] rounded-3xl p-8 text-center shadow-xl">
@@ -395,20 +374,16 @@ export function BestSalesCallRecording() {
               </p>
               <a
                 href="#"
-                className="px-8 py-4 bg-white text-[#C47010] rounded-full hover:bg-amber-50 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-semibold"
+                className="px-8 py-4 bg-white text-[#C47010] rounded-full hover:bg-amber-50 transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-semibold"
               >
                 Start using Nimitai free for 14 days
                 <span aria-hidden="true">→</span>
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Which Tool Should You Choose? */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Which Sales Call Recording Software Should You Choose?</h2>
@@ -442,7 +417,7 @@ export function BestSalesCallRecording() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <p className="font-semibold text-gray-900 dark:text-white mb-2">
                     If: {item.scenario}
@@ -453,14 +428,10 @@ export function BestSalesCallRecording() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* FAQ */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.25 }}
+          <div
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
@@ -485,14 +456,14 @@ export function BestSalesCallRecording() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">{item.q}</h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.a}</p>
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Back to blog */}
           <div className="pt-8 border-t border-gray-100 dark:border-gray-800">

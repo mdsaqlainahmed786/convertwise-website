@@ -143,10 +143,6 @@ export function HowItWorks() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
       {/* Static gradient orbs */}
-      <div className="absolute -top-32 right-0 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[160px] opacity-[0.09]" />
-      <div className="absolute bottom-0 -left-32 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[150px] opacity-[0.08]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-amber-700 rounded-full blur-[130px] opacity-[0.07]" />
-
       {/* Subtle dot grid */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -156,11 +152,10 @@ export function HowItWorks() {
         }}
       />
 
-
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E89422]/10 backdrop-blur-sm border border-[#E89422]/25 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E89422]/10 border border-[#E89422]/25 rounded-full mb-6">
             <Monitor className="text-[#E89422]" size={14} />
             <span className="text-[#E89422] text-sm tracking-wide">How it Works</span>
           </div>
@@ -178,7 +173,6 @@ export function HowItWorks() {
 
         <div className="relative mb-6">
           {/* Glow behind the card */}
-          <div className="absolute inset-0 bg-[#E89422]/10 rounded-2xl blur-2xl scale-95 pointer-events-none" />
           <Carousel
             setApi={setApi}
             opts={{ align: "center", loop: true }}
@@ -187,7 +181,7 @@ export function HowItWorks() {
             <CarouselContent>
               {features.map((feature) => (
                 <CarouselItem key={feature.id} className="basis-full">
-                  <div className="relative bg-white/[0.06] backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+                  <div className="relative bg-white/[0.06] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
                     {/* Inner top highlight */}
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
                     <div className="aspect-[16/10] flex items-center justify-center">
@@ -221,7 +215,7 @@ export function HowItWorks() {
               setIsPaused(true);
               setTimeout(() => setIsPaused(false), 3000);
             }}
-            className="rounded-full h-10 w-10 border border-white/15 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#E89422]/40 transition-all text-white"
+            className="rounded-full h-10 w-10 border border-white/15 bg-white/5 hover:bg-white/10 hover:border-[#E89422]/40 transition-colors text-white"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-4 w-4" />
@@ -236,7 +230,7 @@ export function HowItWorks() {
                   setIsPaused(true);
                   setTimeout(() => setIsPaused(false), 3000);
                 }}
-                className={`h-1.5 rounded-full transition-all ${
+                className={`h-1.5 rounded-full transition-colors ${
                   index + 1 === current
                     ? 'w-8 bg-[#E89422]'
                     : 'w-1.5 bg-white/25 hover:bg-white/40'
@@ -254,7 +248,7 @@ export function HowItWorks() {
               setIsPaused(true);
               setTimeout(() => setIsPaused(false), 3000);
             }}
-            className="rounded-full h-10 w-10 border border-white/15 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#E89422]/40 transition-all text-white"
+            className="rounded-full h-10 w-10 border border-white/15 bg-white/5 hover:bg-white/10 hover:border-[#E89422]/40 transition-colors text-white"
             aria-label="Next slide"
           >
             <ChevronRight className="h-4 w-4" />
