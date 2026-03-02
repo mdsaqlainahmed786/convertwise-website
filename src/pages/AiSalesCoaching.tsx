@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'motion/react';
+
 import {
   Zap,
   Brain,
@@ -149,13 +149,9 @@ function FAQAccordion() {
       {faqs.map((faq, i) => {
         const isOpen = openIndex === i;
         return (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.08 }}
-            className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
+          <div
+            key={i}
+            className="bg-white/95 dark:bg-gray-800/60 rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
           >
             <button
               className="w-full flex items-center justify-between gap-4 p-8 text-left"
@@ -172,7 +168,7 @@ function FAQAccordion() {
             {isOpen && (
               <div className="px-8 pb-8 text-gray-700 dark:text-gray-300 leading-relaxed">{faq.answer}</div>
             )}
-          </motion.div>
+          </div>
         );
       })}
     </div>
@@ -240,69 +236,46 @@ export function AiSalesCoaching() {
           }}
         />
 
-        <motion.div
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40"
-          animate={{ scale: [1, 1.2, 1], x: [0, 50, 0], y: [0, -30, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-orange-100 rounded-full blur-[120px] opacity-35"
-          animate={{ scale: [1.2, 1, 1.2], x: [0, -50, 0], y: [0, 30, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        />
-
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
+            <div
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/95 dark:bg-gray-800/70 border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
             >
               <Brain className="text-[#E89422] dark:text-[#F5B040]" size={16} />
               <span className="text-[#C47010] dark:text-[#F5B040] text-sm font-medium">AI-Powered Sales Coaching Software</span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
+            <h1
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent"
             >
               AI Sales Coaching That Improves Every Rep — Automatically
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+            <p
               className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
             >
               Traditional sales coaching relies on managers listening to random call recordings. Nimitai AI sales coaching software analyzes{' '}
               <strong className="text-gray-900 dark:text-white">EVERY call</strong>, identifies each rep's coaching needs, and delivers personalized insights — so managers coach smarter, not harder.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a
                 href="#"
-                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
                 Start AI Coaching Your Team
                 <Zap size={18} />
               </a>
               <a
                 href="#how-it-works"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 shadow-lg"
+                className="px-8 py-4 bg-white/95 dark:bg-gray-800/70 border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-colors inline-flex items-center gap-2 shadow-lg"
               >
                 See How It Works
                 <ArrowRight size={18} />
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -310,11 +283,7 @@ export function AiSalesCoaching() {
       {/* ── 2. OLD WAY vs NEW WAY ───────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -323,16 +292,12 @@ export function AiSalesCoaching() {
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               The old way of coaching was slow, inconsistent, and impossible to scale. Here is what changes with AI.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Old Way */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+            <div
+              className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="text-sm font-bold uppercase tracking-widest text-red-500 dark:text-red-400 mb-6">The Old Way</div>
               <ul className="space-y-4">
@@ -345,14 +310,10 @@ export function AiSalesCoaching() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
             {/* New Way */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
               className="relative bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-3xl p-8 shadow-2xl shadow-[#E89422]/30 border border-[#E89422]/40 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-3xl pointer-events-none" />
@@ -369,7 +330,7 @@ export function AiSalesCoaching() {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -380,11 +341,7 @@ export function AiSalesCoaching() {
         className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors"
       >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -393,19 +350,15 @@ export function AiSalesCoaching() {
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               Each dimension of sales performance, analyzed and coached automatically.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {coachingFeatures.map((feature, i) => {
               const Icon = feature.icon;
               return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+                <div
+                  key={i}
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-[#E89422]/20">
                     <Icon className="text-white" size={22} />
@@ -413,7 +366,7 @@ export function AiSalesCoaching() {
                   <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{feature.title}</h3>
                   <p className="text-xs font-medium text-[#E89422] dark:text-[#F5B040] mb-3">{feature.desc}</p>
                   <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{feature.body}</p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -423,11 +376,7 @@ export function AiSalesCoaching() {
       {/* ── 4. RESULTS ──────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -436,24 +385,20 @@ export function AiSalesCoaching() {
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               Real results from teams using Nimitai AI sales coaching.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {results.map((r, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.12 }}
-                className="text-center bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-10 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+              <div
+                key={i}
+                className="text-center bg-white/95 dark:bg-gray-800/60 rounded-3xl p-10 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
               >
                 <div className="text-5xl font-black bg-gradient-to-br from-[#E89422] to-orange-500 bg-clip-text text-transparent mb-3">
                   {r.metric}
                 </div>
                 <div className="text-lg font-bold text-gray-900 dark:text-white mb-2">{r.label}</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">{r.sub}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -462,11 +407,7 @@ export function AiSalesCoaching() {
       {/* ── 5. FAQ ───────────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -475,7 +416,7 @@ export function AiSalesCoaching() {
             <p className="text-gray-700 dark:text-gray-300 text-lg">
               Everything you need to know about AI sales coaching and how Nimitai delivers it.
             </p>
-          </motion.div>
+          </div>
 
           <FAQAccordion />
         </div>
@@ -484,15 +425,10 @@ export function AiSalesCoaching() {
       {/* ── 6. FINAL CTA ────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             <div className="relative inline-block mb-10">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#E89422]/20 to-orange-500/20 rounded-3xl blur-xl" />
               <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight">
                 Start AI Coaching Your Sales Team Today
               </h2>
@@ -504,7 +440,7 @@ export function AiSalesCoaching() {
 
             <a
               href="#"
-              className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-orange-500 text-white rounded-full hover:from-[#C47010] hover:to-orange-600 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-orange-500 text-white rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
             >
               Start Free Trial
               <Zap size={18} />
@@ -513,7 +449,7 @@ export function AiSalesCoaching() {
             <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
               No credit card required. Cancel anytime.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

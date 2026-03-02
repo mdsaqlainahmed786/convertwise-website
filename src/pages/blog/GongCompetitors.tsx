@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'motion/react';
 import {
   ChevronDown,
   ChevronUp,
@@ -254,13 +253,9 @@ function FAQAccordion() {
       {faqs.map((faq, i) => {
         const isOpen = openIndex === i;
         return (
-          <motion.div
+          <div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.08 }}
-            className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
+            className="bg-white/95 dark:bg-gray-800/60 rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
           >
             <button
               className="w-full flex items-center justify-between gap-4 p-8 text-left"
@@ -277,7 +272,7 @@ function FAQAccordion() {
             {isOpen && (
               <div className="px-8 pb-8 text-gray-700 dark:text-gray-300 leading-relaxed">{faq.answer}</div>
             )}
-          </motion.div>
+          </div>
         );
       })}
     </div>
@@ -348,53 +343,30 @@ export function GongCompetitors() {
           }}
         />
 
-        {/* Animated gradient orbs */}
-        <motion.div
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40"
-          animate={{ scale: [1, 1.2, 1], x: [0, 50, 0], y: [0, -30, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-orange-100 rounded-full blur-[120px] opacity-35"
-          animate={{ scale: [1.2, 1, 1.2], x: [0, -50, 0], y: [0, 30, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        />
-
+        {/* Gradient orbs */}
         <div className="max-w-4xl mx-auto relative z-10">
           {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
+          <div
+            className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/95 dark:bg-gray-800/70 border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
           >
             <TrendingUp className="text-[#E89422] dark:text-[#F5B040]" size={16} />
             <span className="text-[#C47010] dark:text-[#F5B040] text-sm font-medium">10 Best Gong Competitors 2026</span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+          <h1
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent"
           >
             10 Best Gong Competitors & Alternatives in 2026
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+          <p
             className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed"
           >
             We compared every major Gong competitor on price, features, and fit for different team sizes. Here's the honest ranking — with real pricing numbers Gong doesn't want you to see.
-          </motion.p>
+          </p>
 
           {/* Author byline */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+          <div
             className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 pt-6"
           >
             <span className="inline-flex items-center gap-2">
@@ -409,7 +381,7 @@ export function GongCompetitors() {
               <TrendingUp size={15} className="text-[#E89422]" />
               12 min read
             </span>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -422,12 +394,8 @@ export function GongCompetitors() {
             <article>
 
               {/* Quick comparison table */}
-              <motion.div
+              <div
                 id="quick-comparison"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
                 className="mb-16"
               >
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
@@ -468,17 +436,13 @@ export function GongCompetitors() {
                     </tbody>
                   </table>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Individual competitor sections */}
               {competitors.map((competitor, idx) => (
-                <motion.div
+                <div
                   key={competitor.rank}
                   id={`competitor-${competitor.rank}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.05 }}
                   className={`mb-14 pb-14 ${idx < competitors.length - 1 ? 'border-b border-gray-100 dark:border-gray-800' : ''}`}
                 >
                   {/* Rank + name header */}
@@ -524,18 +488,15 @@ export function GongCompetitors() {
                       <span className="text-gray-600 dark:text-gray-400">{competitor.limitation}</span>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
 
             </article>
 
             {/* Table of contents sidebar */}
             <aside className="hidden lg:block">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="sticky top-28 bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-6 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+              <div
+                className="sticky top-28 bg-white/95 dark:bg-gray-800/60 rounded-3xl p-6 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
               >
                 <div className="text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">In This Article</div>
                 <ul className="space-y-2">
@@ -558,12 +519,12 @@ export function GongCompetitors() {
                 <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
                   <a
                     href="#"
-                    className="block w-full text-center px-4 py-3 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-semibold rounded-xl hover:from-[#C47010] hover:to-[#963C00] transition-all shadow-lg"
+                    className="block w-full text-center px-4 py-3 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-semibold rounded-xl hover:from-[#C47010] hover:to-[#963C00] transition-colors shadow-lg"
                   >
                     Try Nimitai Free
                   </a>
                 </div>
-              </motion.div>
+              </div>
             </aside>
 
           </div>
@@ -573,11 +534,7 @@ export function GongCompetitors() {
       {/* ── FAQ ─────────────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -586,7 +543,7 @@ export function GongCompetitors() {
             <p className="text-gray-700 dark:text-gray-300 text-lg">
               The most common questions when evaluating Gong and its alternatives.
             </p>
-          </motion.div>
+          </div>
 
           <FAQAccordion />
         </div>
@@ -595,15 +552,10 @@ export function GongCompetitors() {
       {/* ── BOTTOM CTA ──────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             <div className="relative inline-block mb-10">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#E89422]/20 to-[#C47010]/20 rounded-3xl blur-xl" />
               <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight">
                 Try Nimitai — The #1 Gong Alternative for Startups
               </h2>
@@ -616,14 +568,14 @@ export function GongCompetitors() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#"
-                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
                 Start 14-Day Free Trial
                 <Zap size={18} />
               </a>
               <a
                 href="/pricing"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 shadow-lg"
+                className="px-8 py-4 bg-white/95 dark:bg-gray-800/70 border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-colors inline-flex items-center gap-2 shadow-lg"
               >
                 See Full Pricing
                 <ArrowRight size={18} />
@@ -633,7 +585,7 @@ export function GongCompetitors() {
             <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
               No credit card required. Join 47+ B2B sales teams using Nimitai.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

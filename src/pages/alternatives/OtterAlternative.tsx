@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'motion/react';
 import {
   FileText,
   BarChart2,
@@ -141,13 +140,9 @@ function FAQAccordion() {
       {faqs.map((faq, i) => {
         const isOpen = openIndex === i;
         return (
-          <motion.div
+          <div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.08 }}
-            className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
+            className="bg-white/95 dark:bg-gray-800/60 rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
           >
             <button
               className="w-full flex items-center justify-between gap-4 p-8 text-left"
@@ -164,7 +159,7 @@ function FAQAccordion() {
             {isOpen && (
               <div className="px-8 pb-8 text-gray-700 dark:text-gray-300 leading-relaxed">{faq.answer}</div>
             )}
-          </motion.div>
+          </div>
         );
       })}
     </div>
@@ -233,71 +228,48 @@ export function OtterAlternative() {
           }}
         />
 
-        {/* Animated gradient orbs */}
-        <motion.div
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40"
-          animate={{ scale: [1, 1.2, 1], x: [0, 50, 0], y: [0, -30, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-orange-100 rounded-full blur-[120px] opacity-35"
-          animate={{ scale: [1.2, 1, 1.2], x: [0, -50, 0], y: [0, 30, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        />
-
+        {/* Gradient orbs */}
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
+            <div
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/95 dark:bg-gray-800/70 border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
             >
               <TrendingUp className="text-[#E89422] dark:text-[#F5B040]" size={16} />
               <span className="text-[#C47010] dark:text-[#F5B040] text-sm font-medium">Best Otter.ai Alternative 2026</span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
+            <h1
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent"
             >
               The Best Otter.ai Alternative for B2B Sales Teams
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+            <p
               className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
             >
               Otter.ai transcribes your calls. Nimitai analyzes them. Get deal risk scoring, objection pattern detection, and real-time coaching — everything Otter.ai can't do — at{' '}
               <strong className="text-gray-900 dark:text-white">$149/month</strong> with no per-seat pricing.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a
                 href="#"
-                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
                 Start Free Trial
                 <Zap size={18} />
               </a>
               <a
                 href="#comparison"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 shadow-lg"
+                className="px-8 py-4 bg-white/95 dark:bg-gray-800/70 border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-colors inline-flex items-center gap-2 shadow-lg"
               >
                 See Full Comparison
                 <ArrowRight size={18} />
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -305,11 +277,7 @@ export function OtterAlternative() {
       {/* ── 2. WHY TEAMS LEAVE OTTER.AI ─────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -318,26 +286,22 @@ export function OtterAlternative() {
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               Otter.ai is a solid transcription tool. Here is why it does not work for B2B sales teams that need actual intelligence.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {painPoints.map((point, i) => {
               const Icon = point.icon;
               return (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-50 dark:from-[#1A1000]/40 dark:to-[#963C00]/20 rounded-2xl flex items-center justify-center mb-5 border border-amber-200/50 dark:border-[#C47010]/30">
                     <Icon className="text-[#E89422] dark:text-[#F5B040]" size={22} />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{point.title}</h3>
                   <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{point.body}</p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -350,11 +314,7 @@ export function OtterAlternative() {
         className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors"
       >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -363,13 +323,9 @@ export function OtterAlternative() {
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               See exactly what you get — and what Otter.ai cannot give you.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+          <div
             className="overflow-x-auto"
           >
             <table className="w-full border-collapse">
@@ -429,18 +385,14 @@ export function OtterAlternative() {
                 ))}
               </tbody>
             </table>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ── 4. WHY NIMITAI ─────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -449,26 +401,22 @@ export function OtterAlternative() {
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               Built from the ground up for B2B sales teams — not retrofitted from a general transcription tool.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-3 gap-8">
             {whyCards.map((card, i) => {
               const Icon = card.icon;
               return (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.12 }}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-[#E89422]/20">
                     <Icon className="text-white" size={24} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{card.title}</h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{card.body}</p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -478,11 +426,7 @@ export function OtterAlternative() {
       {/* ── 5. PRICING COMPARISON ──────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -491,16 +435,12 @@ export function OtterAlternative() {
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               Otter.ai charges per seat. Nimitai charges per team — and delivers far more value.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Otter.ai card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+            <div
+              className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2">
                 Otter.ai
@@ -519,14 +459,10 @@ export function OtterAlternative() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
             {/* Nimitai card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
               className="relative bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-3xl p-8 shadow-2xl shadow-[#E89422]/30 border border-[#E89422]/40 overflow-hidden"
             >
               {/* Glow */}
@@ -550,7 +486,7 @@ export function OtterAlternative() {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -558,11 +494,7 @@ export function OtterAlternative() {
       {/* ── 6. FAQ ─────────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -571,7 +503,7 @@ export function OtterAlternative() {
             <p className="text-gray-700 dark:text-gray-300 text-lg">
               Everything you need to know before switching from Otter.ai to Nimitai.
             </p>
-          </motion.div>
+          </div>
 
           <FAQAccordion />
         </div>
@@ -580,15 +512,10 @@ export function OtterAlternative() {
       {/* ── 7. FINAL CTA ───────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             <div className="relative inline-block mb-10">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#E89422]/20 to-[#C47010]/20 rounded-3xl blur-xl" />
               <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight">
                 Switch to the Otter.ai Alternative Built for Sales
               </h2>
@@ -600,7 +527,7 @@ export function OtterAlternative() {
 
             <a
               href="#"
-              className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
             >
               Start Free Trial
               <Zap size={18} />
@@ -609,7 +536,7 @@ export function OtterAlternative() {
             <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
               No credit card required. Cancel anytime.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

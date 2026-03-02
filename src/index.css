@@ -1,5 +1,24 @@
 @import "tailwindcss";
-@import "./styles/globals.css";
+@plugin "@tailwindcss/typography";
 
 /* Use class-based dark mode (not system preference) so ThemeProvider controls it */
 @variant dark (&:where(.dark, .dark *));
+
+/* GPU-friendly ambient orb animations (replace heavy JS motion) */
+@keyframes ambient-float-a {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  33% { transform: scale(1.15) translate(15px, -12px); }
+  66% { transform: scale(1.05) translate(-8px, 8px); }
+}
+@keyframes ambient-float-b {
+  0%, 100% { transform: scale(1.1) translate(0, 0); }
+  33% { transform: scale(1) translate(-12px, 12px); }
+  66% { transform: scale(1.2) translate(10px, -8px); }
+}
+@keyframes ambient-float-c {
+  0%, 100% { transform: scale(1) translate(0, 0) rotate(0deg); }
+  50% { transform: scale(1.15) translate(5px, -5px) rotate(4deg); }
+}
+.animate-ambient-float-a { animation: ambient-float-a 18s ease-in-out infinite; }
+.animate-ambient-float-b { animation: ambient-float-b 22s ease-in-out infinite 2s; }
+.animate-ambient-float-c { animation: ambient-float-c 28s ease-in-out infinite 4s; }

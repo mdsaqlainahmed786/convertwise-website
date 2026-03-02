@@ -7,22 +7,10 @@ export function LiveIntelligence() {
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
-      {/* Mesh gradient orbs */}
-      <motion.div
-        className="absolute -top-32 left-1/4 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.09]"
-        animate={{ scale: [1, 1.25, 1], x: [0, 50, 0], y: [0, -30, 0] }}
-        transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[160px] opacity-[0.08]"
-        animate={{ scale: [1.2, 1, 1.2], x: [0, -40, 0], y: [0, 30, 0] }}
-        transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-      />
-      <motion.div
-        className="absolute top-1/2 -right-24 w-[500px] h-[400px] bg-amber-700 rounded-full blur-[140px] opacity-[0.07]"
-        animate={{ scale: [1, 1.3, 1], y: [0, -40, 0] }}
-        transition={{ duration: 32, repeat: Infinity, ease: 'easeInOut', delay: 6 }}
-      />
+      {/* Static gradient orbs */}
+      <div className="absolute -top-32 left-1/4 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.09]" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[160px] opacity-[0.08]" />
+      <div className="absolute top-1/2 -right-24 w-[500px] h-[400px] bg-amber-700 rounded-full blur-[140px] opacity-[0.07]" />
 
       {/* Subtle dot grid */}
       <div
@@ -33,22 +21,6 @@ export function LiveIntelligence() {
         }}
       />
 
-      {/* Floating sparkles */}
-      {[
-        { left: '5%', top: '25%', delay: 0 },
-        { left: '20%', top: '65%', delay: 1.1 },
-        { left: '55%', top: '15%', delay: 0.5 },
-        { left: '78%', top: '72%', delay: 1.7 },
-        { left: '93%', top: '35%', delay: 0.3 },
-      ].map((p, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-0.5 h-0.5 rounded-full bg-[#E89422]"
-          style={{ left: p.left, top: p.top }}
-          animate={{ y: [0, -60, -120], opacity: [0, 0.7, 0] }}
-          transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: p.delay, ease: 'easeOut' }}
-        />
-      ))}
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -67,10 +39,10 @@ export function LiveIntelligence() {
 
             <motion.h2
               className="mb-6 text-4xl sm:text-5xl leading-tight"
-              initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
-              whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ type: 'spring', stiffness: 70, damping: 20, delay: 0.1 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
             >
               Real-Time Conversation Intelligence{' '}
               <span className="bg-gradient-to-r from-[#F5B040] to-[#E89422] bg-clip-text text-transparent">
@@ -116,10 +88,10 @@ export function LiveIntelligence() {
                 <motion.div
                   key={i}
                   className="flex items-start gap-4 p-4 bg-white/[0.04] backdrop-blur-md rounded-xl border border-white/[0.08] hover:bg-white/[0.07] hover:border-[#E89422]/20 transition-all"
-                  initial={{ opacity: 0, x: -20, filter: 'blur(4px)' }}
-                  whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+                  initial={{ opacity: 0, x: -12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ type: 'spring', stiffness: 80, damping: 20, delay: item.delay }}
+                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: item.delay }}
                   whileHover={{ x: 4 }}
                 >
                   <div className={`w-10 h-10 rounded-lg ${item.bg} flex items-center justify-center flex-shrink-0`}>
@@ -137,10 +109,10 @@ export function LiveIntelligence() {
           {/* Right side - Dashboard */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, x: 30, filter: 'blur(10px)' }}
-            whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 55, damping: 20, delay: 0.2 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           >
             {/* Glow behind card */}
             <div className="absolute inset-0 bg-[#E89422]/10 rounded-3xl blur-2xl scale-95 pointer-events-none" />
@@ -232,23 +204,15 @@ export function LiveIntelligence() {
             </div>
 
             {/* Floating metric cards */}
-            <motion.div
-              className="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#E89422] to-[#963C00] p-4 rounded-2xl shadow-2xl border border-[#E89422]/30"
-              animate={{ y: [0, -5, 0], rotate: [0, 1, -0.5, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            >
+            <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#E89422] to-[#963C00] p-4 rounded-2xl shadow-2xl border border-[#E89422]/30">
               <div className="text-3xl mb-1">43</div>
               <div className="text-xs text-[#F5B040]">Moments Detected</div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="absolute -top-6 -right-6 bg-gradient-to-br from-[#963C00] to-[#963C00] p-4 rounded-2xl shadow-2xl border border-orange-400/30"
-              animate={{ y: [0, 5, 0], rotate: [0, -1, 0.5, 0] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-            >
+            <div className="absolute -top-6 -right-6 bg-gradient-to-br from-[#963C00] to-[#963C00] p-4 rounded-2xl shadow-2xl border border-orange-400/30">
               <div className="text-3xl mb-1">92%</div>
               <div className="text-xs text-orange-200">Success Rate</div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

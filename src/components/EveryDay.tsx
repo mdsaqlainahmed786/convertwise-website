@@ -10,22 +10,10 @@ export function EveryDay() {
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
-      {/* Mesh gradient orbs */}
-      <motion.div
-        className="absolute -top-32 right-0 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.08]"
-        animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, -30, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        className="absolute bottom-0 -left-32 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[160px] opacity-[0.07]"
-        animate={{ scale: [1.15, 1, 1.15], x: [0, -30, 0], y: [0, 25, 0] }}
-        transition={{ duration: 28, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[400px] bg-red-800 rounded-full blur-[150px] opacity-[0.06]"
-        animate={{ scale: [1, 1.3, 1], rotate: [0, 6, 0] }}
-        transition={{ duration: 35, repeat: Infinity, ease: 'easeInOut', delay: 6 }}
-      />
+      {/* Static gradient orbs */}
+      <div className="absolute -top-32 right-0 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.08]" />
+      <div className="absolute bottom-0 -left-32 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[160px] opacity-[0.07]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[400px] bg-red-800 rounded-full blur-[150px] opacity-[0.06]" />
 
       {/* Subtle dot grid */}
       <div
@@ -36,22 +24,6 @@ export function EveryDay() {
         }}
       />
 
-      {/* Floating sparkles */}
-      {[
-        { left: '7%', top: '20%', delay: 0 },
-        { left: '22%', top: '65%', delay: 1.2 },
-        { left: '52%', top: '18%', delay: 0.6 },
-        { left: '75%', top: '72%', delay: 1.8 },
-        { left: '92%', top: '38%', delay: 0.3 },
-      ].map((p, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-0.5 h-0.5 rounded-full bg-[#E89422]"
-          style={{ left: p.left, top: p.top }}
-          animate={{ y: [0, -60, -120], opacity: [0, 0.6, 0] }}
-          transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: p.delay, ease: 'easeOut' }}
-        />
-      ))}
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Main headline */}
@@ -69,10 +41,10 @@ export function EveryDay() {
 
           <motion.h2
             className="mb-6 text-4xl sm:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
-            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 70, damping: 20, delay: 0.1 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 22, delay: 0.08 }}
           >
             Every Day You Wait,{' '}
             <span className="bg-gradient-to-r from-[#963C00] to-red-400 bg-clip-text text-transparent">
@@ -87,10 +59,10 @@ export function EveryDay() {
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Left: The Setup */}
             <motion.div
-              initial={{ opacity: 0, x: -24, filter: 'blur(6px)' }}
-              whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ type: 'spring', stiffness: 70, damping: 20, delay: 0.2 }}
+              transition={{ type: 'spring', stiffness: 100, damping: 22, delay: 0.12 }}
               className="relative"
             >
               <div className="absolute inset-0 bg-[#E89422]/10 rounded-3xl blur-xl" />
@@ -129,10 +101,10 @@ export function EveryDay() {
 
             {/* Right: The Reality */}
             <motion.div
-              initial={{ opacity: 0, x: 24, filter: 'blur(6px)' }}
-              whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+              initial={{ opacity: 0, x: 16 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ type: 'spring', stiffness: 70, damping: 20, delay: 0.35 }}
+              transition={{ type: 'spring', stiffness: 100, damping: 22, delay: 0.2 }}
               className="relative"
             >
               <div className="absolute inset-0 bg-red-500/15 rounded-3xl blur-xl" />
@@ -167,10 +139,10 @@ export function EveryDay() {
 
           {/* The Critical Moment */}
           <motion.div
-            initial={{ opacity: 0, y: 24, filter: 'blur(6px)' }}
-            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 65, damping: 20, delay: 0.5 }}
+            transition={{ type: 'spring', stiffness: 95, damping: 22, delay: 0.28 }}
             className="relative"
           >
             <div className="absolute inset-0 bg-orange-500/15 rounded-3xl blur-2xl" />
@@ -198,22 +170,20 @@ export function EveryDay() {
 
         {/* The Solution CTA */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, filter: 'blur(8px)' }}
-          whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ type: 'spring', stiffness: 55, damping: 20, delay: 0.7 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
           className="relative"
         >
-          {/* Glowing orbs behind CTA card */}
-          <motion.div
-            className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-amber-500 to-amber-300 rounded-full blur-[100px] opacity-20"
-            animate={{ scale: [1, 1.2, 1], x: [0, 30, 0], y: [0, -20, 0] }}
-            transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+          {/* Glow behind CTA card — CSS */}
+          <div
+            className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-amber-500 to-amber-300 rounded-full blur-[100px] opacity-20 animate-ambient-float-a"
+            aria-hidden
           />
-          <motion.div
-            className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-gradient-to-br from-[#963C00] to-[#E89422] rounded-full blur-[110px] opacity-15"
-            animate={{ scale: [1.2, 1, 1.2], x: [0, -30, 0], y: [0, 20, 0] }}
-            transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+          <div
+            className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-gradient-to-br from-[#963C00] to-[#E89422] rounded-full blur-[110px] opacity-15 animate-ambient-float-b"
+            aria-hidden
           />
 
           <div className="relative bg-white/[0.05] backdrop-blur-2xl border border-white/[0.12] rounded-3xl overflow-hidden shadow-2xl shadow-black/40">
@@ -256,10 +226,10 @@ export function EveryDay() {
                   ].map((item, i) => (
                     <motion.div
                       key={i}
-                      initial={{ opacity: 0, x: -16 }}
+                      initial={{ opacity: 0, x: -12 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ type: 'spring', stiffness: 90, damping: 20, delay: item.delay }}
+                      transition={{ type: 'spring', stiffness: 100, damping: 22, delay: item.delay }}
                       className="flex items-center gap-3 p-4 bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] rounded-xl hover:bg-white/[0.07] hover:border-[#E89422]/20 transition-all"
                     >
                       <div className={`w-2 h-2 ${item.dot} rounded-full`} />
@@ -285,27 +255,19 @@ export function EveryDay() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0400]/60 via-transparent to-transparent" />
 
-                  <motion.div
-                    className="absolute top-6 left-6 bg-green-500/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/25 shadow-lg"
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                  >
+                  <div className="absolute top-6 left-6 bg-green-500/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/25 shadow-lg">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                       <span className="text-white text-sm">Perfect moment detected</span>
                     </div>
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    className="absolute bottom-6 right-6 bg-blue-500/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/25 shadow-lg"
-                    animate={{ y: [0, 5, 0] }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-                  >
+                  <div className="absolute bottom-6 right-6 bg-blue-500/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/25 shadow-lg">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                       <span className="text-white text-sm">High engagement</span>
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
               </motion.div>
             </div>

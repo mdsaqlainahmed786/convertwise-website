@@ -4,55 +4,27 @@ import { motion } from 'motion/react';
 export function TheProblem() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative overflow-hidden">
-      {/* Mesh gradient orbs */}
-      <motion.div
-        className="absolute -top-20 right-0 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[140px] opacity-12"
-        animate={{ scale: [1, 1.25, 1], x: [0, 50, 0], y: [0, -30, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute -bottom-20 -left-10 w-[500px] h-[500px] bg-[#963C00] rounded-full blur-[130px] opacity-12"
-        animate={{ scale: [1.2, 1, 1.2], x: [0, -40, 0], y: [0, 30, 0] }}
-        transition={{ duration: 28, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-red-700 rounded-full blur-[120px] opacity-8"
-        animate={{ scale: [1, 1.2, 1], rotate: [0, 8, 0] }}
-        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut", delay: 5 }}
-      />
+      {/* Static gradient orbs — subtle CSS animation */}
+      <div className="absolute -top-20 right-0 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[140px] opacity-12 animate-ambient-float-a" aria-hidden />
+      <div className="absolute -bottom-20 -left-10 w-[500px] h-[500px] bg-[#963C00] rounded-full blur-[130px] opacity-12 animate-ambient-float-b" aria-hidden />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-red-700 rounded-full blur-[120px] opacity-8 animate-ambient-float-c" aria-hidden />
 
       {/* Grid pattern overlay */}
-      <motion.div
+      <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)',
           backgroundSize: '50px 50px'
         }}
-        animate={{ backgroundPosition: ['0px 0px', '50px 50px'] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       />
-      {/* Floating sparkles */}
-      {[
-        { left: '15%', top: '25%', delay: 0 },
-        { left: '40%', top: '60%', delay: 1 },
-        { left: '70%', top: '30%', delay: 0.5 },
-        { left: '85%', top: '70%', delay: 1.5 },
-      ].map((p, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 rounded-full bg-[#E89422]"
-          style={{ left: p.left, top: p.top }}
-          animate={{ y: [0, -60, -120], opacity: [0, 0.5, 0] }}
-          transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: p.delay, ease: "easeOut" }}
-        />
-      ))}
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
             <AlertTriangle className="text-orange-400" size={16} />
@@ -98,10 +70,10 @@ export function TheProblem() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
+          transition={{ duration: 0.28, delay: 0.15 }}
         >
           <div className="inline-block p-8 bg-gradient-to-r from-orange-500/12 to-red-500/12 backdrop-blur-md border border-orange-500/25 rounded-3xl shadow-lg shadow-orange-900/20">
             <p className="text-3xl sm:text-4xl bg-gradient-to-r from-[#963C00] to-red-400 bg-clip-text text-transparent">
@@ -140,10 +112,10 @@ function StatCard({
   return (
     <motion.div 
       className={`bg-white/8 backdrop-blur-md border ${colors.border} rounded-2xl p-6 hover:bg-white/12 shadow-lg transition-all`}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ type: "spring", stiffness: 65, damping: 20, delay }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay }}
       whileHover={{ y: -8, scale: 1.02 }}
       whileTap={{ scale: 0.99 }}
     >

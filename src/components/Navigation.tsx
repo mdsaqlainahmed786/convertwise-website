@@ -61,7 +61,7 @@ export function Navigation() {
     }`;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-white/[0.06] transition-colors" style={{ zIndex: 50 }}>
+    <nav className="fixed left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 border-b border-gray-200 dark:border-white/[0.06] transition-[top] duration-200" style={{ zIndex: 50, top: 'var(--announcement-bar-h, 0px)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-10">
@@ -165,7 +165,7 @@ export function Navigation() {
                 e.stopPropagation();
                 setIsDialogOpen(true);
               }}
-              className="px-6 py-2 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-medium rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all shadow-lg hover:shadow-xl cursor-pointer"
+              className="px-6 py-2 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white text-sm font-medium rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors shadow-lg hover:shadow-xl cursor-pointer"
               style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}
               aria-label="Get started with Nimitai AI meeting intelligence"
             >
@@ -239,7 +239,7 @@ export function Navigation() {
                 setIsOpen(false);
                 setIsDialogOpen(true);
               }}
-              className="w-full px-6 py-2 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all mt-2"
+              className="w-full px-6 py-2 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors mt-2"
             >
               Get Started
             </button>
@@ -250,7 +250,7 @@ export function Navigation() {
       {/* Sign-up dialog */}
       {isDialogOpen && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60"
           onClick={() => setIsDialogOpen(false)}
           style={{ zIndex: 9999 }}
         >
@@ -319,7 +319,7 @@ export function Navigation() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-2 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all"
+                  className="flex-1 px-6 py-2 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors"
                 >
                   Apply for Access
                 </button>

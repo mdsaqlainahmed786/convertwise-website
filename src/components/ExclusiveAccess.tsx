@@ -39,22 +39,12 @@ export function ExclusiveAccess() {
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
-      {/* Mesh gradient orbs */}
-      <motion.div
-        className="absolute -top-40 -right-20 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.07]"
-        animate={{ scale: [1, 1.25, 1], x: [0, 30, 0], y: [0, -25, 0] }}
-        transition={{ duration: 24, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        className="absolute -bottom-32 -left-20 w-[500px] h-[500px] bg-orange-700 rounded-full blur-[160px] opacity-[0.06]"
-        animate={{ scale: [1.15, 1, 1.15], x: [0, -20, 0], y: [0, 20, 0] }}
-        transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
-      />
-      <motion.div
+      {/* Static gradient orbs */}
+      <div className="absolute -top-40 -right-20 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.07]" />
+      <div className="absolute -bottom-32 -left-20 w-[500px] h-[500px] bg-orange-700 rounded-full blur-[160px] opacity-[0.06]" />
+      <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
         style={{ background: 'radial-gradient(circle, rgba(232,148,34,0.06) 0%, transparent 70%)' }}
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       />
 
       {/* Subtle dot grid */}
@@ -66,22 +56,6 @@ export function ExclusiveAccess() {
         }}
       />
 
-      {/* Floating sparkles */}
-      {[
-        { left: '6%', top: '22%', delay: 0 },
-        { left: '18%', top: '68%', delay: 1.0 },
-        { left: '50%', top: '12%', delay: 0.5 },
-        { left: '78%', top: '75%', delay: 1.6 },
-        { left: '94%', top: '35%', delay: 0.25 },
-      ].map((p, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-0.5 h-0.5 rounded-full bg-[#E89422]"
-          style={{ left: p.left, top: p.top }}
-          animate={{ y: [0, -55, -110], opacity: [0, 0.6, 0] }}
-          transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: p.delay, ease: 'easeOut' }}
-        />
-      ))}
 
       <div className="max-w-3xl mx-auto relative z-10">
         {/* Private beta badge */}
@@ -102,10 +76,10 @@ export function ExclusiveAccess() {
 
         {/* Headline */}
         <motion.h2
-          initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: 'spring', stiffness: 70, damping: 20, delay: 0.1 }}
+          transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
           className="text-center text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.15] mb-6"
         >
           The AI sales teams that win<br />
@@ -164,16 +138,6 @@ export function ExclusiveAccess() {
                 className="px-6 py-3.5 bg-[#E89422] text-[#070B18] font-semibold rounded-full text-sm whitespace-nowrap shadow-lg shadow-[#E89422]/20"
                 whileHover={{ scale: 1.03, backgroundColor: '#C47010' }}
                 whileTap={{ scale: 0.97 }}
-                animate={{
-                  boxShadow: [
-                    '0 8px 20px rgba(232,148,34,0.25)',
-                    '0 12px 40px rgba(232,148,34,0.5)',
-                    '0 8px 20px rgba(232,148,34,0.25)',
-                  ],
-                }}
-                transition={{
-                  boxShadow: { duration: 2.5, repeat: Infinity, ease: 'easeInOut' },
-                }}
                 aria-label="Apply for Nimitai founding access"
               >
                 Apply for Access
@@ -207,10 +171,10 @@ export function ExclusiveAccess() {
           {benefits.map((b, i) => (
             <motion.div
               key={b.title}
-              initial={{ opacity: 0, y: 14, filter: 'blur(4px)' }}
-              whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ type: 'spring', stiffness: 80, damping: 20, delay: 0.1 * i }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: 0.06 * i }}
               whileHover={{ y: -4, scale: 1.01 }}
               className="flex items-start gap-4 p-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-sm hover:border-[#E89422]/25 hover:bg-white/[0.05] transition-all cursor-default"
             >

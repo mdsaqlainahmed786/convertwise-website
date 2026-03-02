@@ -20,17 +20,13 @@ export function FinalCTA() {
       {/* Top teal accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/20 to-transparent" />
 
-      <motion.div
+      <div
         className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-[0.08]"
         style={{ background: '#E89422' }}
-        animate={{ scale: [1, 1.2, 1], x: [0, 30, 0] }}
-        transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
       />
-      <motion.div
+      <div
         className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-3xl opacity-[0.06]"
         style={{ background: '#C47010' }}
-        animate={{ scale: [1.2, 1, 1.2], x: [0, -30, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
       />
 
       <div className="max-w-3xl mx-auto text-center relative z-10">
@@ -47,10 +43,10 @@ export function FinalCTA() {
         </motion.div>
 
         <motion.h2
-          initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.1 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
           className="text-4xl sm:text-5xl font-bold text-white mb-5 leading-tight"
         >
           The conversation intelligence edge<br />
@@ -82,17 +78,6 @@ export function FinalCTA() {
             aria-label="Apply for Nimitai founding access — AI conversation intelligence for sales teams"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            animate={{
-              boxShadow: [
-                "0 8px 25px rgba(232,148,34,0.3)",
-                "0 12px 50px rgba(232,148,34,0.7)",
-                "0 8px 25px rgba(232,148,34,0.3)",
-              ]
-            }}
-            transition={{
-              boxShadow: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
-              scale: { type: "spring", stiffness: 300, damping: 20 }
-            }}
           >
             Apply for Founding Access
             <ArrowRight size={18} />

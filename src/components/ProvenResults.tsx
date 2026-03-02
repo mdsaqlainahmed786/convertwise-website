@@ -11,45 +11,18 @@ export function ProvenResults() {
       <ScanningGrid />
       <AIParticles />
 
-      {/* Mesh orbs — light mode only (dark handled by ScanningGrid/AIParticles) */}
-      <motion.div
-        className="absolute -top-16 right-0 w-[500px] h-[500px] bg-amber-200 rounded-full blur-[100px] opacity-30 dark:opacity-10 transition-opacity"
-        animate={{ scale: [1, 1.2, 1], x: [0, 30, 0] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-0 -left-16 w-[450px] h-[450px] bg-orange-200 rounded-full blur-[100px] opacity-25 dark:opacity-10 transition-opacity"
-        animate={{ scale: [1.15, 1, 1.15], x: [0, -25, 0] }}
-        transition={{ duration: 26, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-yellow-100 rounded-full blur-[120px] opacity-20 dark:opacity-5 transition-opacity"
-        animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-      />
-      {/* Floating sparkles */}
-      {[
-        { left: '10%', top: '30%', delay: 0 },
-        { left: '30%', top: '60%', delay: 1 },
-        { left: '70%', top: '40%', delay: 0.5 },
-        { left: '85%', top: '65%', delay: 1.5 },
-      ].map((p, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1.5 h-1.5 rounded-full bg-[#E89422]"
-          style={{ left: p.left, top: p.top }}
-          animate={{ y: [0, -70, -140], opacity: [0, 0.5, 0], scale: [0.5, 1, 0.5] }}
-          transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: p.delay, ease: "easeOut" }}
-        />
-      ))}
+      {/* Static orbs */}
+      <div className="absolute -top-16 right-0 w-[500px] h-[500px] bg-amber-200 rounded-full blur-[100px] opacity-30 dark:opacity-10 transition-opacity animate-ambient-float-a" aria-hidden />
+      <div className="absolute bottom-0 -left-16 w-[450px] h-[450px] bg-orange-200 rounded-full blur-[100px] opacity-25 dark:opacity-10 transition-opacity animate-ambient-float-b" aria-hidden />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-yellow-100 rounded-full blur-[120px] opacity-20 dark:opacity-5 transition-opacity animate-ambient-float-c" aria-hidden />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 70, damping: 20 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-amber-100 dark:from-[#1A1000]/30 to-orange-100 dark:to-orange-900/30 rounded-full transition-colors">
             <Award className="text-[#E89422] dark:text-[#F5B040]" size={16} />
@@ -68,10 +41,10 @@ export function ProvenResults() {
           {/* Confidence Score Card */}
           <motion.div
             className="relative group"
-            initial={{ opacity: 0, x: -30, filter: "blur(6px)" }}
-            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.15 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
             <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md p-8 rounded-3xl border border-amber-100/80 dark:border-gray-700 hover:border-amber-300 dark:hover:border-[#E89422] shadow-lg hover:shadow-2xl shadow-amber-100/50 dark:shadow-none transition-all">
@@ -121,10 +94,10 @@ export function ProvenResults() {
           {/* Time Saved Card */}
           <motion.div
             className="relative group"
-            initial={{ opacity: 0, x: 30, filter: "blur(6px)" }}
-            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.3 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
             <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md p-8 rounded-3xl border border-orange-100/80 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600 shadow-lg hover:shadow-2xl shadow-orange-100/50 dark:shadow-none transition-all">
@@ -252,10 +225,10 @@ function CaseStudyCard({
   return (
     <motion.div
       className="group bg-white/70 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-amber-100/60 dark:border-gray-700 hover:border-transparent dark:hover:border-transparent shadow-md shadow-amber-50 dark:shadow-none hover:shadow-2xl transition-colors"
-      initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ type: "spring", stiffness: 65, damping: 20, delay }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay }}
       whileHover={{ y: -8, scale: 1.02 }}
       whileTap={{ scale: 0.99 }}
     >

@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { Linkedin, Lightbulb, Eye, Target, Zap, Award, TrendingUp, Users, Briefcase, Rocket, User } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -59,70 +58,9 @@ export function About() {
           }}
         />
 
-        {/* 4 Moving gradient orbs */}
-        <motion.div 
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-orange-200 to-orange-100 rounded-full blur-[120px] opacity-35"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            x: [0, -50, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-
-        <motion.div 
-          className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-gradient-to-br from-pink-200 to-amber-100 rounded-full blur-[110px] opacity-30"
-          animate={{
-            x: [0, -60, 0],
-            y: [0, 40, 0],
-            scale: [1, 1.15, 1],
-          }}
-          transition={{
-            duration: 28,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-
-        <motion.div 
-          className="absolute top-1/4 right-1/4 w-[550px] h-[550px] bg-gradient-to-br from-orange-100 to-yellow-100 rounded-full blur-[100px] opacity-35"
-          animate={{
-            x: [0, 70, 0],
-            y: [0, -50, 0],
-            scale: [1.05, 1, 1.05],
-          }}
-          transition={{
-            duration: 24,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 3
-          }}
-        />
-        
+        {/* 4 Static gradient orbs */}
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <h1 className="mb-6 text-5xl sm:text-6xl lg:text-7xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight">
@@ -131,18 +69,14 @@ export function About() {
             <p className="mb-8 text-xl sm:text-2xl text-gray-700 dark:text-gray-300">
               Transforming Sales Through AI-Powered Automation
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Our Story Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="max-w-4xl mx-auto"
           >
             <h2 className="mb-8 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -159,31 +93,23 @@ export function About() {
                 In 2024, armed with deep expertise in AI-driven marketing and a passion for innovation, they launched Nimitai—an AI-powered sales automation platform that eliminates busywork and supercharges conversion rates.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Images Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Our Journey
             </h2>
-          </motion.div>
+          </div>
 
           <div className="images grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+            <div
               className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <ImageWithFallback
@@ -191,12 +117,8 @@ export function About() {
                 alt="Nimitai AI sales automation platform team working on meeting intelligence software"
                 className="w-full h-full object-cover aspect-video"
               />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            </div>
+            <div
               className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <ImageWithFallback
@@ -204,12 +126,8 @@ export function About() {
                 alt="AI-powered sales automation tools helping businesses achieve 7x ROI and increased lead generation"
                 className="w-full h-full object-cover aspect-video"
               />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+            </div>
+            <div
               className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <ImageWithFallback
@@ -217,7 +135,7 @@ export function About() {
                 alt="Real-time meeting intelligence and sales coaching AI transforming business sales processes"
                 className="w-full h-full object-cover aspect-video"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -225,26 +143,18 @@ export function About() {
       {/* Mission & Vision Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-violet-50 dark:from-violet-900/20 via-white dark:via-gray-900 to-[#EDE8FC] dark:to-violet-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Mission & Vision
             </h2>
-          </motion.div>
+          </div>
           
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Mission Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+            <div
+              className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-[#C47010] rounded-2xl flex items-center justify-center">
@@ -257,15 +167,11 @@ export function About() {
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 To empower sales teams with AI technology that handles repetitive tasks, so they can focus on building relationships and closing deals. We believe every business deserves enterprise-grade sales automation, regardless of size or budget.
               </p>
-            </motion.div>
+            </div>
 
             {/* Vision Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+            <div
+              className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500 dark:from-orange-400 to-orange-600 dark:to-orange-500 rounded-2xl flex items-center justify-center">
@@ -278,7 +184,7 @@ export function About() {
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 To become the world's most trusted AI sales automation platform, transforming how businesses approach lead generation, nurturing, and conversion. We envision a future where AI handles the grunt work, and humans focus on strategic relationships.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -286,17 +192,13 @@ export function About() {
       {/* Our Values Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Our Values
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -340,20 +242,16 @@ export function About() {
               };
 
               return (
-                <motion.div
+                <div
                   key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-lg border border-white/80 dark:border-gray-700/80 hover:shadow-xl transition-all"
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-2xl p-6 shadow-lg border border-white/80 dark:border-gray-700/80 hover:shadow-xl transition-colors"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-br ${colorClasses[value.color as keyof typeof colorClasses]} rounded-xl flex items-center justify-center mb-4`}>
                     {IconComponent && <IconComponent className="text-white" size={24} />}
                   </div>
                   <h3 className="text-xl font-medium mb-2 text-gray-900 dark:text-white">{value.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400">{value.description}</p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -363,17 +261,13 @@ export function About() {
       {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-violet-50 dark:from-violet-900/20 via-white dark:via-gray-900 to-[#EDE8FC] dark:to-violet-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               By The Numbers
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -384,13 +278,9 @@ export function About() {
             ].map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <motion.div
+                <div
                   key={stat.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-8 shadow-lg border border-white/80 dark:border-gray-700/80 text-center hover:shadow-xl transition-all"
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-2xl p-8 shadow-lg border border-white/80 dark:border-gray-700/80 text-center hover:shadow-xl transition-colors"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-[#E89422] dark:from-[#E89422] to-orange-500 dark:to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Icon className="text-white" size={32} />
@@ -399,7 +289,7 @@ export function About() {
                     {stat.number}
                   </div>
                   <div className="text-gray-700 dark:text-gray-300">{stat.label}</div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -409,26 +299,18 @@ export function About() {
       {/* Founding Team Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Founding Team
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Nilansh Gupta Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+            <div
+              className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="relative mb-4">
@@ -467,15 +349,11 @@ export function About() {
                   Compassionate Leader • Strategic Problem-Solver • AI Marketing Expert
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Archit Dhir Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+            <div
+              className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="relative mb-4">
@@ -514,7 +392,7 @@ export function About() {
                   Visionary Thinker • Technical Architect • Creative Problem-Solver
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

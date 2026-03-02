@@ -29,22 +29,10 @@ export function ThreeAgents() {
         {/* Bottom accent line (dark mode) */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/10 to-transparent dark:via-[#E89422]/25" />
 
-        {/* Mesh gradient orbs — light & dark */}
-        <motion.div
-          className="absolute -top-10 right-10 w-[600px] h-[600px] bg-amber-200 dark:bg-[#E89422] rounded-full blur-[130px] opacity-25 dark:opacity-[0.09]"
-          animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, -20, 0] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute -bottom-10 -left-10 w-[500px] h-[500px] bg-orange-300 dark:bg-[#963C00] rounded-full blur-[130px] opacity-22 dark:opacity-[0.08]"
-          animate={{ scale: [1.2, 1, 1.2], x: [0, -30, 0], y: [0, 30, 0] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[350px] bg-amber-100 dark:bg-amber-900/20 rounded-full blur-[110px] opacity-18 dark:opacity-[0.07]"
-          animate={{ scale: [1, 1.3, 1], rotate: [0, 10, 0] }}
-          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-        />
+        {/* Static gradient orbs */}
+        <div className="absolute -top-10 right-10 w-[600px] h-[600px] bg-amber-200 dark:bg-[#E89422] rounded-full blur-[130px] opacity-25 dark:opacity-[0.09]" />
+        <div className="absolute -bottom-10 -left-10 w-[500px] h-[500px] bg-orange-300 dark:bg-[#963C00] rounded-full blur-[130px] opacity-22 dark:opacity-[0.08]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[350px] bg-amber-100 dark:bg-amber-900/20 rounded-full blur-[110px] opacity-18 dark:opacity-[0.07]" />
         {/* Floating sparkles */}
         {[
           { left: '8%', top: '40%', delay: 0 },
@@ -76,10 +64,10 @@ export function ThreeAgents() {
             </motion.div>
             <motion.h2
               className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-gray-700 to-gray-600 dark:from-white dark:via-[#F5B040] dark:to-[#E89422] bg-clip-text text-transparent leading-tight"
-              initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 75, damping: 20, delay: 0.1 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
             >
               Three AI Agents.<br />Every Stage of Your Deal Covered.
             </motion.h2>
@@ -169,12 +157,12 @@ function AgentCard({
   
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -12, scale: 1.025 }}
       whileTap={{ scale: 0.98 }}
-      transition={{ type: "spring", stiffness: 70, damping: 18 }}
       className="group relative bg-white dark:bg-white/[0.06] backdrop-blur-md dark:backdrop-blur-xl rounded-3xl overflow-hidden border border-amber-200/60 dark:border-white/[0.09] hover:border-[#E89422]/40 dark:hover:border-[#E89422]/40 shadow-xl shadow-amber-200/30 dark:shadow-black/40 hover:shadow-2xl transition-all duration-300"
     >
       <div className={`absolute inset-0 bg-gradient-to-br ${gradientFrom} ${gradientTo} opacity-0 group-hover:opacity-5 dark:group-hover:opacity-10 transition-opacity duration-500`}></div>

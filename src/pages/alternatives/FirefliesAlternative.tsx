@@ -1,13 +1,5 @@
-import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Check, X, Sparkles, TrendingUp, Target, Brain } from 'lucide-react';
-
-const fadeUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 },
-};
 
 const painPoints = [
   {
@@ -179,35 +171,18 @@ export function FirefliesAlternative() {
             backgroundSize: '80px 80px',
           }}
         />
-        <motion.div
-          className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40"
-          animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, -30, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-orange-100 rounded-full blur-[120px] opacity-35"
-          animate={{ scale: [1.2, 1, 1.2], x: [0, -40, 0], y: [0, 30, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        />
-
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="max-w-4xl"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
+            <div
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/95 dark:bg-gray-800/70 border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
             >
               <Sparkles className="text-[#E89422] dark:text-[#F5B040]" size={16} />
               <span className="text-sm text-[#C47010] dark:text-[#F5B040] font-medium">
                 Best Fireflies.ai Alternative 2026
               </span>
-            </motion.div>
+            </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               The Best Fireflies.ai Alternative for B2B Sales Teams
@@ -220,48 +195,47 @@ export function FirefliesAlternative() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="https://app.nimitai.com"
-                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-medium"
+                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-medium"
               >
                 Start Free Trial
                 <ArrowRight size={18} />
               </a>
               <a
                 href="#comparison"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 font-medium"
+                className="px-8 py-4 bg-white/95 dark:bg-gray-800/70 border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-colors inline-flex items-center gap-2 font-medium"
               >
                 See Full Comparison
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ── Pain Points ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeUp} className="text-center mb-14">
+          <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Where Fireflies Falls Short for Sales Teams
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               Fireflies is a great meeting recorder. The question is whether recording and searching is enough.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 gap-6">
             {painPoints.map((point, i) => (
-              <motion.div
+              <div
                 key={point.title}
-                {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+               
+                className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
               >
                 <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-200 dark:from-[#1A1000]/40 dark:to-[#963C00]/40 flex items-center justify-center mb-4">
                   <X size={18} className="text-[#E89422] dark:text-[#F5B040]" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{point.title}</h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{point.body}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -273,18 +247,18 @@ export function FirefliesAlternative() {
         className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors"
       >
         <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeUp} className="text-center mb-14">
+          <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Nimitai vs Fireflies.ai: Full Feature & Pricing Comparison
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               A direct feature comparison across the capabilities that matter most for sales coaching.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            {...fadeUp}
-            className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 overflow-hidden transition-colors"
+          <div
+           
+            className="bg-white/95 dark:bg-gray-800/60 rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 overflow-hidden transition-colors"
           >
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -321,38 +295,37 @@ export function FirefliesAlternative() {
                 </tbody>
               </table>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ── Why Nimitai ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeUp} className="text-center mb-14">
+          <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               What Nimitai Adds
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               Purpose-built for sales teams. Every feature exists to improve close rates.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-3 gap-6">
             {whyCards.map((card, i) => {
               const Icon = card.icon;
               return (
-                <motion.div
+                <div
                   key={card.title}
-                  {...fadeUp}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+                 
+                  className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#E89422] to-[#963C00] flex items-center justify-center mb-5 shadow-lg">
                     <Icon size={22} className="text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{card.title}</h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{card.body}</p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -362,21 +335,20 @@ export function FirefliesAlternative() {
       {/* ── Pricing Comparison ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeUp} className="text-center mb-14">
+          <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Pricing Comparison
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               Transparent pricing. No per-seat surprises as your team grows.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {/* Fireflies */}
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+            <div
+             
+              className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Fireflies</h3>
               <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
@@ -391,15 +363,14 @@ export function FirefliesAlternative() {
                 <li className="flex items-start gap-2"><X size={15} className="text-red-400 mt-0.5 shrink-0" /> Deal risk signals</li>
                 <li className="flex items-start gap-2"><X size={15} className="text-red-400 mt-0.5 shrink-0" /> Rep coaching scorecards</li>
               </ul>
-            </motion.div>
+            </div>
 
             {/* Nimitai */}
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
+             
               className="bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-3xl p-8 shadow-xl border border-[#E89422]/50 transition-colors relative overflow-hidden"
             >
-              <div className="absolute top-4 right-4 px-3 py-1 bg-white/20 rounded-full text-xs text-white font-medium backdrop-blur-sm">
+              <div className="absolute top-4 right-4 px-3 py-1 bg-white/20 rounded-full text-xs text-white font-medium">
                 Recommended
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Nimitai</h3>
@@ -415,7 +386,7 @@ export function FirefliesAlternative() {
                 <li className="flex items-start gap-2"><Check size={15} className="text-[#F5B040] mt-0.5 shrink-0" /> Win/loss analysis</li>
                 <li className="flex items-start gap-2"><Check size={15} className="text-[#F5B040] mt-0.5 shrink-0" /> Rep coaching scorecards</li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -423,23 +394,22 @@ export function FirefliesAlternative() {
       {/* ── FAQ ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-3xl mx-auto">
-          <motion.div {...fadeUp} className="text-center mb-14">
+          <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-0">
             {faqs.map((faq, i) => (
-              <motion.div
+              <div
                 key={faq.q}
-                {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.08 }}
+               
                 className="border-b border-gray-200 dark:border-gray-700/60 py-7 last:border-0"
               >
                 <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3">{faq.q}</h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{faq.a}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -448,7 +418,7 @@ export function FirefliesAlternative() {
       {/* ── Final CTA ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div {...fadeUp}>
+          <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
               Upgrade From Fireflies to Real Sales Intelligence
             </h2>
@@ -458,14 +428,14 @@ export function FirefliesAlternative() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://app.nimitai.com"
-                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-medium"
+                className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2 font-medium"
               >
                 Start Free Trial
                 <ArrowRight size={18} />
               </a>
               <a
                 href="https://nimitai.com/pricing"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 font-medium"
+                className="px-8 py-4 bg-white/95 dark:bg-gray-800/70 border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-colors inline-flex items-center gap-2 font-medium"
               >
                 View Pricing
               </a>
@@ -473,7 +443,7 @@ export function FirefliesAlternative() {
             <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
               $149/month for the team. Month-to-month. No minimum seats.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>
