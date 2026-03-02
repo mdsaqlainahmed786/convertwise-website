@@ -160,14 +160,17 @@ export function Navigation() {
             </a>
           </div>
 
-          <button
-            className="md:hidden text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle mobile navigation menu"
-            aria-expanded={isOpen}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-3">
+            <ThemeToggle />
+            <button
+              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle mobile navigation menu"
+              aria-expanded={isOpen}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -245,9 +248,8 @@ export function Navigation() {
               About
             </Link>
 
-            <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 mt-2">
+            <div className="pt-3 border-t border-gray-100 dark:border-gray-800 mt-2">
               <Link to="/login" className="text-sm font-bold text-gray-700 dark:text-gray-300" onClick={() => setIsOpen(false)}>Log In</Link>
-              <ThemeToggle />
             </div>
             <a
               href="https://nilanshgupta.typeform.com/to/UNvZIrgu"
