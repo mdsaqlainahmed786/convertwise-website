@@ -30,6 +30,19 @@ import { SalesCallBestPractices } from './pages/blog/SalesCallBestPractices';
 import { ConversationIntelligenceGuide } from './pages/blog/ConversationIntelligenceGuide';
 import { GongPricing } from './pages/blog/GongPricing';
 import { GongCompetitors } from './pages/blog/GongCompetitors';
+// New blog posts
+import { WhyWeBuildNimitai } from './pages/blog/WhyWeBuildNimitai';
+import { FromDigitalpatronToNimitai } from './pages/blog/FromDigitalpatronToNimitai';
+import { RealTimeSalesCoaching } from './pages/blog/RealTimeSalesCoaching';
+import { BuyerIntentSignals } from './pages/blog/BuyerIntentSignals';
+import { HowToIncreaseCloseRate } from './pages/blog/HowToIncreaseCloseRate';
+import { SalesCallAnalytics } from './pages/blog/SalesCallAnalytics';
+import { AiNotetakerVsConversationIntelligence } from './pages/blog/AiNotetakerVsConversationIntelligence';
+import { GongVsNimitai } from './pages/blog/GongVsNimitai';
+import { AiObjectionHandling } from './pages/blog/AiObjectionHandling';
+import { B2bSaasDemo } from './pages/blog/B2bSaasDemo';
+import { RevenueIntelligence } from './pages/blog/RevenueIntelligence';
+import { WhyNimitai } from './pages/blog/WhyNimitai';
 import { NotFound } from './pages/NotFound';
 
 export default function App() {
@@ -66,6 +79,19 @@ export default function App() {
             <Route path="/blog/conversation-intelligence-guide" element={<ConversationIntelligenceGuide />} />
             <Route path="/blog/gong-pricing-2026" element={<GongPricing />} />
             <Route path="/blog/gong-competitors-alternatives" element={<GongCompetitors />} />
+            {/* New blog posts */}
+            <Route path="/blog/why-we-built-nimitai" element={<WhyWeBuildNimitai />} />
+            <Route path="/blog/from-digitalpatron-to-nimitai" element={<FromDigitalpatronToNimitai />} />
+            <Route path="/blog/real-time-sales-coaching-ai" element={<RealTimeSalesCoaching />} />
+            <Route path="/blog/buyer-intent-signals-sales-calls" element={<BuyerIntentSignals />} />
+            <Route path="/blog/how-to-increase-close-rate" element={<HowToIncreaseCloseRate />} />
+            <Route path="/blog/sales-call-analytics" element={<SalesCallAnalytics />} />
+            <Route path="/blog/ai-notetaker-vs-conversation-intelligence" element={<AiNotetakerVsConversationIntelligence />} />
+            <Route path="/blog/gong-vs-nimitai" element={<GongVsNimitai />} />
+            <Route path="/blog/ai-objection-handling" element={<AiObjectionHandling />} />
+            <Route path="/blog/b2b-saas-demo-best-practices" element={<B2bSaasDemo />} />
+            <Route path="/blog/revenue-intelligence-platforms-2026" element={<RevenueIntelligence />} />
+            <Route path="/blog/why-nimitai-name" element={<WhyNimitai />} />
 
             {/* Catch-all 404 — must be last */}
             <Route path="*" element={<NotFound />} />

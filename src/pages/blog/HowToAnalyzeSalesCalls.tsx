@@ -47,7 +47,7 @@ export function HowToAnalyzeSalesCalls() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
           >
             <div className="mb-6 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
               <Link to="/blog" className="hover:text-[#C47010] dark:hover:text-[#F5B040] transition-colors">
@@ -95,7 +95,7 @@ export function HowToAnalyzeSalesCalls() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
@@ -111,7 +111,7 @@ export function HowToAnalyzeSalesCalls() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Why Sales Call Analysis Drives Better Close Rates</h2>
@@ -131,7 +131,7 @@ export function HowToAnalyzeSalesCalls() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">The 5 Most Important Metrics When Analyzing Sales Calls</h2>
@@ -252,7 +252,7 @@ export function HowToAnalyzeSalesCalls() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <div className="bg-gradient-to-r from-[#E89422] to-[#963C00] rounded-3xl p-8 text-center shadow-xl">
@@ -275,7 +275,7 @@ export function HowToAnalyzeSalesCalls() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">How AI Conversation Intelligence Automates Sales Call Analysis</h2>
@@ -307,7 +307,7 @@ export function HowToAnalyzeSalesCalls() {
               ].map((item) => (
                 <div
                   key={item.step}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors flex items-start gap-4"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors flex items-start gap-4"
                 >
                   <span className="flex-shrink-0 w-9 h-9 rounded-full bg-amber-100 dark:bg-amber-900/40 text-[#C47010] dark:text-[#F5B040] flex items-center justify-center font-bold">
                     {item.step}
@@ -326,7 +326,7 @@ export function HowToAnalyzeSalesCalls() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Automate Your Sales Call Analysis with Nimitai</h2>
@@ -349,7 +349,7 @@ export function HowToAnalyzeSalesCalls() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
@@ -370,7 +370,7 @@ export function HowToAnalyzeSalesCalls() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">{item.q}</h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.a}</p>

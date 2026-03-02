@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
 import { Monitor, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   Carousel,
@@ -143,22 +142,10 @@ export function HowItWorks() {
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
-      {/* Mesh gradient orbs */}
-      <motion.div
-        className="absolute -top-32 right-0 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[160px] opacity-[0.09]"
-        animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, -30, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-0 -left-32 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[150px] opacity-[0.08]"
-        animate={{ scale: [1.15, 1, 1.15], x: [0, -30, 0], y: [0, 25, 0] }}
-        transition={{ duration: 28, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-amber-700 rounded-full blur-[130px] opacity-[0.07]"
-        animate={{ scale: [1, 1.3, 1], rotate: [0, 6, 0] }}
-        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut", delay: 6 }}
-      />
+      {/* Static gradient orbs */}
+      <div className="absolute -top-32 right-0 w-[700px] h-[700px] bg-[#E89422] rounded-full blur-[160px] opacity-[0.09]" />
+      <div className="absolute bottom-0 -left-32 w-[600px] h-[600px] bg-[#963C00] rounded-full blur-[150px] opacity-[0.08]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-amber-700 rounded-full blur-[130px] opacity-[0.07]" />
 
       {/* Subtle dot grid */}
       <div
@@ -169,70 +156,27 @@ export function HowItWorks() {
         }}
       />
 
-      {/* Floating sparkles */}
-      {[
-        { left: '10%', top: '20%', delay: 0 },
-        { left: '30%', top: '60%', delay: 1.2 },
-        { left: '60%', top: '25%', delay: 0.6 },
-        { left: '80%', top: '70%', delay: 1.8 },
-        { left: '90%', top: '40%', delay: 0.3 },
-      ].map((p, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-0.5 h-0.5 rounded-full bg-[#E89422]"
-          style={{ left: p.left, top: p.top }}
-          animate={{ y: [0, -60, -120], opacity: [0, 0.7, 0] }}
-          transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: p.delay, ease: "easeOut" }}
-        />
-      ))}
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#E89422]/10 backdrop-blur-sm border border-[#E89422]/25 rounded-full mb-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 200, damping: 22 }}
-          >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E89422]/10 backdrop-blur-sm border border-[#E89422]/25 rounded-full mb-6">
             <Monitor className="text-[#E89422]" size={14} />
             <span className="text-[#E89422] text-sm tracking-wide">How it Works</span>
-          </motion.div>
+          </div>
 
-          <motion.h2
-            className="mb-5 text-white text-4xl sm:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 70, damping: 20, delay: 0.1 }}
-          >
+          <h2 className="mb-5 text-white text-4xl sm:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto">
             How Nimitai's{' '}
-            <span className="bg-gradient-to-r from-[#F5B040] to-[#E89422] bg-clip-text text-transparent">
-              AI Meeting Intelligence
-            </span>{' '}
+            <span className="bg-gradient-to-r from-[#F5B040] to-[#E89422] bg-clip-text text-transparent">AI Meeting Intelligence</span>{' '}
             Works
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 70, damping: 20, delay: 0.2 }}
-          >
+          <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Three specialized AI agents handle pre-call preparation, live signal detection, and post-call analysis — giving your sales team a complete intelligence advantage at every stage of the deal.
-          </motion.p>
+          </p>
         </div>
 
-        {/* Main Image Display */}
-        <motion.div
-          className="relative mb-6"
-          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 55, damping: 20, delay: 0.25 }}
-        >
+        <div className="relative mb-6">
           {/* Glow behind the card */}
           <div className="absolute inset-0 bg-[#E89422]/10 rounded-2xl blur-2xl scale-95 pointer-events-none" />
           <Carousel
@@ -243,7 +187,7 @@ export function HowItWorks() {
             <CarouselContent>
               {features.map((feature) => (
                 <CarouselItem key={feature.id} className="basis-full">
-                  <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+                  <div className="relative bg-white/[0.06] backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
                     {/* Inner top highlight */}
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
                     <div className="aspect-[16/10] flex items-center justify-center">
@@ -258,21 +202,14 @@ export function HowItWorks() {
               ))}
             </CarouselContent>
           </Carousel>
-        </motion.div>
+        </div>
 
-        {/* Description */}
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 120, damping: 20 }}
-          className="text-center mb-8"
-        >
+        <div key={current} className="text-center mb-8">
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">
             {currentFeature.description[0]}
             {currentFeature.description[1] && <> {currentFeature.description[1]}</>}
           </p>
-        </motion.div>
+        </div>
 
         {/* Navigation Controls */}
         <div className="flex items-center justify-center gap-4">
@@ -292,7 +229,7 @@ export function HowItWorks() {
 
           <div className="flex gap-2 items-center">
             {Array.from({ length: count }).map((_, index) => (
-              <motion.button
+              <button
                 key={index}
                 onClick={() => {
                   api?.scrollTo(index);
@@ -305,7 +242,6 @@ export function HowItWorks() {
                     : 'w-1.5 bg-white/25 hover:bg-white/40'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
-                whileHover={{ scale: 1.2 }}
               />
             ))}
           </div>

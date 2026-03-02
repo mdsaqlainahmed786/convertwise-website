@@ -6,7 +6,7 @@ const fadeUp = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.25 },
 };
 
 const painPoints = [
@@ -179,29 +179,21 @@ export function FirefliesAlternative() {
             backgroundSize: '80px 80px',
           }}
         />
-        <motion.div
-          className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40"
-          animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, -30, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-orange-100 rounded-full blur-[120px] opacity-35"
-          animate={{ scale: [1.2, 1, 1.2], x: [0, -40, 0], y: [0, 30, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-200 to-amber-100 rounded-full blur-[120px] opacity-40" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-orange-100 rounded-full blur-[120px] opacity-35" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="max-w-4xl"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
+              transition={{ duration: 0.3, delay: 0.1 }}
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
             >
               <Sparkles className="text-[#E89422] dark:text-[#F5B040]" size={16} />
               <span className="text-sm text-[#C47010] dark:text-[#F5B040] font-medium">
@@ -227,7 +219,7 @@ export function FirefliesAlternative() {
               </a>
               <a
                 href="#comparison"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 font-medium"
+                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 font-medium"
               >
                 See Full Comparison
               </a>
@@ -253,8 +245,8 @@ export function FirefliesAlternative() {
               <motion.div
                 key={point.title}
                 {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+                transition={{ duration: 0.25, delay: i * 0.1 }}
+                className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
               >
                 <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-200 dark:from-[#1A1000]/40 dark:to-[#963C00]/40 flex items-center justify-center mb-4">
                   <X size={18} className="text-[#E89422] dark:text-[#F5B040]" />
@@ -284,7 +276,7 @@ export function FirefliesAlternative() {
 
           <motion.div
             {...fadeUp}
-            className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 overflow-hidden transition-colors"
+            className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 overflow-hidden transition-colors"
           >
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -344,8 +336,8 @@ export function FirefliesAlternative() {
                 <motion.div
                   key={card.title}
                   {...fadeUp}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+                  transition={{ duration: 0.25, delay: i * 0.1 }}
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#E89422] to-[#963C00] flex items-center justify-center mb-5 shadow-lg">
                     <Icon size={22} className="text-white" />
@@ -375,8 +367,8 @@ export function FirefliesAlternative() {
             {/* Fireflies */}
             <motion.div
               {...fadeUp}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
+              transition={{ duration: 0.25, delay: 0.1 }}
+              className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Fireflies</h3>
               <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
@@ -396,7 +388,7 @@ export function FirefliesAlternative() {
             {/* Nimitai */}
             <motion.div
               {...fadeUp}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.25, delay: 0.2 }}
               className="bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-3xl p-8 shadow-xl border border-[#E89422]/50 transition-colors relative overflow-hidden"
             >
               <div className="absolute top-4 right-4 px-3 py-1 bg-white/20 rounded-full text-xs text-white font-medium backdrop-blur-sm">
@@ -434,7 +426,7 @@ export function FirefliesAlternative() {
               <motion.div
                 key={faq.q}
                 {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.08 }}
+                transition={{ duration: 0.25, delay: i * 0.08 }}
                 className="border-b border-gray-200 dark:border-gray-700/60 py-7 last:border-0"
               >
                 <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3">{faq.q}</h3>
@@ -465,7 +457,7 @@ export function FirefliesAlternative() {
               </a>
               <a
                 href="https://nimitai.com/pricing"
-                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 font-medium"
+                className="px-8 py-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border-2 border-gray-900 dark:border-gray-200 text-gray-900 dark:text-gray-100 rounded-full hover:bg-gray-900 dark:hover:bg-gray-200 hover:text-white dark:hover:text-gray-900 transition-all inline-flex items-center gap-2 font-medium"
               >
                 View Pricing
               </a>

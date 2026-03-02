@@ -107,7 +107,7 @@ export function BestSalesCallRecording() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
           >
             <div className="mb-6 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
               <Link to="/blog" className="hover:text-[#C47010] dark:hover:text-[#F5B040] transition-colors">
@@ -155,7 +155,7 @@ export function BestSalesCallRecording() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">How We Evaluated These Sales Call Recording Tools</h2>
@@ -185,7 +185,7 @@ export function BestSalesCallRecording() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Sales Call Recording Software Comparison: 7 Tools Reviewed Honestly</h2>
@@ -336,7 +336,7 @@ export function BestSalesCallRecording() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Sales Call Recording Software Comparison: Features & Pricing</h2>
@@ -385,7 +385,7 @@ export function BestSalesCallRecording() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <div className="bg-gradient-to-r from-[#E89422] to-[#963C00] rounded-3xl p-8 text-center shadow-xl">
@@ -408,7 +408,7 @@ export function BestSalesCallRecording() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Which Sales Call Recording Software Should You Choose?</h2>
@@ -442,7 +442,7 @@ export function BestSalesCallRecording() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <p className="font-semibold text-gray-900 dark:text-white mb-2">
                     If: {item.scenario}
@@ -460,7 +460,7 @@ export function BestSalesCallRecording() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
@@ -485,7 +485,7 @@ export function BestSalesCallRecording() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">{item.q}</h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.a}</p>

@@ -1,6 +1,5 @@
 import { Search, Zap, Eye, ArrowRight, TrendingUp, Users, Brain, X, BarChart3, Target, Activity, AlertCircle, CheckCircle, FileText } from 'lucide-react';
 import { useState } from 'react';
-import { motion } from 'motion/react';
 import { CircuitBoard } from './backgrounds/CircuitBoard';
 import { DataStream } from './backgrounds/DataStream';
 
@@ -18,7 +17,7 @@ export function ThreeAgents() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/20 to-transparent dark:via-[#E89422]/30" />
 
         {/* Animated background grid */}
-        <motion.div
+        <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: 'radial-gradient(circle, rgba(232,148,34,0.8) 1px, transparent 1px)',
@@ -29,69 +28,23 @@ export function ThreeAgents() {
         {/* Bottom accent line (dark mode) */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/10 to-transparent dark:via-[#E89422]/25" />
 
-        {/* Mesh gradient orbs — light & dark */}
-        <motion.div
-          className="absolute -top-10 right-10 w-[600px] h-[600px] bg-amber-200 dark:bg-[#E89422] rounded-full blur-[130px] opacity-25 dark:opacity-[0.09]"
-          animate={{ scale: [1, 1.2, 1], x: [0, 40, 0], y: [0, -20, 0] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute -bottom-10 -left-10 w-[500px] h-[500px] bg-orange-300 dark:bg-[#963C00] rounded-full blur-[130px] opacity-22 dark:opacity-[0.08]"
-          animate={{ scale: [1.2, 1, 1.2], x: [0, -30, 0], y: [0, 30, 0] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[350px] bg-amber-100 dark:bg-amber-900/20 rounded-full blur-[110px] opacity-18 dark:opacity-[0.07]"
-          animate={{ scale: [1, 1.3, 1], rotate: [0, 10, 0] }}
-          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-        />
-        {/* Floating sparkles */}
-        {[
-          { left: '8%', top: '40%', delay: 0 },
-          { left: '22%', top: '70%', delay: 0.8 },
-          { left: '55%', top: '30%', delay: 1.6 },
-          { left: '75%', top: '65%', delay: 0.4 },
-          { left: '90%', top: '45%', delay: 1.2 },
-        ].map((p, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 rounded-full bg-[#E89422] dark:bg-[#E89422]"
-            style={{ left: p.left, top: p.top }}
-            animate={{ y: [0, -80, -160], opacity: [0, 0.6, 0], scale: [0.5, 1.2, 0.5] }}
-            transition={{ duration: 4 + i * 0.6, repeat: Infinity, delay: p.delay, ease: "easeOut" }}
-          />
-        ))}
+        {/* Static gradient orbs */}
+        <div className="absolute -top-10 right-10 w-[600px] h-[600px] bg-amber-200 dark:bg-[#E89422] rounded-full blur-[130px] opacity-25 dark:opacity-[0.09]" />
+        <div className="absolute -bottom-10 -left-10 w-[500px] h-[500px] bg-orange-300 dark:bg-[#963C00] rounded-full blur-[130px] opacity-22 dark:opacity-[0.08]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[350px] bg-amber-100 dark:bg-amber-900/20 rounded-full blur-[110px] opacity-18 dark:opacity-[0.07]" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <motion.div
-              className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-amber-100 dark:bg-[#E89422]/10 backdrop-blur-sm border border-amber-200 dark:border-[#E89422]/25 rounded-full transition-colors"
-              initial={{ opacity: 0, scale: 0.88, y: 10 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 200, damping: 22 }}
-            >
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-amber-100 dark:bg-[#E89422]/10 backdrop-blur-sm border border-amber-200 dark:border-[#E89422]/25 rounded-full transition-colors">
               <Brain className="text-[#E89422] dark:text-[#F5B040]" size={16} />
               <span className="text-[#C47010] dark:text-[#F5B040] text-sm tracking-wide">AI-Powered Intelligence</span>
-            </motion.div>
-            <motion.h2
-              className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-gray-700 to-gray-600 dark:from-white dark:via-[#F5B040] dark:to-[#E89422] bg-clip-text text-transparent leading-tight"
-              initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 75, damping: 20, delay: 0.1 }}
-            >
+            </div>
+            <h2 className="mb-4 text-4xl sm:text-5xl bg-gradient-to-br from-gray-900 via-gray-700 to-gray-600 dark:from-white dark:via-[#F5B040] dark:to-[#E89422] bg-clip-text text-transparent leading-tight">
               Three AI Agents.<br />Every Stage of Your Deal Covered.
-            </motion.h2>
-            <motion.p
-              className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 75, damping: 20, delay: 0.2 }}
-            >
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Pre-call research, live coaching, and post-call pitch auditing — full-cycle AI conversation intelligence for B2B sales teams.
-            </motion.p>
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -168,14 +121,8 @@ function AgentCard({
   const gradientTo = color === 'amber' ? 'to-[#963C00]' : 'to-[#963C00]';
   
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true }}
-      whileHover={{ y: -12, scale: 1.025 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ type: "spring", stiffness: 70, damping: 18 }}
-      className="group relative bg-white dark:bg-white/[0.06] backdrop-blur-md dark:backdrop-blur-xl rounded-3xl overflow-hidden border border-amber-200/60 dark:border-white/[0.09] hover:border-[#E89422]/40 dark:hover:border-[#E89422]/40 shadow-xl shadow-amber-200/30 dark:shadow-black/40 hover:shadow-2xl transition-all duration-300"
+    <div
+      className="group relative bg-white dark:bg-white/[0.06] backdrop-blur-sm dark:backdrop-blur-sm rounded-3xl overflow-hidden border border-amber-200/60 dark:border-white/[0.09] hover:border-[#E89422]/40 dark:hover:border-[#E89422]/40 shadow-xl shadow-amber-200/30 dark:shadow-black/40 hover:shadow-2xl transition-all duration-300"
     >
       <div className={`absolute inset-0 bg-gradient-to-br ${gradientFrom} ${gradientTo} opacity-0 group-hover:opacity-5 dark:group-hover:opacity-10 transition-opacity duration-500`}></div>
       
@@ -205,7 +152,7 @@ function AgentCard({
           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -566,7 +513,7 @@ function LiveModal({ onClose }: { onClose: () => void }) {
               <div className="text-sm text-gray-600 dark:text-gray-400">Current meeting confidence</div>
             </div>
             <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-4">
-              <div className="h-full bg-gradient-to-r from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-orange-400 rounded-full animate-pulse" style={{ width: '87%' }}></div>
+              <div className="h-full bg-gradient-to-r from-[#E89422] dark:from-[#E89422] to-[#963C00] dark:to-orange-400 rounded-full" style={{ width: '87%' }}></div>
             </div>
             <p className="text-center text-gray-700 dark:text-gray-300">
               Live coaching keeps you on track when it matters most.

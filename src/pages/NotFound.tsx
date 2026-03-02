@@ -23,31 +23,13 @@ export function NotFound() {
         />
 
         {/* Orbs */}
-        <motion.div
-          className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-amber-300 dark:bg-amber-500/20 rounded-full blur-[120px] opacity-40"
-          animate={{ scale: [1, 1.15, 1], x: [0, 30, 0], y: [0, -20, 0] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute -bottom-32 -left-32 w-[480px] h-[480px] bg-orange-300 dark:bg-orange-500/20 rounded-full blur-[110px] opacity-35"
-          animate={{ scale: [1.1, 1, 1.1], x: [0, -25, 0], y: [0, 25, 0] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-amber-300 dark:bg-amber-500/20 rounded-full blur-[120px] opacity-40" />
+        <div className="absolute -bottom-32 -left-32 w-[480px] h-[480px] bg-orange-300 dark:bg-orange-500/20 rounded-full blur-[110px] opacity-35" />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse 50% 40% at 50% 50%, rgba(232,148,34,0.08) 0%, transparent 65%)' }}
         />
 
-        {/* Floating sparkles */}
-        {[0, 1, 2, 3, 4].map((i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1.5 h-1.5 rounded-full bg-[#E89422]/60"
-            style={{ left: `${18 + i * 18}%`, top: `${35 + (i % 3) * 20}%` }}
-            animate={{ y: [0, -60, -120], opacity: [0, 0.8, 0], scale: [0.6, 1.2, 0.5] }}
-            transition={{ duration: 5 + i * 0.5, repeat: Infinity, delay: i * 0.7, ease: "easeOut" }}
-          />
-        ))}
 
         <div className="max-w-3xl mx-auto relative z-10 text-center">
           {/* 404 number */}
@@ -96,7 +78,7 @@ export function NotFound() {
             </Link>
             <Link
               to="/pricing"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/80 dark:bg-white/10 backdrop-blur-md border-2 border-gray-200 dark:border-white/20 text-gray-900 dark:text-white rounded-full font-medium hover:border-[#E89422] dark:hover:border-[#E89422] hover:text-[#E89422] dark:hover:text-[#F5B040] transition-all duration-300"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/80 dark:bg-white/10 backdrop-blur-sm border-2 border-gray-200 dark:border-white/20 text-gray-900 dark:text-white rounded-full font-medium hover:border-[#E89422] dark:hover:border-[#E89422] hover:text-[#E89422] dark:hover:text-[#F5B040] transition-all duration-300"
             >
               View pricing
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden />

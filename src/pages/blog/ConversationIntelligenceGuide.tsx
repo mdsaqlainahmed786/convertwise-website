@@ -47,7 +47,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
           >
             <div className="mb-6 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
               <Link to="/blog" className="hover:text-[#C47010] dark:hover:text-[#F5B040] transition-colors">
@@ -95,7 +95,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">What Is Conversation Intelligence Software?</h2>
@@ -115,7 +115,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">How AI Conversation Intelligence Analyzes Sales Calls</h2>
@@ -164,7 +164,7 @@ export function ConversationIntelligenceGuide() {
               ].map((layer) => (
                 <div
                   key={layer.layer}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${layer.color}`}>
@@ -187,7 +187,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Conversation Intelligence vs. Basic Call Recording: What's the Difference?</h2>
@@ -207,7 +207,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Key Features of Conversation Intelligence Platforms</h2>
@@ -241,7 +241,7 @@ export function ConversationIntelligenceGuide() {
               ].map((item) => (
                 <div
                   key={item.number}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors flex gap-5"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors flex gap-5"
                 >
                   <span className="flex-shrink-0 text-3xl font-bold text-[#F5B040] dark:text-amber-900 select-none leading-none pt-1">
                     {item.number}
@@ -260,7 +260,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <div className="bg-gradient-to-r from-[#E89422] to-[#963C00] rounded-3xl p-8 text-center shadow-xl">
@@ -283,7 +283,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Getting Started with AI Conversation Intelligence</h2>
@@ -306,7 +306,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">How to Choose the Right Conversation Intelligence Software</h2>
@@ -342,7 +342,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Conversation Intelligence Software Evaluation Criteria</h2>
@@ -374,7 +374,7 @@ export function ConversationIntelligenceGuide() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-5 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <h3 className="font-bold text-gray-900 dark:text-white mb-2">
                     <span className="text-[#E89422] dark:text-[#F5B040] mr-2">{String(index + 1).padStart(2, '0')}.</span>
@@ -391,7 +391,7 @@ export function ConversationIntelligenceGuide() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.25 }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
@@ -416,7 +416,7 @@ export function ConversationIntelligenceGuide() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
+                  className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">{item.q}</h3>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.a}</p>

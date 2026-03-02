@@ -1,51 +1,16 @@
 import { X, Check, Sparkles, Zap, Brain, Rocket } from 'lucide-react';
-import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function WhyDifferent() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white dark:from-gray-900 via-amber-50 dark:via-[#1A1000]/20 to-orange-50 dark:to-orange-900/20 relative overflow-hidden transition-colors">
-      {/* Mesh gradient orbs */}
-      <motion.div
-        className="absolute -top-20 right-0 w-[500px] h-[500px] bg-amber-200 dark:bg-amber-900/10 rounded-full blur-[110px] opacity-35 dark:opacity-20 transition-opacity"
-        animate={{ scale: [1, 1.2, 1], x: [0, 30, 0], y: [0, -25, 0] }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-0 -left-16 w-[480px] h-[480px] bg-orange-200 dark:bg-[#963C00]/15 rounded-full blur-[110px] opacity-28 dark:opacity-20 transition-opacity"
-        animate={{ scale: [1.15, 1, 1.15], x: [0, -20, 0], y: [0, 30, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      />
-      <motion.div
-        className="absolute top-1/2 right-1/4 w-[300px] h-[300px] bg-yellow-100 dark:bg-amber-900/5 rounded-full blur-[90px] opacity-20 dark:opacity-5 transition-opacity"
-        animate={{ scale: [1, 1.3, 1], rotate: [0, 8, 0] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut", delay: 5 }}
-      />
-      {/* Floating sparkles */}
-      {[
-        { left: '20%', top: '25%', delay: 0, size: 'w-1.5 h-1.5' },
-        { left: '35%', top: '68%', delay: 1, size: 'w-1 h-1' },
-        { left: '60%', top: '20%', delay: 0.5, size: 'w-1 h-1' },
-        { left: '80%', top: '55%', delay: 1.5, size: 'w-1.5 h-1.5' },
-        { left: '10%', top: '75%', delay: 0.8, size: 'w-1 h-1' },
-      ].map((p, i) => (
-        <motion.div
-          key={i}
-          className={`absolute ${p.size} rounded-full bg-[#E89422]`}
-          style={{ left: p.left, top: p.top }}
-          animate={{ y: [0, -70, -140], opacity: [0, 0.6, 0], scale: [0.5, 1.2, 0.5] }}
-          transition={{ duration: 4 + i * 0.5, repeat: Infinity, delay: p.delay, ease: "easeOut" }}
-        />
-      ))}
+      {/* Mesh gradient orbs — static */}
+      <div className="absolute -top-20 right-0 w-[500px] h-[500px] bg-amber-200 dark:bg-amber-900/10 rounded-full blur-[110px] opacity-35 dark:opacity-20 transition-opacity" aria-hidden />
+      <div className="absolute bottom-0 -left-16 w-[480px] h-[480px] bg-orange-200 dark:bg-[#963C00]/15 rounded-full blur-[110px] opacity-28 dark:opacity-20 transition-opacity" aria-hidden />
+      <div className="absolute top-1/2 right-1/4 w-[300px] h-[300px] bg-yellow-100 dark:bg-amber-900/5 rounded-full blur-[90px] opacity-20 dark:opacity-5 transition-opacity" aria-hidden />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 70, damping: 20 }}
-        >
+        <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white dark:bg-gray-800 border border-amber-200 dark:border-[#E89422]/30 rounded-full shadow-sm transition-colors">
             <Sparkles className="text-[#E89422] dark:text-[#F5B040]" size={16} />
             <span className="text-[#C47010] dark:text-[#F5B040]">Conversation Intelligence vs. Basic Call Recording</span>
@@ -54,20 +19,12 @@ export function WhyDifferent() {
             Why AI Conversation Intelligence Feels Like Cheating
           </h2>
           <p className="text-2xl text-gray-600 dark:text-gray-400">(It's Not)</p>
-        </motion.div>
+        </div>
 
-        {/* Visual comparison with images */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Other tools */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: -30, filter: "blur(6px)" }}
-            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.15 }}
-          >
+          <div className="relative">
             <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 rounded-3xl blur-xl opacity-30 dark:opacity-20 transition-colors"></div>
-            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-md rounded-3xl overflow-hidden border border-gray-200/70 dark:border-gray-700 shadow-xl shadow-gray-200/50 dark:shadow-none transition-colors">
+            <div className="relative bg-white/70 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl overflow-hidden border border-gray-200/70 dark:border-gray-700 shadow-xl shadow-gray-200/50 dark:shadow-none transition-colors">
               <div className="bg-gray-100/70 dark:bg-gray-700 backdrop-blur-sm p-6 border-b border-gray-200/70 dark:border-gray-600">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center">
@@ -123,18 +80,11 @@ export function WhyDifferent() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
           
-          {/* Nimitai */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 30, filter: "blur(6px)" }}
-            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.3 }}
-          >
+          <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-[#F5B040] dark:from-[#E89422] to-orange-400 dark:to-orange-600 rounded-3xl blur-xl opacity-30 dark:opacity-15 transition-colors"></div>
-            <div className="relative bg-white/65 dark:bg-gray-800/90 backdrop-blur-md convertwise-card rounded-3xl overflow-hidden border border-[#E89422]/50 dark:border-[#E89422]/50 shadow-2xl shadow-amber-200/40 dark:shadow-amber-900/20 transition-colors">
+            <div className="relative bg-white/65 dark:bg-gray-800/90 backdrop-blur-sm convertwise-card rounded-3xl overflow-hidden border border-[#E89422]/50 dark:border-[#E89422]/50 shadow-2xl shadow-amber-200/40 dark:shadow-amber-900/20 transition-colors">
               <div className="bg-gradient-to-r from-[#E89422] dark:from-[#E89422] to-orange-500 dark:to-orange-400 p-6 text-white border-b border-white/20">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
@@ -206,7 +156,7 @@ export function WhyDifferent() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
