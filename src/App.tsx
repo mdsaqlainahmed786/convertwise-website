@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { AnnouncementBar } from './components/AnnouncementBar';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { Home } from './components/Home';
@@ -49,6 +50,7 @@ export default function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="nimitai-theme">
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+        <AnnouncementBar />
         <Navigation />
         <main role="main">
           <Routes>
