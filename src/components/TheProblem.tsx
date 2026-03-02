@@ -1,9 +1,14 @@
 import { AlertTriangle, Clock, TrendingDown } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function TheProblem() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative overflow-hidden">
       {/* Static gradient orbs — subtle CSS animation */}
+      <div className="absolute -top-20 right-0 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[140px] opacity-12 animate-ambient-float-a" aria-hidden />
+      <div className="absolute -bottom-20 -left-10 w-[500px] h-[500px] bg-[#963C00] rounded-full blur-[130px] opacity-12 animate-ambient-float-b" aria-hidden />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-red-700 rounded-full blur-[120px] opacity-8 animate-ambient-float-c" aria-hidden />
+
       {/* Grid pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -14,8 +19,14 @@ export function TheProblem() {
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white/10 rounded-full border border-white/20">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
             <AlertTriangle className="text-orange-400" size={16} />
             <span className="text-white">Why Sales Teams Lose Deals They Should Win</span>
           </div>
@@ -25,7 +36,7 @@ export function TheProblem() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Without AI conversation intelligence, reps miss up to 70% of buyer signals buried in unanalyzed recordings. Nimitai tracks buyer emotion, purchase intent, and engagement patterns automatically — so nothing gets missed and every deal gets the intelligence it deserves.
           </p>
-        </div>
+        </motion.div>
 
         {/* Stats grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -57,13 +68,19 @@ export function TheProblem() {
           />
         </div>
 
-        <div className="text-center">
-          <div className="inline-block p-8 bg-gradient-to-r from-orange-500/12 to-red-500/12 border border-orange-500/25 rounded-3xl shadow-lg shadow-orange-900/20">
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.28, delay: 0.15 }}
+        >
+          <div className="inline-block p-8 bg-gradient-to-r from-orange-500/12 to-red-500/12 backdrop-blur-md border border-orange-500/25 rounded-3xl shadow-lg shadow-orange-900/20">
             <p className="text-3xl sm:text-4xl bg-gradient-to-r from-[#963C00] to-red-400 bg-clip-text text-transparent">
               $200B in revenue vanishes annually
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -93,14 +110,21 @@ function StatCard({
   const colors = colorMap[color];
 
   return (
-    <div 
-      className={`bg-white/8 border ${colors.border} rounded-2xl p-6 hover:bg-white/12 shadow-lg transition-colors`}
+    <motion.div 
+      className={`bg-white/8 backdrop-blur-md border ${colors.border} rounded-2xl p-6 hover:bg-white/12 shadow-lg transition-all`}
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], delay }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      whileTap={{ scale: 0.99 }}
     >
-      <div 
+      <motion.div 
         className={`inline-flex p-3 bg-gradient-to-br ${colors.bg} bg-opacity-20 rounded-xl mb-4 ${colors.icon}`}
+        whileHover={{ rotate: 10, scale: 1.1 }}
       >
         {icon}
-      </div>
+      </motion.div>
       <div className={`text-5xl sm:text-6xl mb-2 bg-gradient-to-br ${colors.bg} bg-clip-text text-transparent`}>
         {stat}
       </div>
@@ -108,6 +132,6 @@ function StatCard({
       <p className="text-gray-400 text-sm">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'motion/react';
 
 const benefits = [
   {
@@ -39,6 +40,8 @@ export function ExclusiveAccess() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E89422]/30 to-transparent" />
 
       {/* Static gradient orbs */}
+      <div className="absolute -top-40 -right-20 w-[600px] h-[600px] bg-[#E89422] rounded-full blur-[180px] opacity-[0.07]" />
+      <div className="absolute -bottom-32 -left-20 w-[500px] h-[500px] bg-orange-700 rounded-full blur-[160px] opacity-[0.06]" />
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
         style={{ background: 'radial-gradient(circle, rgba(232,148,34,0.06) 0%, transparent 70%)' }}
@@ -53,34 +56,68 @@ export function ExclusiveAccess() {
         }}
       />
 
+
       <div className="max-w-3xl mx-auto relative z-10">
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex items-center gap-2.5 border border-[#E89422]/25 bg-[#E89422]/[0.07] rounded-full px-5 py-2">
-            <span className="w-1.5 h-1.5 bg-[#E89422] rounded-full" />
+        {/* Private beta badge */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', stiffness: 200, damping: 22 }}
+          className="flex justify-center mb-10"
+        >
+          <div className="inline-flex items-center gap-2.5 border border-[#E89422]/25 bg-[#E89422]/[0.07] rounded-full px-5 py-2 backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 bg-[#E89422] rounded-full animate-pulse" />
             <span className="text-[#E89422] text-xs tracking-[0.2em] uppercase font-medium">
               Private Beta · Application Open
             </span>
           </div>
-        </div>
+        </motion.div>
 
-        <h2
+        {/* Headline */}
+        <motion.h2
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
           className="text-center text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.15] mb-6"
         >
           The AI sales teams that win<br />
           <span className="bg-gradient-to-r from-[#F5B040] to-[#E89422] bg-clip-text text-transparent">always know more</span>{' '}
           before the call ends.
-        </h2>
+        </motion.h2>
 
-        <p className="text-center text-lg text-gray-400 mb-3 max-w-xl mx-auto leading-relaxed">
+        {/* Sub-headline */}
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', stiffness: 80, damping: 20, delay: 0.2 }}
+          className="text-center text-lg text-gray-400 mb-3 max-w-xl mx-auto leading-relaxed"
+        >
           Nimitai is in private beta. We are onboarding founding teams who understand that every sales call is a{' '}
           <span className="text-gray-200">real-time intelligence opportunity</span> — not just a conversation to be recorded and forgotten.
-        </p>
+        </motion.p>
 
-        <p className="text-center text-sm text-gray-600 mb-12">
+        {/* Waitlist count */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center text-sm text-gray-600 mb-12"
+        >
           <span className="text-white font-semibold">412</span> founders already on the waitlist.
-        </p>
+        </motion.p>
 
-        <div className="max-w-md mx-auto mb-20">
+        {/* Waitlist form */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', stiffness: 80, damping: 20, delay: 0.35 }}
+          className="max-w-md mx-auto mb-20"
+        >
           {!submitted ? (
             <form
               onSubmit={handleSubmit}
@@ -96,13 +133,15 @@ export function ExclusiveAccess() {
                 className="flex-1 px-5 py-3.5 bg-white/[0.04] border border-white/10 rounded-full text-white placeholder-gray-600 focus:outline-none focus:border-[#E89422]/50 transition-colors text-sm"
                 aria-label="Work email for Nimitai AI meeting intelligence waitlist"
               />
-              <button
+              <motion.button
                 type="submit"
-                className="px-6 py-3.5 bg-[#E89422] text-[#070B18] font-semibold rounded-full text-sm whitespace-nowrap shadow-lg shadow-[#E89422]/20 hover:opacity-95 transition-opacity"
+                className="px-6 py-3.5 bg-[#E89422] text-[#070B18] font-semibold rounded-full text-sm whitespace-nowrap shadow-lg shadow-[#E89422]/20"
+                whileHover={{ scale: 1.03, backgroundColor: '#C47010' }}
+                whileTap={{ scale: 0.97 }}
                 aria-label="Apply for Nimitai founding access"
               >
                 Apply for Access
-              </button>
+              </motion.button>
             </form>
           ) : (
             <div className="text-center py-4 px-6 border border-[#E89422]/25 rounded-full bg-[#E89422]/[0.07]">
@@ -111,19 +150,33 @@ export function ExclusiveAccess() {
               </p>
             </div>
           )}
-        </div>
+        </motion.div>
 
+        {/* Divider */}
         <div className="border-t border-white/[0.06] mb-12" />
 
-        <p className="text-center text-[10px] text-gray-600 uppercase tracking-[0.25em] mb-8">
+        {/* Benefits label */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-center text-[10px] text-gray-600 uppercase tracking-[0.25em] mb-8"
+        >
           What founding teams receive
-        </p>
+        </motion.p>
 
+        {/* Benefits grid */}
         <div className="grid sm:grid-cols-2 gap-4">
-          {benefits.map((b) => (
-            <div
+          {benefits.map((b, i) => (
+            <motion.div
               key={b.title}
-              className="flex items-start gap-4 p-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-[#E89422]/25 hover:bg-white/[0.05] transition-colors cursor-default"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: 0.06 * i }}
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="flex items-start gap-4 p-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-sm hover:border-[#E89422]/25 hover:bg-white/[0.05] transition-all cursor-default"
             >
               <span className="text-[#E89422] text-base mt-0.5 flex-shrink-0" aria-hidden="true">
                 {b.icon}
@@ -132,11 +185,18 @@ export function ExclusiveAccess() {
                 <p className="text-white text-sm font-semibold mb-1.5">{b.title}</p>
                 <p className="text-gray-500 text-xs leading-relaxed">{b.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <p className="text-center text-xs text-gray-700 mt-10">
+        {/* Bottom note */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-center text-xs text-gray-700 mt-10"
+        >
           Nimitai is{' '}
           <a
             href="/ai-meeting-intelligence-software"
@@ -145,7 +205,7 @@ export function ExclusiveAccess() {
             an AI meeting intelligence platform
           </a>{' '}
           built for B2B SaaS sales teams who want real-time conversation intelligence without enterprise pricing.
-        </p>
+        </motion.p>
       </div>
 
       {/* Bottom accent line */}
