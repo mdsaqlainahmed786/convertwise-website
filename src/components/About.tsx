@@ -10,7 +10,7 @@ export function About() {
   const siteUrl = 'https://nimitai.com';
   const pageUrl = `${siteUrl}/about`;
   const title = 'About Nimitai — AI Meeting Intelligence & Conversation Intelligence for B2B Sales';
-  const description = 'Nimitai is AI meeting intelligence software built by founders Nilansh Gupta and Archit Dhir. We record and analyze B2B sales calls to surface coaching insights, objection patterns, and deal risks — the Gong alternative built for startup sales teams.';
+  const description = 'Nimitai is AI meeting intelligence software built by founders Nilansh Gupta and Archit Dhir. We analyze B2B sales conversations in real time to surface coaching insights, objection patterns, and deal risks — the Gong alternative built for startup sales teams.';
   const keywords = 'Nimitai founders, AI meeting intelligence team, conversation intelligence startup, sales call intelligence creators, Nilansh Gupta, Archit Dhir, Gong alternative founders';
   const ogImage = `${siteUrl}/og-image.jpg`;
 

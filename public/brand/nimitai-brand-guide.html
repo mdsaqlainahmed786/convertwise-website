@@ -3,24 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nimitai Brand Guide — Identity, Voice & Social Strategy</title>
+  <title>Nimitai Brand Guide — Unified Identity, Voice & Social Strategy</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
     :root {
-      --primary: #E89422;
-      --primary-dark: #963C00;
-      --primary-light: #F5B040;
-      --accent: #C47010;
-      --bg-dark: #070B18;
-      --bg-dark-alt: #0A0400;
-      --bg-dark-subtle: #1A1000;
+      /* ── SHARED ANCHOR ─────────────────── */
+      --brand-orange: #E89422;
+      --brand-orange-dark: #963C00;
+      --brand-orange-light: #F5B040;
+      --brand-warm: #C47010;
+
+      /* ── MARKETING PALETTE ─────────────── */
+      --mkt-bg: #070B18;
+      --mkt-bg-alt: #0A0400;
+      --mkt-bg-subtle: #1A1000;
+
+      /* ── PRODUCT PALETTE ───────────────── */
+      --prod-blue: #4F46E5;
+      --prod-blue-light: #6366F1;
+      --prod-purple: #7C3AED;
+      --prod-purple-light: #8B5CF6;
+      --prod-green: #22C55E;
+      --prod-green-light: #4ADE80;
+      --prod-coral: #F97316;
+      --prod-bg: #F8FAFC;
+      --prod-card: #FFFFFF;
+      --prod-border: #E2E8F0;
+
+      /* ── NEUTRALS ──────────────────────── */
       --white: #FFFFFF;
       --gray-50: #FAFAF9;
       --gray-100: #F5F5F4;
       --gray-200: #E7E5E4;
+      --gray-300: #D6D3D1;
       --gray-400: #A8A29E;
+      --gray-500: #78716C;
       --gray-600: #57534E;
+      --gray-700: #44403C;
       --gray-800: #292524;
       --gray-900: #1C1917;
     }
@@ -29,7 +49,7 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-dark);
+      background: var(--mkt-bg);
       color: var(--white);
       line-height: 1.6;
     }
@@ -38,33 +58,41 @@
     .hero {
       padding: 80px 24px;
       text-align: center;
-      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-alt) 50%, var(--bg-dark) 100%);
-      border-bottom: 1px solid rgba(232,148,34,0.15);
       position: relative;
       overflow: hidden;
     }
     .hero::before {
       content: '';
       position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, var(--mkt-bg) 0%, #0D0B2E 30%, #1A0B30 50%, var(--mkt-bg-alt) 80%, var(--mkt-bg) 100%);
+      z-index: 0;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
       top: -200px;
       right: -100px;
       width: 600px;
       height: 600px;
-      background: var(--primary);
+      background: var(--prod-purple);
       border-radius: 50%;
-      filter: blur(180px);
-      opacity: 0.08;
+      filter: blur(200px);
+      opacity: 0.12;
+      z-index: 0;
     }
+    .hero > * { position: relative; z-index: 1; }
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 8px 20px;
-      background: rgba(232,148,34,0.1);
+      background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(232,148,34,0.15));
       border: 1px solid rgba(232,148,34,0.25);
       border-radius: 100px;
       font-size: 12px;
-      color: var(--primary);
+      color: var(--brand-orange);
       text-transform: uppercase;
       letter-spacing: 0.15em;
       margin-bottom: 32px;
@@ -73,7 +101,7 @@
       content: '';
       width: 6px;
       height: 6px;
-      background: var(--primary);
+      background: var(--brand-orange);
       border-radius: 50%;
     }
     .hero h1 {
@@ -81,10 +109,15 @@
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 16px;
-      position: relative;
     }
-    .hero h1 span {
-      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    .hero h1 .orange {
+      background: linear-gradient(135deg, var(--brand-orange-light), var(--brand-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero h1 .purple {
+      background: linear-gradient(135deg, var(--prod-blue-light), var(--prod-purple));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -92,7 +125,7 @@
     .hero p {
       color: var(--gray-400);
       font-size: 18px;
-      max-width: 600px;
+      max-width: 680px;
       margin: 0 auto;
     }
 
@@ -113,7 +146,7 @@
       border: 1px solid rgba(232,148,34,0.2);
       border-radius: 100px;
       font-size: 11px;
-      color: var(--primary-light);
+      color: var(--brand-orange-light);
       text-transform: uppercase;
       letter-spacing: 0.2em;
       margin-bottom: 20px;
@@ -141,83 +174,134 @@
     }
 
     /* ── COLOR PALETTE ───────────────────────────── */
+    .palette-context {
+      margin-bottom: 40px;
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .palette-context.marketing {
+      background: linear-gradient(135deg, rgba(232,148,34,0.06), rgba(10,4,0,0.4));
+      border-color: rgba(232,148,34,0.2);
+    }
+    .palette-context.product {
+      background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(124,58,237,0.04));
+      border-color: rgba(79,70,229,0.2);
+    }
+    .palette-context .context-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .palette-context.marketing .context-label { color: var(--brand-orange); }
+    .palette-context.product .context-label { color: var(--prod-blue-light); }
+    .palette-context .context-desc {
+      font-size: 14px;
+      color: var(--gray-400);
+      margin-bottom: 20px;
+    }
+
     .color-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
     }
 
     .color-card {
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.08);
       background: rgba(255,255,255,0.03);
     }
 
     .color-swatch {
-      height: 120px;
-      display: flex;
-      align-items: flex-end;
-      padding: 12px;
+      height: 90px;
     }
 
     .color-info {
-      padding: 16px;
+      padding: 12px;
     }
 
     .color-info .name {
       font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 4px;
+      font-size: 13px;
+      margin-bottom: 2px;
     }
 
     .color-info .hex {
       font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 13px;
+      font-size: 12px;
       color: var(--gray-400);
     }
 
     .color-info .usage {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--gray-600);
-      margin-top: 6px;
+      margin-top: 4px;
+    }
+
+    /* ── BRIDGE SECTION ─────────────────────────── */
+    .bridge-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 32px 0;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 100px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .bridge-segment {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: white;
     }
 
     /* ── GRADIENT STRIPS ─────────────────────────── */
     .gradient-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 32px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
     }
 
     .gradient-card {
-      height: 80px;
+      height: 72px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
       color: white;
+      text-align: center;
       border: 1px solid rgba(255,255,255,0.1);
+      line-height: 1.4;
     }
 
     /* ── TYPOGRAPHY ───────────────────────────────── */
     .type-sample {
-      padding: 32px;
+      padding: 28px;
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 16px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .type-label {
       font-size: 11px;
-      color: var(--primary);
+      color: var(--brand-orange);
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     /* ── VOICE TABLE ─────────────────────────────── */
@@ -248,10 +332,7 @@
     .voice-card.do .voice-tag { color: #22c55e; }
     .voice-card.dont .voice-tag { color: #ef4444; }
 
-    .voice-card ul {
-      list-style: none;
-      padding: 0;
-    }
+    .voice-card ul { list-style: none; padding: 0; }
 
     .voice-card li {
       font-size: 14px;
@@ -285,7 +366,7 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      color: var(--primary);
+      color: var(--brand-orange);
       margin-bottom: 12px;
     }
 
@@ -295,11 +376,7 @@
       line-height: 1.7;
     }
 
-    .social-card ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 12px;
-    }
+    .social-card ul { list-style: none; padding: 0; margin-top: 12px; }
 
     .social-card li {
       padding: 4px 0;
@@ -314,7 +391,7 @@
       top: 12px;
       width: 6px;
       height: 6px;
-      background: var(--primary);
+      background: var(--brand-orange);
       border-radius: 50%;
     }
 
@@ -327,7 +404,7 @@
 
     .pillar-card {
       padding: 24px;
-      background: linear-gradient(135deg, rgba(232,148,34,0.06), rgba(150,60,0,0.04));
+      background: linear-gradient(135deg, rgba(232,148,34,0.06), rgba(79,70,229,0.04));
       border: 1px solid rgba(232,148,34,0.15);
       border-radius: 16px;
       text-align: center;
@@ -336,7 +413,7 @@
     .pillar-card .number {
       font-size: 48px;
       font-weight: 800;
-      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      background: linear-gradient(135deg, var(--brand-orange-light), var(--prod-purple));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -350,7 +427,7 @@
       margin-top: 8px;
     }
 
-    /* ── EMOTION & PERSONALITY ────────────────────── */
+    /* ── PERSONALITY ─────────────────────────────── */
     .personality-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -372,8 +449,8 @@
 
     /* ── SPECTRUM BAR ────────────────────────────── */
     .spectrum {
-      margin: 24px 0;
-      padding: 20px 24px;
+      margin: 16px 0;
+      padding: 16px 24px;
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 12px;
@@ -383,7 +460,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
     }
 
     .spectrum-label { font-size: 12px; color: var(--gray-400); width: 100px; }
@@ -403,9 +479,120 @@
       top: -5px;
       width: 16px;
       height: 16px;
-      background: var(--primary);
+      background: var(--brand-orange);
       border-radius: 50%;
-      border: 2px solid var(--bg-dark);
+      border: 2px solid var(--mkt-bg);
+    }
+
+    /* ── CONTEXT SWITCH CARDS ────────────────────── */
+    .context-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .context-card {
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .context-card.dark-theme {
+      background: var(--mkt-bg-alt);
+      border-color: rgba(232,148,34,0.2);
+    }
+    .context-card.light-theme {
+      background: var(--prod-bg);
+      color: var(--gray-900);
+      border-color: var(--prod-border);
+    }
+    .context-card .ctx-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .context-card.dark-theme .ctx-label { color: var(--brand-orange); }
+    .context-card.light-theme .ctx-label { color: var(--prod-blue); }
+    .context-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .context-card.light-theme h4 { color: var(--gray-900); }
+    .context-card p {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .context-card.dark-theme p { color: var(--gray-400); }
+    .context-card.light-theme p { color: var(--gray-600); }
+    .mini-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .mini-btn.orange {
+      background: linear-gradient(135deg, var(--brand-orange), var(--brand-orange-dark));
+      color: white;
+    }
+    .mini-btn.blue {
+      background: var(--prod-blue);
+      color: white;
+    }
+
+    /* ── PRODUCT UI PREVIEW ──────────────────────── */
+    .ui-preview {
+      margin-top: 24px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .ui-preview-bar {
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .ui-preview-bar.dark {
+      background: var(--mkt-bg);
+      color: white;
+      border-bottom: 1px solid rgba(232,148,34,0.15);
+    }
+    .ui-preview-bar.light {
+      background: white;
+      color: var(--gray-900);
+      border-bottom: 1px solid var(--prod-border);
+    }
+    .ui-preview-bar .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .ui-preview-body {
+      padding: 24px;
+    }
+    .ui-preview-body.dark {
+      background: var(--mkt-bg-alt);
+    }
+    .ui-preview-body.light {
+      background: var(--prod-bg);
+    }
+    .mock-card {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-right: 10px;
+      margin-bottom: 10px;
     }
 
     /* ── HASHTAG CLOUD ───────────────────────────── */
@@ -413,7 +600,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 16px;
+      margin-top: 12px;
     }
 
     .hashtag {
@@ -422,12 +609,12 @@
       border: 1px solid rgba(232,148,34,0.2);
       border-radius: 100px;
       font-size: 12px;
-      color: var(--primary-light);
+      color: var(--brand-orange-light);
     }
 
     /* ── RESPONSIVE ──────────────────────────────── */
     @media (max-width: 768px) {
-      .voice-grid, .gradient-row { grid-template-columns: 1fr; }
+      .voice-grid, .gradient-row, .context-cards { grid-template-columns: 1fr; }
       .personality-grid { grid-template-columns: repeat(3, 1fr); }
       .color-grid { grid-template-columns: repeat(2, 1fr); }
       section { padding: 48px 0; }
@@ -441,14 +628,14 @@
   <!-- HERO                                        -->
   <!-- ═══════════════════════════════════════════ -->
   <div class="hero">
-    <div class="hero-badge">Brand Identity Guide</div>
-    <h1>Nimitai <span>Brand System</span></h1>
-    <p>The single source of truth for every piece of content, design, and communication across all channels. If it carries the Nimitai name, it follows this guide.</p>
+    <div class="hero-badge">Unified Brand System v2.0</div>
+    <h1>Nimitai <span class="orange">Brand</span> <span class="purple">System</span></h1>
+    <p>One identity across two experiences — the marketing site that sells and the product dashboard that delivers. Same voice. Unified palette. One brand.</p>
   </div>
 
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- 1. BRAND PERSONALITY & EMOTION               -->
+  <!-- 1. BRAND PERSONALITY                        -->
   <!-- ═══════════════════════════════════════════ -->
   <section>
     <div class="container">
@@ -526,109 +713,196 @@
 
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- 2. COLOR PALETTE                             -->
+  <!-- 2. DUAL-CONTEXT COLOR SYSTEM                -->
   <!-- ═══════════════════════════════════════════ -->
   <section>
     <div class="container">
-      <div class="section-label">02 — Color Palette</div>
-      <h2>Brand Colors</h2>
-      <p class="section-desc">The Nimitai palette is built on warm amber and deep dark. High contrast. High energy. Every color has a job.</p>
+      <div class="section-label">02 — Color System</div>
+      <h2>Two Contexts, One Brand</h2>
+      <p class="section-desc">Nimitai has two visual modes: the bold marketing presence that sells, and the clean product UI that delivers. Orange is the thread that connects them.</p>
 
-      <div class="color-grid">
-        <div class="color-card">
-          <div class="color-swatch" style="background: #E89422;"></div>
-          <div class="color-info">
-            <div class="name">Nimitai Orange</div>
-            <div class="hex">#E89422</div>
-            <div class="usage">Primary. CTAs, buttons, highlights, badges, links.</div>
+      <!-- BRIDGE VISUAL -->
+      <div class="bridge-visual">
+        <div class="bridge-segment" style="background: var(--mkt-bg);">Marketing</div>
+        <div class="bridge-segment" style="background: var(--brand-orange-dark);">&larr;</div>
+        <div class="bridge-segment" style="background: var(--brand-orange);">Nimitai Orange</div>
+        <div class="bridge-segment" style="background: var(--prod-blue);">&rarr;</div>
+        <div class="bridge-segment" style="background: var(--prod-bg); color: var(--gray-800);">Product</div>
+      </div>
+      <p style="text-align: center; font-size: 12px; color: var(--gray-600); margin-bottom: 40px;">Orange (#E89422) is the anchor across both contexts — CTAs on the website, alerts and highlights in the product.</p>
+
+      <!-- MARKETING PALETTE -->
+      <div class="palette-context marketing">
+        <div class="context-label">Marketing &amp; Social — Dark Mode</div>
+        <p class="context-desc">Used on: Website (nimitai.com), social media posts, ads, pitch decks, emails.</p>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background: #E89422;"></div>
+            <div class="color-info">
+              <div class="name">Nimitai Orange</div>
+              <div class="hex">#E89422</div>
+              <div class="usage">Primary CTAs, buttons, links, badges</div>
+            </div>
           </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #963C00;"></div>
-          <div class="color-info">
-            <div class="name">Deep Amber</div>
-            <div class="hex">#963C00</div>
-            <div class="usage">Gradient pair. Hover states, depth, shadows.</div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #963C00;"></div>
+            <div class="color-info">
+              <div class="name">Deep Amber</div>
+              <div class="hex">#963C00</div>
+              <div class="usage">Gradient end, hover states, depth</div>
+            </div>
           </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #F5B040;"></div>
-          <div class="color-info">
-            <div class="name">Gold Light</div>
-            <div class="hex">#F5B040</div>
-            <div class="usage">Accent text on dark. Highlights, badges.</div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #F5B040;"></div>
+            <div class="color-info">
+              <div class="name">Gold Light</div>
+              <div class="hex">#F5B040</div>
+              <div class="usage">Highlights, stats, accent text</div>
+            </div>
           </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #C47010;"></div>
-          <div class="color-info">
-            <div class="name">Warm Brown</div>
-            <div class="hex">#C47010</div>
-            <div class="usage">Light mode text accent. Secondary CTA.</div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #070B18; border: 1px solid rgba(255,255,255,0.15);"></div>
+            <div class="color-info">
+              <div class="name">Midnight</div>
+              <div class="hex">#070B18</div>
+              <div class="usage">Primary background, headers</div>
+            </div>
           </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #070B18; border: 1px solid rgba(255,255,255,0.1);"></div>
-          <div class="color-info">
-            <div class="name">Midnight</div>
-            <div class="hex">#070B18</div>
-            <div class="usage">Primary dark background. Posts, headers.</div>
-          </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #0A0400; border: 1px solid rgba(255,255,255,0.1);"></div>
-          <div class="color-info">
-            <div class="name">True Dark</div>
-            <div class="hex">#0A0400</div>
-            <div class="usage">Alternate dark BG. Premium sections.</div>
-          </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #FFFFFF;"></div>
-          <div class="color-info">
-            <div class="name">White</div>
-            <div class="hex">#FFFFFF</div>
-            <div class="usage">Headings on dark. Clean backgrounds.</div>
-          </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #1A1000; border: 1px solid rgba(255,255,255,0.1);"></div>
-          <div class="color-info">
-            <div class="name">Dark Tint</div>
-            <div class="hex">#1A1000</div>
-            <div class="usage">Subtle warm dark. Card backgrounds.</div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #0A0400; border: 1px solid rgba(255,255,255,0.15);"></div>
+            <div class="color-info">
+              <div class="name">True Dark</div>
+              <div class="hex">#0A0400</div>
+              <div class="usage">Alternate BG, premium sections</div>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- PRODUCT PALETTE -->
+      <div class="palette-context product">
+        <div class="context-label">Product Dashboard — Light Mode</div>
+        <p class="context-desc">Used on: App dashboard, in-product UI, settings, meeting views, agent screens.</p>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background: #4F46E5;"></div>
+            <div class="color-info">
+              <div class="name">Indigo</div>
+              <div class="hex">#4F46E5</div>
+              <div class="usage">Primary actions, active nav, buttons</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: linear-gradient(135deg, #7C3AED, #A855F7);"></div>
+            <div class="color-info">
+              <div class="name">Purple</div>
+              <div class="hex">#7C3AED</div>
+              <div class="usage">Charts, hero gradient, analytics</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #22C55E;"></div>
+            <div class="color-info">
+              <div class="name">Success Green</div>
+              <div class="hex">#22C55E</div>
+              <div class="usage">Won deals, ready status, progress</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #E89422;"></div>
+            <div class="color-info">
+              <div class="name">Amber Alert</div>
+              <div class="hex">#E89422</div>
+              <div class="usage">In-prep, warnings, progress bars</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: linear-gradient(135deg, #F97316, #EF4444);"></div>
+            <div class="color-info">
+              <div class="name">Coral Urgent</div>
+              <div class="hex">#F97316</div>
+              <div class="usage">Next meeting, urgent cards</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #F8FAFC; border: 1px solid #E2E8F0;"></div>
+            <div class="color-info">
+              <div class="name" style="color: var(--gray-400);">Slate BG</div>
+              <div class="hex">#F8FAFC</div>
+              <div class="usage">Page background</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E2E8F0;"></div>
+            <div class="color-info">
+              <div class="name" style="color: var(--gray-400);">Card White</div>
+              <div class="hex">#FFFFFF</div>
+              <div class="usage">Card surfaces, modals, inputs</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background: #1E293B;"></div>
+            <div class="color-info">
+              <div class="name">Slate Dark</div>
+              <div class="hex">#1E293B</div>
+              <div class="usage">Primary text, headings in-app</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRADIENTS -->
       <h3 style="margin-top: 40px;">Brand Gradients</h3>
       <div class="gradient-row">
         <div class="gradient-card" style="background: linear-gradient(135deg, #E89422, #963C00);">
-          Primary CTA Gradient<br>#E89422 &rarr; #963C00
+          Marketing CTA<br>#E89422 → #963C00
         </div>
-        <div class="gradient-card" style="background: linear-gradient(135deg, #F5B040, #E89422);">
-          Text Highlight Gradient<br>#F5B040 &rarr; #E89422
+        <div class="gradient-card" style="background: linear-gradient(135deg, #4F46E5, #7C3AED);">
+          Product Hero<br>#4F46E5 → #7C3AED
+        </div>
+        <div class="gradient-card" style="background: linear-gradient(135deg, #E89422, #4F46E5);">
+          Brand Bridge<br>#E89422 → #4F46E5
         </div>
       </div>
 
-      <h3 style="margin-top: 40px;">Social Media Color Rules</h3>
+      <!-- SIDE-BY-SIDE PREVIEW -->
+      <h3 style="margin-top: 40px;">Context in Action</h3>
+      <div class="context-cards">
+        <div class="context-card dark-theme">
+          <div class="ctx-label">Marketing Context</div>
+          <h4>Close 31% more deals.</h4>
+          <p>AI meeting intelligence that coaches your sales reps in real time. Built for founders. $149/seat/month.</p>
+          <span class="mini-btn orange">Apply for Founding Access</span>
+        </div>
+        <div class="context-card light-theme">
+          <div class="ctx-label">Product Context</div>
+          <h4 style="color: #1E293B;">Welcome back, Nilansh</h4>
+          <p>3 meetings today worth $470k in pipeline. Confidence is up 12% this week.</p>
+          <span class="mini-btn blue">Start Prep Session</span>
+        </div>
+      </div>
+
+      <!-- COLOR RULES -->
+      <h3 style="margin-top: 40px;">Color Rules</h3>
       <div class="voice-grid" style="margin-top: 16px;">
         <div class="voice-card do">
-          <div class="voice-tag">Use</div>
+          <div class="voice-tag">Do</div>
           <ul>
-            <li>Dark backgrounds (#070B18) with orange (#E89422) accents</li>
-            <li>White text on dark for headlines</li>
-            <li>Gradient CTAs for visual hierarchy</li>
-            <li>Gold (#F5B040) for highlighted stats/numbers</li>
+            <li>Use dark BG + orange for all external marketing and social</li>
+            <li>Use light BG + indigo/purple for in-app product screens</li>
+            <li>Orange (#E89422) bridges both — CTAs on marketing, alerts in product</li>
+            <li>Green for success/wins in both contexts</li>
+            <li>Purple charts in product, orange highlights in marketing</li>
           </ul>
         </div>
         <div class="voice-card dont">
           <div class="voice-tag">Never</div>
           <ul>
-            <li>Pure black (#000000) backgrounds — use #070B18</li>
-            <li>Blue, green, or purple accents</li>
-            <li>Light/pastel color schemes for posts</li>
-            <li>Orange text on orange backgrounds</li>
+            <li>Blue/purple in social media posts or marketing (that's product only)</li>
+            <li>Dark midnight backgrounds inside the product dashboard</li>
+            <li>Pure black (#000000) anywhere — use #070B18 or #1E293B</li>
+            <li>Mix both palettes randomly in the same asset</li>
+            <li>Use light/pastel colors for external marketing content</li>
           </ul>
         </div>
       </div>
@@ -643,30 +917,33 @@
     <div class="container">
       <div class="section-label">03 — Typography</div>
       <h2>Type System</h2>
-      <p class="section-desc">Inter is the primary typeface. Clean, modern, highly legible at every size.</p>
+      <p class="section-desc">Inter everywhere. Marketing and product both use Inter. Clean, modern, consistent across every touchpoint.</p>
 
       <div class="type-sample">
-        <div class="type-label">Display / Hero</div>
+        <div class="type-label">Display / Hero (Marketing)</div>
         <div style="font-size: 48px; font-weight: 800; line-height: 1.1;">The AI Meeting Intelligence Platform</div>
-        <div style="margin-top: 8px; font-size: 13px; color: var(--gray-600);">Inter 800 &middot; 48-64px &middot; Line-height 1.1</div>
+        <div style="margin-top: 8px; font-size: 13px; color: var(--gray-600);">Inter 800 · 48-64px · Line-height 1.1 · White on dark</div>
       </div>
 
-      <div class="type-sample">
-        <div class="type-label">Section Heading</div>
-        <div style="font-size: 36px; font-weight: 700; line-height: 1.2;">Real-Time Coaching That Reads Every Buyer</div>
-        <div style="margin-top: 8px; font-size: 13px; color: var(--gray-600);">Inter 700 &middot; 36px &middot; Line-height 1.2</div>
+      <div class="type-sample" style="background: var(--prod-bg); border-color: var(--prod-border);">
+        <div class="type-label" style="color: var(--prod-blue);">Dashboard Heading (Product)</div>
+        <div style="font-size: 28px; font-weight: 700; line-height: 1.2; color: #1E293B;">Welcome back, Nilansh</div>
+        <div style="margin-top: 8px; font-size: 13px; color: var(--gray-500);">Inter 700 · 24-28px · Line-height 1.2 · Slate on white</div>
       </div>
 
       <div class="type-sample">
         <div class="type-label">Body Copy</div>
         <div style="font-size: 16px; font-weight: 400; line-height: 1.6; color: var(--gray-400);">Nimitai records, transcribes, and analyzes every sales call — surfacing buyer intent signals, objection patterns, and real-time coaching cues your team can act on immediately.</div>
-        <div style="margin-top: 8px; font-size: 13px; color: var(--gray-600);">Inter 400 &middot; 16px &middot; Line-height 1.6</div>
+        <div style="margin-top: 8px; font-size: 13px; color: var(--gray-600);">Inter 400 · 16px · Line-height 1.6</div>
       </div>
 
       <div class="type-sample">
-        <div class="type-label">CTA / Button</div>
-        <div style="display: inline-flex; padding: 14px 32px; background: linear-gradient(135deg, #E89422, #963C00); border-radius: 100px; font-size: 14px; font-weight: 600;">Apply for Founding Access</div>
-        <div style="margin-top: 12px; font-size: 13px; color: var(--gray-600);">Inter 600 &middot; 14px &middot; Full rounded, gradient BG</div>
+        <div class="type-label">CTA Buttons</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <div style="display: inline-flex; padding: 12px 28px; background: linear-gradient(135deg, #E89422, #963C00); border-radius: 100px; font-size: 14px; font-weight: 600; color: white;">Apply for Founding Access</div>
+          <div style="display: inline-flex; padding: 12px 28px; background: #4F46E5; border-radius: 12px; font-size: 14px; font-weight: 600; color: white;">Start Prep Session</div>
+        </div>
+        <div style="margin-top: 12px; font-size: 13px; color: var(--gray-600);">Marketing: rounded-full + gradient · Product: rounded-xl + solid indigo</div>
       </div>
     </div>
   </section>
@@ -679,7 +956,7 @@
     <div class="container">
       <div class="section-label">04 — Voice & Tone</div>
       <h2>How Nimitai Speaks</h2>
-      <p class="section-desc">Direct. Data-driven. Founder-led. We speak like a top-performing sales leader — not a marketing department.</p>
+      <p class="section-desc">Direct. Data-driven. Founder-led. Same voice in marketing copy and product microcopy — just adapted intensity.</p>
 
       <div class="voice-grid">
         <div class="voice-card do">
@@ -706,18 +983,32 @@
         </div>
       </div>
 
+      <h3 style="margin-top: 40px;">Voice Across Contexts</h3>
+      <div class="context-cards" style="margin-top: 16px;">
+        <div class="context-card dark-theme">
+          <div class="ctx-label">Marketing Voice (High Intensity)</div>
+          <p style="font-size: 15px; font-weight: 600; color: white; margin-bottom: 8px;">"Sales teams miss 70% of buying signals buried in call recordings."</p>
+          <p>Bold claims. Sharp contrast. Competitive edge. Urgency to act.</p>
+        </div>
+        <div class="context-card light-theme">
+          <div class="ctx-label">Product Voice (Calm + Confident)</div>
+          <p style="font-size: 15px; font-weight: 600; color: #1E293B; margin-bottom: 8px;">"Your confidence is up 12% this week. You're crushing it!"</p>
+          <p>Encouraging. Data-backed. Friendly. Helps reps feel prepared, not pressured.</p>
+        </div>
+      </div>
+
       <h3 style="margin-top: 40px;">Copy Formulas</h3>
       <div class="voice-grid" style="margin-top: 16px;">
-        <div class="voice-card" style="border-left: 3px solid var(--primary);">
-          <div class="voice-tag" style="color: var(--primary);">Pattern: Pain → Proof → CTA</div>
+        <div class="voice-card" style="border-left: 3px solid var(--brand-orange);">
+          <div class="voice-tag" style="color: var(--brand-orange);">Pattern: Pain → Proof → CTA</div>
           <ul>
             <li><strong>Pain:</strong> "Sales teams miss 70% of buying signals buried in call recordings."</li>
             <li><strong>Proof:</strong> "Nimitai detects them in real time — 87% accuracy across 18 demos."</li>
             <li><strong>CTA:</strong> "Apply for founding access. $149/seat/month."</li>
           </ul>
         </div>
-        <div class="voice-card" style="border-left: 3px solid var(--primary);">
-          <div class="voice-tag" style="color: var(--primary);">Pattern: Competitor → Contrast → Close</div>
+        <div class="voice-card" style="border-left: 3px solid var(--prod-blue);">
+          <div class="voice-tag" style="color: var(--prod-blue);">Pattern: Competitor → Contrast → Close</div>
           <ul>
             <li><strong>Competitor:</strong> "Gong charges $28,000/year for 5 seats."</li>
             <li><strong>Contrast:</strong> "Nimitai gives you the same AI coaching for $149/seat/month. Live in 48 hours."</li>
@@ -742,7 +1033,7 @@
         <div class="pillar-card">
           <div class="number">01</div>
           <h3>Product Proof</h3>
-          <p>Screenshots, demo clips, feature drops, before/after metrics.</p>
+          <p>Dashboard screenshots, demo clips, feature drops, before/after metrics from the live product.</p>
         </div>
         <div class="pillar-card">
           <div class="number">02</div>
@@ -776,7 +1067,7 @@
     <div class="container">
       <div class="section-label">06 — Social Strategy</div>
       <h2>Channel Playbook</h2>
-      <p class="section-desc">Each platform has different rules. Same brand voice, adapted format.</p>
+      <p class="section-desc">Each platform has different rules. Same brand voice, adapted format. Social always uses the marketing palette (dark + orange).</p>
 
       <div class="social-grid">
         <div class="social-card">
@@ -785,7 +1076,7 @@
           <p>3-4 posts/week from Nilansh + Archit's personal accounts. Company page reposts.</p>
           <ul>
             <li><strong>Mon:</strong> Sales insight / hot take (text post)</li>
-            <li><strong>Wed:</strong> Product demo or feature clip (video/carousel)</li>
+            <li><strong>Wed:</strong> Product dashboard screenshot or demo clip (video/carousel)</li>
             <li><strong>Thu:</strong> Founder journey / building-in-public (text post)</li>
             <li><strong>Sat:</strong> Competitor comparison or data insight (carousel)</li>
           </ul>
@@ -794,9 +1085,9 @@
         <div class="social-card">
           <div class="platform">Instagram</div>
           <h3>Visual Brand + Behind the Scenes</h3>
-          <p>Feed: Dark-themed brand graphics. Stories: Raw founder content. Reels: Quick sales tips.</p>
+          <p>Feed: Dark-themed brand graphics with product UI highlights. Stories: Raw founder content. Reels: Quick sales tips.</p>
           <ul>
-            <li><strong>Feed:</strong> 3 posts/week — carousels with dark BG + orange accents</li>
+            <li><strong>Feed:</strong> 3 posts/week — dark BG carousels with orange accents + product screenshots</li>
             <li><strong>Stories:</strong> Daily — office life, product updates, polls</li>
             <li><strong>Reels:</strong> 2/week — 15-30s sales tips, product demos</li>
             <li><strong>Highlights:</strong> Product, Pricing, Results, Team, FAQ</li>
@@ -818,12 +1109,12 @@
         <div class="social-card">
           <div class="platform">YouTube</div>
           <h3>Demo + Education</h3>
-          <p>Product walkthroughs, sales coaching content, competitor comparisons.</p>
+          <p>Product walkthroughs showing actual dashboard, sales coaching content, competitor comparisons.</p>
           <ul>
-            <li><strong>Weekly:</strong> 1 video — product demo or sales tutorial</li>
+            <li><strong>Weekly:</strong> 1 video — product dashboard walkthrough or sales tutorial</li>
             <li><strong>Shorts:</strong> 2/week — quick sales tips from Reels</li>
             <li><strong>SEO titles:</strong> "Gong vs Nimitai", "Best Sales Call Software 2026"</li>
-            <li><strong>Thumbnails:</strong> Dark BG, orange text, face shots</li>
+            <li><strong>Thumbnails:</strong> Dark BG, orange text, face shots + product UI peek</li>
           </ul>
         </div>
       </div>
@@ -833,10 +1124,10 @@
         <div class="voice-card do">
           <div class="voice-tag">Design System</div>
           <ul>
-            <li>Background: Always #070B18 (Midnight)</li>
+            <li>Background: Always #070B18 (Midnight) for graphics</li>
             <li>Headline text: White (#FFFFFF), Inter Bold</li>
             <li>Accent text/numbers: #E89422 or #F5B040</li>
-            <li>Subtle orange glow/gradient in corners</li>
+            <li>Product screenshots on light BG are OK as carousel slides</li>
             <li>Nimitai logo bottom-right, small</li>
             <li>Max 2 fonts per post (heading + body)</li>
           </ul>
@@ -844,7 +1135,7 @@
         <div class="voice-card dont">
           <div class="voice-tag">Never</div>
           <ul>
-            <li>White/light backgrounds</li>
+            <li>All-white/light backgrounds for brand graphics (screenshots are OK)</li>
             <li>Stock photos of people shaking hands</li>
             <li>More than 3 colors per post</li>
             <li>Decorative fonts or script typefaces</li>
@@ -854,11 +1145,32 @@
         </div>
       </div>
 
+      <h3 style="margin-top: 40px;">Product Screenshots in Social</h3>
+      <p style="font-size: 14px; color: var(--gray-400); margin-bottom: 16px;">When sharing product UI on social, always frame them inside the dark marketing context:</p>
+      <div class="ui-preview">
+        <div class="ui-preview-bar dark">
+          <span><span class="dot" style="background: var(--brand-orange);"></span> nimitai.com</span>
+          <span style="font-size: 11px; color: var(--gray-400);">PRODUCT PREVIEW</span>
+        </div>
+        <div class="ui-preview-body dark" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <div class="mock-card" style="background: white; color: #1E293B;">
+            <span style="color: var(--prod-blue); font-weight: 700;">$1.2M</span> Pipeline
+          </div>
+          <div class="mock-card" style="background: white; color: #1E293B;">
+            <span style="color: var(--prod-green); font-weight: 700;">72%</span> Win Rate
+          </div>
+          <div class="mock-card" style="background: linear-gradient(135deg, #F97316, #EF4444); color: white;">
+            Next: Priya Sharma · $145k
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 12px; color: var(--gray-600); margin-top: 8px;">Product UI cards sit on the dark marketing background — creating visual continuity between what we sell and what we ship.</p>
+
       <h3 style="margin-top: 40px;">Hashtag Strategy</h3>
       <p style="font-size: 14px; color: var(--gray-400); margin-bottom: 16px;">Use 5-8 per Instagram post. Mix branded + category + niche.</p>
 
       <div style="margin-bottom: 16px;">
-        <h4 style="font-size: 13px; color: var(--primary); margin-bottom: 8px;">Branded (always use)</h4>
+        <h4 style="font-size: 13px; color: var(--brand-orange); margin-bottom: 8px;">Branded (always use)</h4>
         <div class="hashtag-cloud">
           <span class="hashtag">#Nimitai</span>
           <span class="hashtag">#NimitaiAI</span>
@@ -867,7 +1179,7 @@
       </div>
 
       <div style="margin-bottom: 16px;">
-        <h4 style="font-size: 13px; color: var(--primary); margin-bottom: 8px;">Category (rotate)</h4>
+        <h4 style="font-size: 13px; color: var(--brand-orange); margin-bottom: 8px;">Category (rotate)</h4>
         <div class="hashtag-cloud">
           <span class="hashtag">#ConversationIntelligence</span>
           <span class="hashtag">#SalesAI</span>
@@ -880,7 +1192,7 @@
       </div>
 
       <div>
-        <h4 style="font-size: 13px; color: var(--primary); margin-bottom: 8px;">Niche / Discovery (rotate)</h4>
+        <h4 style="font-size: 13px; color: var(--brand-orange); margin-bottom: 8px;">Niche / Discovery (rotate)</h4>
         <div class="hashtag-cloud">
           <span class="hashtag">#GongAlternative</span>
           <span class="hashtag">#B2BSaaS</span>
@@ -912,13 +1224,13 @@
           <h3>Logo</h3>
           <p>Primary: <code>nimitai-logo.png</code></p>
           <p>Legacy: <code>convertwiselogo1.svg</code></p>
-          <p style="margin-top: 8px;">Always use on dark backgrounds. Minimum clear space: 1x logo height on all sides.</p>
+          <p style="margin-top: 8px;">Use on dark backgrounds for marketing. On white/light backgrounds inside product.</p>
         </div>
         <div class="social-card">
           <h3>OG Image</h3>
           <p>File: <code>og-image.png</code></p>
           <p>Size: 1200x630px</p>
-          <p style="margin-top: 8px;">Used for social link previews. Update quarterly with fresh screenshots.</p>
+          <p style="margin-top: 8px;">Used for social link previews. Dark BG + orange accents.</p>
         </div>
         <div class="social-card">
           <h3>Social Handles</h3>
@@ -926,6 +1238,11 @@
           <p>LinkedIn: <strong>/company/nimitai</strong></p>
           <p>Email: <strong>hello@nimitai.com</strong></p>
           <p>Website: <strong>nimitai.com</strong></p>
+        </div>
+        <div class="social-card">
+          <h3>Product Mockup</h3>
+          <p>Figma: <strong>ribbon-cabin-58379357.figma.site</strong></p>
+          <p style="margin-top: 8px;">Use dashboard screenshots as proof-of-product in social content. Always frame on dark BG.</p>
         </div>
       </div>
     </div>
@@ -935,16 +1252,18 @@
   <!-- ═══════════════════════════════════════════ -->
   <!-- 8. THE ONE RULE                              -->
   <!-- ═══════════════════════════════════════════ -->
-  <section style="border-bottom: none; text-align: center; padding: 80px 24px;">
-    <div class="container">
+  <section style="border-bottom: none; text-align: center; padding: 80px 24px; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, var(--mkt-bg) 0%, #0D0B2E 40%, #1A0B30 60%, var(--mkt-bg-alt) 100%); z-index: 0;"></div>
+    <div style="position: absolute; bottom: -100px; left: 50%; transform: translateX(-50%); width: 500px; height: 500px; background: var(--brand-orange); border-radius: 50%; filter: blur(200px); opacity: 0.08; z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 1;">
       <div class="section-label">The One Rule</div>
-      <h2 style="font-size: 42px; max-width: 700px; margin: 0 auto 20px;">Every piece of content should feel like a <span style="background: linear-gradient(135deg, #F5B040, #E89422); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">top closer</span> talking to another founder.</h2>
-      <p style="color: var(--gray-400); font-size: 18px;">Not a marketer. Not a copywriter. A founder who closes deals and built the tool they wished existed.</p>
+      <h2 style="font-size: 42px; max-width: 750px; margin: 0 auto 20px;">The website <span style="background: linear-gradient(135deg, #F5B040, #E89422); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">sells the dream</span>. The product <span style="background: linear-gradient(135deg, #6366F1, #7C3AED); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">delivers the reality</span>. Both feel like Nimitai.</h2>
+      <p style="color: var(--gray-400); font-size: 18px; max-width: 600px; margin: 0 auto;">Dark and bold when we're convincing. Light and clean when we're helping. Always precise. Always founder-led. Always Nimitai.</p>
     </div>
   </section>
 
   <footer style="text-align: center; padding: 40px 24px; border-top: 1px solid rgba(255,255,255,0.06);">
-    <p style="font-size: 12px; color: var(--gray-600);">Nimitai Brand Guide v1.0 &middot; March 2026 &middot; REN AI Technologies Private Limited</p>
+    <p style="font-size: 12px; color: var(--gray-600);">Nimitai Unified Brand Guide v2.0 · March 2026 · REN AI Technologies Private Limited</p>
   </footer>
 
 </body>
