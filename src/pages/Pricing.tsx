@@ -56,9 +56,9 @@ const faqs = [
       'Gong pricing starts at approximately $1,200–$1,600 per seat per year with a 15-seat minimum — meaning $18,000–$24,000 minimum annual spend. Nimitai is $149/seat/month during early access. For a 5-person sales team, Nimitai is roughly 90% cheaper than Gong with no enterprise contract or seat minimums.',
   },
   {
-    question: 'Does Nimitai charge per recording or per minute?',
+    question: 'Does Nimitai charge per meeting or per minute?',
     answer:
-      'No. Nimitai charges $149/seat/month with no per-recording or per-minute charges. Record every sales call your team takes — discovery calls, demos, follow-ups, QBRs — all included.',
+      'No. Nimitai charges $149/seat/month with no per-meeting or per-minute charges. Analyze every sales conversation your team has — discovery calls, demos, follow-ups, QBRs — all included.',
   },
 ];
 

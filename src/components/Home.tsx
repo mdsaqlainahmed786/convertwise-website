@@ -17,8 +17,8 @@ import { WebSiteSchema } from './seo/WebSiteSchema';
 export function Home() {
   const siteUrl = 'https://nimitai.com';
   const title = 'Nimitai — AI Meeting Intelligence for Sales Teams | Gong Alternative';
-  const description = 'Nimitai records your sales calls and uses AI to surface real-time coaching, objection patterns, and deal risks. The #1 Gong alternative for startup sales teams. $149/mo, setup in 30 minutes.';
-  const keywords = 'AI meeting intelligence, conversation intelligence software, sales call recording software, gong alternative, AI sales coaching, meeting intelligence, gong alternative for startups, fathom alternative, fireflies alternative, AI meeting assistant, AI notetaker for sales';
+  const description = 'Nimitai is AI meeting intelligence that analyzes your B2B sales conversations to surface real-time coaching, buyer signals, and deal risks. The #1 Gong alternative for startup sales teams. $149/mo, setup in 30 minutes.';
+  const keywords = 'AI meeting intelligence, conversation intelligence software, gong alternative, AI sales coaching, meeting intelligence, gong alternative for startups, fathom alternative, fireflies alternative, AI meeting assistant, AI notetaker for sales, sales meeting analysis, buyer signal detection';
   const ogImage = `${siteUrl}/og-image.jpg`;
 
   return (
@@ -67,7 +67,7 @@ export function Home() {
               "name": "What is Nimitai?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nimitai is AI meeting intelligence software that automatically records your B2B sales calls and surfaces actionable coaching insights, objection patterns, talk-ratio analysis, and deal risk signals. It's a Gong alternative built specifically for startup sales teams at $149/month."
+                "text": "Nimitai is AI meeting intelligence software that automatically analyzes your B2B sales conversations and surfaces actionable coaching insights, objection patterns, talk-ratio analysis, and deal risk signals in real time. It's a Gong alternative built specifically for startup sales teams at $149/month."
               }
             },
             {
@@ -75,15 +75,15 @@ export function Home() {
               "name": "How is Nimitai different from Gong?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nimitai offers the same AI conversation intelligence as Gong — call recording, objection detection, talk-ratio analysis, deal risk alerts — at a fraction of the cost. No enterprise contract, no annual commitment, setup in 30 minutes. Perfect for teams under 50 reps."
+                "text": "Nimitai offers the same AI conversation intelligence as Gong — real-time meeting analysis, objection detection, talk-ratio insights, deal risk alerts — at a fraction of the cost. No enterprise contract, no annual commitment, setup in 30 minutes. Perfect for teams under 50 reps."
               }
             },
             {
               "@type": "Question",
-              "name": "What sales call recording features does Nimitai include?",
+              "name": "What AI meeting intelligence features does Nimitai include?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nimitai includes automatic sales call recording, AI-powered transcription, talk-ratio analysis, objection pattern detection, deal risk scoring, real-time coaching cues, and automated CRM notes. It integrates with Zoom, Google Meet, and Microsoft Teams."
+                "text": "Nimitai includes real-time meeting analysis, AI-powered transcription, talk-ratio insights, objection pattern detection, deal risk scoring, live coaching cues, buyer signal detection, and automated CRM notes. It integrates with Zoom, Google Meet, and Microsoft Teams."
               }
             },
             {
@@ -99,7 +99,7 @@ export function Home() {
               "name": "Is Nimitai a good Gong alternative for small teams?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Nimitai is purpose-built as a Gong alternative for startup and SMB sales teams. It delivers enterprise-grade conversation intelligence — call recording, AI coaching, deal intelligence — without the $1,200/year per-seat enterprise pricing."
+                "text": "Yes. Nimitai is purpose-built as a Gong alternative for startup and SMB sales teams. It delivers enterprise-grade conversation intelligence — real-time meeting analysis, AI coaching, deal intelligence — without the $1,200/year per-seat enterprise pricing."
               }
             },
             {

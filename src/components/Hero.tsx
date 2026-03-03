@@ -37,10 +37,10 @@ export function Hero() {
       />
 
       {/* ── Static gradient orbs ─────────────────────────── */}
-      <div className="absolute -top-20 -right-20 w-[700px] h-[700px] bg-amber-300 rounded-full blur-[130px] opacity-35" />
-      <div className="absolute -bottom-24 -left-24 w-[650px] h-[650px] bg-orange-300 rounded-full blur-[130px] opacity-28" />
-      <div className="absolute top-1/3 -left-16 w-[420px] h-[420px] bg-amber-200 rounded-full blur-[100px] opacity-22" />
-      <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-orange-200 rounded-full blur-[90px] opacity-20" />
+      <div className="absolute -top-20 -right-20 w-[700px] h-[700px] bg-amber-300 rounded-full blur-[130px] opacity-15 sm:opacity-35" />
+      <div className="absolute -bottom-24 -left-24 w-[650px] h-[650px] bg-orange-300 rounded-full blur-[130px] opacity-10 sm:opacity-28" />
+      <div className="hidden sm:block absolute top-1/3 -left-16 w-[420px] h-[420px] bg-amber-200 rounded-full blur-[100px] opacity-22" />
+      <div className="hidden sm:block absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-orange-200 rounded-full blur-[90px] opacity-20" />
       {/* Radial centre glow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -81,7 +81,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             >
-              Record every call. Analyze every signal. Coach every rep — in real time.
+              Analyze every meeting. Surface every signal. Coach every rep — in real time.
             </motion.p>
 
             <motion.p
@@ -90,7 +90,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: 0.28 }}
             >
-              Nimitai is an AI conversation intelligence platform built exclusively for B2B sales teams. Sales managers and founders use Nimitai to detect buyer emotion and purchase signals in real time, auto-generate battle cards before each call, and audit pitch quality — so every rep operates at your best rep's level.
+              AI meeting intelligence that detects buyer signals, surfaces coaching insights, and auto-generates battle cards — so every rep sells like your best rep. The Gong alternative built for startup sales teams.
             </motion.p>
 
             <motion.div
