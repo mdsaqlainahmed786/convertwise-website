@@ -48,6 +48,15 @@ export function Footer() {
               >
                 <Instagram size={16} />
               </a>
+              <a
+                href="https://wa.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#E89422] transition-colors overflow-hidden p-1.5"
+                aria-label="Contact Nimitai on WhatsApp"
+              >
+                <img src="/whatsapp-logo.jpeg" alt="" className="w-full h-full object-contain" aria-hidden />
+              </a>
             </div>
           </div>
 
