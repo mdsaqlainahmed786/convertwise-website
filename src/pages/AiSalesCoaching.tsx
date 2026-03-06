@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 import {
   Zap,
@@ -67,7 +68,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   name: 'AI Sales Coaching Software for B2B Teams 2026 — Nimitai',
   description:
-    'Nimitai is AI sales coaching software that automatically analyzes every sales call, identifies coaching opportunities, tracks rep improvement over time, and tells managers exactly who needs help and why. $149/month.',
+    'Nimitai AI sales coaching: analyzes every call, identifies reps who need coaching, tracks improvement. $149/user/month. Built by REN AI Technologies.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -182,7 +183,7 @@ export function AiSalesCoaching() {
         <title>AI Sales Coaching Software for B2B Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="Nimitai is AI sales coaching software that automatically analyzes every sales call, identifies coaching opportunities, tracks rep improvement over time, and tells managers exactly who needs help and why. $149/month."
+          content="Nimitai AI sales coaching: analyzes every call, identifies reps who need coaching, tracks improvement. $149/user/month. Built by REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -196,7 +197,7 @@ export function AiSalesCoaching() {
         <meta property="og:title" content="AI Sales Coaching Software for B2B Teams 2026 — Nimitai" />
         <meta
           property="og:description"
-          content="Nimitai is AI sales coaching software that automatically analyzes every sales call, identifies coaching opportunities, tracks rep improvement over time, and tells managers exactly who needs help and why. $149/month."
+          content="Nimitai AI sales coaching: analyzes every call, identifies reps who need coaching, tracks improvement. $149/user/month. Built by REN AI Technologies."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -210,11 +211,11 @@ export function AiSalesCoaching() {
         <meta name="twitter:title" content="AI Sales Coaching Software for B2B Teams 2026 — Nimitai" />
         <meta
           name="twitter:description"
-          content="Nimitai is AI sales coaching software that automatically analyzes every sales call, identifies coaching opportunities, tracks rep improvement over time, and tells managers exactly who needs help and why. $149/month."
+          content="Nimitai AI sales coaching: analyzes every call, identifies reps who need coaching, tracks improvement. $149/user/month. Built by REN AI Technologies."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@NimitaiHQ" />
-        <meta name="twitter:site" content="@NimitaiHQ" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -419,6 +420,24 @@ export function AiSalesCoaching() {
           </div>
 
           <FAQAccordion />
+        </div>
+      </section>
+
+      {/* From the blog */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/30 transition-colors">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mb-6">From the blog</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time AI Sales Coaching: How It Works' },
+              { to: '/blog/sales-call-best-practices', label: 'Sales Call Best Practices That Close Deals' },
+              { to: '/blog/how-to-increase-close-rate', label: 'How to Increase Your Close Rate' },
+            ].map((link) => (
+              <Link key={link.to} to={link.to} className="flex items-center gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-[#E89422]/50 bg-white dark:bg-gray-800 hover:bg-amber-50 dark:hover:bg-amber-900/10 transition-colors group">
+                <span className="text-sm text-gray-700 dark:text-gray-300 font-medium group-hover:text-[#E89422] transition-colors leading-snug">{link.label}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

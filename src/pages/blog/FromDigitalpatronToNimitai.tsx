@@ -123,7 +123,7 @@ export function FromDigitalpatronToNimitai() {
 
         <h2 id="ideology">Our ideology: intelligence during, not after</h2>
         <p>
-          Every existing tool in this space — <Link to="/alternatives/gong-alternative">Gong</Link>, Chorus, Fathom, Fireflies — operates on the same basic premise: record the conversation, then analyze it.
+          Every existing tool in this space — <Link to="/alternatives/gong-alternative">Gong</Link>, Chorus, Fathom, Fireflies — operates on the same basic premise: record the conversation, then analyze it. <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a> has over 60 tools, and nearly all of them are post-call. The <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales</a> shows that real-time AI guidance is the feature sales teams now rank as their top priority investment.
         </p>
         <p>
           That's a useful premise. But it accepts a fundamental constraint as a given: that AI can only help you understand a conversation after it ends.
@@ -155,7 +155,7 @@ export function FromDigitalpatronToNimitai() {
           Small and mid-size sales teams have none of that. They go into calls with a CRM record, a LinkedIn profile, and their own instincts.
         </p>
         <p>
-          Nimitai is the equalizer. A 5-person sales team using Nimitai walks into every call with the same pre-call preparation, real-time coaching, and post-call follow-through as a 500-person enterprise team. The intelligence gap closes. And when the intelligence gap closes, the best product wins — not the one with the biggest sales infrastructure.
+          Nimitai is the equalizer. A 5-person sales team using Nimitai walks into every call with the same pre-call preparation, real-time <Link to="/ai-sales-coaching">AI sales coaching</Link>, and post-call follow-through as a 500-person enterprise team. The intelligence gap closes. And when the intelligence gap closes, the best product wins — not the one with the biggest sales infrastructure. <Link to="/pricing">Nimitai starts at $149/seat/month</Link> — no enterprise contracts, no 15-seat minimums.
         </p>
 
         <h2 id="what-we-owe">What we owe to ConvertWise and Digitalpatron</h2>
@@ -186,11 +186,34 @@ export function FromDigitalpatronToNimitai() {
           That's why we started over. That's why it was worth it.
         </p>
 
+        <h2 id="faq" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {[
+            { q: 'What was Digitalpatron?', a: 'Digitalpatron.in was a B2B growth and digital marketing consultancy founded by Nilansh and Archit in 2022. It specialized in conversion rate optimization, SEO, and go-to-market strategy for SaaS companies. It became the research foundation for Nimitai.' },
+            { q: 'Why did you pivot from ConvertWise to Nimitai?', a: 'ConvertWise was built from a consultant\'s perspective — solving the problem as observed from a distance. After 350 sales calls of direct user research, it became clear the product needed to be rebuilt from scratch around a different core belief: AI should work during the conversation, not after it.' },
+            { q: 'What is Nimitai\'s ideology?', a: 'Intelligence during, not after. The most valuable moment to surface an insight is during the live conversation, when the rep can still act on it — not in a post-call summary email. Every product decision at Nimitai is filtered through this principle.' },
+            { q: 'How is Nimitai priced?', a: 'Nimitai starts at $149/seat/month with no minimums, no long-term contracts, and a 48-hour time to go live. Every seat added later costs the same rate.' },
+          ].map(({ q, a }) => (
+            <div key={q} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">{q}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+          <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist
+          </a>
+        </div>
+
         <RelatedArticles links={[
+          { to: '/ai-meeting-assistant', label: 'AI Meeting Assistant — Nimitai' },
+          { to: '/pricing', label: 'Nimitai Pricing — $149/seat/month' },
           { to: '/blog/why-we-built-nimitai', label: 'Why We Built Nimitai: 350 Sales Calls, One Hard Truth' },
-          { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time AI Coaching: Why Post-Call Review Is Too Late' },
           { to: '/blog/conversation-intelligence-guide', label: 'Conversation Intelligence: The Complete Guide' },
-          { to: '/pricing', label: 'Nimitai Founding Pricing — $149/seat/month' },
         ]} />
       </BlogShell>
     </>

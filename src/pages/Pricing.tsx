@@ -194,7 +194,7 @@ export function Pricing() {
   return (
     <>
       <Helmet>
-        <title>Nimitai Pricing — $149/Month | AI Meeting Intelligence</title>
+        <title>Nimitai Pricing — $149/Seat/Month | AI Meeting Intelligence</title>
         <meta
           name="description"
           content="Nimitai is in private beta. Founding teams get $149/seat/month, private onboarding, and direct access to the founders. Join the waitlist to apply for early access."
@@ -228,8 +228,8 @@ export function Pricing() {
           content="Nimitai is in private beta. Founding teams get $149/seat/month, private onboarding, and direct access to the founders. Join the waitlist to apply for early access."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@NimitaiHQ" />
-        <meta name="twitter:site" content="@NimitaiHQ" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />

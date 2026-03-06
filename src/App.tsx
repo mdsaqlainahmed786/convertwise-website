@@ -45,6 +45,14 @@ import { AiObjectionHandling } from './pages/blog/AiObjectionHandling';
 import { B2bSaasDemo } from './pages/blog/B2bSaasDemo';
 import { RevenueIntelligence } from './pages/blog/RevenueIntelligence';
 import { WhyNimitai } from './pages/blog/WhyNimitai';
+import { GongRealCost } from './pages/blog/GongRealCost';
+import { FirefliesVsGongVsNimitai } from './pages/blog/FirefliesVsGongVsNimitai';
+import { BestAiSalesCoaching } from './pages/blog/BestAiSalesCoaching';
+import { SalesCallRecordingLaws } from './pages/blog/SalesCallRecordingLaws';
+import { ChorusVsGongVsNimitai } from './pages/blog/ChorusVsGongVsNimitai';
+import { TldvVsGongVsNimitai } from './pages/blog/TldvVsGongVsNimitai';
+import { PerfectDiscoveryCall } from './pages/blog/PerfectDiscoveryCall';
+import { AiReplacingSalesManagers } from './pages/blog/AiReplacingSalesManagers';
 import { Waitlist } from './pages/Waitlist';
 import { NotFound } from './pages/NotFound';
 
@@ -97,6 +105,14 @@ export default function App() {
             <Route path="/blog/b2b-saas-demo-best-practices" element={<B2bSaasDemo />} />
             <Route path="/blog/revenue-intelligence-platforms-2026" element={<RevenueIntelligence />} />
             <Route path="/blog/why-nimitai-name" element={<WhyNimitai />} />
+            <Route path="/blog/gong-real-cost-hidden-fees" element={<GongRealCost />} />
+            <Route path="/blog/fireflies-vs-gong-vs-nimitai" element={<FirefliesVsGongVsNimitai />} />
+            <Route path="/blog/best-ai-sales-coaching-software-2026" element={<BestAiSalesCoaching />} />
+            <Route path="/blog/sales-call-recording-laws-2026" element={<SalesCallRecordingLaws />} />
+            <Route path="/blog/chorus-vs-gong-vs-nimitai" element={<ChorusVsGongVsNimitai />} />
+            <Route path="/blog/tldv-vs-gong-vs-nimitai" element={<TldvVsGongVsNimitai />} />
+            <Route path="/blog/perfect-discovery-call-ai-playbook" element={<PerfectDiscoveryCall />} />
+            <Route path="/blog/how-ai-is-replacing-sales-managers" element={<AiReplacingSalesManagers />} />
 
             {/* Waitlist / Login */}
             <Route path="/login" element={<Waitlist />} />

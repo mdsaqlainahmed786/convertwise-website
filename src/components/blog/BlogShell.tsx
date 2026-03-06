@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { BreadcrumbListSchema } from '../seo/BreadcrumbListSchema';
 import { useInView } from 'motion/react';
 import { Linkedin, Twitter, Link2, Calendar, ArrowRight, Check, TrendingUp, Lightbulb } from 'lucide-react';
 
@@ -8,7 +10,7 @@ export const CALENDLY_URL = 'https://calendly.com/gnilansh';
 export const NILANSH_LINKEDIN = 'https://linkedin.com/in/nilanshgupta';
 export const ARCHIT_LINKEDIN = 'https://www.linkedin.com/in/architdhir-healthcare-growth/';
 export const COMPANY_LINKEDIN = 'https://www.linkedin.com/company/nimitai';
-export const TWITTER_URL = 'https://twitter.com/nimitaihq';
+export const TWITTER_URL = 'https://x.com/Nimit_ai';
 export const SITE_URL = 'https://nimitai.com';
 
 /* ─── Types ──────────────────────────────────────────────────── */
@@ -198,7 +200,7 @@ function AuthorCard({ authorKey }: { authorKey: AuthorKey }) {
             <Linkedin size={13} /> LinkedIn
           </a>
           <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:underline">
-            <Twitter size={13} /> @nimitaihq
+            <Twitter size={13} /> @Nimit_ai
           </a>
         </div>
       </div>
@@ -559,6 +561,18 @@ export function BlogShell({
 
   return (
     <>
+      <Helmet>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Nimit_ai" />
+        <meta name="twitter:image" content="https://nimitai.com/og-image.png" />
+      </Helmet>
+
+      <BreadcrumbListSchema items={[
+        { name: 'Home', item: 'https://nimitai.com' },
+        { name: 'Blog', item: 'https://nimitai.com/blog' },
+        { name: title, item: `https://nimitai.com/blog/${typeof window !== 'undefined' ? window.location.pathname.split('/').pop() : ''}` },
+      ]} />
+
       <ReadingProgress />
 
       {/* Hero */}
@@ -694,7 +708,7 @@ export function BlogShell({
                         <Linkedin size={12} /> Follow Nimitai
                       </a>
                       <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 hover:underline">
-                        <Twitter size={12} /> @nimitaihq
+                        <Twitter size={12} /> @Nimit_ai
                       </a>
                     </div>
                   </div>

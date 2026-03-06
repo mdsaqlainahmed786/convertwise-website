@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { RelatedArticles } from '../../components/blog/BlogShell';
 import {
   ChevronDown,
@@ -44,12 +45,12 @@ const faqs = [
   {
     question: 'Which Gong competitor has the most affordable pricing?',
     answer:
-      'Nimitai is the most affordable Gong competitor with full AI sales intelligence at $149/month for the entire team — no per-seat fees. Fathom offers a free plan but without sales intelligence features. All enterprise Gong competitors (Chorus, Clari, Jiminny) are similarly priced to Gong at $700–$1,600/seat/year.',
+      'Nimitai is the most affordable Gong competitor with full AI sales intelligence starting at $149/user/month — no platform fee, no annual contract. Fathom offers a free plan but without sales intelligence features. All enterprise Gong competitors (Chorus, Clari, Jiminny) are similarly priced to Gong at $700–$1,600/seat/year.',
   },
   {
     question: 'Can I switch from Gong to a cheaper alternative without losing features?',
     answer:
-      "Yes, for most startup and SMB teams. Nimitai matches Gong's core conversation intelligence features — call recording, deal risk scoring, objection pattern detection, talk-ratio analysis, and CRM sync — at $149/month. Enterprise-specific features (forecasting, pipeline management, 500+ rep org charts) remain Gong-only.",
+      "Yes, for most startup and SMB teams. Nimitai matches Gong's core conversation intelligence features — call recording, deal risk scoring, objection pattern detection, talk-ratio analysis, and CRM sync — at $149/user/month. Enterprise-specific features (forecasting, pipeline management, 500+ rep org charts) remain Gong-only.",
   },
   {
     question: 'Is Fathom really a Gong alternative?',
@@ -77,7 +78,7 @@ const faqSchema = {
 };
 
 const quickComparisonRows = [
-  { tool: 'Nimitai', bestFor: 'Startup & SMB sales', price: '$149/mo flat', differentiator: 'Sales AI + flat pricing', isHighlighted: true },
+  { tool: 'Nimitai', bestFor: 'Startup & SMB sales', price: '$149/user/mo', differentiator: 'Sales AI + per-user pricing', isHighlighted: true },
   { tool: 'Fathom', bestFor: 'Individuals + small teams', price: 'Free–$19/user', differentiator: 'Best free tier', isHighlighted: false },
   { tool: 'Fireflies.ai', bestFor: 'Teams wanting transcription', price: '$10–$18/user', differentiator: 'Large meeting library', isHighlighted: false },
   { tool: 'tl;dv', bestFor: 'Product + sales hybrid', price: '$20–$29/user', differentiator: 'Timestamped highlights', isHighlighted: false },
@@ -96,7 +97,7 @@ interface Competitor {
   bestFor: string;
   pricing: string;
   limitation: string;
-  paragraphs: string[];
+  paragraphs: React.ReactNode[];
 }
 
 const competitors: Competitor[] = [
@@ -109,8 +110,8 @@ const competitors: Competitor[] = [
     limitation: 'Newer product — less historical data depth than Gong for large enterprises.',
     paragraphs: [
       'Nimitai is purpose-built for the sales motion of early-stage B2B SaaS companies. Where Gong was designed for 200-rep enterprise orgs with dedicated RevOps, Nimitai assumes your head of sales is also running calls, your CRM data is imperfect, and your team is 3–15 people who need real intelligence without a 90-day implementation.',
-      'The core platform covers deal risk scoring on every call, objection pattern detection across your call library, talk/listen ratio analysis, real-time coaching cues during calls, and automatic CRM sync to Salesforce or HubSpot. Setup is 30 minutes, not 90 days. The pricing is $149/month for your entire team — unlimited recordings, unlimited seats, no per-call fees.',
-      'For startup and SMB sales teams that need Gong-level conversation intelligence at a price that makes sense before Series B, Nimitai is the strongest option in 2026.',
+      <>The core platform covers deal risk scoring on every call, objection pattern detection across your call library, talk/listen ratio analysis, real-time coaching cues during calls, and automatic CRM sync to Salesforce or HubSpot. Setup is 30 minutes, not 90 days. The pricing is <Link to="/pricing">from $149/seat/month</Link> — unlimited recordings, no annual contract, no per-call fees.</>,
+      <>For startup and SMB sales teams that need Gong-level <Link to="/blog/conversation-intelligence-guide">conversation intelligence</Link> at a price that makes sense before Series B, Nimitai is the strongest <Link to="/alternatives/gong-alternative">Gong alternative</Link> in 2026.</>,
     ],
   },
   {
@@ -121,7 +122,7 @@ const competitors: Competitor[] = [
     pricing: 'Free plan available, paid from $19/user/month.',
     limitation: 'No sales intelligence features (no deal risk, no objection analysis, no talk ratios). Designed for note-taking, not sales optimization.',
     paragraphs: [
-      'Fathom is the most popular free Gong alternative — but the comparison is a stretch. Fathom is a meeting note-taking tool that records, transcribes, and summarizes calls. It does this very well. The free plan is generous, the Zoom integration is seamless, and the meeting summaries are genuinely useful.',
+      <><Link to="/alternatives/fathom-alternative">Fathom alternative</Link> seekers will find the tool popular — but the comparison to Gong is a stretch. Fathom is a meeting note-taking tool that records, transcribes, and summarizes calls. It does this very well. The free plan is generous, the Zoom integration is seamless, and the meeting summaries are genuinely useful.</>,
       'What Fathom lacks entirely is sales intelligence. There is no deal risk scoring, no objection pattern analysis, no talk-ratio tracking, no coaching nudges, and no rep performance scorecards. It\'s a productivity tool, not a revenue intelligence platform. If you\'re an individual contributor who wants to stop taking notes during calls, Fathom is excellent.',
       'If you\'re a sales leader who wants to improve your team\'s win rate through conversation analysis, Fathom won\'t get you there. The gap between Fathom and Gong is not pricing — it\'s product category.',
     ],
@@ -135,7 +136,7 @@ const competitors: Competitor[] = [
     limitation: 'Basic conversation analytics — no deal risk scoring, no real-time coaching, limited sales-specific intelligence.',
     paragraphs: [
       'Fireflies.ai has built one of the largest meeting recording libraries in the category. The platform records across Zoom, Google Meet, Teams, and dozens of other conferencing tools. Search is a genuine strength — you can search across your entire call history for specific keywords, topics, or moments.',
-      'The conversation analytics layer is lighter than Gong or Nimitai. You get basic talk-ratio metrics and topic tracking, but no deal risk scoring, no objection clustering, and no real-time coaching features. Fireflies is best understood as a meeting archive and transcription tool with a basic analytics layer on top.',
+      <>The <Link to="/blog/conversation-intelligence-guide">conversation intelligence</Link> layer is lighter than Gong or Nimitai. You get basic talk-ratio metrics and topic tracking, but no deal risk scoring, no objection clustering, and no real-time coaching features. <Link to="/alternatives/fireflies-alternative">Fireflies alternative</Link> hunters should note that Fireflies is best understood as a meeting archive and transcription tool with a basic analytics layer on top.</>,
       'For teams that primarily need a searchable call library and basic transcription at a low per-seat cost, Fireflies is a strong choice. For teams that want the intelligence to improve win rates, you\'ll outgrow it quickly.',
     ],
   },
@@ -147,7 +148,7 @@ const competitors: Competitor[] = [
     pricing: 'Free plan, paid from $20–$29/user/month.',
     limitation: 'Primarily a video highlight tool — not a full conversation intelligence platform.',
     paragraphs: [
-      'tl;dv (Too Long; Didn\'t View) built their product around the insight that most people don\'t watch full call recordings. Instead, the platform makes it easy to create timestamped clips, highlight reels, and sharable moments from any call. The clip-sharing workflow is genuinely best-in-class.',
+      <><Link to="/alternatives/tldv-alternative">tl;dv alternative</Link> seekers: tl;dv (Too Long; Didn't View) built their product around the insight that most people don't watch full call recordings. Instead, the platform makes it easy to create timestamped clips, highlight reels, and sharable moments from any call. The clip-sharing workflow is genuinely best-in-class.</>,
       'Sales teams use tl;dv primarily for internal coaching moments (sharing a great objection handle with the team) or for sending relevant call clips to prospects ("here\'s the demo section we discussed"). The free plan is usable, and the paid tiers are reasonably priced at $20–$29/user.',
       'Where tl;dv falls short is in systematic conversation intelligence. There\'s no deal risk scoring, no automated objection pattern analysis across your call library, and no real-time coaching features. It\'s a highlight reel tool, not a revenue intelligence platform.',
     ],
@@ -188,7 +189,7 @@ const competitors: Competitor[] = [
     paragraphs: [
       'Wingman, now part of Clari, built its reputation on real-time coaching during calls. When a prospect mentions a competitor, Wingman surfaces the relevant battlecard immediately. When the call hits a common objection, it shows the rep the best-performing response. For competitive-heavy sales environments, this is genuinely useful.',
       'The real-time layer is Wingman\'s strongest differentiation. Live coaching nudges, talk-time warnings, and competitor detection during calls set it apart from tools that are purely post-call analytics.',
-      'The pricing model is per-seat, which means costs scale linearly with team size. For a 10-rep team at $60/user, that\'s $600/month versus $149/month for Nimitai covering the same team. Post-call pattern analysis and cross-call intelligence are less developed than dedicated analytics platforms.',
+      'The pricing model is per-seat, which means costs scale linearly with team size. For a 10-rep team at $60/user, that\'s $600/month versus $149/user/month for Nimitai covering the same team. Post-call pattern analysis and cross-call intelligence are less developed than dedicated analytics platforms.',
     ],
   },
   {
@@ -320,8 +321,8 @@ export function GongCompetitors() {
           content="Looking for Gong competitors? We ranked the 10 best Gong alternatives in 2026 by price, features, and fit for startup sales teams. Includes real pricing data, feature comparisons, and who each tool is best for."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@NimitaiHQ" />
-        <meta name="twitter:site" content="@NimitaiHQ" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -532,6 +533,19 @@ export function GongCompetitors() {
         </div>
       </section>
 
+      {/* ── INLINE CTA ──────────────────────────────────────────────── */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-4xl mx-auto">
+          <div className="mt-4 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+            <p className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Ready to try a smarter Gong alternative?</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">Nimitai gives B2B SaaS teams Gong-level insights from <Link to="/pricing">$149/seat/month</Link> — no platform fee, no 12-month lock-in. Based on <a href="https://www.g2.com/products/gong/reviews" target="_blank" rel="noopener noreferrer" className="underline">G2 reviews for Gong</a>, the #1 complaint is price — Nimitai solves that. <a href="https://www.gong.io/pricing/" target="_blank" rel="noopener noreferrer" className="underline">Gong's pricing page</a> doesn't publish numbers — ours does.</p>
+            <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+              Join the Waitlist — Free
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ─────────────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-4xl mx-auto">
@@ -563,7 +577,7 @@ export function GongCompetitors() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              $149/month for your entire sales team. Gong-level AI conversation intelligence. 30-minute setup. No annual contract.
+              $149/user/month. Gong-level AI conversation intelligence. 30-minute setup. No annual contract.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -593,8 +607,9 @@ export function GongCompetitors() {
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-3xl mx-auto">
           <RelatedArticles links={[
+            { to: '/alternatives/gong-alternative', label: 'Gong Alternative — Nimitai' },
+            { to: '/ai-meeting-assistant', label: 'AI Meeting Assistant — Real-Time Meeting Intelligence' },
             { to: '/blog/gong-pricing-2026', label: 'Gong Pricing 2026: Complete Breakdown' },
-            { to: '/blog/conversation-intelligence-guide', label: 'The Complete Conversation Intelligence Guide' },
             { to: '/blog/gong-vs-nimitai', label: 'Gong vs Nimitai: Full Feature Comparison' },
           ]} />
         </div>

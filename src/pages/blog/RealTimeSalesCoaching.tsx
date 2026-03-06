@@ -136,7 +136,7 @@ export function RealTimeSalesCoaching() {
         </div>
 
         <h2 id="why-tools-dont">Why most tools don't do this</h2>
-        <p>Processing speech in real time and surfacing contextual intelligence requires a significantly more complex infrastructure than recording and transcribing after the fact. Post-call analysis is batch processing. Real-time coaching requires a live inference pipeline with sub-second latency.</p>
+        <p>Processing speech in real time and surfacing contextual intelligence requires a significantly more complex infrastructure than recording and transcribing after the fact. Post-call analysis is batch processing. Real-time coaching requires a live inference pipeline with sub-second latency. According to <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales research</a>, high-performing teams are nearly twice as likely to use AI in their sales process — but the quality of that AI matters enormously. Tools listed in <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a> vary widely in whether they provide genuine real-time intelligence or just post-call summaries.</p>
         <p>It also requires a different product philosophy. Most <Link to="/blog/best-sales-call-recording-software-startups">call recording software</Link> companies started as recording tools and added analysis later. The architecture reflects that history — optimized for storage and retrieval, not for live inference.</p>
         <p>Nimitai was designed for real-time from day one. Every architectural decision — from how we process audio streams to how we surface intelligence in the UI — was made with live coaching as the primary use case.</p>
 
@@ -163,13 +163,36 @@ export function RealTimeSalesCoaching() {
         <h2 id="distraction">Is real-time coaching a distraction?</h2>
         <p>This is the most common concern we hear from sales reps — that a live AI overlay will break their focus and make conversations feel robotic.</p>
         <p>The concern is legitimate for poorly designed systems. If the AI interrupts constantly, or surfaces irrelevant suggestions, or requires the rep to context-switch, it will hurt performance. We saw this in our early ConvertWise experiments.</p>
-        <p>Nimitai is designed with conversational flow as a constraint. Intelligence is surfaced at the right moment, not every moment. Suggestions are scannable in under a second. The rep decides whether to use them. Most reps in our beta describe the experience as similar to having a very quiet, very well-prepared colleague sitting next to them — available when needed, invisible when not.</p>
+        <p>Nimitai is designed with conversational flow as a constraint. Intelligence is surfaced at the right moment, not every moment. Suggestions are scannable in under a second. The rep decides whether to use them. Most reps in our beta describe the experience as similar to having a very quiet, very well-prepared colleague sitting next to them — available when needed, invisible when not. Nimitai's <Link to="/ai-sales-coaching">AI sales coaching</Link> is available <Link to="/pricing">from $149/seat/month</Link> with a 30-minute setup.</p>
+
+        <h2 id="faq" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {[
+            { q: 'What is real-time AI sales coaching?', a: 'Real-time AI sales coaching means the AI listens to your live sales call and surfaces relevant information — objection responses, buying signal alerts, competitor battle cards — during the conversation, not after it ends. The goal is to help reps win the current deal, not just improve the next one.' },
+            { q: 'How is real-time coaching different from post-call analysis?', a: 'Post-call analysis helps you understand what happened and coach for future calls. Real-time coaching gives reps the right information at the right moment while the buyer is still on the line. Both are valuable, but real-time coaching addresses the most common cause of lost deals: missed signals and fumbled objections in the moment.' },
+            { q: 'Does real-time AI coaching work for new reps?', a: 'Especially for new reps. Experienced reps have internalized pattern recognition over hundreds of calls. Real-time AI compresses that learning curve by naming patterns and surfacing responses that would otherwise take years to develop instinctively.' },
+            { q: 'What does it cost to use real-time AI sales coaching?', a: 'Nimitai is available from $149/seat/month, which includes real-time coaching, post-call summaries, deal risk scoring, and manager coaching dashboards. Setup takes approximately 30 minutes.' },
+          ].map(({ q, a }) => (
+            <div key={q} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">{q}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+          <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist
+          </a>
+        </div>
 
         <RelatedArticles links={[
+          { to: '/ai-meeting-copilot', label: 'AI Meeting Co-Pilot — Live AI Coaching During Calls' },
+          { to: '/ai-sales-coaching', label: 'AI Sales Coaching Software — Nimitai' },
           { to: '/blog/buyer-intent-signals-sales-calls', label: 'How to Read Buyer Intent Signals During Sales Calls' },
-          { to: '/blog/ai-objection-handling', label: 'AI-Powered Objection Handling: Win the Moments That Lose Deals' },
           { to: '/blog/how-to-increase-close-rate', label: 'How to Increase Close Rate: 9 Strategies from 350+ Calls' },
-          { to: '/blog/conversation-intelligence-guide', label: 'Conversation Intelligence: The Complete Guide' },
         ]} />
       </BlogShell>
     </>

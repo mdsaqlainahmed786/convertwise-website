@@ -16,7 +16,7 @@ const painPoints = [
   },
   {
     title: 'tl;dv Per-Seat Costs Add Up',
-    body: 'tl;dv charges per seat with a free tier that limits features. Nimitai is $149/month for the whole sales team with full AI conversation intelligence included.',
+    body: 'tl;dv charges per seat with a free tier that limits features. Nimitai starts at $149/user/month with full AI conversation intelligence included.',
   },
 ];
 
@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     q: 'Is Nimitai more expensive than tl;dv?',
-    a: 'tl;dv charges ~$18/user/month with a limited free tier. Nimitai costs $149/month for the whole sales team and includes full conversation intelligence — objection detection, deal risk alerts, coaching insights, and CRM auto-sync. For teams of 8+ reps, Nimitai is actually cheaper per seat.',
+    a: 'tl;dv charges ~$18/user/month with a limited free tier. Nimitai costs $149/user/month and includes full conversation intelligence — objection detection, deal risk alerts, coaching insights, and CRM auto-sync. For teams of 8+ reps, Nimitai is actually cheaper per seat.',
   },
   {
     q: 'Can Nimitai replace tl;dv for my sales team?',
@@ -92,6 +92,27 @@ function CellValue({ value }: { value: boolean | string }) {
   return <span className="text-sm text-gray-500 dark:text-gray-400">{value}</span>;
 }
 
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Nimitai',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, Chrome',
+  description: 'AI meeting intelligence for B2B sales teams. Real-time coaching, buyer signal detection, and automated call analysis.',
+  url: 'https://nimitai.com',
+  offers: {
+    '@type': 'Offer',
+    price: '149',
+    priceCurrency: 'USD',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '149',
+      priceCurrency: 'USD',
+      unitText: 'seat/month',
+    },
+  },
+};
+
 export function TldvAlternative() {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -102,7 +123,7 @@ export function TldvAlternative() {
         url: 'https://nimitai.com/alternatives/tldv-alternative',
         name: 'Best tl;dv Alternative 2026 — Nimitai | AI Sales Intelligence for B2B Teams',
         description:
-          'Looking for a tl;dv alternative with real sales intelligence? Nimitai records sales calls and surfaces objection patterns, deal risks, and coaching insights beyond basic highlights. $149/month for B2B sales teams.',
+          'tl;dv alternative for sales teams. Nimitai adds deal risk, objection patterns, coaching insights. $149/user/month. A product of REN AI Technologies.',
         isPartOf: { '@id': 'https://nimitai.com/#website' },
         breadcrumb: { '@id': 'https://nimitai.com/alternatives/tldv-alternative#breadcrumb' },
       },
@@ -137,7 +158,7 @@ export function TldvAlternative() {
         <title>Best tl;dv Alternative 2026 — Nimitai AI Sales Intelligence</title>
         <meta
           name="description"
-          content="Looking for a tl;dv alternative with real sales intelligence? Nimitai records sales calls and surfaces objection patterns, deal risks, and coaching insights beyond basic highlights. $149/month for B2B sales teams."
+          content="tl;dv alternative for sales teams. Nimitai adds deal risk, objection patterns, coaching insights. $149/user/month. A product of REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -149,16 +170,17 @@ export function TldvAlternative() {
         <meta property="og:title" content="Best tl;dv Alternative 2026 — Nimitai | AI Sales Intelligence for B2B Teams" />
         <meta
           property="og:description"
-          content="Looking for a tl;dv alternative with real sales intelligence? Nimitai records sales calls and surfaces objection patterns, deal risks, and coaching insights beyond basic highlights. $149/month for B2B sales teams."
+          content="tl;dv alternative for sales teams. Nimitai adds deal risk, objection patterns, coaching insights. $149/user/month. A product of REN AI Technologies."
         />
         <meta property="og:site_name" content="Nimitai" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Best tl;dv Alternative 2026 — Nimitai | AI Sales Intelligence for B2B Teams" />
         <meta
           name="twitter:description"
-          content="Looking for a tl;dv alternative with real sales intelligence? Nimitai records sales calls and surfaces objection patterns, deal risks, and coaching insights beyond basic highlights. $149/month for B2B sales teams."
+          content="tl;dv alternative for sales teams. Nimitai adds deal risk, objection patterns, coaching insights. $149/user/month. A product of REN AI Technologies."
         />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>
       </Helmet>
 
       {/* ── Hero ── */}
@@ -189,7 +211,7 @@ export function TldvAlternative() {
             </h1>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl leading-relaxed">
-              tl;dv is excellent for video highlights and async meeting sharing. But if you run a sales team, you need more: objection pattern detection, deal risk scoring, talk-ratio analysis, and AI coaching insights. That's Nimitai — the tl;dv alternative built for B2B sales performance.
+              tl;dv is excellent for video highlights and async meeting sharing. But if you run a sales team, you need more: objection pattern detection, deal risk scoring, talk-ratio analysis, and AI coaching insights. That's Nimitai — the tl;dv alternative built for B2B sales performance. Built after analyzing 350+ real B2B sales calls across 200+ businesses.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -210,6 +232,25 @@ export function TldvAlternative() {
           </div>
         </div>
       </section>
+
+      {/* ── Traction / Credibility ── */}
+      <div className="bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            {[
+              { number: '350+', label: 'Sales calls analyzed' },
+              { number: '200+', label: 'B2B businesses studied' },
+              { number: '412', label: 'Founders on waitlist' },
+              { number: '$149', label: 'per seat/month' },
+            ].map((stat) => (
+              <div key={stat.label} className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-900/30">
+                <div className="text-2xl sm:text-3xl font-black text-[#E89422]">{stat.number}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-tight">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ── Pain Points ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
@@ -375,7 +416,7 @@ export function TldvAlternative() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Nimitai</h3>
               <div className="text-3xl font-bold text-white mb-1">
-                $149<span className="text-base font-normal text-[#F5B040]">/team/mo</span>
+                $149<span className="text-base font-normal text-[#F5B040]">/user/month</span>
               </div>
               <p className="text-sm text-[#F5B040] mb-6">Up to 10 reps. No per-seat pricing.</p>
               <ul className="space-y-3 text-sm text-amber-100">
@@ -441,7 +482,7 @@ export function TldvAlternative() {
               </a>
             </div>
             <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-              $149/month for the team. Month-to-month. No minimum seats.
+              $149/user/month for the team. Month-to-month. No minimum seats.
             </p>
           </div>
         </div>

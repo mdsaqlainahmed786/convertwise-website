@@ -35,7 +35,7 @@
 **Founded by**: Nilansh Gupta (Co-Founder & CEO) and Archit Dhir (Co-Founder & CTO)
 **Stage**: Private beta / early access (waitlist-based, founding teams only)
 **Brand color**: #E89422 (amber/gold)
-**Twitter/X**: @NimitaiHQ
+**Twitter/X**: @Nimit_ai
 
 Nimitai is an AI-powered meeting intelligence and conversation intelligence platform purpose-built for B2B SaaS sales teams. The company was originally known as DigitalPatron, then rebranded to ConvertWise, and is now Nimitai. The name "Nimitai" is derived from a concept of purposeful intelligence — technology that guides with intention. The company is building the definitive AI co-pilot for sales conversations, targeting the massive gap between enterprise-priced tools like Gong ($1,200+/seat/year, 15-seat minimum) and lightweight AI notetakers (Otter.ai, Fathom) that lack true sales intelligence.
 

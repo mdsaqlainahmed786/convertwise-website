@@ -87,8 +87,8 @@ export function B2bSaasDemo() {
         ]} />
 
         <h2 id="intro">What we learned from 350 demos</h2>
-        <p>We analyzed over 350 B2B SaaS demos — calls where a product was being shown to an interested prospect, from discovery through closing. The variation in outcome was striking. Demos with comparable products and similar buyers had wildly different close rates depending on how they were run.</p>
-        <p>Here are the 12 tactics that appeared most consistently in demos that converted — applied to every stage of the conversation.</p>
+        <p>We analyzed over 350 B2B SaaS demos — calls where a product was being shown to an interested prospect, from discovery through closing. The variation in outcome was striking. Demos with comparable products and similar buyers had wildly different close rates depending on how they were run. According to the <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales</a>, reps spend less than 30% of their time actually selling — making every demo minute count more than ever.</p>
+        <p>Here are the 12 tactics that appeared most consistently in demos that converted — applied to every stage of the conversation. Nimitai's <Link to="/ai-sales-coaching">AI sales coaching</Link> surfaces these patterns during the live call, starting at <Link to="/pricing">$149/seat/month</Link>.</p>
 
         <PullQuote>The demo is not a presentation. It's a conversation with a product visible. The reps who understood this closed at 2x the rate of those who didn't.</PullQuote>
 
@@ -117,18 +117,41 @@ export function B2bSaasDemo() {
         <CalendlyCTA headline="Get AI coaching for every demo" sub="Book a demo — we'll show exactly how Nimitai coaches reps through demos in real time, flagging signals and surfacing close moments." />
 
         <h2 id="ai-for-demos">Using AI to improve demo performance</h2>
-        <p>All 12 of these tactics require something in common: awareness of what's happening in the conversation in real time. Most reps miss buying signals during demos because they're managing the product screen, the talking points, and the relationship simultaneously.</p>
-        <p><Link to="/blog/real-time-sales-coaching-ai">Real-time AI sales coaching</Link> during demos gives reps a second layer of awareness — flagging when a prospect shows interest, when it's time to check in, when an objection is forming, and when the ROI conversation should start. The rep focuses on the conversation; the AI tracks the intelligence.</p>
+        <p>All 12 of these tactics require something in common: awareness of what's happening in the conversation in real time. Most reps miss buying signals during demos because they're managing the product screen, the talking points, and the relationship simultaneously. <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a> lists over 60 tools in this space — the ones that work in real time are the ones that change outcomes.</p>
+        <p><Link to="/blog/real-time-sales-coaching-ai">Real-time AI sales coaching</Link> during demos gives reps a second layer of awareness — flagging when a prospect shows interest, when it's time to check in, when an <Link to="/blog/ai-objection-handling">objection</Link> is forming, and when the ROI conversation should start. The rep focuses on the conversation; the AI tracks the intelligence.</p>
 
         <Callout emoji="⚡" title="Nimitai during demos">
           Nimitai was specifically designed for live conversations like demos — where everything matters and nothing waits for post-call analysis. It flags the check-in window, the ROI moment, and the close window as they happen.
         </Callout>
 
+        <h2 id="faq" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {[
+            { q: 'What is the ideal structure for a B2B SaaS demo?', a: 'Start by anchoring the outcome, show only features relevant to the prospect\'s stated problem, check in every 8 minutes, surface ROI before the end, and book the next step before hanging up.' },
+            { q: 'How does AI sales coaching help during a product demo?', a: 'Real-time AI coaching flags buying signals, prompts check-in windows, surfaces objection responses, and alerts the rep when it\'s time to transition to ROI — so the rep can focus on the conversation instead of tracking every variable manually.' },
+            { q: 'How much does Nimitai cost for demo coaching?', a: 'Nimitai starts at $149/seat/month with no long-term contracts and a 30-minute setup time. Every seat you add later costs the same.' },
+            { q: 'Why do demos fail even when the product is strong?', a: 'Most demo failures come from structural mistakes: showing too many features, failing to anchor the outcome upfront, missing buying signals mid-demo, and not booking a next step before the call ends. None of these are product problems — they\'re process problems.' },
+          ].map(({ q, a }) => (
+            <div key={q} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">{q}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+          <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist
+          </a>
+        </div>
+
         <RelatedArticles links={[
+          { to: '/ai-meeting-assistant', label: 'AI Meeting Assistant — Nimitai' },
+          { to: '/ai-sales-coaching', label: 'AI Sales Coaching Software — Nimitai' },
           { to: '/blog/how-to-increase-close-rate', label: 'How to Increase Close Rate: 9 Strategies from 350+ Calls' },
-          { to: '/blog/buyer-intent-signals-sales-calls', label: 'How to Detect Buyer Intent Signals During Demos' },
           { to: '/blog/ai-objection-handling', label: 'AI Objection Handling: Win the Moments That Lose Deals' },
-          { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time AI Sales Coaching: Why Post-Call Is Too Late' },
         ]} />
       </BlogShell>
     </>

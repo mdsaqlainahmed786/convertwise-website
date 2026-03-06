@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import {
   FileText,
   AlertTriangle,
@@ -24,7 +25,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   name: 'Best AI Notetaker for Sales Teams 2026 — Nimitai | Beyond Notes to Revenue Intelligence',
   description:
-    'The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. from $149/seat/month.',
+    'AI notetaker for B2B sales teams. Beyond notes — deal risks, objections, coaching insights, CRM updates. from $149/user/month. A product of REN AI Technologies.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -49,7 +50,7 @@ const faqs = [
   {
     question: 'How much does an AI notetaker cost?',
     answer:
-      'AI notetaker pricing ranges from free (Fathom, Fireflies free tiers with limits) to per-seat pricing ($10–$20/user/month for Otter.ai). Nimitai costs $149/month for your entire sales team with no per-seat pricing and full sales intelligence — not just notes.',
+      'AI notetaker pricing ranges from free (Fathom, Fireflies free tiers with limits) to per-seat pricing ($10–$20/user/month for Otter.ai). Nimitai costs $149/user/month with full sales intelligence included — not just notes.',
   },
   {
     question: 'Can an AI notetaker replace manual CRM updates?',
@@ -172,7 +173,7 @@ export function AiNotetaker() {
         <title>Best AI Notetaker for Sales Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. from $149/seat/month."
+          content="AI notetaker for B2B sales teams. Beyond notes — deal risks, objections, coaching insights, CRM updates. from $149/user/month. A product of REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -186,7 +187,7 @@ export function AiNotetaker() {
         <meta property="og:title" content="Best AI Notetaker for Sales Teams 2026 — Nimitai | Beyond Notes to Revenue Intelligence" />
         <meta
           property="og:description"
-          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. from $149/seat/month."
+          content="AI notetaker for B2B sales teams. Beyond notes — deal risks, objections, coaching insights, CRM updates. from $149/user/month. A product of REN AI Technologies."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -200,11 +201,11 @@ export function AiNotetaker() {
         <meta name="twitter:title" content="Best AI Notetaker for Sales Teams 2026 — Nimitai | Beyond Notes to Revenue Intelligence" />
         <meta
           name="twitter:description"
-          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. from $149/seat/month."
+          content="AI notetaker for B2B sales teams. Beyond notes — deal risks, objections, coaching insights, CRM updates. from $149/user/month. A product of REN AI Technologies."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@NimitaiHQ" />
-        <meta name="twitter:site" content="@NimitaiHQ" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -426,6 +427,24 @@ export function AiNotetaker() {
           </div>
 
           <FAQAccordion />
+        </div>
+      </section>
+
+      {/* From the blog */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/30 transition-colors">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mb-6">From the blog</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { to: '/blog/ai-notetaker-vs-conversation-intelligence', label: 'AI Notetaker vs Conversation Intelligence' },
+              { to: '/blog/how-to-analyze-sales-calls', label: 'How to Analyze Sales Calls with AI' },
+              { to: '/blog/best-sales-call-recording-software-startups', label: 'Best Sales Call Recording Software for Startups' },
+            ].map((link) => (
+              <Link key={link.to} to={link.to} className="flex items-center gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-[#E89422]/50 bg-white dark:bg-gray-800 hover:bg-amber-50 dark:hover:bg-amber-900/10 transition-colors group">
+                <span className="text-sm text-gray-700 dark:text-gray-300 font-medium group-hover:text-[#E89422] transition-colors leading-snug">{link.label}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

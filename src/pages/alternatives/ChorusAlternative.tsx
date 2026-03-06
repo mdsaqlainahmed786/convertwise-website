@@ -4,7 +4,7 @@ import { ArrowRight, Check, X, Sparkles, TrendingUp, Target, Brain } from 'lucid
 const painPoints = [
   {
     title: 'Chorus.ai Costs $20,000+/Year',
-    body: 'Chorus.ai (ZoomInfo) enterprise pricing starts at $20,000/year minimum. Nimitai delivers the same conversation intelligence features at $149/month — saving startups over $18,000/year.',
+    body: 'Chorus.ai (ZoomInfo) enterprise pricing starts at $20,000/year minimum. Nimitai delivers the same conversation intelligence features at $149/user/month — saving startups over $18,000/year.',
   },
   {
     title: 'Chorus.ai Requires Enterprise Negotiation',
@@ -49,18 +49,18 @@ const whyCards = [
   {
     icon: Target,
     title: 'Month-to-Month, No Minimums',
-    body: 'Nimitai is $149/month for the team, billed monthly, with no minimum seat count and no annual commitment required. Cancel any time. Exactly the flexibility startups need.',
+    body: 'Nimitai is $149/user/month, billed monthly, with no minimum seat count and no annual commitment required. Cancel any time. Exactly the flexibility startups need.',
   },
 ];
 
 const faqs = [
   {
     q: 'Is Nimitai a good replacement for Chorus.ai?',
-    a: 'Yes. Nimitai delivers the core Chorus.ai (ZoomInfo) conversation intelligence features — AI call recording, objection detection, deal risk scoring, rep coaching insights, talk-ratio analysis — at $149/month vs Chorus.ai\'s $20,000+/year enterprise pricing. It\'s the best Chorus alternative for startup and SMB sales teams.',
+    a: 'Yes. Nimitai delivers the core Chorus.ai (ZoomInfo) conversation intelligence features — AI call recording, objection detection, deal risk scoring, rep coaching insights, talk-ratio analysis — at $149/user/month vs Chorus.ai\'s $20,000+/year enterprise pricing. It\'s the best Chorus alternative for startup and SMB sales teams.',
   },
   {
     q: 'How does Nimitai compare to Chorus.ai on features?',
-    a: 'Nimitai matches Chorus.ai on the features that close deals: AI call recording, conversation intelligence, objection pattern detection, deal risk alerts, talk-ratio analysis, and coaching insights. The difference is that Nimitai costs $149/month with no annual contract, while Chorus.ai requires a $20,000+ enterprise agreement.',
+    a: 'Nimitai matches Chorus.ai on the features that close deals: AI call recording, conversation intelligence, objection pattern detection, deal risk alerts, talk-ratio analysis, and coaching insights. The difference is that Nimitai costs $149/user/month with no annual contract, while Chorus.ai requires a $20,000+ enterprise agreement.',
   },
   {
     q: 'Can small teams use Nimitai instead of Chorus.ai?',
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     q: 'How does pricing compare between Nimitai and Chorus.ai?',
-    a: 'Chorus.ai (ZoomInfo) enterprise pricing starts at $20,000+/year with minimum seat requirements and annual commitments. Nimitai is $149/month for the whole team, month-to-month, with no minimum seat requirement and no annual contract.',
+    a: 'Chorus.ai (ZoomInfo) enterprise pricing starts at $20,000+/year with minimum seat requirements and annual commitments. Nimitai is $149/user/month, month-to-month, with no minimum seat requirement and no annual contract.',
   },
   {
     q: 'Can I export my Chorus data before switching?',
@@ -94,6 +94,27 @@ function CellValue({ value }: { value: boolean | string }) {
   return <span className="text-sm text-gray-500 dark:text-gray-400">{value}</span>;
 }
 
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Nimitai',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, Chrome',
+  description: 'AI meeting intelligence for B2B sales teams. Real-time coaching, buyer signal detection, and automated call analysis.',
+  url: 'https://nimitai.com',
+  offers: {
+    '@type': 'Offer',
+    price: '149',
+    priceCurrency: 'USD',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '149',
+      priceCurrency: 'USD',
+      unitText: 'seat/month',
+    },
+  },
+};
+
 export function ChorusAlternative() {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -104,7 +125,7 @@ export function ChorusAlternative() {
         url: 'https://nimitai.com/alternatives/chorus-alternative',
         name: 'Best Chorus.ai Alternative 2026 — Nimitai | Conversation Intelligence Without Enterprise Pricing',
         description:
-          'Looking for a Chorus.ai (ZoomInfo) alternative? Nimitai delivers the same conversation intelligence — call recording, AI coaching, deal risk analysis — without the $20,000+ enterprise contract. $149/month for startup sales teams.',
+          'Chorus alternative: AI call recording, coaching, deal risk — no enterprise contract. $149/user/month for startups. A product of REN AI Technologies.',
         isPartOf: { '@id': 'https://nimitai.com/#website' },
         breadcrumb: { '@id': 'https://nimitai.com/alternatives/chorus-alternative#breadcrumb' },
       },
@@ -139,7 +160,7 @@ export function ChorusAlternative() {
         <title>Best Chorus.ai Alternative 2026 — Nimitai Conversation Intelligence</title>
         <meta
           name="description"
-          content="Looking for a Chorus.ai (ZoomInfo) alternative? Nimitai delivers the same conversation intelligence — call recording, AI coaching, deal risk analysis — without the $20,000+ enterprise contract. $149/month for startup sales teams."
+          content="Chorus alternative: AI call recording, coaching, deal risk — no enterprise contract. $149/user/month for startups. A product of REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -151,16 +172,17 @@ export function ChorusAlternative() {
         <meta property="og:title" content="Best Chorus.ai Alternative 2026 — Nimitai | Conversation Intelligence Without Enterprise Pricing" />
         <meta
           property="og:description"
-          content="Looking for a Chorus.ai (ZoomInfo) alternative? Nimitai delivers the same conversation intelligence — call recording, AI coaching, deal risk analysis — without the $20,000+ enterprise contract. $149/month for startup sales teams."
+          content="Chorus alternative: AI call recording, coaching, deal risk — no enterprise contract. $149/user/month for startups. A product of REN AI Technologies."
         />
         <meta property="og:site_name" content="Nimitai" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Best Chorus.ai Alternative 2026 — Nimitai | Conversation Intelligence Without Enterprise Pricing" />
         <meta
           name="twitter:description"
-          content="Looking for a Chorus.ai (ZoomInfo) alternative? Nimitai delivers the same conversation intelligence — call recording, AI coaching, deal risk analysis — without the $20,000+ enterprise contract. $149/month for startup sales teams."
+          content="Chorus alternative: AI call recording, coaching, deal risk — no enterprise contract. $149/user/month for startups. A product of REN AI Technologies."
         />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>
       </Helmet>
 
       {/* ── Hero ── */}
@@ -191,7 +213,7 @@ export function ChorusAlternative() {
             </h1>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl leading-relaxed">
-              Chorus.ai (now part of ZoomInfo) is powerful conversation intelligence software — but it costs $20,000+ per year and requires enterprise negotiations. Nimitai delivers the same core features: AI call recording, objection detection, deal risk scoring, rep coaching — at $149/month with no annual contract.
+              Chorus.ai (now part of ZoomInfo) is powerful conversation intelligence software — but it costs $20,000+ per year and requires enterprise negotiations. Nimitai delivers the same core features: AI call recording, objection detection, deal risk scoring, rep coaching — at $149/user/month with no annual contract.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -377,7 +399,7 @@ export function ChorusAlternative() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Nimitai</h3>
               <div className="text-3xl font-bold text-white mb-1">
-                $149<span className="text-base font-normal text-[#F5B040]">/team/mo</span>
+                $149<span className="text-base font-normal text-[#F5B040]">/user/month</span>
               </div>
               <p className="text-sm text-[#F5B040] mb-6">Month-to-month. Up to 10 reps. No minimums.</p>
               <ul className="space-y-3 text-sm text-amber-100">
@@ -425,7 +447,7 @@ export function ChorusAlternative() {
               Switch from Chorus.ai to a Smarter Alternative
             </h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-              47+ sales teams chose Nimitai as their Chorus.ai alternative. Setup in 30 minutes, $149/month, cancel anytime.
+              47+ sales teams chose Nimitai as their Chorus.ai alternative. Setup in 30 minutes, $149/user/month, cancel anytime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -443,7 +465,7 @@ export function ChorusAlternative() {
               </a>
             </div>
             <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-              $149/month for the team. Month-to-month. No minimum seats. Cancel any time.
+              $149/user/month. Month-to-month. No minimum seats. Cancel any time.
             </p>
           </div>
         </div>

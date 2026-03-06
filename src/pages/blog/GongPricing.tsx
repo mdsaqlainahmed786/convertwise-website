@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { RelatedArticles } from '../../components/blog/BlogShell';
 import {
   ChevronDown,
@@ -13,14 +14,14 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/gong-pricing-2026`;
-const ogImage = `${siteUrl}/assets/blog/og-gong-pricing.png`;
+const ogImage = `${siteUrl}/assets/blog/og-gong-pricing-2026.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Gong Pricing in 2026: How Much Does Gong Actually Cost? (Real Numbers)',
   description:
-    "Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/month alternative that delivers the same AI.",
+    "Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/user/month alternative that delivers the same AI.",
   url: pageUrl,
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
@@ -54,7 +55,7 @@ const faqs = [
   {
     question: 'Is there a cheaper alternative to Gong with the same features?',
     answer:
-      'Yes. Nimitai is the most direct Gong alternative for startup sales teams — offering AI call recording, conversation intelligence, deal risk scoring, objection pattern detection, and CRM sync at $149/month for your entire team. That\'s roughly 90% cheaper than Gong for a 5-person sales team.',
+      'Yes. Nimitai is the most direct Gong alternative for startup sales teams — offering AI call recording, conversation intelligence, deal risk scoring, objection pattern detection, and CRM sync at $149/user/month — roughly 90% cheaper than Gong for a 5-person sales team. That\'s roughly 90% cheaper than Gong for a 5-person sales team.',
   },
   {
     question: 'Why is Gong so expensive?',
@@ -132,7 +133,7 @@ export function GongPricing() {
         <title>Gong Pricing 2026: How Much Does Gong Actually Cost? | Nimitai</title>
         <meta
           name="description"
-          content="Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/month alternative that delivers the same AI."
+          content="Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/user/month alternative that delivers the same AI."
         />
         <meta
           name="keywords"
@@ -146,7 +147,7 @@ export function GongPricing() {
         <meta property="og:title" content="Gong Pricing in 2026: How Much Does Gong Actually Cost? (Real Numbers)" />
         <meta
           property="og:description"
-          content="Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/month alternative that delivers the same AI."
+          content="Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/user/month alternative that delivers the same AI."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -162,11 +163,11 @@ export function GongPricing() {
         <meta name="twitter:title" content="Gong Pricing in 2026: How Much Does Gong Actually Cost? (Real Numbers)" />
         <meta
           name="twitter:description"
-          content="Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/month alternative that delivers the same AI."
+          content="Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/user/month alternative that delivers the same AI."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@NimitaiHQ" />
-        <meta name="twitter:site" content="@NimitaiHQ" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -247,7 +248,7 @@ export function GongPricing() {
                   Why Gong Doesn't Show Pricing Publicly
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                  Gong uses an enterprise sales motion — custom quotes based on team size, contract length, and negotiation leverage. This is a deliberate strategy, not an oversight. By hiding pricing, Gong can charge different rates to different buyers and maximize revenue per deal.
+                  Gong uses an enterprise sales motion — custom quotes based on team size, contract length, and negotiation leverage. This is a deliberate strategy, not an oversight. <a href="https://www.gong.io/pricing/" target="_blank" rel="noopener noreferrer" className="text-[#E89422] hover:underline">Gong's pricing page</a> contains no actual numbers — just a "Request pricing" form. By hiding pricing, Gong can charge different rates to different buyers and maximize revenue per deal.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                   This creates significant information asymmetry where buyers don't know if they're overpaying relative to other customers at similar company sizes. A 20-person sales team and a 200-person sales team might be quoted wildly different prices — and neither knows what the other paid.
@@ -274,7 +275,7 @@ export function GongPricing() {
                   What Gong Actually Costs in 2026
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                  Based on aggregated data from real Gong customers, sales rep conversations, and G2/Capterra reviews, here's what Gong actually charges in 2026:
+                  Based on aggregated data from real Gong customers, sales rep conversations, and <a href="https://www.g2.com/products/gong/reviews" target="_blank" rel="noopener noreferrer" className="text-[#E89422] hover:underline">G2 reviews for Gong</a>, here's what Gong actually charges in 2026:
                 </p>
 
                 {/* Pricing breakdown table */}
@@ -310,11 +311,11 @@ export function GongPricing() {
                 </p>
                 <ul className="space-y-2 mb-6">
                   {[
-                    'Sales call recording and storage',
+                    <><Link to="/ai-notetaker" className="text-[#E89422] hover:underline">AI notetaker for sales</Link> — call recording and storage</>,
                     'AI transcription and search',
-                    'Conversation intelligence and analytics',
+                    <><Link to="/blog/conversation-intelligence-guide" className="text-[#E89422] hover:underline">Conversation intelligence</Link> and analytics</>,
                     'Deal intelligence and pipeline visibility',
-                    'Team and rep performance analytics',
+                    <><Link to="/ai-sales-coaching" className="text-[#E89422] hover:underline">AI sales coaching</Link> — team and rep performance analytics</>,
                     'CRM integration (Salesforce, HubSpot)',
                     'Revenue forecasting (enterprise tiers only)',
                     'Pipeline analytics and health scoring',
@@ -365,7 +366,7 @@ export function GongPricing() {
                   The Best Gong Alternative for Startup Pricing
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                  Nimitai was built specifically for B2B SaaS founders and startup sales teams who need Gong-level conversation intelligence without Gong-level enterprise pricing. At $149/month for your entire team — no per-seat fees, no seat minimums, no annual contract — Nimitai delivers the same core AI that makes Gong valuable: deal risk scoring, objection pattern detection, talk-ratio analysis, and automatic CRM sync.
+                  Nimitai was built specifically for B2B SaaS founders and startup sales teams who need Gong-level <Link to="/blog/conversation-intelligence-guide" className="text-[#E89422] hover:underline">conversation intelligence</Link> without Gong-level enterprise pricing. The best <Link to="/alternatives/gong-alternative" className="text-[#E89422] hover:underline">Gong alternative</Link> for startups, Nimitai starts at <Link to="/pricing" className="text-[#E89422] hover:underline">$149/seat/month</Link> — no seat minimums, no annual contract — and delivers the same core AI that makes Gong valuable: deal risk scoring, objection pattern detection, talk-ratio analysis, and automatic CRM sync.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                   Setup takes 30 minutes. There's a 14-day free trial with no credit card required. And if it's not the right fit, you cancel in your account settings — no penalty, no enterprise exit negotiation.
@@ -431,6 +432,19 @@ export function GongPricing() {
         </div>
       </section>
 
+      {/* ── INLINE CTA ──────────────────────────────────────────────── */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-4xl mx-auto">
+          <div className="mt-4 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+            <p className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Ready to try a smarter Gong alternative?</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">Nimitai gives B2B SaaS teams Gong-level insights from <Link to="/pricing">$149/seat/month</Link> — no platform fee, no 12-month lock-in.</p>
+            <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+              Join the Waitlist — Free
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ─────────────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-4xl mx-auto">
@@ -457,7 +471,7 @@ export function GongPricing() {
           >
             <div className="relative inline-block mb-10">
               <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight">
-                Get Gong-Level Intelligence at $149/Month
+                Get Gong-Level Intelligence at $149/User/Month
               </h2>
             </div>
 
@@ -492,9 +506,10 @@ export function GongPricing() {
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-3xl mx-auto">
           <RelatedArticles links={[
+            { to: '/alternatives/gong-alternative', label: 'Gong Alternative — Nimitai' },
+            { to: '/pricing', label: 'Nimitai Pricing — $149/seat/month' },
             { to: '/blog/gong-competitors-alternatives', label: 'Top 10 Gong Competitors & Alternatives (2026)' },
             { to: '/blog/gong-vs-nimitai', label: 'Gong vs Nimitai: Full Feature Comparison' },
-            { to: '/blog/revenue-intelligence-platforms-2026', label: 'Revenue Intelligence Platforms to Watch in 2026' },
           ]} />
         </div>
       </section>

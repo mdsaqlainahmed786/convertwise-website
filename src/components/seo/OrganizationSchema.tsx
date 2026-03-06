@@ -5,6 +5,7 @@ export function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Nimitai",
+    "legalName": "REN AI Technologies Private Limited",
     "alternateName": "REN AI Technologies Private Limited",
     "url": "https://nimitai.com",
     "logo": "https://nimitai.com/nimitai-logo.png",
@@ -32,7 +33,7 @@ export function OrganizationSchema() {
     },
     "sameAs": [
       "https://www.linkedin.com/company/nimitai",
-      "https://twitter.com/nimitaihq"
+      "https://x.com/Nimit_ai"
     ],
     "address": {
       "@type": "PostalAddress",

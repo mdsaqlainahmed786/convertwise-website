@@ -23,7 +23,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   name: 'Best Otter.ai Alternative for Sales Teams 2026 — Nimitai AI Meeting Intelligence',
   description:
-    'Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. from $149/seat/month.',
+    'Otter.ai alternative for sales teams. Nimitai delivers AI sales intelligence — deal risk, objections, coaching. $149/user/month. A product of REN AI Technologies.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: 'Is Nimitai cheaper than Otter.ai?',
     answer:
-      'For sales teams, yes. Otter.ai charges $10–$20 per user per month. A 5-person sales team pays $50–$100/month for basic transcription. Nimitai costs $149/month total — covering your whole team with full AI sales intelligence. At 5+ reps, Nimitai is both cheaper and dramatically more capable.',
+      'For sales teams that need real intelligence, yes. Otter.ai charges $10–$20/user/month for basic transcription — no sales intelligence. Nimitai is $149/user/month but delivers deal risk scoring, objection analysis, real-time coaching, and CRM sync that Otter.ai simply cannot. You\'re not comparing price — you\'re comparing a notepad to a sales coach.',
   },
   {
     question: 'Does Nimitai integrate with Salesforce and HubSpot?',
@@ -76,6 +76,27 @@ const faqSchema = {
   })),
 };
 
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Nimitai',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, Chrome',
+  description: 'AI meeting intelligence for B2B sales teams. Real-time coaching, buyer signal detection, and automated call analysis.',
+  url: 'https://nimitai.com',
+  offers: {
+    '@type': 'Offer',
+    price: '149',
+    priceCurrency: 'USD',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '149',
+      priceCurrency: 'USD',
+      unitText: 'seat/month',
+    },
+  },
+};
+
 const comparisonRows = [
   { feature: 'Call recording & transcription', otter: true, nimitai: true },
   { feature: 'AI meeting summaries', otter: true, nimitai: true },
@@ -86,9 +107,9 @@ const comparisonRows = [
   { feature: 'CRM auto-sync (Salesforce/HubSpot)', otter: false, nimitai: true },
   { feature: 'Rep performance scorecards', otter: false, nimitai: true },
   { feature: 'Win/loss pattern analysis', otter: false, nimitai: true },
-  { feature: 'Flat team pricing', otter: false, nimitai: true },
+  { feature: 'Transparent per-user pricing', otter: true, nimitai: true },
   { feature: 'Setup time', otter: '< 10 min', nimitai: '< 30 min' },
-  { feature: 'Price', otter: '$10–$20/user/mo', nimitai: '$149/mo (whole team)' },
+  { feature: 'Price', otter: '$10–$20/user/mo', nimitai: '$149/user/month' },
 ];
 
 const painPoints = [
@@ -105,7 +126,7 @@ const painPoints = [
   {
     icon: DollarSign,
     title: 'Per-Seat Pricing That Adds Up Fast',
-    body: "Otter.ai charges per user per month. For a 5-person sales team, you're paying for 5 seats to get basic transcription. Nimitai covers your whole team for $149/month — flat, no per-seat fees.",
+    body: "Otter.ai charges per user per month. For a 5-person sales team, you're paying for 5 seats to get basic transcription. Nimitai is $149/user/month — and delivers deal risk, objection analysis, and real-time coaching that Otter.ai simply doesn't have.",
   },
   {
     icon: Brain,
@@ -127,8 +148,8 @@ const whyCards = [
   },
   {
     icon: Zap,
-    title: 'One price, whole team',
-    body: "Otter.ai scales your cost with every rep you hire. Nimitai is $149/month for your entire sales team — 1 rep or 25 reps. No per-seat pricing. No surprise invoices.",
+    title: 'Transparent per-user pricing',
+    body: "Otter.ai scales your cost with every rep you hire. Nimitai is $149/user/month — transparent, per-user pricing with no platform fees, no seat minimums, and no annual lock-in.",
   },
 ];
 
@@ -173,7 +194,7 @@ export function OtterAlternative() {
         <title>Best Otter.ai Alternative for Sales Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. from $149/seat/month."
+          content="Otter.ai alternative for sales teams. Nimitai delivers AI sales intelligence — deal risk, objections, coaching. $149/user/month. A product of REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -187,7 +208,7 @@ export function OtterAlternative() {
         <meta property="og:title" content="Best Otter.ai Alternative for Sales Teams 2026 — Nimitai AI Meeting Intelligence" />
         <meta
           property="og:description"
-          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. from $149/seat/month."
+          content="Otter.ai alternative for sales teams. Nimitai delivers AI sales intelligence — deal risk, objections, coaching. $149/user/month. A product of REN AI Technologies."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -201,11 +222,11 @@ export function OtterAlternative() {
         <meta name="twitter:title" content="Best Otter.ai Alternative for Sales Teams 2026 — Nimitai AI Meeting Intelligence" />
         <meta
           name="twitter:description"
-          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. from $149/seat/month."
+          content="Otter.ai alternative for sales teams. Nimitai delivers AI sales intelligence — deal risk, objections, coaching. $149/user/month. A product of REN AI Technologies."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@NimitaiHQ" />
-        <meta name="twitter:site" content="@NimitaiHQ" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -214,6 +235,8 @@ export function OtterAlternative() {
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
         {/* JSON-LD FAQPage */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        {/* JSON-LD SoftwareApplication */}
+        <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>
       </Helmet>
 
       {/* ── 1. HERO ─────────────────────────────────────────────────── */}
@@ -249,7 +272,7 @@ export function OtterAlternative() {
               className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
             >
               Otter.ai transcribes your calls. Nimitai analyzes them. Get deal risk scoring, objection pattern detection, and real-time coaching — everything Otter.ai can't do — at{' '}
-              <strong className="text-gray-900 dark:text-white">$149/month</strong> with no per-seat pricing.
+              <strong className="text-gray-900 dark:text-white">$149/user/month</strong> with transparent per-user pricing. Built after analyzing 350+ real B2B sales calls across 200+ businesses.
             </p>
 
             <div
@@ -273,6 +296,25 @@ export function OtterAlternative() {
           </div>
         </div>
       </section>
+
+      {/* ── Traction / Credibility ──────────────────────────────────── */}
+      <div className="bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            {[
+              { number: '350+', label: 'Sales calls analyzed' },
+              { number: '200+', label: 'B2B businesses studied' },
+              { number: '412', label: 'Founders on waitlist' },
+              { number: '$149', label: 'per seat/month' },
+            ].map((stat) => (
+              <div key={stat.label} className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-900/30">
+                <div className="text-2xl sm:text-3xl font-black text-[#E89422]">{stat.number}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-tight">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ── 2. WHY TEAMS LEAVE OTTER.AI ─────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
@@ -433,7 +475,7 @@ export function OtterAlternative() {
               Pricing That Makes Sense for Sales Teams
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-              Otter.ai charges per seat. Nimitai charges per team — and delivers far more value.
+              Otter.ai and Nimitai both charge per user — Nimitai just delivers far more value per seat.
             </p>
           </div>
 
@@ -471,13 +513,13 @@ export function OtterAlternative() {
                 <div className="text-sm font-semibold uppercase tracking-widest text-[#F5B040] mb-2">
                   Nimitai
                 </div>
-                <div className="text-4xl font-bold text-white mb-6">$149/month (whole team)</div>
+                <div className="text-4xl font-bold text-white mb-6">$149/user/month</div>
                 <ul className="space-y-3">
                   {[
-                    'No per-seat pricing',
                     'Full AI sales intelligence',
+                    'Real-time sales coaching',
                     'CRM auto-sync',
-                    '14-day free trial',
+                    'No seat minimums',
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-amber-100">
                       <Check className="text-green-400 shrink-0" size={16} />

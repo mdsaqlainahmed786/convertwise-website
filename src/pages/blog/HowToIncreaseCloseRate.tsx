@@ -129,9 +129,9 @@ export function HowToIncreaseCloseRate() {
 
         <h2 id="what-350-taught">What 350 calls taught us about close rates</h2>
 
-        <p>When Archit and I spent six months listening to over 350 B2B sales calls, we weren't looking for sales "hacks." We were looking for patterns — the specific behaviors that separated reps who consistently closed at 35–45% from those stuck at 12–18%, on the same team, with the same product, selling to the same market.</p>
+        <p>When Archit and I spent six months listening to over 350 B2B sales calls, we weren't looking for sales "hacks." We were looking for patterns — the specific behaviors that separated reps who consistently closed at 35–45% from those stuck at 12–18%, on the same team, with the same product, selling to the same market. The <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales</a> confirms that the performance gap between top and average reps has never been wider — and it's largely a coaching problem.</p>
 
-        <p>What we found was clear, repeatable, and teachable. None of it required extraordinary talent. All of it required awareness of what was actually happening on the call — which is exactly the gap that <Link to="/blog/real-time-sales-coaching-ai">real-time AI sales coaching</Link> is built to close.</p>
+        <p>What we found was clear, repeatable, and teachable. None of it required extraordinary talent. All of it required awareness of what was actually happening on the call — which is exactly the gap that <Link to="/blog/real-time-sales-coaching-ai">real-time AI sales coaching</Link> is built to close. Nimitai delivers that coaching from <Link to="/pricing">$149/seat/month</Link>.</p>
 
         <PullQuote>The gap between a top rep and an average rep isn't talent. It's pattern recognition. And pattern recognition is teachable — especially with AI.</PullQuote>
 
@@ -195,17 +195,40 @@ export function HowToIncreaseCloseRate() {
 
         <p>Every one of those variables is improvable. None of them require natural charisma or years of experience. They require awareness of what's happening on each call — and a systematic approach to improving it after every conversation.</p>
 
-        <p><Link to="/blog/sales-call-analytics">Sales call analytics</Link> gives you the data after the fact. <Link to="/blog/real-time-sales-coaching-ai">Real-time AI coaching</Link> gives you the intelligence during the call, when you can still use it. The combination is what moves close rates at the team level — not one-off coaching sessions or motivational training days.</p>
+        <p><Link to="/blog/sales-call-analytics">Sales call analytics</Link> gives you the data after the fact. <Link to="/blog/real-time-sales-coaching-ai">Real-time AI coaching</Link> gives you the intelligence during the call, when you can still use it. The combination is what moves <Link to="/blog/how-to-increase-close-rate">close rates</Link> at the team level — not one-off coaching sessions or motivational training days. <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a> shows this is now the fastest-growing segment in sales tech for exactly this reason.</p>
 
         <KeyTakeaway>
           Close rate improvement is a systems problem, not an individual talent problem. Build systems that surface the right intelligence at the right moment — before the deal is decided, not after it's lost.
         </KeyTakeaway>
 
+        <h2 id="faq" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {[
+            { q: 'What is a good B2B sales close rate?', a: 'A strong B2B close rate is 30–45% for inbound leads and 15–25% for outbound. Most teams fall below these benchmarks because of skill gaps, not pipeline quality. Systematic coaching is the most reliable way to close the gap.' },
+            { q: 'How does real-time AI coaching increase close rate?', a: 'Real-time AI coaching surfaces buying signals, objection responses, and close prompts during the live call — when the rep can still act on them. Post-call analysis tells you what went wrong; real-time coaching stops it from going wrong in the first place.' },
+            { q: 'What is the fastest way to increase a team\'s close rate?', a: 'The fastest lever is reducing skill variance across the team. When every rep has access to the patterns that top performers use naturally, average close rates rise toward the top performer\'s level. Real-time AI coaching is the most scalable way to do this.' },
+            { q: 'How much does Nimitai\'s AI sales coaching cost?', a: 'Nimitai starts at $149/seat/month with no minimums and a 30-minute setup. Teams typically see measurable close rate improvement within the first 30 days.' },
+          ].map(({ q, a }) => (
+            <div key={q} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">{q}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+          <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist
+          </a>
+        </div>
+
         <RelatedArticles links={[
+          { to: '/ai-sales-coaching', label: 'AI Sales Coaching Software — Nimitai' },
+          { to: '/ai-meeting-copilot', label: 'AI Meeting Co-Pilot — Live Coaching During Calls' },
           { to: '/blog/buyer-intent-signals-sales-calls', label: 'Buyer Intent Signals: How to Detect Them in Real Time' },
-          { to: '/blog/b2b-saas-demo-best-practices', label: 'B2B SaaS Demo Best Practices: 12 Tactics from 350 Calls' },
           { to: '/blog/ai-objection-handling', label: 'AI Objection Handling: Win the Moments That Lose Deals' },
-          { to: '/blog/sales-call-analytics', label: 'Sales Call Analytics: 7 Metrics That Predict Revenue' },
         ]} />
       </BlogShell>
     </>

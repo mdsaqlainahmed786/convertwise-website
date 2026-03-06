@@ -53,8 +53,8 @@ export function Home() {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:image:alt" content="Nimitai AI meeting intelligence dashboard for B2B sales teams" />
-        <meta name="twitter:creator" content="@NimitaiHQ" />
-        <meta name="twitter:site" content="@NimitaiHQ" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#E89422" />
