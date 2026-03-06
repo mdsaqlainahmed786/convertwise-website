@@ -17,7 +17,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/alternatives/gong-alternative`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'What does Nimitai offer that Gong doesn\'t?',
     answer:
-      'Nimitai offers no per-seat pricing, no annual contract, 30-minute setup, and a startup-friendly $149/month flat fee. Gong requires enterprise negotiations, 90-day implementations, and $1,200+/seat/year. Nimitai also includes real-time AI coaching during calls, not just post-call analysis.',
+      'Nimitai offers no per-seat pricing, no annual contract, 30-minute setup, and a startup-friendly pricing from $149/seat/month. Gong requires enterprise negotiations, 90-day implementations, and $1,200+/seat/year. Nimitai also includes real-time AI coaching during calls, not just post-call analysis.',
   },
   {
     question: 'How does Nimitai\'s conversation intelligence compare to Gong?',
@@ -205,8 +205,8 @@ export function GongAlternative() {
           content="Looking for a Gong alternative? Nimitai delivers the same AI conversation intelligence — sales call recording, objection detection, deal risk alerts, talk-ratio analysis — at $149/month with no enterprise contract. The best Gong alternative for startup sales teams."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />

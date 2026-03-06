@@ -721,7 +721,7 @@ export function BlogShell({
               Get real-time intelligence on every sales call
             </h2>
             <p className="text-gray-500 dark:text-gray-400 mb-9 text-[0.9375rem] leading-[1.75]">
-              Nimitai surfaces buyer intent signals, coaches your reps through objections, and generates follow-ups — all during the live conversation. $149/month flat, founding price locked for life.
+              Nimitai surfaces buyer intent signals, coaches your reps through objections, and generates follow-ups — all during the live conversation. from $149/seat/month, founding price locked for life.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a

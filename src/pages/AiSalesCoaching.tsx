@@ -19,7 +19,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/ai-sales-coaching`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const faqs = [
   {
@@ -213,8 +213,8 @@ export function AiSalesCoaching() {
           content="Nimitai is AI sales coaching software that automatically analyzes every sales call, identifies coaching opportunities, tracks rep improvement over time, and tells managers exactly who needs help and why. $149/month."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -435,7 +435,7 @@ export function AiSalesCoaching() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Join 47+ B2B sales teams using Nimitai to coach every rep, every call. $149/month, 30-minute setup, cancel anytime.
+              Join 47+ B2B sales teams using Nimitai to coach every rep, every call. from $149/seat/month, 30-minute setup, cancel anytime.
             </p>
 
             <a

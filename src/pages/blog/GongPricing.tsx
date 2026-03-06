@@ -13,7 +13,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/gong-pricing-2026`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/assets/blog/og-gong-pricing.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -165,8 +165,8 @@ export function GongPricing() {
           content="Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/month alternative that delivers the same AI."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -386,7 +386,7 @@ export function GongPricing() {
                     <div className="relative z-10">
                       <div className="text-sm font-bold text-[#F5B040] uppercase tracking-widest mb-3">Nimitai</div>
                       <div className="space-y-2 text-sm text-amber-100">
-                        <div>$149/month flat</div>
+                        <div>from $149/seat/month</div>
                         <div>Unlimited seats</div>
                         <div>No annual contract</div>
                       </div>

@@ -16,14 +16,14 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/alternatives/otter-alternative`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Best Otter.ai Alternative for Sales Teams 2026 — Nimitai AI Meeting Intelligence',
   description:
-    'Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. $149/month for your whole team.',
+    'Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. from $149/seat/month.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -173,7 +173,7 @@ export function OtterAlternative() {
         <title>Best Otter.ai Alternative for Sales Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. $149/month for your whole team."
+          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. from $149/seat/month."
         />
         <meta
           name="keywords"
@@ -187,7 +187,7 @@ export function OtterAlternative() {
         <meta property="og:title" content="Best Otter.ai Alternative for Sales Teams 2026 — Nimitai AI Meeting Intelligence" />
         <meta
           property="og:description"
-          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. $149/month for your whole team."
+          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. from $149/seat/month."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -201,11 +201,11 @@ export function OtterAlternative() {
         <meta name="twitter:title" content="Best Otter.ai Alternative for Sales Teams 2026 — Nimitai AI Meeting Intelligence" />
         <meta
           name="twitter:description"
-          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. $149/month for your whole team."
+          content="Looking for an Otter.ai alternative? Nimitai goes beyond transcription to deliver real AI sales intelligence — deal risk scoring, objection patterns, coaching insights, talk-ratio analysis. from $149/seat/month."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -522,7 +522,7 @@ export function OtterAlternative() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Get deal intelligence, coaching insights, and CRM sync — everything Otter.ai can't do. $149/month, 30-minute setup, 14-day free trial.
+              Get deal intelligence, coaching insights, and CRM sync — everything Otter.ai can't do. from $149/seat/month, 30-minute setup, 14-day free trial.
             </p>
 
             <a

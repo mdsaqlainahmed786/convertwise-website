@@ -16,7 +16,7 @@ const painPoints = [
   },
   {
     title: 'Fireflies Has a Per-Seat Pricing Model',
-    body: 'Fireflies.ai charges per seat which adds up fast. Nimitai is $149/month flat for the whole team — no per-seat fees, no surprise bills as your team grows.',
+    body: 'Fireflies.ai charges per seat which adds up fast. Nimitai is from $149/seat/month — no surprise bills as your team grows.',
   },
 ];
 
@@ -423,7 +423,7 @@ export function FirefliesAlternative() {
               Upgrade From Fireflies to Real Sales Intelligence
             </h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-              Nimitai does everything Fireflies does, plus AI sales coaching and deal intelligence. $149/month for your whole team.
+              Nimitai does everything Fireflies does, plus AI sales coaching and deal intelligence. from $149/seat/month.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

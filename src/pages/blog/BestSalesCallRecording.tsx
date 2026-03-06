@@ -18,7 +18,7 @@ const jsonLd = {
     name: 'Nimitai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://nimitai.com/logo.png',
+      url: 'https://nimitai.com/nimitai-logo.png',
     },
   },
   url: 'https://nimitai.com/blog/best-sales-call-recording-software-startups',
@@ -313,7 +313,7 @@ export function BestSalesCallRecording() {
               </p>
               <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-4 border border-amber-100 dark:border-amber-800">
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <strong className="text-gray-900 dark:text-white">Pricing:</strong> $149/month flat for early-stage teams.
+                  <strong className="text-gray-900 dark:text-white">Pricing:</strong> from $149/seat/month.
                   <br /><strong className="text-gray-900 dark:text-white">Bottom line:</strong> Purpose-built for founders who need enterprise coaching intelligence at startup pricing.
                 </p>
               </div>

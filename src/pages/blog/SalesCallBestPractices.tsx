@@ -18,7 +18,7 @@ const jsonLd = {
     name: 'Nimitai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://nimitai.com/logo.png',
+      url: 'https://nimitai.com/nimitai-logo.png',
     },
   },
   url: 'https://nimitai.com/blog/sales-call-best-practices',

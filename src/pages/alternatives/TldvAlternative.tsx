@@ -423,7 +423,7 @@ export function TldvAlternative() {
               Switch to the Best tl;dv Alternative for Sales Teams
             </h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-              Nimitai delivers the call recording tl;dv does, plus full AI sales coaching and deal intelligence. $149/month flat.
+              Nimitai delivers the call recording tl;dv does, plus full AI sales coaching and deal intelligence. from $149/seat/month.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

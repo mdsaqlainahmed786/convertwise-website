@@ -18,14 +18,14 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/ai-meeting-assistant`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Best AI Meeting Assistant for Sales Teams 2026 — Nimitai',
   description:
-    'Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. $149/month for your whole team.',
+    'Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. from $149/seat/month.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -156,7 +156,7 @@ const comparisonRows = [
   },
   {
     feature: 'Price',
-    cw: '$149/mo (team)',
+    cw: 'from $149/seat/mo',
     otter: 'Free–$20/user',
     fathom: 'Free–$19/user',
     fireflies: 'Free–$18/user',
@@ -210,7 +210,7 @@ export function AiMeetingAssistant() {
         <title>Best AI Meeting Assistant for Sales Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. $149/month for your whole team."
+          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. from $149/seat/month."
         />
         <meta
           name="keywords"
@@ -224,7 +224,7 @@ export function AiMeetingAssistant() {
         <meta property="og:title" content="Best AI Meeting Assistant for Sales Teams 2026 — Nimitai" />
         <meta
           property="og:description"
-          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. $149/month for your whole team."
+          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. from $149/seat/month."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -238,11 +238,11 @@ export function AiMeetingAssistant() {
         <meta name="twitter:title" content="Best AI Meeting Assistant for Sales Teams 2026 — Nimitai" />
         <meta
           name="twitter:description"
-          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. $149/month for your whole team."
+          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. from $149/seat/month."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -498,7 +498,7 @@ export function AiMeetingAssistant() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Join 47+ B2B sales teams. $149/month, 30-minute setup, cancel anytime.
+              Join 47+ B2B sales teams. from $149/seat/month, 30-minute setup, cancel anytime.
             </p>
 
             <a

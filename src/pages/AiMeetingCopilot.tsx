@@ -16,7 +16,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/ai-meeting-copilot`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -236,8 +236,8 @@ export function AiMeetingCopilot() {
           content="Nimitai is the AI co-pilot for your sales meetings. Get real-time coaching cues, live deal risk alerts, talk-ratio tracking, and instant objection responses — while the meeting is happening."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -483,7 +483,7 @@ export function AiMeetingCopilot() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Join 47+ B2B sales teams winning more deals with real-time AI intelligence. $149/month, setup in 30 minutes.
+              Join 47+ B2B sales teams winning more deals with real-time AI intelligence. from $149/seat/month, setup in 30 minutes.
             </p>
 
             <a

@@ -17,7 +17,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/alternatives/fathom-alternative`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -215,8 +215,8 @@ export function FathomAlternative() {
           content="Looking for a Fathom alternative with real sales intelligence? Nimitai goes beyond AI note-taking to surface objection patterns, deal risks, talk-ratio analysis, and coaching insights from every sales call. $149/month for the whole team."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />

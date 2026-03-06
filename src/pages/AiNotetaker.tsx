@@ -17,14 +17,14 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/ai-notetaker`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Best AI Notetaker for Sales Teams 2026 — Nimitai | Beyond Notes to Revenue Intelligence',
   description:
-    'The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. $149/month for your whole team.',
+    'The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. from $149/seat/month.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -128,7 +128,7 @@ const comparisonRows = [
   { feature: 'CRM auto-sync', nimitai: true, fathom: true, fireflies: true, otter: false },
   { feature: 'Win/loss pattern analysis', nimitai: true, fathom: false, fireflies: false, otter: false },
   { feature: 'Flat team pricing', nimitai: true, fathom: false, fireflies: false, otter: false },
-  { feature: 'Price', nimitai: '$149/mo (team)', fathom: 'Free–$19/user', fireflies: 'Free–$18/user', otter: '$10–$20/user' },
+  { feature: 'Price', nimitai: 'from $149/seat/mo', fathom: 'Free–$19/user', fireflies: 'Free–$18/user', otter: '$10–$20/user' },
 ];
 
 function FAQAccordion() {
@@ -172,7 +172,7 @@ export function AiNotetaker() {
         <title>Best AI Notetaker for Sales Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. $149/month for your whole team."
+          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. from $149/seat/month."
         />
         <meta
           name="keywords"
@@ -186,7 +186,7 @@ export function AiNotetaker() {
         <meta property="og:title" content="Best AI Notetaker for Sales Teams 2026 — Nimitai | Beyond Notes to Revenue Intelligence" />
         <meta
           property="og:description"
-          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. $149/month for your whole team."
+          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. from $149/seat/month."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -200,11 +200,11 @@ export function AiNotetaker() {
         <meta name="twitter:title" content="Best AI Notetaker for Sales Teams 2026 — Nimitai | Beyond Notes to Revenue Intelligence" />
         <meta
           name="twitter:description"
-          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. $149/month for your whole team."
+          content="The best AI notetaker for B2B sales teams. Nimitai records, transcribes, and goes further — surfacing deal risks, objection patterns, coaching insights, and CRM updates automatically. from $149/seat/month."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -442,7 +442,7 @@ export function AiNotetaker() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Stop getting just notes. Start getting deal intelligence. $149/month for your whole team, 30-minute setup, 14-day free trial.
+              Stop getting just notes. Start getting deal intelligence. from $149/seat/month, 30-minute setup, 14-day free trial.
             </p>
 
             <a

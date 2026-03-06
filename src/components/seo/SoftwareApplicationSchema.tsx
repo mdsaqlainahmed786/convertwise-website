@@ -20,7 +20,7 @@ export function SoftwareApplicationSchema() {
         "unitText": "MONTH"
       }
     },
-    "description": "Nimitai is AI meeting intelligence and conversation intelligence software for B2B SaaS sales teams. Records sales calls, surfaces coaching insights, objection patterns, deal risk signals, and win/loss analysis automatically. $149/month flat for the entire team.",
+    "description": "Nimitai is AI meeting intelligence and conversation intelligence software for B2B SaaS sales teams. Records sales calls, surfaces coaching insights, objection patterns, deal risk signals, and win/loss analysis automatically. from $149/seat/month.",
     "featureList": [
       "AI Sales Call Recording and Transcription",
       "Talk/Listen Ratio Analysis",

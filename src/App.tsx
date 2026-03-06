@@ -45,6 +45,7 @@ import { AiObjectionHandling } from './pages/blog/AiObjectionHandling';
 import { B2bSaasDemo } from './pages/blog/B2bSaasDemo';
 import { RevenueIntelligence } from './pages/blog/RevenueIntelligence';
 import { WhyNimitai } from './pages/blog/WhyNimitai';
+import { Waitlist } from './pages/Waitlist';
 import { NotFound } from './pages/NotFound';
 
 export default function App() {
@@ -96,6 +97,9 @@ export default function App() {
             <Route path="/blog/b2b-saas-demo-best-practices" element={<B2bSaasDemo />} />
             <Route path="/blog/revenue-intelligence-platforms-2026" element={<RevenueIntelligence />} />
             <Route path="/blog/why-nimitai-name" element={<WhyNimitai />} />
+
+            {/* Waitlist / Login */}
+            <Route path="/login" element={<Waitlist />} />
 
             {/* Catch-all 404 — must be last */}
             <Route path="*" element={<NotFound />} />

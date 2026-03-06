@@ -13,7 +13,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/gong-competitors-alternatives`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/assets/blog/og-gong-competitors.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -39,7 +39,7 @@ const faqs = [
   {
     question: 'What is the best Gong alternative in 2026?',
     answer:
-      "The best Gong alternative in 2026 depends on your team size. For startups and SMBs (1–25 reps), Nimitai delivers full Gong-level conversation intelligence at $149/month flat. For enterprise teams needing Gong's full feature depth, Chorus.ai is the closest alternative. For teams primarily needing meeting notes, Fathom offers the best free experience.",
+      "The best Gong alternative in 2026 depends on your team size. For startups and SMBs (1–25 reps), Nimitai delivers full Gong-level conversation intelligence starting from $149/seat/month. For enterprise teams needing Gong's full feature depth, Chorus.ai is the closest alternative. For teams primarily needing meeting notes, Fathom offers the best free experience.",
   },
   {
     question: 'Which Gong competitor has the most affordable pricing?',
@@ -105,7 +105,7 @@ const competitors: Competitor[] = [
     name: 'Nimitai',
     tagline: 'Best for Startup and SMB B2B Sales Teams',
     bestFor: 'B2B SaaS founders with 1–25 reps who need Gong-level intelligence without Gong pricing.',
-    pricing: '$149/month flat, whole team, no annual contract.',
+    pricing: 'from $149/seat/month, no annual contract.',
     limitation: 'Newer product — less historical data depth than Gong for large enterprises.',
     paragraphs: [
       'Nimitai is purpose-built for the sales motion of early-stage B2B SaaS companies. Where Gong was designed for 200-rep enterprise orgs with dedicated RevOps, Nimitai assumes your head of sales is also running calls, your CRM data is imperfect, and your team is 3–15 people who need real intelligence without a 90-day implementation.',
@@ -320,8 +320,8 @@ export function GongCompetitors() {
           content="Looking for Gong competitors? We ranked the 10 best Gong alternatives in 2026 by price, features, and fit for startup sales teams. Includes real pricing data, feature comparisons, and who each tool is best for."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@NimitaiHQ" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
