@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { Linkedin, ArrowRight, TrendingUp, Users, Brain, Target, Zap, Eye } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { OrganizationSchema } from './seo/OrganizationSchema';
 import { BreadcrumbListSchema } from './seo/BreadcrumbListSchema';
 import architImage from '../assets/archit.png';
+import architWebp from '../assets/archit.webp';
 import nilanshImage from '../assets/Nilansh.png';
+import nilanshWebp from '../assets/Nilansh.webp';
 
 const timeline = [
   {
@@ -95,7 +96,10 @@ export function About() {
         <meta name="twitter:site" content="@Nimit_ai" />
       </Helmet>
       <OrganizationSchema />
-      <BreadcrumbListSchema />
+      <BreadcrumbListSchema items={[
+        { name: 'Home', item: 'https://nimitai.com' },
+        { name: 'About', item: 'https://nimitai.com/about' },
+      ]} />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#070B18]">
@@ -296,11 +300,18 @@ export function About() {
               <div className="h-px bg-gradient-to-r from-transparent via-[#E89422]/40 to-transparent" />
               <div className="p-8">
                 <div className="flex items-start gap-5 mb-6">
-                  <ImageWithFallback
-                    src={nilanshImage}
-                    alt="Nilansh Gupta — Co-Founder & CEO, Nimitai"
-                    className="w-16 h-16 rounded-xl object-cover object-center flex-shrink-0 border border-white/10"
-                  />
+                  <picture>
+                    <source srcSet={nilanshWebp} type="image/webp" />
+                    <img
+                      src={nilanshImage}
+                      alt="Nilansh Gupta — Co-Founder & CEO, Nimitai"
+                      width={64}
+                      height={64}
+                      className="w-16 h-16 rounded-xl object-cover object-center flex-shrink-0 border border-white/10"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-0.5">Nilansh Gupta</h3>
                     <p className="text-[#E89422] text-sm font-medium mb-2">Co-Founder & CEO</p>
@@ -353,11 +364,18 @@ export function About() {
               <div className="h-px bg-gradient-to-r from-transparent via-[#E89422]/40 to-transparent" />
               <div className="p-8">
                 <div className="flex items-start gap-5 mb-6">
-                  <ImageWithFallback
-                    src={architImage}
-                    alt="Archit Dhir — Co-Founder & CTO, Nimitai"
-                    className="w-16 h-16 rounded-xl object-cover object-center flex-shrink-0 border border-white/10"
-                  />
+                  <picture>
+                    <source srcSet={architWebp} type="image/webp" />
+                    <img
+                      src={architImage}
+                      alt="Archit Dhir — Co-Founder & CTO, Nimitai"
+                      width={64}
+                      height={64}
+                      className="w-16 h-16 rounded-xl object-cover object-center flex-shrink-0 border border-white/10"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-0.5">Archit Dhir</h3>
                     <p className="text-[#E89422] text-sm font-medium mb-2">Co-Founder & CTO</p>

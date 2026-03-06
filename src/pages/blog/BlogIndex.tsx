@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -12,6 +13,33 @@ interface BlogPost {
 }
 
 const posts: BlogPost[] = [
+  {
+    title: 'What is Meeting Intelligence? The Complete Guide for 2026',
+    slug: '/blog/what-is-meeting-intelligence',
+    date: 'Mar 6, 2026',
+    readTime: '10 min',
+    category: 'Conversation Intel',
+    excerpt: 'Meeting intelligence explained: what it is, how the AI works, key features, use cases, how it differs from basic notetakers, and how to choose the right platform for your B2B sales team in 2026.',
+    image: '/assets/blog/og-meeting-intelligence.png',
+  },
+  {
+    title: 'Fathom vs Gong vs Nimitai: Full Comparison 2026',
+    slug: '/blog/fathom-vs-gong-vs-nimitai',
+    date: 'Mar 6, 2026',
+    readTime: '9 min',
+    category: 'Tool Comparison',
+    excerpt: 'Fathom vs Gong vs Nimitai — a full feature, pricing, and coaching capability breakdown. Which AI sales tool is right for your B2B sales team in 2026?',
+    image: '/assets/blog/og-fathom-vs-gong.png',
+  },
+  {
+    title: 'Otter.ai vs Gong vs Nimitai: Which AI Sales Tool Wins in 2026?',
+    slug: '/blog/otter-vs-gong-vs-nimitai',
+    date: 'Mar 6, 2026',
+    readTime: '8 min',
+    category: 'Tool Comparison',
+    excerpt: 'Otter.ai vs Gong vs Nimitai — full feature, pricing, and sales intelligence breakdown. Which AI meeting tool is right for your B2B sales team in 2026?',
+    image: '/assets/blog/og-otter-vs-gong.png',
+  },
   {
     title: 'How AI is Replacing Sales Managers (And Why That\'s a Good Thing)',
     slug: '/blog/how-ai-is-replacing-sales-managers',
@@ -162,7 +190,7 @@ const posts: BlogPost[] = [
     date: 'Feb 28, 2026',
     readTime: '8 min',
     category: 'Comparison',
-    excerpt: 'An honest Gong vs Nimitai comparison for B2B SaaS teams — pricing ($1,600/seat/year vs $149/month), real-time coaching, setup time, and who each platform is actually built for.',
+    excerpt: 'An honest Gong vs Nimitai comparison for B2B SaaS teams — pricing ($1,600/seat/year vs $149/user/month), real-time coaching, setup time, and who each platform is actually built for.',
     image: '/assets/blog/og-gong-vs-nimitai.png',
   },
   {
@@ -260,9 +288,19 @@ const categoryColors: Record<string, string> = {
   'Sales Compliance': 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
   'Sales Intelligence': 'bg-amber-100 dark:bg-amber-900/40 text-[#C47010] dark:text-[#F5B040]',
   'Tool Comparison': 'bg-gray-100 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300',
+  'Conversation Intel': 'bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300',
+  'Sales Playbooks': 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300',
 };
 
+const PAGE_SIZE = 12;
+
+function toWebp(src: string) {
+  return src.replace(/\.(png|jpg|jpeg)$/, '.webp');
+}
+
 export function BlogIndex() {
+  const [visible, setVisible] = useState(PAGE_SIZE);
+
   return (
     <>
       <Helmet>
@@ -272,6 +310,9 @@ export function BlogIndex() {
           content="Expert guides on conversation intelligence software, sales call recording best practices, AI meeting intelligence, and closing more B2B deals. Practical insights for sales teams."
         />
         <link rel="canonical" href="https://nimitai.com/blog" />
+        {/* Preload first 2 above-fold card images */}
+        <link rel="preload" as="image" href={toWebp(posts[0].image)} type="image/webp" />
+        <link rel="preload" as="image" href={toWebp(posts[1].image)} type="image/webp" />
       </Helmet>
 
       {/* Hero */}
@@ -281,7 +322,7 @@ export function BlogIndex() {
             The Nimitai Blog
           </span>
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent leading-tight">
-            Sales Intelligence & Conversation Intelligence Guides
+            Sales Intelligence &amp; Conversation Intelligence Guides
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
             Expert guides on conversation intelligence software, sales call recording best practices, AI meeting intelligence, and how B2B sales teams close more deals using data from their calls.
@@ -293,22 +334,26 @@ export function BlogIndex() {
       <section className="bg-white dark:bg-gray-900 transition-colors py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {posts.map((post, i) => (
+            {posts.slice(0, visible).map((post, i) => (
               <article
                 key={post.slug}
                 className="bg-white/95 dark:bg-gray-800/60 rounded-3xl overflow-hidden shadow-lg border border-white/80 dark:border-gray-700/80 flex flex-col group hover:shadow-xl transition-shadow"
               >
-                {/* Thumbnail */}
+                {/* Thumbnail — WebP with PNG fallback */}
                 <Link to={post.slug} className="block overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt=""
-                    width={1200}
-                    height={630}
-                    loading={i < 4 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    className="w-full aspect-[1200/630] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
-                  />
+                  <picture>
+                    <source srcSet={toWebp(post.image)} type="image/webp" />
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      width={1200}
+                      height={630}
+                      loading={i < 2 ? 'eager' : 'lazy'}
+                      fetchPriority={i < 2 ? 'high' : 'auto'}
+                      decoding={i < 2 ? 'sync' : 'async'}
+                      className="w-full aspect-[1200/630] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                    />
+                  </picture>
                 </Link>
 
                 <div className="p-8 flex flex-col flex-1">
@@ -352,6 +397,18 @@ export function BlogIndex() {
               </article>
             ))}
           </div>
+
+          {/* Load more */}
+          {visible < posts.length && (
+            <div className="mt-12 text-center">
+              <button
+                onClick={() => setVisible(v => Math.min(v + PAGE_SIZE, posts.length))}
+                className="px-8 py-4 rounded-full border-2 border-[#E89422] text-[#C47010] dark:text-[#F5B040] font-semibold hover:bg-[#E89422] hover:text-white transition-colors"
+              >
+                Load more articles ({posts.length - visible} remaining)
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -366,7 +423,9 @@ export function BlogIndex() {
               Nimitai automatically surfaces patterns from every sales call so you can close more deals — without spending hours reviewing recordings.
             </p>
             <a
-              href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer"
+              href="https://nilanshgupta.typeform.com/to/UNvZIrgu"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white rounded-full hover:from-[#C47010] hover:to-[#963C00] transition-colors inline-flex items-center gap-2"
             >
               Try Nimitai free for 14 days

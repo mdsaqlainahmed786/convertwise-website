@@ -194,7 +194,7 @@ export function OtterAlternative() {
         <title>Best Otter.ai Alternative for Sales Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="Otter.ai alternative for sales teams. Nimitai delivers AI sales intelligence — deal risk, objections, coaching. $149/user/month. A product of REN AI Technologies."
+          content="Otter.ai alternative for sales teams. Nimitai delivers AI sales intelligence — deal risk, objections, coaching. $149/user/month. REN AI Technologies."
         />
         <meta
           name="keywords"

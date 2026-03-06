@@ -173,7 +173,7 @@ export function AiNotetaker() {
         <title>Best AI Notetaker for Sales Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="AI notetaker for B2B sales teams. Beyond notes — deal risks, objections, coaching insights, CRM updates. from $149/user/month. A product of REN AI Technologies."
+          content="AI notetaker for B2B sales teams. Beyond notes — deal risks, objections, coaching insights, CRM updates. $149/user/month. A product of REN AI Technologies."
         />
         <meta
           name="keywords"

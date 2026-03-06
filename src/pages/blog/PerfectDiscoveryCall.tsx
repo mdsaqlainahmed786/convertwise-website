@@ -68,6 +68,16 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'How to Run a Perfect Discovery Call (With AI)', item: 'https://nimitai.com/blog/perfect-discovery-call-ai-playbook' },
+  ],
+};
+
 const toc = [
   { id: 'what-makes-perfect', label: 'What makes a discovery call "perfect"?' },
   { id: 'five-phase-structure', label: 'The 5-phase discovery call structure' },
@@ -123,6 +133,7 @@ export function PerfectDiscoveryCall() {
         <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

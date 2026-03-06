@@ -6,10 +6,10 @@ interface BreadcrumbItem {
 }
 
 interface BreadcrumbListSchemaProps {
-  items: BreadcrumbItem[];
+  items?: BreadcrumbItem[];
 }
 
-export function BreadcrumbListSchema({ items }: BreadcrumbListSchemaProps) {
+export function BreadcrumbListSchema({ items = [] }: BreadcrumbListSchemaProps) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

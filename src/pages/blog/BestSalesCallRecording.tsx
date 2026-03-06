@@ -181,6 +181,9 @@ export function BestSalesCallRecording() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-4">
         <img
           src="/assets/dashboard.jpeg"
+          width={1280}
+          height={720}
+          decoding="async"
           alt="Sales call recording software comparison dashboard — Gong, Fathom, Fireflies, tl;dv, Avoma, Nimitai"
           className="w-full rounded-2xl shadow-xl object-cover"
           style={{ maxHeight: '420px', objectPosition: 'center' }}

@@ -67,6 +67,16 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Chorus vs Gong vs Nimitai 2026', item: 'https://nimitai.com/blog/chorus-vs-gong-vs-nimitai' },
+  ],
+};
+
 const toc = [
   { id: 'what-each-tool-does', label: 'What Chorus, Gong, and Nimitai do differently' },
   { id: 'feature-comparison', label: 'Full feature comparison' },
@@ -136,6 +146,7 @@ export function ChorusVsGongVsNimitai() {
         <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

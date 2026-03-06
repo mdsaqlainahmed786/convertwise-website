@@ -46,6 +46,9 @@ const POSTS = [
   { slug: 'og-why-we-build-nimitai',         title: 'Why We Built Nimitai: What 350 Calls Taught Us',                   category: 'Founder Story',      sub: 'The real story behind the product' },
   { slug: 'og-digitalpatron-to-nimitai',     title: 'From Digitalpatron to Nimitai: Why We Started Over',               category: 'Founder Story',      sub: 'Our ideology, mission, and the pivot that changed everything' },
   { slug: 'og-nimitai-name',                 title: 'Why We Named It Nimitai: The Sanskrit Word Behind Our Mission',     category: 'Founder Story',      sub: 'A 3,000-year-old word that defines everything we build' },
+  { slug: 'og-fathom-vs-gong',              title: 'Fathom vs Gong vs Nimitai 2026',                                     category: 'Tool Comparison',    sub: '3-tool breakdown: features, pricing & coaching depth' },
+  { slug: 'og-otter-vs-gong',               title: 'Otter.ai vs Gong vs Nimitai 2026',                                   category: 'Tool Comparison',    sub: 'Which AI sales tool actually coaches your reps?' },
+  { slug: 'og-meeting-intelligence',         title: 'What is Meeting Intelligence?',                                      category: 'Conversation Intel', sub: 'The complete 2026 guide for B2B sales teams' },
 ];
 
 function getStyle(category) {

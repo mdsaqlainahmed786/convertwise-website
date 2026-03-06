@@ -45,6 +45,9 @@ export function Waitlist() {
               <img
                 src="/chrome-logo.png"
                 alt="Nimitai"
+                width={48}
+                height={48}
+                decoding="async"
                 className="h-12 w-auto"
               />
             </Link>

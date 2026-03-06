@@ -81,6 +81,9 @@ export function SalesCallBestPractices() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-4">
         <img
           src="/assets/prep-agent.jpeg"
+          width={1280}
+          height={720}
+          decoding="async"
           alt="Sales call preparation and best practices for SaaS founders — AI meeting intelligence"
           className="w-full rounded-2xl shadow-xl object-cover"
           style={{ maxHeight: '420px', objectPosition: 'center' }}

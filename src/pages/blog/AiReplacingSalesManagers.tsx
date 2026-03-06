@@ -67,6 +67,16 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'How AI is Replacing Sales Managers', item: 'https://nimitai.com/blog/how-ai-is-replacing-sales-managers' },
+  ],
+};
+
 const toc = [
   { id: 'what-managers-do', label: 'What sales managers actually spend time doing' },
   { id: 'five-things-ai-does-better', label: 'The 5 things AI does better than managers' },
@@ -128,6 +138,7 @@ export function AiReplacingSalesManagers() {
         <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

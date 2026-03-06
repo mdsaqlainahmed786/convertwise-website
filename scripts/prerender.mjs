@@ -58,6 +58,9 @@ const ROUTES = [
   '/blog/b2b-saas-demo-best-practices',
   '/blog/revenue-intelligence-platforms-2026',
   '/blog/why-nimitai-name',
+  '/blog/fathom-vs-gong-vs-nimitai',
+  '/blog/otter-vs-gong-vs-nimitai',
+  '/blog/what-is-meeting-intelligence',
 ];
 
 // Simple static file server for the build directory

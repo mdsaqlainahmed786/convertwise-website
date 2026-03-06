@@ -67,6 +67,16 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Best AI Sales Coaching Software 2026', item: 'https://nimitai.com/blog/best-ai-sales-coaching-software-2026' },
+  ],
+};
+
 const toc = [
   { id: 'what-makes-great', label: 'What makes great AI sales coaching software?' },
   { id: 'best-tools-2026', label: 'The best AI sales coaching software tools in 2026' },
@@ -179,6 +189,7 @@ export function BestAiSalesCoaching() {
         <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell
