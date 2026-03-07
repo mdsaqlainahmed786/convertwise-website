@@ -180,10 +180,10 @@ export function Waitlist() {
             </Link>
             <span className="text-gray-800 text-xs">·</span>
             <a
-              href="mailto:hello@nimitai.com"
+              href="mailto:info@nimitai.com"
               className="text-xs text-gray-600 hover:text-[#E89422] transition-colors"
             >
-              hello@nimitai.com
+              info@nimitai.com
             </a>
           </motion.div>
 

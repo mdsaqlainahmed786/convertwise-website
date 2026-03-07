@@ -27,7 +27,7 @@ export function OrganizationSchema() {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "hello@nimitai.com",
+      "email": "info@nimitai.com",
       "telephone": "+91-9915494146",
       "contactType": "Customer Service"
     },
