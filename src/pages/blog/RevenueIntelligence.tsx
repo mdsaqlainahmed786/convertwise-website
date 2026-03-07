@@ -4,7 +4,7 @@ import { BlogShell, Callout, CalendlyCTA, RelatedArticles, StatStrip } from '../
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/revenue-intelligence-platforms-2026`;
-const ogImage = `${siteUrl}/assets/blog/og-revenue-intelligence.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -16,7 +16,7 @@ const articleSchema = {
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -35,6 +35,17 @@ const toc = [
   { id: 'how-to-choose', label: 'How to choose for your team size' },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Revenue Intelligence Platforms in 2026: What the Best Tools ...', item: '${siteUrl}/blog/revenue-intelligence-platforms-2026' },
+  ],
+};
+
 export function RevenueIntelligence() {
   return (
     <>
@@ -48,6 +59,7 @@ export function RevenueIntelligence() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

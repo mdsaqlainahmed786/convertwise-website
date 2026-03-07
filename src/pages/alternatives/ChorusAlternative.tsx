@@ -157,7 +157,7 @@ export function ChorusAlternative() {
   return (
     <>
       <Helmet>
-        <title>Best Chorus.ai Alternative 2026 — Nimitai Conversation Intelligence</title>
+        <title>Best Chorus.ai Alternative 2026 — Nimitai | Sales AI</title>
         <meta
           name="description"
           content="Chorus alternative: AI call recording, coaching, deal risk — no enterprise contract. $149/user/month for startups. A product of REN AI Technologies."
@@ -174,8 +174,12 @@ export function ChorusAlternative() {
           property="og:description"
           content="Chorus alternative: AI call recording, coaching, deal risk — no enterprise contract. $149/user/month for startups. A product of REN AI Technologies."
         />
+        <meta property="og:image" content="https://nimitai.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Nimitai" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
         <meta name="twitter:title" content="Best Chorus.ai Alternative 2026 — Nimitai | Conversation Intelligence Without Enterprise Pricing" />
         <meta
           name="twitter:description"

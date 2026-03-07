@@ -192,7 +192,7 @@ export function GongAlternative() {
   return (
     <>
       <Helmet>
-        <title>Best Gong Alternative 2026 — Nimitai | AI Conversation Intelligence</title>
+        <title>Best Gong Alternative 2026 — Nimitai | From $149/Seat</title>
         <meta
           name="description"
           content="Best Gong alternative for startups. AI conversation intelligence at $149/user/month. No annual contract. A product of REN AI Technologies."

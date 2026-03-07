@@ -16,7 +16,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/buyer-intent-signals-sales-calls`;
-const ogImage = `${siteUrl}/assets/blog/og-buyer-intent.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -28,7 +28,7 @@ const articleSchema = {
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -89,6 +89,17 @@ const toc = [
   { id: 'training', label: 'Training yourself manually' },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Buyer Intent Signals in Sales Calls: How to Detect Them Befo...', item: '${siteUrl}/blog/buyer-intent-signals-sales-calls' },
+  ],
+};
+
 export function BuyerIntentSignals() {
   const strengthColor = (s: 'Very High' | 'High' | 'Medium') => {
     if (s === 'Very High') return 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300';
@@ -108,6 +119,7 @@ export function BuyerIntentSignals() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell
@@ -150,7 +162,11 @@ export function BuyerIntentSignals() {
         <div className="not-prose space-y-5 my-10">
           {intentSignals.map((signal, i) => (
             <div
-              key={i}
+              key={i}
+
+
+
+
               className="rounded-2xl border border-gray-100 dark:border-gray-700/80 bg-white dark:bg-gray-800/40 overflow-hidden hover:border-amber-200/70 dark:hover:border-amber-700/40 hover:shadow-sm transition-colors"
             >
               {/* Header */}

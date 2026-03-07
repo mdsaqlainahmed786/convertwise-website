@@ -5,7 +5,7 @@ import { BlogShell, PullQuote, Callout, CalendlyCTA, RelatedArticles, StatStrip 
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/ai-notetaker-vs-conversation-intelligence`;
-const ogImage = `${siteUrl}/assets/blog/og-notetaker-vs-ci.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -17,7 +17,7 @@ const articleSchema = {
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -84,6 +84,17 @@ const faqSchema = {
   ],
 };
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'AI Notetaker vs Conversation Intelligence: Why the Differenc...', item: '${siteUrl}/blog/ai-notetaker-vs-conversation-intelligence' },
+  ],
+};
+
 export function AiNotetakerVsConversationIntelligence() {
   return (
     <>
@@ -98,6 +109,7 @@ export function AiNotetakerVsConversationIntelligence() {
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

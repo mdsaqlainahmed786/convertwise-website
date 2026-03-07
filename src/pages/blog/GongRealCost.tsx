@@ -5,7 +5,7 @@ import { BlogShell, PullQuote, Callout, RelatedArticles, StatStrip } from '../..
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/gong-real-cost-hidden-fees`;
-const ogImage = `${siteUrl}/assets/blog/og-gong-real-cost.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -17,7 +17,7 @@ const articleSchema = {
   datePublished: '2026-03-06',
   dateModified: '2026-03-06',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -88,6 +88,17 @@ const faqs = [
   },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'The Real Cost of Gong: Hidden Fees, Contracts, and What Nobo...', item: '${siteUrl}/blog/gong-real-cost-hidden-fees' },
+  ],
+};
+
 export function GongRealCost() {
   return (
     <>
@@ -104,6 +115,7 @@ export function GongRealCost() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

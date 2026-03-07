@@ -14,7 +14,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/gong-competitors-alternatives`;
-const ogImage = `${siteUrl}/assets/blog/og-gong-competitors.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -23,11 +23,12 @@ const articleSchema = {
   description:
     'Looking for Gong competitors? We ranked the 10 best Gong alternatives in 2026 by price, features, and fit for startup sales teams. Includes real pricing data, feature comparisons, and who each tool is best for.',
   url: pageUrl,
+  image: ogImage,
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: {
     '@type': 'Person',
-    name: 'Nilansh Gupta, Founder of Nimitai',
+    name: 'Nilansh Gupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -247,6 +248,17 @@ const tocItems = [
   { id: 'competitor-10', label: '#10 Modjo' },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: '10 Best Gong Competitors & Alternatives in 2026 (Honest Comp...', item: '${siteUrl}/blog/gong-competitors-alternatives' },
+  ],
+};
+
 function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -331,6 +343,7 @@ export function GongCompetitors() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         {/* JSON-LD FAQPage */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       {/* ── HERO ────────────────────────────────────────────────────── */}

@@ -15,7 +15,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/how-to-increase-close-rate`;
-const ogImage = `${siteUrl}/assets/blog/og-close-rate.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -27,7 +27,7 @@ const articleSchema = {
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -95,6 +95,17 @@ const toc = [
   { id: 'close-rate-equation', label: 'The close rate equation' },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'How to Increase Sales Close Rate: 9 Proven Strategies from 3...', item: '${siteUrl}/blog/how-to-increase-close-rate' },
+  ],
+};
+
 export function HowToIncreaseCloseRate() {
   return (
     <>
@@ -108,6 +119,7 @@ export function HowToIncreaseCloseRate() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

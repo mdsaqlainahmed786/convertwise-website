@@ -5,7 +5,7 @@ import { BlogShell, PullQuote, Callout, CalendlyCTA, RelatedArticles, StatStrip 
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/ai-objection-handling`;
-const ogImage = `${siteUrl}/assets/blog/og-ai-objection-handling.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -17,7 +17,7 @@ const articleSchema = {
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -61,6 +61,17 @@ const toc = [
   { id: 'preempting', label: 'Pre-empting objections before they appear' },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'AI-Powered Objection Handling: How to Win the Moments That L...', item: '${siteUrl}/blog/ai-objection-handling' },
+  ],
+};
+
 export function AiObjectionHandling() {
   return (
     <>
@@ -74,6 +85,7 @@ export function AiObjectionHandling() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell
@@ -105,7 +117,11 @@ export function AiObjectionHandling() {
         <div className="not-prose space-y-6 my-8">
           {objections.map((obj, i) => (
             <div
-              key={i}
+              key={i}
+
+
+
+
               className="rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
             >
               <div className="p-5 bg-amber-50 dark:bg-amber-900/20 border-b border-gray-200 dark:border-gray-700">

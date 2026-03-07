@@ -14,7 +14,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/gong-pricing-2026`;
-const ogImage = `${siteUrl}/assets/blog/og-gong-pricing-2026.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -23,11 +23,12 @@ const articleSchema = {
   description:
     "Gong pricing is not publicly listed. Here's what Gong actually costs in 2026 based on real customer data: $1,200–$1,600/seat/year, 15-seat minimum, annual contracts. And a $149/user/month alternative that delivers the same AI.",
   url: pageUrl,
+  image: ogImage,
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: {
     '@type': 'Person',
-    name: 'Nilansh Gupta, Founder of Nimitai',
+    name: 'Nilansh Gupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -91,6 +92,17 @@ const tocItems = [
   { id: 'whats-included', label: "What's Included in Gong's Price" },
   { id: 'priced-out', label: 'Why 80% of Teams Get Priced Out' },
 ];
+
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Gong Pricing in 2026: How Much Does Gong Actually Cost? (Rea...', item: '${siteUrl}/blog/gong-pricing-2026' },
+  ],
+};
 
 function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -176,6 +188,7 @@ export function GongPricing() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         {/* JSON-LD FAQPage */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       {/* ── HERO ────────────────────────────────────────────────────── */}

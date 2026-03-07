@@ -6,7 +6,7 @@ import { BlogShell, PullQuote, CalendlyCTA, RelatedArticles, StatStrip } from '.
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/sales-call-analytics`;
-const ogImage = `${siteUrl}/assets/blog/og-sales-call-analytics.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -18,7 +18,7 @@ const articleSchema = {
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -38,6 +38,17 @@ const toc = [
   { id: 'implement', label: 'How to implement without a data team' },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Sales Call Analytics: 7 Metrics That Actually Predict Revenu...', item: '${siteUrl}/blog/sales-call-analytics' },
+  ],
+};
+
 export function SalesCallAnalytics() {
   return (
     <>
@@ -51,6 +62,7 @@ export function SalesCallAnalytics() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell
@@ -82,7 +94,11 @@ export function SalesCallAnalytics() {
         <div className="not-prose space-y-6 my-8">
           {metrics.map((metric, i) => (
             <div
-              key={i}
+              key={i}
+
+
+
+
               className="rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
             >
               <div className="flex items-center gap-4 px-6 py-4 bg-amber-50 dark:bg-amber-900/20 border-b border-gray-200 dark:border-gray-700">

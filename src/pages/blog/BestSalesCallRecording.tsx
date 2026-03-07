@@ -22,6 +22,7 @@ const jsonLd = {
     },
   },
   url: 'https://nimitai.com/blog/best-sales-call-recording-software-startups',
+  image: 'https://nimitai.com/og-image.png',
   keywords: [
     'best sales call recording software for startups',
     'sales call recording software comparison 2026',
@@ -123,6 +124,17 @@ function cellStyle(value: string, isNimitai = false): string {
   return `${base} text-[#E89422] dark:text-[#F5B040]`;
 }
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Best Sales Call Recording Software for Startups in 2026: An ...', item: 'https://nimitai.com/blog/best-sales-call-recording-software-startups' },
+  ],
+};
+
 export function BestSalesCallRecording() {
   return (
     <>
@@ -139,11 +151,12 @@ export function BestSalesCallRecording() {
         <link rel="canonical" href="https://nimitai.com/blog/best-sales-call-recording-software-startups" />
         <meta property="og:title" content="Best Sales Call Recording Software 2026: 7 Tools Compared | Nimitai" />
         <meta property="og:description" content="Comparing the 7 best sales call recording software tools in 2026: Gong, Fathom, Fireflies, tl;dv, Chorus, Otter.ai, and Nimitai. Full feature comparison, pricing breakdown, and which tool is right for your team." />
-        <meta property="og:image" content="https://nimitai.com/assets/blog/og-best-sales-call-software.png" />
+        <meta property="og:image" content="https://nimitai.com/og-image.png" />
         <meta property="og:url" content="https://nimitai.com/blog/best-sales-call-recording-software-startups" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       {/* Hero */}
