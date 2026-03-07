@@ -17,9 +17,9 @@ import { WebSiteSchema } from './seo/WebSiteSchema';
 export function Home() {
   const siteUrl = 'https://nimitai.com';
   const title = 'Nimitai — AI Meeting Intelligence for Sales Teams | Gong Alternative';
-  const description = 'Nimitai is AI meeting intelligence that analyzes your B2B sales conversations to surface real-time coaching, buyer signals, and deal risks. The #1 Gong alternative for startup sales teams. from $149/seat/month, setup in 30 minutes.';
+  const description = 'Stop losing deals to patterns nobody caught. Nimitai gives B2B sales teams real-time coaching, objection intelligence, and deal risk signals — automatically. The #1 Gong alternative for startups. From $149/seat/month.';
   const keywords = 'AI meeting intelligence, conversation intelligence software, gong alternative, AI sales coaching, meeting intelligence, gong alternative for startups, fathom alternative, fireflies alternative, AI meeting assistant, AI notetaker for sales, sales meeting analysis, buyer signal detection';
-  const ogImage = `${siteUrl}/og-image.png`;
+  const ogImage = `${siteUrl}/og-image.png?v=2`;
 
   return (
     <>
