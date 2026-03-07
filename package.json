@@ -65,7 +65,7 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build && node scripts/prerender.mjs",
+            "build": "vite build",
             "build:seo": "vite build && node scripts/prerender.mjs",
             "build:vite": "vite build",
             "prerender": "node scripts/prerender.mjs"
