@@ -58,6 +58,7 @@ const AiReplacingSalesManagers = React.lazy(() => import('./pages/blog/AiReplaci
 const FathomVsGongVsNimitai = React.lazy(() => import('./pages/blog/FathomVsGongVsNimitai').then(m => ({ default: m.FathomVsGongVsNimitai })));
 const OtterVsGongVsNimitai = React.lazy(() => import('./pages/blog/OtterVsGongVsNimitai').then(m => ({ default: m.OtterVsGongVsNimitai })));
 const MeetingIntelligenceGuide = React.lazy(() => import('./pages/blog/MeetingIntelligenceGuide').then(m => ({ default: m.MeetingIntelligenceGuide })));
+const SybillVsNimitai = React.lazy(() => import('./pages/blog/SybillVsNimitai').then(m => ({ default: m.SybillVsNimitai })));
 const Waitlist = React.lazy(() => import('./pages/Waitlist').then(m => ({ default: m.Waitlist })));
 const NotFound = React.lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
@@ -126,6 +127,7 @@ export default function App() {
               <Route path="/blog/fathom-vs-gong-vs-nimitai" element={<FathomVsGongVsNimitai />} />
               <Route path="/blog/otter-vs-gong-vs-nimitai" element={<OtterVsGongVsNimitai />} />
               <Route path="/blog/what-is-meeting-intelligence" element={<MeetingIntelligenceGuide />} />
+              <Route path="/blog/sybill-vs-nimitai" element={<SybillVsNimitai />} />
 
               {/* Waitlist / Login */}
               <Route path="/login" element={<Waitlist />} />

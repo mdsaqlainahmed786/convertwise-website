@@ -14,6 +14,15 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    title: 'Sybill vs Nimitai 2026: Which AI Sales Tool Wins for Startups?',
+    slug: '/blog/sybill-vs-nimitai',
+    date: 'Mar 7, 2026',
+    readTime: '9 min',
+    category: 'Tool Comparison',
+    excerpt: 'Sybill vs Nimitai — full 2026 comparison of features, pricing, real-time coaching, CRM automation, and conversation intelligence. Which AI sales tool is right for your startup team?',
+    image: '/og-image.png',
+  },
+  {
     title: 'What is Meeting Intelligence? The Complete Guide for 2026',
     slug: '/blog/what-is-meeting-intelligence',
     date: 'Mar 6, 2026',
