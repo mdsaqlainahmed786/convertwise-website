@@ -127,14 +127,25 @@ async function prerender() {
 
       await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
 
-      // Wait for react-helmet-async to update the head
+      // Wait for React to mount — look for the root div having children
       await page.waitForFunction(() => {
-        const title = document.querySelector('title');
-        return title && title.textContent && title.textContent.length > 0;
-      }, { timeout: 10000 });
+        const root = document.getElementById('root');
+        return root && root.children.length > 0;
+      }, { timeout: 15000 });
 
-      // Small delay to ensure all dynamic content is rendered
-      await new Promise(r => setTimeout(r, 500));
+      // Wait for react-helmet-async to update the title away from the fallback
+      const FALLBACK_TITLE = 'Nimitai \u2014 AI Meeting Intelligence for Sales Teams';
+      try {
+        await page.waitForFunction((fallback) => {
+          const title = document.querySelector('title');
+          return title && title.textContent && title.textContent !== fallback;
+        }, { timeout: 8000 }, FALLBACK_TITLE);
+      } catch {
+        // Some pages may legitimately use a title close to fallback — proceed anyway
+      }
+
+      // Extra delay to ensure all dynamic content is rendered
+      await new Promise(r => setTimeout(r, 1000));
 
       // Clean up duplicate meta tags in the DOM before extracting HTML
       await page.evaluate(() => {
