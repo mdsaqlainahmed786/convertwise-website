@@ -5,7 +5,7 @@ import { BlogShell, StatStrip, PullQuote, Callout, RelatedArticles, CalendlyCTA 
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/why-we-built-nimitai`;
-const ogImage = `${siteUrl}/assets/blog/og-why-we-build-nimitai.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -19,7 +19,7 @@ const articleSchema = {
     { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
     { '@type': 'Person', name: 'Archit', url: `${siteUrl}/about` },
   ],
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -34,6 +34,17 @@ const toc = [
   { id: 'beta-feedback', label: 'Beta feedback' },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Why We Built Nimitai: What 350 Sales Calls Taught Us About A...', item: '${siteUrl}/blog/why-we-built-nimitai' },
+  ],
+};
+
 export function WhyWeBuildNimitai() {
   return (
     <>
@@ -47,6 +58,7 @@ export function WhyWeBuildNimitai() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

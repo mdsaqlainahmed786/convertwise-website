@@ -13,7 +13,7 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/why-nimitai-name`;
-const ogImage = `${siteUrl}/assets/blog/og-nimitai-name.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -25,7 +25,7 @@ const articleSchema = {
   datePublished: '2026-03-01',
   dateModified: '2026-03-01',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -37,6 +37,17 @@ const toc = [
   { id: 'naming-journey', label: 'Our naming journey' },
   { id: 'name-in-practice', label: 'How the name shapes the product' },
 ];
+
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Why We Named It Nimitai: The Sanskrit Word That Became Our M...', item: '${siteUrl}/blog/why-nimitai-name' },
+  ],
+};
 
 export function WhyNimitai() {
   return (
@@ -54,6 +65,7 @@ export function WhyNimitai() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

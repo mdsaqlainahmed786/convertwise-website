@@ -4,7 +4,7 @@ import { BlogShell, PullQuote, Callout, RelatedArticles, StatStrip } from '../..
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/chorus-vs-gong-vs-nimitai`;
-const ogImage = `${siteUrl}/assets/blog/og-chorus-vs-gong.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -16,7 +16,7 @@ const articleSchema = {
   datePublished: '2026-03-06',
   dateModified: '2026-03-06',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 

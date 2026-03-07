@@ -20,7 +20,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'Conversation Intel',
     excerpt: 'Meeting intelligence explained: what it is, how the AI works, key features, use cases, how it differs from basic notetakers, and how to choose the right platform for your B2B sales team in 2026.',
-    image: '/assets/blog/og-meeting-intelligence.png',
+    image: '/og-image.png',
   },
   {
     title: 'Fathom vs Gong vs Nimitai: Full Comparison 2026',
@@ -29,7 +29,7 @@ const posts: BlogPost[] = [
     readTime: '9 min',
     category: 'Tool Comparison',
     excerpt: 'Fathom vs Gong vs Nimitai — a full feature, pricing, and coaching capability breakdown. Which AI sales tool is right for your B2B sales team in 2026?',
-    image: '/assets/blog/og-fathom-vs-gong.png',
+    image: '/og-image.png',
   },
   {
     title: 'Otter.ai vs Gong vs Nimitai: Which AI Sales Tool Wins in 2026?',
@@ -38,7 +38,7 @@ const posts: BlogPost[] = [
     readTime: '8 min',
     category: 'Tool Comparison',
     excerpt: 'Otter.ai vs Gong vs Nimitai — full feature, pricing, and sales intelligence breakdown. Which AI meeting tool is right for your B2B sales team in 2026?',
-    image: '/assets/blog/og-otter-vs-gong.png',
+    image: '/og-image.png',
   },
   {
     title: 'How AI is Replacing Sales Managers (And Why That\'s a Good Thing)',
@@ -47,7 +47,7 @@ const posts: BlogPost[] = [
     readTime: '9 min',
     category: 'AI Sales Coaching',
     excerpt: 'AI is taking over the parts of sales management that humans were never good at — coaching every call, spotting patterns, real-time guidance. Here\'s what that means for sales leaders.',
-    image: '/assets/blog/og-ai-replacing-sales-managers.png',
+    image: '/og-image.png',
   },
   {
     title: 'How to Run a Perfect Discovery Call (With AI): A Step-by-Step Playbook',
@@ -56,7 +56,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'Sales Playbooks',
     excerpt: 'A step-by-step discovery call playbook for B2B sales teams — the 5-phase structure, 10 best questions, AI tools that help, and a scoring rubric for every call.',
-    image: '/assets/blog/og-discovery-call.png',
+    image: '/og-image.png',
   },
   {
     title: 'tl;dv vs Gong vs Nimitai 2026: Which One Actually Coaches Your Reps?',
@@ -65,7 +65,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'Tool Comparison',
     excerpt: 'tl;dv vs Gong vs Nimitai — a full feature, pricing, and coaching capability breakdown. Which meeting intelligence tool is right for your B2B sales team in 2026?',
-    image: '/assets/blog/og-tldv-vs-gong.png',
+    image: '/og-image.png',
   },
   {
     title: 'Chorus vs Gong vs Nimitai 2026: Enterprise CI vs Startup-Friendly AI',
@@ -74,7 +74,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'Tool Comparison',
     excerpt: 'Chorus vs Gong vs Nimitai — enterprise conversation intelligence head-to-head. Is Chorus worth the ZoomInfo bundle? Where does Nimitai fit for startup sales teams?',
-    image: '/assets/blog/og-chorus-vs-gong.png',
+    image: '/og-image.png',
   },
   {
     title: 'Sales Call Recording Laws by State 2026: What Every Sales Team Must Know',
@@ -83,7 +83,7 @@ const posts: BlogPost[] = [
     readTime: '11 min',
     category: 'Sales Compliance',
     excerpt: 'Which US states require two-party consent? Is GDPR relevant? A complete guide to sales call recording laws by state in 2026, with a state-by-state consent table.',
-    image: '/assets/blog/og-call-recording-laws.png',
+    image: '/og-image.png',
   },
   {
     title: 'Best AI Sales Coaching Software 2026: Ranked by Real Sales Teams',
@@ -92,7 +92,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'AI Sales Coaching',
     excerpt: 'The 6 best AI sales coaching software tools in 2026, ranked by real B2B sales teams. From enterprise Gong to budget-friendly Nimitai — find the right fit for your team size and budget.',
-    image: '/assets/blog/og-best-ai-sales-coaching.png',
+    image: '/og-image.png',
   },
   {
     title: 'Fireflies vs Gong vs Nimitai: Full Comparison 2026',
@@ -101,7 +101,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'Tool Comparison',
     excerpt: 'Fireflies vs Gong vs Nimitai — a full feature, pricing, and use-case breakdown. Which conversation intelligence tool is right for your sales team in 2026?',
-    image: '/assets/blog/og-fireflies-vs-gong.png',
+    image: '/og-image.png',
   },
   {
     title: 'The Real Cost of Gong: Hidden Fees, Contracts, and What Nobody Tells You',
@@ -110,7 +110,7 @@ const posts: BlogPost[] = [
     readTime: '9 min',
     category: 'Sales Intelligence',
     excerpt: 'The number on Gong\'s pricing page isn\'t your invoice total. Platform fees, seat minimums, implementation costs, and auto-renewal clauses add $10,000–$30,000+ to your real bill.',
-    image: '/assets/blog/og-gong-real-cost.png',
+    image: '/og-image.png',
   },
   {
     title: 'Why We Named It Nimitai: The Sanskrit Word That Became Our Mission',
@@ -119,7 +119,7 @@ const posts: BlogPost[] = [
     readTime: '6 min',
     category: 'Founder Story',
     excerpt: 'The name "Nimitai" comes from the Sanskrit word "nimit" — meaning purpose, destined instrument, and the cause behind an effect. Here\'s why we chose it, what it means, and how a 3,000-year-old word defines everything we build.',
-    image: '/assets/blog/og-nimitai-name.png',
+    image: '/og-image.png',
   },
   {
     title: 'Why We Built Nimitai: What 350 Sales Calls Taught Us About AI',
@@ -128,7 +128,7 @@ const posts: BlogPost[] = [
     readTime: '9 min',
     category: 'Founder Story',
     excerpt: 'Nilansh and Archit share the real story behind Nimitai — 350 B2B sales calls, 47 teams interviewed, and the moment everything became clear about what AI in sales needs to actually do.',
-    image: '/assets/blog/og-why-we-build-nimitai.png',
+    image: '/og-image.png',
   },
   {
     title: 'From Digitalpatron to Nimitai: Why We Started Over — Our Ideology, Mission, and Vision',
@@ -137,7 +137,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'Founder Story',
     excerpt: 'The honest account of how Nilansh and Archit left Digitalpatron.in and ConvertWise behind, what they learned, and why a fresh start was the only path to building something that actually solves the real problem.',
-    image: '/assets/blog/og-digitalpatron-to-nimitai.png',
+    image: '/og-image.png',
   },
   {
     title: 'Real-Time AI Sales Coaching: Why Post-Call Review Is Already Too Late',
@@ -146,7 +146,7 @@ const posts: BlogPost[] = [
     readTime: '8 min',
     category: 'AI Sales Coaching',
     excerpt: 'Post-call coaching makes the next call better. Real-time AI coaching wins the current deal. Here is the difference — and why it is the most important distinction in conversation intelligence.',
-    image: '/assets/blog/og-realtime-coaching.png',
+    image: '/og-image.png',
   },
   {
     title: 'Buyer Intent Signals in Sales Calls: How to Detect Them Before It\'s Too Late',
@@ -155,7 +155,7 @@ const posts: BlogPost[] = [
     readTime: '7 min',
     category: 'Conversation Intelligence',
     excerpt: 'The 6 strongest buyer intent signal categories in B2B sales calls — timeline anchoring, implementation questions, stakeholder mentions — and how AI conversation intelligence detects them in real time.',
-    image: '/assets/blog/og-buyer-intent.png',
+    image: '/og-image.png',
   },
   {
     title: 'How to Increase Sales Close Rate: 9 Proven Strategies from 350+ B2B Sales Calls',
@@ -164,7 +164,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'Sales Performance',
     excerpt: '9 data-backed strategies to increase B2B close rate from analyzing 350+ real sales calls. Covers buying signal response, discovery discipline, objection pre-emption, and real-time AI coaching.',
-    image: '/assets/blog/og-close-rate.png',
+    image: '/og-image.png',
   },
   {
     title: 'Sales Call Analytics: 7 Metrics That Actually Predict Revenue',
@@ -173,7 +173,7 @@ const posts: BlogPost[] = [
     readTime: '8 min',
     category: 'Conversation Intelligence',
     excerpt: 'Stop tracking call duration and talk time. These 7 sales call analytics metrics — talk ratio, buying signal frequency, next-step specificity — are the ones that actually predict deal outcomes.',
-    image: '/assets/blog/og-sales-call-analytics.png',
+    image: '/og-image.png',
   },
   {
     title: 'AI Notetaker vs Conversation Intelligence: Why the Difference Costs You Deals',
@@ -182,7 +182,7 @@ const posts: BlogPost[] = [
     readTime: '7 min',
     category: 'Conversation Intelligence',
     excerpt: 'Fathom, Otter, and Fireflies are AI notetakers — they document your calls. Gong and Nimitai are conversation intelligence platforms — they change their outcomes. Here\'s why that distinction matters.',
-    image: '/assets/blog/og-notetaker-vs-ci.png',
+    image: '/og-image.png',
   },
   {
     title: 'Gong vs Nimitai (2026): Full Comparison for Startup Sales Teams',
@@ -191,7 +191,7 @@ const posts: BlogPost[] = [
     readTime: '8 min',
     category: 'Comparison',
     excerpt: 'An honest Gong vs Nimitai comparison for B2B SaaS teams — pricing ($1,600/seat/year vs $149/user/month), real-time coaching, setup time, and who each platform is actually built for.',
-    image: '/assets/blog/og-gong-vs-nimitai.png',
+    image: '/og-image.png',
   },
   {
     title: 'AI-Powered Objection Handling: How to Win the Moments That Lose Deals',
@@ -200,7 +200,7 @@ const posts: BlogPost[] = [
     readTime: '7 min',
     category: 'AI Sales Coaching',
     excerpt: 'Sales objections are predictable. The 5 most common B2B objections, the wrong way and right way to handle each, and how real-time AI conversation intelligence coaches reps through them live.',
-    image: '/assets/blog/og-ai-objection-handling.png',
+    image: '/og-image.png',
   },
   {
     title: 'How to Run a B2B SaaS Demo That Converts: 12 Tactics from 350 Sales Calls',
@@ -209,7 +209,7 @@ const posts: BlogPost[] = [
     readTime: '9 min',
     category: 'Founder-Led Sales',
     excerpt: '12 specific tactics that separate B2B SaaS demos that close from demos that end in "I\'ll think about it" — drawn from analyzing 350+ live sales calls by the Nimitai founding team.',
-    image: '/assets/blog/og-b2b-saas-demo.png',
+    image: '/og-image.png',
   },
   {
     title: 'Revenue Intelligence Platforms in 2026: What the Best Tools Actually Do',
@@ -218,7 +218,7 @@ const posts: BlogPost[] = [
     readTime: '8 min',
     category: 'Revenue Intelligence',
     excerpt: 'What revenue intelligence actually means, how it differs from CRMs and AI notetakers, the 5 features that predict outcomes, and how Gong, Clari, Chorus, and Nimitai compare in 2026.',
-    image: '/assets/blog/og-revenue-intelligence.png',
+    image: '/og-image.png',
   },
   {
     title: '10 Best Gong Competitors & Alternatives in 2026 (Honest Comparison + Real Pricing)',
@@ -227,7 +227,7 @@ const posts: BlogPost[] = [
     readTime: '10 min',
     category: 'Comparison',
     excerpt: 'An honest comparison of the 10 best Gong competitors and alternatives in 2026 — with real pricing, feature breakdowns, and a clear recommendation for startup sales teams who need enterprise-grade intelligence without enterprise pricing.',
-    image: '/assets/blog/og-gong-competitors.png',
+    image: '/og-image.png',
   },
   {
     title: 'Gong Pricing in 2026: How Much Does Gong Actually Cost? (Real Numbers)',
@@ -236,7 +236,7 @@ const posts: BlogPost[] = [
     readTime: '7 min',
     category: 'Comparison',
     excerpt: 'The real cost of Gong in 2026 — implementation fees, per-seat pricing, annual minimums, and hidden costs — plus a direct comparison to what startup sales teams actually need.',
-    image: '/assets/blog/og-gong-pricing-2026.png',
+    image: '/og-image.png',
   },
   {
     title: 'Best Sales Call Recording Software in 2026: 7 Tools Compared (With Real Pricing)',
@@ -245,7 +245,7 @@ const posts: BlogPost[] = [
     readTime: '8 min',
     category: 'Sales Call Recording',
     excerpt: 'Full comparison of the 7 best sales meeting intelligence tools — Gong, Fathom, Fireflies, tl;dv, Avoma, Otter.ai, and Nimitai — with real pricing and an honest take on which tool fits your team size.',
-    image: '/assets/blog/og-best-sales-call-software.png',
+    image: '/og-image.png',
   },
   {
     title: 'How to Analyze Sales Calls: A Complete Guide for Sales Managers in 2026',
@@ -254,7 +254,7 @@ const posts: BlogPost[] = [
     readTime: '7 min',
     category: 'Conversation Intelligence',
     excerpt: 'Step-by-step sales call analysis guide covering the 5 key metrics, how to spot objection patterns, identify deal risks, and how AI conversation intelligence automates the entire process.',
-    image: '/assets/blog/og-analyze-sales-calls.png',
+    image: '/og-image.png',
   },
   {
     title: '15 Sales Call Best Practices That Top B2B Sales Teams Use to Close More Deals',
@@ -263,7 +263,7 @@ const posts: BlogPost[] = [
     readTime: '6 min',
     category: 'AI Sales Coaching',
     excerpt: 'The 15 most effective sales call best practices used by top-performing B2B sales teams — covering discovery call techniques, objection handling, closing strategies, and how conversation intelligence reinforces them.',
-    image: '/assets/blog/og-sales-call-best-practices.png',
+    image: '/og-image.png',
   },
   {
     title: 'Conversation Intelligence: The Complete Guide to AI-Powered Sales Analysis (2026)',
@@ -272,7 +272,7 @@ const posts: BlogPost[] = [
     readTime: '9 min',
     category: 'Conversation Intelligence',
     excerpt: 'The complete guide to conversation intelligence software: what it is, how AI analyzes sales conversations across a 4-layer pipeline, key features to evaluate, and how to choose the right platform for your team.',
-    image: '/assets/blog/og-conversation-intelligence.png',
+    image: '/og-image.png',
   },
 ];
 
@@ -305,14 +305,23 @@ export function BlogIndex() {
     <>
       <Helmet>
         <title>B2B Sales Intelligence Blog — Nimitai | Sales Call Guides</title>
-        <meta
-          name="description"
-          content="Expert guides on conversation intelligence software, sales call recording best practices, AI meeting intelligence, and closing more B2B deals. Practical insights for sales teams."
-        />
+        <meta name="description" content="Expert guides on conversation intelligence software, sales call recording best practices, AI meeting intelligence, and closing more B2B deals. Practical insights for sales teams." />
         <link rel="canonical" href="https://nimitai.com/blog" />
-        {/* Preload first 2 above-fold card images */}
-        <link rel="preload" as="image" href={toWebp(posts[0].image)} type="image/webp" />
-        <link rel="preload" as="image" href={toWebp(posts[1].image)} type="image/webp" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nimitai.com/blog" />
+        <meta property="og:title" content="B2B Sales Intelligence Blog — Nimitai | Sales Call Guides" />
+        <meta property="og:description" content="Expert guides on conversation intelligence software, sales call recording best practices, AI meeting intelligence, and closing more B2B deals. Practical insights for sales teams." />
+        <meta property="og:image" content="https://nimitai.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Nimitai" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
+        <meta name="twitter:title" content="B2B Sales Intelligence Blog — Nimitai | Sales Call Guides" />
+        <meta name="twitter:description" content="Expert guides on conversation intelligence software, sales call recording best practices, AI meeting intelligence, and closing more B2B deals." />
+        <meta name="twitter:image" content="https://nimitai.com/og-image.png" />
+        {/* Preload first above-fold card image (all posts share og-image.png) */}
+        <link rel="preload" as="image" href="/og-image.png" type="image/png" />
       </Helmet>
 
       {/* Hero */}

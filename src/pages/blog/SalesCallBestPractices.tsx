@@ -22,6 +22,18 @@ const jsonLd = {
     },
   },
   url: 'https://nimitai.com/blog/sales-call-best-practices',
+  image: 'https://nimitai.com/og-image.png',
+};
+
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Sales Call Best Practices for SaaS Founders in 2026', item: 'https://nimitai.com/blog/sales-call-best-practices' },
+  ],
 };
 
 export function SalesCallBestPractices() {
@@ -40,10 +52,11 @@ export function SalesCallBestPractices() {
         <link rel="canonical" href="https://nimitai.com/blog/sales-call-best-practices" />
         <meta property="og:title" content="Sales Call Best Practices: 15 Techniques to Close More (2026) | Nimitai" />
         <meta property="og:description" content="The 15 most effective sales call best practices used by top-performing B2B sales teams. Research-backed techniques for discovery calls, demo calls, and closing calls — plus how AI conversation intelligence reinforces them." />
-        <meta property="og:image" content="https://nimitai.com/assets/blog/og-sales-call-best-practices.png" />
+        <meta property="og:image" content="https://nimitai.com/og-image.png" />
         <meta property="og:url" content="https://nimitai.com/blog/sales-call-best-practices" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       {/* Hero */}

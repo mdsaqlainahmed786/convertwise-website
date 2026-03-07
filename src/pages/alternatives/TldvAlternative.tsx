@@ -172,8 +172,12 @@ export function TldvAlternative() {
           property="og:description"
           content="tl;dv alternative for sales teams. Nimitai adds deal risk, objection patterns, coaching insights. $149/user/month. A product of REN AI Technologies."
         />
+        <meta property="og:image" content="https://nimitai.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Nimitai" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@NimitaiHQ" />
         <meta name="twitter:title" content="Best tl;dv Alternative 2026 — Nimitai | AI Sales Intelligence for B2B Teams" />
         <meta
           name="twitter:description"

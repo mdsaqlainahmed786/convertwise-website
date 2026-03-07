@@ -197,7 +197,7 @@ export function Pricing() {
         <title>Nimitai Pricing — $149/Seat/Month | AI Meeting Intelligence</title>
         <meta
           name="description"
-          content="Nimitai is in private beta. Founding teams get $149/seat/month, private onboarding, and direct access to the founders. Join the waitlist to apply for early access."
+          content="Nimitai pricing: from $149/seat/month. No annual contract, no seat minimums. Private beta — founding teams get direct onboarding. Join the waitlist for early access."
         />
         <meta
           name="keywords"
@@ -211,7 +211,7 @@ export function Pricing() {
         <meta property="og:title" content="Nimitai Pricing — $149/Seat/Month | AI Meeting Intelligence for B2B Sales Teams" />
         <meta
           property="og:description"
-          content="Nimitai is in private beta. Founding teams get $149/seat/month, private onboarding, and direct access to the founders. Join the waitlist to apply for early access."
+          content="Nimitai pricing: from $149/seat/month. No annual contract, no seat minimums. Private beta — founding teams get direct onboarding. Join the waitlist for early access."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -225,7 +225,7 @@ export function Pricing() {
         <meta name="twitter:title" content="Nimitai Pricing — $149/Seat/Month | AI Meeting Intelligence for B2B Sales Teams" />
         <meta
           name="twitter:description"
-          content="Nimitai is in private beta. Founding teams get $149/seat/month, private onboarding, and direct access to the founders. Join the waitlist to apply for early access."
+          content="Nimitai pricing: from $149/seat/month. No annual contract, no seat minimums. Private beta — founding teams get direct onboarding. Join the waitlist for early access."
         />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:creator" content="@Nimit_ai" />

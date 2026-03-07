@@ -4,7 +4,7 @@ import { BlogShell, PullQuote, Callout, CalendlyCTA, RelatedArticles, StatStrip 
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/from-digitalpatron-to-nimitai`;
-const ogImage = `${siteUrl}/assets/blog/og-digitalpatron-to-nimitai.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -19,7 +19,7 @@ const articleSchema = {
     { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
     { '@type': 'Person', name: 'Archit', url: `${siteUrl}/about` },
   ],
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -34,6 +34,17 @@ const toc = [
   { id: 'what-we-owe', label: 'What we owe to the past' },
   { id: 'sharing', label: 'Why we\'re sharing this' },
 ];
+
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'From Digitalpatron to Nimitai: Why We Started Over — Our Ide...', item: '${siteUrl}/blog/from-digitalpatron-to-nimitai' },
+  ],
+};
 
 export function FromDigitalpatronToNimitai() {
   return (
@@ -51,6 +62,7 @@ export function FromDigitalpatronToNimitai() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

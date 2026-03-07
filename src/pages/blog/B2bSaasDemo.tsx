@@ -5,7 +5,7 @@ import { BlogShell, PullQuote, Callout, CalendlyCTA, RelatedArticles, StatStrip 
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/b2b-saas-demo-best-practices`;
-const ogImage = `${siteUrl}/assets/blog/og-b2b-saas-demo.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -17,7 +17,7 @@ const articleSchema = {
   datePublished: '2026-02-28',
   dateModified: '2026-02-28',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -54,6 +54,17 @@ const toc = [
   { id: 'ai-for-demos', label: 'Using AI to improve demo performance' },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'How to Run a B2B SaaS Demo That Converts: 12 Tactics from 35...', item: '${siteUrl}/blog/b2b-saas-demo-best-practices' },
+  ],
+};
+
 export function B2bSaasDemo() {
   return (
     <>
@@ -67,6 +78,7 @@ export function B2bSaasDemo() {
         <meta property="og:url" content={pageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell
@@ -97,7 +109,11 @@ export function B2bSaasDemo() {
         <div className="not-prose space-y-5 my-8">
           {tactics.map((tactic, i) => (
             <div
-              key={i}
+              key={i}
+
+
+
+
               className="rounded-2xl border border-gray-200 dark:border-gray-700 p-6"
             >
               <div className="flex items-start gap-4">

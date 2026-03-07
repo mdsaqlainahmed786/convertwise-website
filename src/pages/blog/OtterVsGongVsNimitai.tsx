@@ -4,7 +4,7 @@ import { BlogShell, PullQuote, Callout, RelatedArticles, StatStrip } from '../..
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/otter-vs-gong-vs-nimitai`;
-const ogImage = `${siteUrl}/assets/blog/og-otter-vs-gong.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -16,7 +16,7 @@ const articleSchema = {
   datePublished: '2026-03-06',
   dateModified: '2026-03-06',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -117,6 +117,17 @@ const faqs = [
   },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'Otter.ai vs Gong vs Nimitai: Which AI Sales Tool Wins in 202...', item: '${siteUrl}/blog/otter-vs-gong-vs-nimitai' },
+  ],
+};
+
 export function OtterVsGongVsNimitai() {
   return (
     <>
@@ -139,6 +150,7 @@ export function OtterVsGongVsNimitai() {
         <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell

@@ -4,7 +4,7 @@ import { BlogShell, PullQuote, Callout, RelatedArticles, StatStrip } from '../..
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/blog/what-is-meeting-intelligence`;
-const ogImage = `${siteUrl}/assets/blog/og-meeting-intelligence.png`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -16,7 +16,7 @@ const articleSchema = {
   datePublished: '2026-03-06',
   dateModified: '2026-03-06',
   author: { '@type': 'Person', name: 'Nilansh Gupta', url: `${siteUrl}/about` },
-  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl },
+  publisher: { '@type': 'Organization', name: 'Nimitai', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/nimitai-logo.png` } },
   image: ogImage,
 };
 
@@ -114,6 +114,17 @@ const faqs = [
   },
 ];
 
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nimitai.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nimitai.com/blog' },
+    { '@type': 'ListItem', position: 3, name: 'What is Meeting Intelligence? The Complete Guide for 2026', item: '${siteUrl}/blog/what-is-meeting-intelligence' },
+  ],
+};
+
 export function MeetingIntelligenceGuide() {
   return (
     <>
@@ -136,6 +147,7 @@ export function MeetingIntelligenceGuide() {
         <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <BlogShell
