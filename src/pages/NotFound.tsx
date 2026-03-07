@@ -80,8 +80,8 @@ export function NotFound() {
             className="mt-12 text-sm text-gray-500 dark:text-gray-500"
           >
             If you think this is a mistake, drop us a line at{' '}
-            <a href="mailto:hello@nimitai.com" className="text-[#E89422] dark:text-[#F5B040] hover:underline">
-              hello@nimitai.com
+            <a href="mailto:info@nimitai.com" className="text-[#E89422] dark:text-[#F5B040] hover:underline">
+              info@nimitai.com
             </a>
           </p>
         </div>

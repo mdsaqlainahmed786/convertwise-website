@@ -154,7 +154,7 @@ export function About() {
               Apply for Founding Access <ArrowRight size={16} />
             </a>
             <a
-              href="mailto:hello@nimitai.com"
+              href="mailto:info@nimitai.com"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 text-gray-300 hover:text-white hover:border-white/25 rounded-full text-sm transition-colors"
             >
               Talk to the founders
@@ -521,10 +521,10 @@ export function About() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:hello@nimitai.com"
+                href="mailto:info@nimitai.com"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#E89422] to-[#963C00] text-white font-semibold rounded-full text-sm shadow-lg shadow-[#E89422]/20 hover:shadow-xl transition-shadow"
               >
-                hello@nimitai.com <ArrowRight size={16} />
+                info@nimitai.com <ArrowRight size={16} />
               </a>
               <a
                 href="https://nilanshgupta.typeform.com/to/UNvZIrgu"

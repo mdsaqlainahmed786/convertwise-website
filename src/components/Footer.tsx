@@ -114,9 +114,9 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm text-gray-400">
               <li><Link to="/about" className="hover:text-white transition-colors">About Nimitai</Link></li>
               <li>
-                <a href="mailto:hello@nimitai.com" className="flex items-center gap-2 hover:text-white transition-colors">
+                <a href="mailto:info@nimitai.com" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Mail size={14} />
-                  hello@nimitai.com
+                  info@nimitai.com
                 </a>
               </li>
             </ul>
