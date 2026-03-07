@@ -21,6 +21,7 @@ const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/ai-meeting-assistant`;
 const ogImage = `${siteUrl}/og-image.png`;
 
+
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
