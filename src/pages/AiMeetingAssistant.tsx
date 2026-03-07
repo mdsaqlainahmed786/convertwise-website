@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 const siteUrl = 'https://nimitai.com';
+
 const pageUrl = `${siteUrl}/ai-meeting-assistant`;
 const ogImage = `${siteUrl}/og-image.png`;
 
@@ -179,7 +180,11 @@ function FAQAccordion() {
         const isOpen = openIndex === i;
         return (
           <div
-            key={i}
+            key={i}
+
+
+
+
             className="bg-white/95 dark:bg-gray-800/60 rounded-3xl shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors overflow-hidden"
           >
             <button
@@ -270,26 +275,38 @@ export function AiMeetingAssistant() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
-            <div
+            <div
+
+
+
               className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/95 dark:bg-gray-800/70 border border-amber-200/60 dark:border-[#E89422]/30 rounded-full shadow-lg transition-colors"
             >
               <Bot className="text-[#E89422] dark:text-[#F5B040]" size={16} />
               <span className="text-[#C47010] dark:text-[#F5B040] text-sm font-medium">The AI Meeting Assistant Built for Sales</span>
             </div>
 
-            <h1
+            <h1
+
+
+
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent"
             >
               The AI Meeting Assistant That Closes More Deals
             </h1>
 
-            <p
+            <p
+
+
+
               className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
             >
               Most AI meeting assistants take notes. Nimitai does more — it records your sales calls, coaches you in real time, detects buying signals, flags deal risks, and surfaces objection patterns automatically. The AI meeting assistant your sales team actually needs.
             </p>
 
-            <div
+            <div
+
+
+
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
               <a
@@ -309,7 +326,10 @@ export function AiMeetingAssistant() {
             </div>
 
             {/* Trust stat pills */}
-            <div
+            <div
+
+
+
               className="flex flex-wrap gap-3 justify-center"
             >
               {trustStats.map((stat, i) => {
@@ -332,7 +352,11 @@ export function AiMeetingAssistant() {
       {/* ── 2. WHAT MAKES A GREAT AI MEETING ASSISTANT ──────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <div
+          <div
+
+
+
+
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -348,7 +372,11 @@ export function AiMeetingAssistant() {
               const Icon = card.icon;
               return (
                 <div
-                  key={i}
+                  key={i}
+
+
+
+
                   className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-[#E89422] to-[#963C00] rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-[#E89422]/20">
@@ -369,7 +397,11 @@ export function AiMeetingAssistant() {
         className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors"
       >
         <div className="max-w-7xl mx-auto">
-          <div
+          <div
+
+
+
+
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -383,7 +415,11 @@ export function AiMeetingAssistant() {
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, i) => (
               <div
-                key={i}
+                key={i}
+
+
+
+
                 className="bg-white/95 dark:bg-gray-800/60 rounded-3xl p-8 shadow-xl border border-white/80 dark:border-gray-700/80 transition-colors relative overflow-hidden"
               >
                 <div className="absolute top-6 right-6 text-6xl font-black text-amber-100 dark:text-[#1A1000]/40 select-none leading-none">
@@ -405,7 +441,11 @@ export function AiMeetingAssistant() {
       {/* ── 4. COMPARISON TABLE ─────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <div
+          <div
+
+
+
+
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -416,7 +456,11 @@ export function AiMeetingAssistant() {
             </p>
           </div>
 
-          <div
+          <div
+
+
+
+
             className="overflow-x-auto"
           >
             <table className="w-full border-collapse">
@@ -471,7 +515,11 @@ export function AiMeetingAssistant() {
       {/* ── 5. FAQ ───────────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 dark:from-amber-900/20 via-white dark:via-gray-900 to-orange-50 dark:to-orange-900/20 transition-colors">
         <div className="max-w-4xl mx-auto">
-          <div
+          <div
+
+
+
+
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 dark:from-white via-[#1A1000] dark:via-[#F5B040] to-[#C47010] dark:to-[#F5B040] bg-clip-text text-transparent">
@@ -507,7 +555,11 @@ export function AiMeetingAssistant() {
       {/* ── 6. FINAL CTA ────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
-          <div
+          <div
+
+
+
+
             className="text-center"
           >
             <div className="relative inline-block mb-10">
