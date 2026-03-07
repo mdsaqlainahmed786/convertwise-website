@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 
 const siteUrl = 'https://nimitai.com';
-
 const pageUrl = `${siteUrl}/ai-meeting-assistant`;
 const ogImage = `${siteUrl}/og-image.png`;
 
