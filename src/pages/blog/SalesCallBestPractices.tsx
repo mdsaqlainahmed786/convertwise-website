@@ -18,7 +18,7 @@ const jsonLd = {
     name: 'Nimitai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://nimitai.com/logo.png',
+      url: 'https://nimitai.com/nimitai-logo.png',
     },
   },
   url: 'https://nimitai.com/blog/sales-call-best-practices',
@@ -38,6 +38,11 @@ export function SalesCallBestPractices() {
           content="sales call best practices, sales call tips, B2B sales call techniques, sales discovery call tips, how to run a sales call, effective sales calls, sales call strategies 2026"
         />
         <link rel="canonical" href="https://nimitai.com/blog/sales-call-best-practices" />
+        <meta property="og:title" content="Sales Call Best Practices: 15 Techniques to Close More (2026) | Nimitai" />
+        <meta property="og:description" content="The 15 most effective sales call best practices used by top-performing B2B sales teams. Research-backed techniques for discovery calls, demo calls, and closing calls — plus how AI conversation intelligence reinforces them." />
+        <meta property="og:image" content="https://nimitai.com/assets/blog/og-sales-call-best-practices.png" />
+        <meta property="og:url" content="https://nimitai.com/blog/sales-call-best-practices" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
@@ -66,7 +71,7 @@ export function SalesCallBestPractices() {
               <span>By Nimitai</span>
             </div>
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              The sales call best practices that separate top B2B sales teams from average ones are measurable, repeatable, and coachable. This guide covers the 15 most effective techniques — from discovery call best practices to closing strategies — and how conversation intelligence and sales call recording help you embed them consistently across every rep on your team.
+              The sales call best practices that separate top B2B sales teams from average ones are measurable, repeatable, and coachable. This guide covers the 15 most effective techniques — from discovery call best practices to closing strategies — and how <Link to="/blog/conversation-intelligence-guide">conversation intelligence</Link> and sales call recording help you embed them consistently across every rep on your team. The <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales</a> report found that teams using systematic call coaching see a 28% higher win rate than those relying on ad hoc feedback.
             </p>
           </div>
         </div>
@@ -76,6 +81,9 @@ export function SalesCallBestPractices() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-4">
         <img
           src="/assets/prep-agent.jpeg"
+          width={1280}
+          height={720}
+          decoding="async"
           alt="Sales call preparation and best practices for SaaS founders — AI meeting intelligence"
           className="w-full rounded-2xl shadow-xl object-cover"
           style={{ maxHeight: '420px', objectPosition: 'center' }}
@@ -95,7 +103,7 @@ export function SalesCallBestPractices() {
               The sales call best practices that consistently separate top B2B sales teams from average ones are not secret techniques — they are repeatable, measurable behaviours that can be identified in sales call recordings and reinforced through coaching. When the person who built the product is also the person selling it, you have an insight asymmetry that no enterprise sales rep can match. But following sales call best practices without a feedback mechanism means your blind spots never get corrected.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-              This is where conversation intelligence and sales call recording become essential tools. AI conversation intelligence tracks whether you're applying these sales call best practices on every call — not just the ones you happen to remember reviewing. You are your own rep and your own sales manager. The practices in this article are calibrated for that reality, and each one is directly measurable from your call recordings.
+              This is where <Link to="/blog/conversation-intelligence-guide">conversation intelligence</Link> and sales call recording become essential tools. AI conversation intelligence tracks whether you're applying these sales call best practices on every call — not just the ones you happen to remember reviewing. You are your own rep and your own sales manager. The practices in this article are calibrated for that reality, and each one is directly measurable from your call recordings. See also: <Link to="/blog/how-to-analyze-sales-calls">how to analyze sales calls</Link> for the specific metrics to track.
             </p>
           </div>
 
@@ -183,7 +191,7 @@ export function SalesCallBestPractices() {
               <div className="bg-white/95 dark:bg-gray-800/60 rounded-2xl p-6 shadow-md border border-white/80 dark:border-gray-700/80 transition-colors">
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Review the AI call summary for blind spots</h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  The signals you miss in real time — a talk ratio that crept past 65%, a discovery question you planned but never asked, a competitor name you heard but didn't directly address — show up in the AI call report. This is the self-coaching infrastructure that replaces the sales manager you don't have. Not to beat yourself up; to identify one specific thing to do differently on the next call.
+                  The signals you miss in real time — a talk ratio that crept past 65%, a discovery question you planned but never asked, a competitor name you heard but didn't directly address — show up in the AI call report. This is the self-coaching infrastructure that replaces the sales manager you don't have. Not to beat yourself up; to identify one specific thing to do differently on the next call. Nimitai's <Link to="/ai-sales-coaching">AI sales coaching</Link> platform delivers this feedback automatically at <Link to="/pricing">$149/seat/month</Link> — no manual call review required. <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a> reviews consistently highlight automated coaching feedback as the top use case.
                 </p>
               </div>
 
@@ -230,7 +238,7 @@ export function SalesCallBestPractices() {
               Third: not confirming next steps. Founders tend to be optimistic. A call that feels positive leads to an assumption that the deal is moving. It isn't moving unless there's a specific next step agreed. "Let's stay in touch" is not a deal stage. A booked follow-up with a named attendee and a clear agenda is a deal stage.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Fourth: treating discovery as an information dump. Discovery is a conversation, not an intake form. The goal is not to collect information — it is to help the prospect articulate their problem at a level of specificity they may not have reached before the call. When discovery goes well, prospects finish the call saying, "I hadn't thought about it quite that way before." That's when you've done it right.
+              Fourth: treating discovery as an information dump. Discovery is a conversation, not an intake form. The goal is not to collect information — it is to help the prospect articulate their problem at a level of specificity they may not have reached before the call. When discovery goes well, prospects finish the call saying, "I hadn't thought about it quite that way before." That's when you've done it right. Improving your <Link to="/blog/how-to-increase-close-rate">close rate</Link> starts with improving discovery — and <Link to="/blog/buyer-intent-signals-sales-calls">recognising buyer intent signals</Link> in real time gives you the edge.
             </p>
           </div>
 
@@ -265,10 +273,19 @@ export function SalesCallBestPractices() {
             </div>
           </div>
 
+          <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+            <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup, cancel anytime.</p>
+            <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+              Join the Waitlist — Free
+            </a>
+          </div>
+
           <RelatedArticles links={[
+            { to: '/ai-meeting-assistant', label: 'AI Meeting Assistant — Nimitai' },
+            { to: '/ai-sales-coaching', label: 'AI Sales Coaching Software — Nimitai' },
             { to: '/blog/how-to-increase-close-rate', label: 'How to Increase Your Sales Close Rate' },
             { to: '/blog/how-to-analyze-sales-calls', label: 'How to Analyze Sales Calls with AI' },
-            { to: '/blog/ai-objection-handling', label: 'AI-Powered Objection Handling for Sales Teams' },
           ]} />
 
           {/* Back to blog */}

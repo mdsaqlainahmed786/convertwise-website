@@ -31,7 +31,7 @@ export function Footer() {
                 <Linkedin size={16} />
               </a>
               <a
-                href="https://twitter.com/nimitaihq"
+                href="https://x.com/Nimit_ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#E89422] transition-colors"
@@ -47,6 +47,25 @@ export function Footer() {
                 aria-label="Nimitai on Instagram"
               >
                 <Instagram size={16} />
+              </a>
+              <a
+                href="https://wa.me/9915494146"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#E89422] transition-colors overflow-hidden p-1.5"
+                aria-label="Contact Nimitai on WhatsApp"
+              >
+                {/* Below-fold image: lazy load, explicit dimensions prevent CLS */}
+                <img
+                  src="/whatsapp-logo.jpeg"
+                  alt=""
+                  width={36}
+                  height={36}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-contain"
+                  aria-hidden
+                />
               </a>
             </div>
           </div>
@@ -110,7 +129,20 @@ export function Footer() {
 
         <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
           <p>&copy; 2026 REN AI Technologies Private Limited. All Rights Reserved.</p>
-          <p>Nimitai (formerly ConvertWise) — AI Meeting Intelligence</p>
+          <div className="flex items-center gap-4">
+            <a href="https://fazier.com/launches/nimitai.com" target="_blank" rel="noopener noreferrer">
+              {/* Below-fold badge — lazy load, explicit dimensions */}
+              <img
+                src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light"
+                width={120}
+                height={40}
+                loading="lazy"
+                decoding="async"
+                alt="Fazier badge"
+              />
+            </a>
+            <p>Nimitai (formerly ConvertWise) — AI Meeting Intelligence</p>
+          </div>
         </div>
       </div>
     </footer>

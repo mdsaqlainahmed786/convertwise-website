@@ -94,7 +94,7 @@ export function WhyWeBuildNimitai() {
           The buyer would drop a buying signal — a question about implementation timelines, a comment about their current vendor's pricing, a mention of their end-of-quarter budget — and the rep would nod, keep talking, and miss it. Not because they were bad. Because they were managing the entire conversation in their head, processing context, remembering notes, handling nerves, and trying to sound natural all at once.
         </p>
         <p>
-          Post-call, with the transcript in front of them, every rep could see it immediately. "I should have said this here." "That was my moment." But by then it was too late. The buyer had moved on.
+          Post-call, with the transcript in front of them, every rep could see it immediately. "I should have said this here." "That was my moment." But by then it was too late. The buyer had moved on. The <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales</a> puts it plainly: 57% of reps say they miss buying signals during live calls. <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a> has exploded as a result — teams are finally investing in tools that catch those moments in real time.
         </p>
 
         <Callout emoji="📊" title="The number that changed everything">
@@ -196,11 +196,34 @@ export function WhyWeBuildNimitai() {
           { number: '$149', label: 'Per seat per month' },
         ]} />
 
+        <h2 id="faq" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {[
+            { q: 'What problem does Nimitai solve?', a: 'Nimitai solves the buying signal gap — the moment a buyer drops a signal (timeline question, budget mention, competitor reference) and the rep misses it because they are managing the conversation in their head. Nimitai surfaces those signals in real time so the rep can act on them during the call.' },
+            { q: 'Why did you build Nimitai instead of improving an existing tool?', a: 'Every existing tool we evaluated operated on the same premise: record the call, then analyze it. That solves the wrong problem. Understanding what went wrong after the fact is useful. Preventing it from going wrong in the first place is transformative. No existing tool was doing the latter.' },
+            { q: 'Who is Nimitai built for?', a: 'Nimitai is built for B2B SaaS sales teams with 2 to 50 reps — founders doing their own selling, AEs who want to close more, and VP Sales who want to coach without reviewing hours of call recordings every week.' },
+            { q: 'How much does Nimitai cost?', a: 'Nimitai starts at $149/seat/month with no minimums, no enterprise contracts, and a 48-hour time to go live. Every additional seat costs the same.' },
+          ].map(({ q, a }) => (
+            <div key={q} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">{q}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+          <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist
+          </a>
+        </div>
+
         <RelatedArticles links={[
+          { to: '/ai-meeting-assistant', label: 'AI Meeting Assistant — Nimitai' },
+          { to: '/pricing', label: 'Nimitai Pricing — $149/seat/month' },
           { to: '/blog/from-digitalpatron-to-nimitai', label: 'From Digitalpatron to Nimitai: Why We Started Over' },
-          { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time AI Coaching: Why Post-Call Review Is Too Late' },
           { to: '/blog/how-to-increase-close-rate', label: 'How to Increase Close Rate: 9 Strategies from 350+ Calls' },
-          { to: '/blog/buyer-intent-signals-sales-calls', label: 'How to Read Buyer Intent Signals During Sales Calls' },
         ]} />
       </BlogShell>
     </>

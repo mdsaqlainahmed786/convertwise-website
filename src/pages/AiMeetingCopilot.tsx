@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import {
   Zap,
   Brain,
@@ -16,14 +17,14 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/ai-meeting-copilot`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'AI Co-Pilot for Sales Meetings — Nimitai | Real-Time Meeting Intelligence',
   description:
-    'Nimitai is the AI co-pilot for your sales meetings. Get real-time coaching cues, live deal risk alerts, talk-ratio tracking, and instant objection responses — while the meeting is happening.',
+    'AI co-pilot for sales meetings. Real-time coaching, deal risk alerts, talk-ratio, objection responses during calls. Built by REN AI Technologies.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -205,7 +206,7 @@ export function AiMeetingCopilot() {
         <title>AI Meeting Co-Pilot for Sales Teams — Nimitai</title>
         <meta
           name="description"
-          content="Nimitai is the AI co-pilot for your sales meetings. Get real-time coaching cues, live deal risk alerts, talk-ratio tracking, and instant objection responses — while the meeting is happening."
+          content="AI co-pilot for sales meetings. Real-time coaching, deal risk alerts, talk-ratio, objection responses during calls. Built by REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -219,7 +220,7 @@ export function AiMeetingCopilot() {
         <meta property="og:title" content="AI Co-Pilot for Sales Meetings — Nimitai | Real-Time Meeting Intelligence" />
         <meta
           property="og:description"
-          content="Nimitai is the AI co-pilot for your sales meetings. Get real-time coaching cues, live deal risk alerts, talk-ratio tracking, and instant objection responses — while the meeting is happening."
+          content="AI co-pilot for sales meetings. Real-time coaching, deal risk alerts, talk-ratio, objection responses during calls. Built by REN AI Technologies."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -233,11 +234,11 @@ export function AiMeetingCopilot() {
         <meta name="twitter:title" content="AI Co-Pilot for Sales Meetings — Nimitai | Real-Time Meeting Intelligence" />
         <meta
           name="twitter:description"
-          content="Nimitai is the AI co-pilot for your sales meetings. Get real-time coaching cues, live deal risk alerts, talk-ratio tracking, and instant objection responses — while the meeting is happening."
+          content="AI co-pilot for sales meetings. Real-time coaching, deal risk alerts, talk-ratio, objection responses during calls. Built by REN AI Technologies."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -470,6 +471,24 @@ export function AiMeetingCopilot() {
         </div>
       </section>
 
+      {/* From the blog */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/30 transition-colors">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mb-6">From the blog</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time AI Sales Coaching: How It Works' },
+              { to: '/blog/buyer-intent-signals-sales-calls', label: 'Buyer Intent Signals on Sales Calls' },
+              { to: '/blog/ai-objection-handling', label: 'AI Objection Handling in Sales Calls' },
+            ].map((link) => (
+              <Link key={link.to} to={link.to} className="flex items-center gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-[#E89422]/50 bg-white dark:bg-gray-800 hover:bg-amber-50 dark:hover:bg-amber-900/10 transition-colors group">
+                <span className="text-sm text-gray-700 dark:text-gray-300 font-medium group-hover:text-[#E89422] transition-colors leading-snug">{link.label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 6. FINAL CTA ────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
@@ -483,7 +502,7 @@ export function AiMeetingCopilot() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Join 47+ B2B sales teams winning more deals with real-time AI intelligence. $149/month, setup in 30 minutes.
+              Join 47+ B2B sales teams winning more deals with real-time AI intelligence. from $149/seat/month, setup in 30 minutes.
             </p>
 
             <a

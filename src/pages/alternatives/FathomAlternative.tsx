@@ -17,14 +17,14 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/alternatives/fathom-alternative`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Best Fathom Alternative 2026 — Nimitai AI Sales Intelligence | More Than Just Notes',
   description:
-    'Looking for a Fathom alternative with real sales intelligence? Nimitai goes beyond AI note-taking to surface objection patterns, deal risks, talk-ratio analysis, and coaching insights from every sales call. $149/month for the whole team.',
+    "Nimitai goes beyond Fathom's AI notes: deal risk, objection patterns, coaching. $149/user/month. A product of REN AI Technologies.",
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'Is Nimitai more expensive than Fathom?',
     answer:
-      "Fathom's free tier covers basic note-taking. Nimitai costs $149/month for the whole team and includes full conversation intelligence — objection detection, deal risk alerts, coaching insights, and CRM auto-sync. For sales teams, the ROI difference is significant.",
+      "Fathom's free tier covers basic note-taking. Nimitai costs $149/user/month and includes full conversation intelligence — objection detection, deal risk alerts, coaching insights, and CRM auto-sync. For sales teams, the ROI difference is significant.",
   },
   {
     question: 'Can Nimitai replace Fathom for my sales team?',
@@ -65,6 +65,27 @@ const faqSchema = {
       text: faq.answer,
     },
   })),
+};
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Nimitai',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, Chrome',
+  description: 'AI meeting intelligence for B2B sales teams. Real-time coaching, buyer signal detection, and automated call analysis.',
+  url: 'https://nimitai.com',
+  offers: {
+    '@type': 'Offer',
+    price: '149',
+    priceCurrency: 'USD',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '149',
+      priceCurrency: 'USD',
+      unitText: 'seat/month',
+    },
+  },
 };
 
 const comparisonRows = [
@@ -107,7 +128,7 @@ const whyCards = [
   {
     icon: TrendingUp,
     title: 'Gong-level AI, startup price',
-    body: 'AI coaching depth was previously only available at $75k+/year. Nimitai brings talk ratios, objection clustering, and deal risk signals to teams with 1–25 reps at $149/month.',
+    body: 'AI coaching depth was previously only available at $75k+/year. Nimitai brings talk ratios, objection clustering, and deal risk signals to teams with 1–25 reps at $149/user/month.',
   },
   {
     icon: Zap,
@@ -184,7 +205,7 @@ export function FathomAlternative() {
         <title>Best Fathom Alternative 2026 — Nimitai AI Sales Intelligence</title>
         <meta
           name="description"
-          content="Looking for a Fathom alternative with real sales intelligence? Nimitai goes beyond AI note-taking to surface objection patterns, deal risks, talk-ratio analysis, and coaching insights from every sales call. $149/month for the whole team."
+          content="Nimitai goes beyond Fathom's AI notes: deal risk, objection patterns, coaching. $149/user/month. A product of REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -198,7 +219,7 @@ export function FathomAlternative() {
         <meta property="og:title" content="Best Fathom Alternative 2026 — Nimitai AI Sales Intelligence | More Than Just Notes" />
         <meta
           property="og:description"
-          content="Looking for a Fathom alternative with real sales intelligence? Nimitai goes beyond AI note-taking to surface objection patterns, deal risks, talk-ratio analysis, and coaching insights from every sales call. $149/month for the whole team."
+          content="Nimitai goes beyond Fathom's AI notes: deal risk, objection patterns, coaching. $149/user/month. A product of REN AI Technologies."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -212,11 +233,11 @@ export function FathomAlternative() {
         <meta name="twitter:title" content="Best Fathom Alternative 2026 — Nimitai AI Sales Intelligence | More Than Just Notes" />
         <meta
           name="twitter:description"
-          content="Looking for a Fathom alternative with real sales intelligence? Nimitai goes beyond AI note-taking to surface objection patterns, deal risks, talk-ratio analysis, and coaching insights from every sales call. $149/month for the whole team."
+          content="Nimitai goes beyond Fathom's AI notes: deal risk, objection patterns, coaching. $149/user/month. A product of REN AI Technologies."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -225,6 +246,8 @@ export function FathomAlternative() {
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
         {/* JSON-LD FAQPage */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        {/* JSON-LD SoftwareApplication */}
+        <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>
       </Helmet>
 
       {/* ── 1. HERO ─────────────────────────────────────────────────── */}
@@ -259,7 +282,7 @@ export function FathomAlternative() {
             <p
               className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
             >
-              Fathom is a great AI notetaker — but it stops at transcription. Nimitai goes further: it analyzes your sales calls for objection patterns, deal risk signals, talk ratios, and coaching opportunities. The Fathom alternative built for sales teams who need real conversation intelligence.
+              Fathom is a great AI notetaker — but it stops at transcription. Nimitai goes further: it analyzes your sales calls for objection patterns, deal risk signals, talk ratios, and coaching opportunities. The Fathom alternative built for sales teams who need real conversation intelligence. Built after analyzing 350+ real B2B sales calls across 200+ businesses.
             </p>
 
             <div
@@ -283,6 +306,25 @@ export function FathomAlternative() {
           </div>
         </div>
       </section>
+
+      {/* ── Traction / Credibility ──────────────────────────────────── */}
+      <div className="bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            {[
+              { number: '350+', label: 'Sales calls analyzed' },
+              { number: '200+', label: 'B2B businesses studied' },
+              { number: '412', label: 'Founders on waitlist' },
+              { number: '$149', label: 'per seat/month' },
+            ].map((stat) => (
+              <div key={stat.label} className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-900/30">
+                <div className="text-2xl sm:text-3xl font-black text-[#E89422]">{stat.number}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-tight">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ── 2. WHY TEAMS LEAVE FATHOM ──────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
@@ -467,8 +509,8 @@ export function FathomAlternative() {
                 <div className="text-sm font-semibold uppercase tracking-widest text-[#F5B040] mb-2">
                   Nimitai
                 </div>
-                <div className="text-4xl font-bold text-white mb-2">$149<span className="text-xl font-medium text-[#F5B040]">/month</span></div>
-                <p className="text-sm text-[#F5B040] mb-6">For teams of 1–10 reps. Full coaching intelligence included.</p>
+                <div className="text-4xl font-bold text-white mb-2">$149<span className="text-xl font-medium text-[#F5B040]">/user/month</span></div>
+                <p className="text-sm text-[#F5B040] mb-6">Per seat, per month. Full coaching intelligence included.</p>
                 <ul className="space-y-3">
                   {[
                     'Full AI coaching intelligence',
@@ -493,7 +535,7 @@ export function FathomAlternative() {
           >
             <p className="text-gray-700 dark:text-gray-300">
               <strong className="text-gray-900 dark:text-white">Math check:</strong> A 10-rep team on Fathom pays $190/month. Nimitai costs{' '}
-              <strong className="text-[#E89422] dark:text-[#F5B040]">$149/month</strong> for the whole team — and includes the coaching intelligence Fathom doesn't have.
+              <strong className="text-[#E89422] dark:text-[#F5B040]">$149/user/month</strong> — and includes the coaching intelligence Fathom doesn't have.
             </p>
           </div>
         </div>
@@ -530,7 +572,7 @@ export function FathomAlternative() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Nimitai gives you everything Fathom has, plus AI conversation intelligence that actually closes deals. $149/month for the whole team.
+              Nimitai gives you everything Fathom has, plus AI conversation intelligence that actually closes deals. $149/user/month.
             </p>
 
             <a

@@ -171,9 +171,9 @@ export function WhyNimitai() {
 
         <h2 id="name-in-practice">How the name shapes the product every day</h2>
 
-        <p>A name is not a slogan. But a good name creates a filter for every product decision that follows. For us, "Nimitai" acts as a constant test: <em>does this feature serve a purpose during the conversation?</em></p>
+        <p>A name is not a slogan. But a good name creates a filter for every product decision that follows. For us, "Nimitai" acts as a constant test: <em>does this feature serve a purpose during the conversation?</em> That philosophy is why we built <Link to="/ai-sales-coaching">AI sales coaching</Link> that works in real time — not as a post-call add-on. According to <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a>, real-time coaching is now the feature buyers cite most when choosing between platforms. The <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales</a> backs this up: teams using real-time AI guidance close 28% more deals than those relying on post-call review. Nimitai is available from <Link to="/pricing">$149/seat/month</Link>.</p>
 
-        <p>If the answer is yes, it belongs in the product. If the answer is "it's useful, but only after the call ends," it goes into the backlog — not the roadmap. This is a hard discipline. Many features that other conversation intelligence platforms offer are genuinely useful but violate our core principle: intelligence should arrive during the conversation, when the rep can still act on it.</p>
+        <p>If the answer is yes, it belongs in the product. If the answer is "it's useful, but only after the call ends," it goes into the backlog — not the roadmap. This is a hard discipline. Many features that other <Link to="/blog/conversation-intelligence-guide">conversation intelligence</Link> platforms offer are genuinely useful but violate our core principle: intelligence should arrive during the conversation, when the rep can still act on it.</p>
 
         <p>The name keeps us honest. Every time we're tempted to add a feature because competitors have it, we ask: <em>is this nimit?</em> Is this purposeful? Does this act as an instrument of the outcome we're trying to create? Or is it noise?</p>
 
@@ -183,11 +183,34 @@ export function WhyNimitai() {
           Nimitai is not just a name. It is a Sanskrit word meaning purpose, instrument, and destined cause — fused naturally with "AI" to create an identity that encodes everything we believe: that intelligence should be purposeful, active, and present in the moment it matters most.
         </KeyTakeaway>
 
+        <h2 id="faq" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {[
+            { q: 'What does "Nimitai" mean?', a: 'Nimitai comes from the Sanskrit word "nimit" (निमित), meaning purpose, reason, and destined instrument. The "AI" ending is inherent in the Sanskrit root — not appended. In Hindi, the full word loosely translates to "purpose has arrived."' },
+            { q: 'How is Nimitai different from other AI sales tools?', a: 'Most AI sales tools analyze calls after they end. Nimitai operates during the live conversation — surfacing buyer intent signals, objection coaching, and close prompts in real time, when the rep can still act on them.' },
+            { q: 'What does "intelligence during, not after" mean in practice?', a: 'It means Nimitai\'s alerts, coaching suggestions, and buyer signal detections arrive on the rep\'s screen while the conversation is happening — not in a summary email an hour later. The moment the buyer drops a signal is the moment the rep needs to see it.' },
+            { q: 'How much does Nimitai cost?', a: 'Nimitai starts at $149/seat/month with no long-term contracts, no call recording required, and a 30-minute setup time.' },
+          ].map(({ q, a }) => (
+            <div key={q} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">{q}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+          <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist
+          </a>
+        </div>
+
         <RelatedArticles links={[
+          { to: '/ai-meeting-assistant', label: 'AI Meeting Assistant — Nimitai' },
+          { to: '/pricing', label: 'Nimitai Pricing — $149/seat/month' },
           { to: '/blog/why-we-built-nimitai', label: 'Why We Built Nimitai: What 350 Sales Calls Taught Us' },
           { to: '/blog/from-digitalpatron-to-nimitai', label: 'From Digitalpatron to Nimitai: Why We Started Over' },
-          { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time AI Coaching: Why Post-Call Review Is Too Late' },
-          { to: '/blog/conversation-intelligence-guide', label: 'Conversation Intelligence: The Complete Guide' },
         ]} />
       </BlogShell>
     </>

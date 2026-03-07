@@ -68,7 +68,7 @@ export function GongVsNimitai() {
     <>
       <Helmet>
         <title>Gong vs Nimitai (2026): Full Comparison for Startup Sales Teams | Nimitai</title>
-        <meta name="description" content="Honest Gong vs Nimitai comparison for startup sales teams in 2026. Covers pricing ($1,600/seat/year vs $149/month), real-time coaching, setup time, and who each tool is actually built for." />
+        <meta name="description" content="Honest Gong vs Nimitai comparison for startup sales teams in 2026. Covers pricing ($1,600/seat/year vs $149/user/month), real-time coaching, setup time, and who each tool is actually built for." />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:title" content="Gong vs Nimitai (2026): Full Comparison for Startup Sales Teams" />
         <meta property="og:description" content="Gong costs $1,200–1,600/seat/year. Nimitai costs $149/seat/month. Here's the full comparison — features, pricing, and who wins for your team size." />
@@ -131,12 +131,12 @@ export function GongVsNimitai() {
         </div>
 
         <h2 id="where-gong-wins">Where Gong wins</h2>
-        <p>Gong is the right tool for enterprise sales organizations. If you have 100+ reps, a dedicated RevOps team, complex Salesforce territories, and budget for a six-figure annual contract, Gong's depth of reporting, integrations, and organizational tooling justifies the price.</p>
-        <p>Gong also has years of data advantage — their models have been trained on an enormous dataset of enterprise sales calls. For very large organizations selling complex, multi-stakeholder deals, that data advantage matters.</p>
+        <p>Gong is the right tool for enterprise sales organizations. If you have 100+ reps, a dedicated RevOps team, complex Salesforce territories, and budget for a six-figure annual contract, Gong's depth of reporting, integrations, and organizational tooling justifies the price. <a href="https://www.g2.com/products/gong/reviews" target="_blank" rel="noopener noreferrer" className="text-[#E89422] hover:underline">G2 reviews for Gong</a> confirm it's rated highly by enterprise users — the consistent complaint is pricing, not capability.</p>
+        <p>Gong also has years of data advantage — their models have been trained on an enormous dataset of enterprise sales calls. For very large organizations selling complex, multi-stakeholder deals, that data advantage matters. <a href="https://www.gong.io/pricing/" target="_blank" rel="noopener noreferrer" className="text-[#E89422] hover:underline">Gong's pricing page</a> doesn't publish numbers, but enterprise deals commonly run $75,000–$150,000+ per year.</p>
 
         <h2 id="where-nimitai-wins">Where Nimitai wins</h2>
-        <p>Nimitai wins on accessibility, speed, and real-time coaching. A startup with 5 reps can be live with Nimitai in 48 hours, paying $745/month, with full real-time coaching included. The same team on Gong would spend 4–6 weeks on implementation, commit to an annual contract, and pay $6,000–$8,000/month.</p>
-        <p>Nimitai's pre-call preparation agent is also something Gong doesn't offer — a briefing that surfaces everything known about a prospect 15 minutes before the call starts, without the rep doing any research.</p>
+        <p>Nimitai wins on accessibility, speed, and real-time <Link to="/ai-sales-coaching" className="text-[#E89422] hover:underline">AI sales coaching</Link>. A startup with 5 reps can be live with Nimitai in 48 hours, paying <Link to="/pricing" className="text-[#E89422] hover:underline">$149/seat/month</Link> (just $745/month for a 5-person team), with full real-time coaching included. The same team on Gong would spend 4–6 weeks on implementation, commit to an annual contract, and pay $6,000–$8,000/month.</p>
+        <p>Nimitai's <Link to="/ai-meeting-assistant" className="text-[#E89422] hover:underline">AI meeting assistant</Link> and pre-call preparation agent are also something Gong doesn't offer — a briefing that surfaces everything known about a prospect 15 minutes before the call starts, without the rep doing any research. The <Link to="/ai-notetaker" className="text-[#E89422] hover:underline">AI notetaker for sales</Link> handles call recording and CRM sync automatically.</p>
 
         <Callout emoji="💡" title="The 90/10 rule">
           For most B2B SaaS teams under 50 reps, Nimitai provides 90% of Gong's value at 10% of Gong's cost. The 10% gap is enterprise org management features that most teams don't need.
@@ -145,10 +145,18 @@ export function GongVsNimitai() {
         <CalendlyCTA headline="Compare Nimitai to your Gong quote" sub="Book a 20-minute demo and we'll show you exactly what you'd get — and what you'd pay. The math is usually decisive." />
 
         <h2 id="honest-take">The honest take</h2>
-        <p>We built Nimitai because we believe the startup and growth-stage market deserves conversation intelligence that was actually designed for them — not an enterprise product with features removed and pricing adjusted.</p>
+        <p>We built Nimitai because we believe the startup and growth-stage market deserves <Link to="/blog/conversation-intelligence-guide" className="text-[#E89422] hover:underline">conversation intelligence</Link> that was actually designed for them — not an enterprise product with features removed and pricing adjusted. If you're looking for a <Link to="/alternatives/gong-alternative" className="text-[#E89422] hover:underline">Gong alternative</Link>, Nimitai starts at <Link to="/pricing" className="text-[#E89422] hover:underline">$149/seat/month</Link> — no annual contract, no 15-seat minimum.</p>
         <p>Gong is built for Salesforce-native, multi-territory enterprise sales. Nimitai is built for the team that needs real-time intelligence now, can't wait 6 weeks for implementation, and doesn't have $100K in annual software budget.</p>
 
         <PullQuote>If you're evaluating both: see Nimitai's founding pricing and compare honestly against the Gong quote you've been given. The math is usually decisive.</PullQuote>
+
+        <div className="mt-12 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center not-prose">
+          <p className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Ready to try a smarter Gong alternative?</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">Nimitai gives B2B SaaS teams Gong-level insights from <Link to="/pricing" className="text-[#E89422] hover:underline">$149/seat/month</Link> — no platform fee, no 12-month lock-in.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist — Free
+          </a>
+        </div>
 
         <h2 id="faq">Frequently asked questions</h2>
         <div className="not-prose space-y-3 my-6">

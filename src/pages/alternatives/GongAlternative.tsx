@@ -17,14 +17,14 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/alternatives/gong-alternative`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Best Gong Alternative 2026 — Nimitai AI Conversation Intelligence | 80% Cheaper',
+  name: 'Best Gong Alternative 2026 — Nimitai AI Conversation Intelligence | 90% Cheaper',
   description:
-    'Looking for a Gong alternative? Nimitai delivers the same AI conversation intelligence — sales call recording, objection detection, deal risk alerts, talk-ratio analysis — at $149/month with no enterprise contract. The best Gong alternative for startup sales teams.',
+    'Best Gong alternative for startups. AI conversation intelligence at $149/user/month. No annual contract. A product of REN AI Technologies.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -40,17 +40,17 @@ const faqs = [
   {
     question: 'Is Nimitai a good replacement for Gong?',
     answer:
-      'Yes. Nimitai is the best Gong alternative for startup and SMB sales teams. It records all your sales calls, provides AI conversation intelligence, detects objection patterns, scores deal risk, and gives real-time coaching — the same core features as Gong at $149/month vs Gong\'s $1,200+/seat/year enterprise pricing.',
+      'Yes. Nimitai is the best Gong alternative for startup and SMB sales teams. It records all your sales calls, provides AI conversation intelligence, detects objection patterns, scores deal risk, and gives real-time coaching — the same core features as Gong at $149/user/month vs Gong\'s $1,200+/seat/year enterprise pricing.',
   },
   {
     question: 'What does Nimitai offer that Gong doesn\'t?',
     answer:
-      'Nimitai offers no per-seat pricing, no annual contract, 30-minute setup, and a startup-friendly $149/month flat fee. Gong requires enterprise negotiations, 90-day implementations, and $1,200+/seat/year. Nimitai also includes real-time AI coaching during calls, not just post-call analysis.',
+      'Nimitai offers transparent per-user pricing, no annual contract, 30-minute setup, and a startup-friendly pricing from $149/seat/month. Gong requires enterprise negotiations, 90-day implementations, and $1,200+/seat/year. Nimitai also includes real-time AI coaching during calls, not just post-call analysis.',
   },
   {
     question: 'How does Nimitai\'s conversation intelligence compare to Gong?',
     answer:
-      'Nimitai matches Gong\'s core conversation intelligence features: automated call recording, AI transcription, talk-ratio analysis, objection detection, deal risk scoring, and coaching insights. The difference is price — $149/month total vs Gong\'s per-seat enterprise pricing — and simplicity.',
+      'Nimitai matches Gong\'s core conversation intelligence features: automated call recording, AI transcription, talk-ratio analysis, objection detection, deal risk scoring, and coaching insights. The difference is price — $149/user/month vs Gong\'s per-seat enterprise pricing — and simplicity.',
   },
   {
     question: 'Can I migrate from Gong to Nimitai easily?',
@@ -77,6 +77,27 @@ const faqSchema = {
   })),
 };
 
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Nimitai',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, Chrome',
+  description: 'AI meeting intelligence for B2B sales teams. Real-time coaching, buyer signal detection, and automated call analysis.',
+  url: 'https://nimitai.com',
+  offers: {
+    '@type': 'Offer',
+    price: '149',
+    priceCurrency: 'USD',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '149',
+      priceCurrency: 'USD',
+      unitText: 'seat/month',
+    },
+  },
+};
+
 const comparisonRows = [
   { feature: 'Call recording & transcription', gong: true, cw: true, startup: false },
   { feature: 'AI coaching insights', gong: true, cw: true, startup: false },
@@ -96,7 +117,7 @@ const painPoints = [
   {
     icon: DollarSign,
     title: 'Gong Costs $1,200+/Seat/Year',
-    body: "Gong's enterprise pricing forces sales teams to pay $1,200–$1,600 per seat annually. Nimitai delivers the same conversation intelligence at $149/month total — no per-seat pricing.",
+    body: "Gong's enterprise pricing forces sales teams to pay $1,200–$1,600 per seat annually. Nimitai delivers the same conversation intelligence at $149/user/month — transparent per-user pricing.",
   },
   {
     icon: Clock,
@@ -119,7 +140,7 @@ const whyCards = [
   {
     icon: DollarSign,
     title: 'Gong-level AI, startup price',
-    body: 'AI coaching depth was previously only available at $75k+/year. Nimitai brings talk ratios, objection clustering, and deal risk signals to teams with 1–25 reps at $149/month.',
+    body: 'AI coaching depth was previously only available at $75k+/year. Nimitai brings talk ratios, objection clustering, and deal risk signals to teams with 1–25 reps at $149/user/month.',
   },
   {
     icon: Zap,
@@ -174,7 +195,7 @@ export function GongAlternative() {
         <title>Best Gong Alternative 2026 — Nimitai | AI Conversation Intelligence</title>
         <meta
           name="description"
-          content="Looking for a Gong alternative? Nimitai delivers the same AI conversation intelligence — sales call recording, objection detection, deal risk alerts, talk-ratio analysis — at $149/month with no enterprise contract. The best Gong alternative for startup sales teams."
+          content="Best Gong alternative for startups. AI conversation intelligence at $149/user/month. No annual contract. A product of REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -188,7 +209,7 @@ export function GongAlternative() {
         <meta property="og:title" content="Best Gong Alternative 2026 — Nimitai AI Conversation Intelligence | 80% Cheaper" />
         <meta
           property="og:description"
-          content="Looking for a Gong alternative? Nimitai delivers the same AI conversation intelligence — sales call recording, objection detection, deal risk alerts, talk-ratio analysis — at $149/month with no enterprise contract. The best Gong alternative for startup sales teams."
+          content="Best Gong alternative for startups. AI conversation intelligence at $149/user/month. No annual contract. A product of REN AI Technologies."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -202,11 +223,11 @@ export function GongAlternative() {
         <meta name="twitter:title" content="Best Gong Alternative 2026 — Nimitai AI Conversation Intelligence | 80% Cheaper" />
         <meta
           name="twitter:description"
-          content="Looking for a Gong alternative? Nimitai delivers the same AI conversation intelligence — sales call recording, objection detection, deal risk alerts, talk-ratio analysis — at $149/month with no enterprise contract. The best Gong alternative for startup sales teams."
+          content="Best Gong alternative for startups. AI conversation intelligence at $149/user/month. No annual contract. A product of REN AI Technologies."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -215,6 +236,8 @@ export function GongAlternative() {
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
         {/* JSON-LD FAQPage */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        {/* JSON-LD SoftwareApplication */}
+        <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>
       </Helmet>
 
       {/* ── 1. HERO ─────────────────────────────────────────────────── */}
@@ -250,7 +273,7 @@ export function GongAlternative() {
               className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
             >
               Nimitai delivers everything Gong offers — AI sales call recording, conversation intelligence, objection pattern detection, deal risk signals, talk-ratio analysis, and coaching insights — at{' '}
-              <strong className="text-gray-900 dark:text-white">$149/month</strong> with no annual contract. The Gong alternative startup sales teams actually choose.
+              <strong className="text-gray-900 dark:text-white">from $149/user/month</strong> — no annual contract. The Gong alternative startup sales teams actually choose.
             </p>
 
             <div
@@ -274,6 +297,25 @@ export function GongAlternative() {
           </div>
         </div>
       </section>
+
+      {/* ── Traction / Credibility ── */}
+      <div className="bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            {[
+              { number: '350+', label: 'Sales calls analyzed' },
+              { number: '200+', label: 'B2B businesses studied' },
+              { number: '412', label: 'Founders on waitlist' },
+              { number: '$149', label: 'per seat/month' },
+            ].map((stat) => (
+              <div key={stat.label} className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-900/30">
+                <div className="text-2xl sm:text-3xl font-black text-[#E89422]">{stat.number}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-tight">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ── 2. WHY FOUNDERS LEAVE GONG ─────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
@@ -466,7 +508,7 @@ export function GongAlternative() {
                 <div className="text-sm font-semibold uppercase tracking-widest text-[#F5B040] mb-2">
                   Nimitai
                 </div>
-                <div className="text-4xl font-bold text-white mb-6">$149/month</div>
+                <div className="text-4xl font-bold text-white mb-6">from $149/user/month</div>
                 <ul className="space-y-3">
                   {[
                     'No annual contract',
@@ -517,7 +559,7 @@ export function GongAlternative() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Join 47+ B2B sales teams who replaced Gong with Nimitai. Setup in 30 minutes, $149/month, cancel anytime.
+              Join 47+ B2B sales teams who replaced Gong with Nimitai. Setup in 30 minutes, $149/user/month, cancel anytime.
             </p>
 
             <a

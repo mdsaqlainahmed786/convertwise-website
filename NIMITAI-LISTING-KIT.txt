@@ -1,0 +1,319 @@
+================================================================
+NIMITAI DIRECTORY SUBMISSION KIT — March 2026
+Copy-paste ready for every listing platform
+================================================================
+
+PRODUCT NAME: Nimitai
+WEBSITE: https://nimitai.com
+TAGLINE: AI Meeting Intelligence for B2B Sales Teams
+CATEGORY: AI Sales Tools / Conversation Intelligence / Sales Enablement
+FOUNDED: 2024 (rebranded Nimitai Q1 2025)
+COMPANY: REN AI Technologies Private Limited
+FOUNDERS: Nilansh Gupta (Co-Founder & CEO), Archit Dhir (Co-Founder & CTO)
+HQ: India (serving US, UK, Canada, Australia)
+PRICING: from $149/user/month
+STAGE: Private Beta / Early Access (412+ waitlist)
+PLATFORMS: Web app + Chrome extension
+WORKS WITH: Zoom, Google Meet, Microsoft Teams
+CRM INTEGRATIONS: Salesforce, HubSpot, Pipedrive
+
+================================================================
+DESCRIPTIONS (use by character/word count)
+================================================================
+
+--- TAGLINE (60 chars) ---
+AI Meeting Intelligence for B2B Sales Teams
+
+--- ONE-LINER (100 chars) ---
+Nimitai is AI conversation intelligence for B2B sales — coaching, deal risk, objection detection.
+
+--- SHORT DESCRIPTION (150 chars) ---
+AI meeting intelligence for B2B sales teams. Real-time coaching, objection detection, deal risk signals, and CRM auto-sync. From $149/user/month.
+
+--- STANDARD DESCRIPTION (300 chars) ---
+Nimitai is AI meeting intelligence and conversation intelligence software for B2B SaaS sales teams. It records, transcribes, and analyzes every sales call — surfacing coaching insights, objection patterns, deal risk signals, and win/loss analysis automatically. Built as the affordable alternative to Gong. From $149/user/month.
+
+--- MEDIUM DESCRIPTION (500 chars) ---
+Nimitai delivers enterprise-grade AI conversation intelligence for startup and SMB sales teams — without the $75,000/year Gong contract.
+
+It automatically records sales calls on Zoom, Google Meet, and Teams, then analyzes every conversation for rep coaching opportunities, objection patterns, deal risk signals, and buyer intent cues. Managers stop listening to recordings manually. Reps get automated coaching scorecards after every call.
+
+Built after analyzing 350+ real B2B sales calls. Pricing starts at $149/user/month with no annual contract.
+
+--- LONG DESCRIPTION (800 chars) ---
+Nimitai is AI meeting intelligence and conversation intelligence software for B2B SaaS sales teams, founders, and early-stage sales organizations (1–50 reps).
+
+Unlike generic meeting notetakers (Fathom, Fireflies, Otter.ai), Nimitai is purpose-built for sales intelligence:
+
+→ Real-time AI co-pilot during calls (not just post-call)
+→ Objection pattern detection across all recorded calls
+→ Deal risk scoring and next-step monitoring
+→ Rep coaching scorecards (talk ratio, question quality, objection handling)
+→ Win/loss analysis correlated with CRM outcomes
+→ Automatic CRM sync to Salesforce, HubSpot, Pipedrive
+
+Nimitai was built by founders Nilansh Gupta and Archit Dhir (REN AI Technologies) after analyzing 350+ real sales calls across 200+ B2B businesses. The product launched in private beta in 2025 with 412+ founding team members on the waitlist.
+
+Pricing: from $149/user/month — roughly 90% cheaper than Gong ($1,200–$1,600/seat/year) with no annual contract and 30-minute setup.
+
+--- FULL DESCRIPTION (1500 chars — for G2, Gartner, TrustRadius) ---
+Nimitai is the AI meeting intelligence platform for B2B SaaS sales teams who need Gong-level conversation intelligence without a six-figure enterprise contract.
+
+The problem Nimitai solves: sales managers at startups and SMBs can't scale coaching because they don't have time to listen to recordings. Reps don't get consistent feedback. Deals die from patterns nobody noticed. Nimitai fixes all three.
+
+WHAT IT DOES:
+• Records every sales call automatically (Zoom, Google Meet, Teams)
+• Transcribes with speaker diarization
+• Detects objection patterns across ALL calls — not just one at a time
+• Scores every rep after every call (talk ratio, question quality, next-step confirmation, objection handling)
+• Flags deal risk signals: no next step confirmed, pricing objection unresolved, economic buyer gone dark
+• Surfaces real-time coaching during live calls — battle cards, talk ratio alerts, objection prompts
+• Syncs structured call data to CRM automatically
+
+WHO IT'S FOR:
+• B2B SaaS founders running sales themselves (1–5 reps)
+• Sales leaders at seed–Series B companies (5–50 reps)
+• SDR/AE teams who need coaching at scale without a RevOps team
+
+HOW IT COMPARES:
+• vs Gong: 90% cheaper ($149/user/mo vs $1,200+/seat/year), no 15-seat minimum, no annual lock-in, 30-min setup vs 90 days
+• vs Fathom/Fireflies/Otter.ai: those are meeting notetakers — Nimitai is conversation intelligence with deal risk and coaching
+• vs Chorus (ZoomInfo): no $20K+/year enterprise bundle required
+
+Research base: 350+ sales calls analyzed, 200+ B2B businesses, 412+ waitlist founders (Q1 2026).
+
+================================================================
+KEY FEATURES (for feature lists/checkboxes)
+================================================================
+
+✓ AI sales call recording (Zoom, Google Meet, Teams)
+✓ Speaker-diarized transcription
+✓ Real-time AI meeting co-pilot (live during calls)
+✓ Talk/listen ratio tracking per rep
+✓ Objection pattern detection (cross-call AI clustering)
+✓ Rep coaching scorecards (automated, after every call)
+✓ Deal risk signals and alerts
+✓ Win/loss analysis from call data
+✓ CRM auto-sync (Salesforce, HubSpot, Pipedrive)
+✓ AI battle cards (auto-triggered when competitor mentioned)
+✓ Chrome extension
+✓ 30-minute setup
+✓ No annual contract
+✓ 14-day free trial
+
+================================================================
+CATEGORIES / TAGS (use relevant ones per platform)
+================================================================
+
+AI Tools, Sales AI, Conversation Intelligence, Meeting Intelligence,
+Sales Coaching, Revenue Intelligence, Meeting Assistant, AI Notetaker,
+Sales Call Recording, CRM Integration, B2B Sales, Sales Enablement,
+Sales Analytics, Deal Intelligence, Chrome Extension, Zoom Integration,
+Google Meet Integration, HubSpot Integration, Salesforce Integration,
+Gong Alternative, Startup Tools, SaaS Tools, GTM Tools
+
+================================================================
+PRICING INFO
+================================================================
+
+Plan: Founding Access / Private Beta
+Price: $149/user/month
+Contract: Month-to-month (no annual required)
+Trial: 14-day free trial
+Seats: No minimum seat requirement
+Setup: 30 minutes
+
+================================================================
+COMPETITIVE ALTERNATIVES (for AlternativeTo submissions)
+================================================================
+
+Submit Nimitai as an alternative to:
+1. Gong (gong.io) — https://alternativeto.net/software/gong/about/
+2. Fathom (fathom.video) — https://alternativeto.net/software/fathom/about/
+3. Fireflies.ai — https://alternativeto.net/software/fireflies/about/
+4. tl;dv (tldv.io) — https://alternativeto.net/software/tl-dv/about/
+5. Otter.ai — https://alternativeto.net/software/otter/about/
+6. Chorus (ZoomInfo) — https://alternativeto.net/software/chorus/about/
+
+================================================================
+SOCIAL PROFILES (for listing verification)
+================================================================
+
+LinkedIn: https://www.linkedin.com/company/nimitai
+Twitter/X: https://x.com/Nimit_ai
+Instagram: https://www.instagram.com/nimitaihq
+Email: hello@nimitai.com
+Waitlist: https://nilanshgupta.typeform.com/to/UNvZIrgu
+
+================================================================
+FOUNDER INFO (for VC directories, Tracxn, Harmonic, Wellfound)
+================================================================
+
+CEO: Nilansh Gupta
+LinkedIn: https://www.linkedin.com/in/nilanshgupta (verify URL)
+CTO: Archit Dhir
+Company Type: B2B SaaS
+Stage: Pre-seed / Private Beta
+Funding: Bootstrapped
+Team Size: 2 founders
+Incorporated: India (REN AI Technologies Private Limited)
+Markets: US, UK, Canada, Australia, India
+
+================================================================
+AWARD NOMINATION COPY (AI Breakthrough Awards — deadline April 13)
+================================================================
+
+Category to enter: "Best AI Sales Solution" or "Conversational AI Innovation of the Year"
+
+Nomination statement (250 words):
+Nimitai is AI meeting intelligence built to democratize conversation intelligence for the 99% of B2B sales teams who can't afford Gong's $75,000+/year enterprise contracts.
+
+Founded by Nilansh Gupta and Archit Dhir (REN AI Technologies) after analyzing 350+ real sales calls across 200+ B2B businesses, Nimitai identified a critical gap: startup and SMB sales teams were flying blind. Managers couldn't coach at scale. Reps received inconsistent feedback. Deals died from patterns nobody caught in time.
+
+Nimitai's solution delivers full enterprise-grade conversation intelligence at $149/user/month — roughly 90% cheaper than Gong — with no annual contract, no seat minimums, and 30-minute setup.
+
+Key innovations:
+• Real-time AI co-pilot: unlike Gong (post-call only), Nimitai coaches reps DURING the call — surfacing battle cards when competitors are mentioned, alerting on talk ratio, prompting next-step confirmation
+• Cross-call objection clustering: AI detects patterns across hundreds of calls simultaneously — not just one call at a time
+• Automated coaching scorecards: every rep gets a coaching report after every call without a manager listening to recordings
+• Deal risk intelligence: flags unresolved pricing objections, absent economic buyers, missing next steps — before opportunities go cold
+
+412+ B2B founders are on the waitlist. Nimitai is in private beta serving teams across US, UK, Canada, Australia, and India.
+
+URL: https://nimitai.com
+Contact: hello@nimitai.com
+
+================================================================
+REDDIT POST TEMPLATES
+================================================================
+
+--- r/sales (value post, not an ad) ---
+Title: "We analyzed 350+ B2B sales calls. Here are the 3 things that actually predict close rate."
+
+After building an AI sales tool, my co-founder and I went back through 350+ real sales calls across 200+ companies before writing a single line of code.
+
+What we found surprised us:
+
+1. Talk ratio matters more than anything. Reps who talked less than 45% of the time closed at 2.3x the rate of reps over 65%. Not groundbreaking — but seeing it across 350 calls made it undeniable.
+
+2. The next step is decided in the first 3 minutes. Calls where the rep confirmed a concrete next step in the opening were 4x more likely to advance. Most reps wait until the end. By then it's too late.
+
+3. Objections aren't the problem — repetition is. The same 4-5 objections appeared in 80%+ of lost deals. But every rep was handling them differently with no shared learning. That's a coaching problem, not a product problem.
+
+We built Nimitai to fix #3 specifically — surface patterns across ALL calls, not just the one you're reviewing.
+
+Happy to share the full breakdown if useful. What patterns have you noticed in your call reviews?
+
+--- r/SaaS (founder story, not ad) ---
+Title: "We pivoted from an agency to a SaaS after analyzing 350 sales calls. Here's what we found."
+
+[Share founding story from blog: https://nimitai.com/blog/why-we-built-nimitai]
+
+================================================================
+CHROME WEB STORE OPTIMIZATION
+================================================================
+
+Extension Name: Nimitai — AI Sales Intelligence
+Short Description (132 chars max):
+AI meeting intelligence for sales teams. Real-time coaching, deal risk, objection detection. For Zoom & Google Meet.
+
+Detailed Description:
+Nimitai is the AI meeting co-pilot for B2B sales reps and founders.
+
+WHAT IT DOES:
+→ Joins your Zoom or Google Meet calls automatically
+→ Surfaces real-time coaching: talk ratio alerts, battle cards when competitors are mentioned, next-step prompts
+→ After every call: coaching scorecard, objection analysis, deal risk flags, CRM sync
+
+WHO IT'S FOR:
+→ B2B SaaS founders running sales themselves
+→ Sales reps who want to close more without a manager on every call
+→ Sales managers who need coaching intelligence without listening to every recording
+
+PRICING: From $149/user/month — private beta pricing
+
+Get on the waitlist: https://nimitai.com
+
+Keywords: AI meeting assistant, sales call recording, conversation intelligence, Gong alternative, AI notetaker for sales, deal intelligence
+
+================================================================
+ASSETS NEEDED FOR LISTINGS
+================================================================
+
+Logo (provide these files):
+- nimitai-logo.png (main logo) → https://nimitai.com/nimitai-logo.png
+- chrome-logo.png (icon/favicon) → https://nimitai.com/chrome-logo.png
+- og-image.png (1200x630 banner) → https://nimitai.com/og-image.png
+
+Screenshots needed (most directories require 3-5):
+1. Dashboard / call analysis view
+2. Real-time coaching during call
+3. Rep coaching scorecard
+4. Objection patterns view
+5. Pricing page
+
+================================================================
+SUBMISSION TRACKER — check off as you go
+================================================================
+
+HIGH PRIORITY (Week 1):
+[ ] Gartner Peer Insights — gartner.com/peer-insights/vendor-portal
+[ ] TrustRadius — trustradius.com (claim/create vendor profile)
+[ ] AlternativeTo — alternativeto.net (list Nimitai + add as alt to 6 competitors)
+[ ] SaaSHub — saashub.com
+[ ] Crozdesk — crozdesk.com
+[ ] SoftwareSuggest — softwaresuggest.com
+[ ] Tekpon — tekpon.com
+
+HIGH PRIORITY (Week 2 — AI Directories):
+[ ] There's An AI For That — theresanaiforthat.com/submit
+[ ] Futurepedia — futurepedia.io
+[ ] Toolify.ai — toolify.ai
+[ ] TopAI.tools — topai.tools/submit
+[ ] Dang.ai — dang.ai
+[ ] AIxploria — aixploria.com/en
+
+HIGH PRIORITY (Week 3 — India/VC):
+[ ] INDIAai — indiaai.gov.in/startup
+[ ] NASSCOM DeepTech Club — nasscom.in/deeptech/deeptechclub
+[ ] Inc42 Tracker — pitch editorial team at inc42.com
+[ ] Tracxn — tracxn.com (claim company profile)
+[ ] Harmonic.ai — harmonic.ai (claim profile)
+[ ] Wellfound — wellfound.com
+
+TIME-SENSITIVE AWARDS:
+[ ] AI Breakthrough Awards — aibreakthroughawards.com/nominate — DEADLINE APRIL 13, 2026
+[ ] Cloud A.I. Awards — cloud-awards.com/ai-awards — July 2026
+[ ] CogX Awards — cogx.live/awards — May 2026
+
+SALES COMMUNITIES:
+[ ] GTMnow partnership inquiry — gtmnow.com
+[ ] Sales Enablement Collective — salesenablementcollective.com
+[ ] StackShare listing — stackshare.io
+[ ] r/sales post (value content, not ad)
+[ ] r/salesforce post
+[ ] r/SaaS post
+
+EDITORIAL PITCHES (email outreach):
+[ ] Outreach.io blog — pitch to add Nimitai to CI roundup
+[ ] The Software Report — pitch for "Top 25 Sales Enablement" list
+[ ] CX Today — pitch for "Top Conversational Intelligence Vendors"
+[ ] Inc42 — pitch for Indian AI Startup Tracker inclusion
+[ ] Channel V Media — PR for ZDNet/WSJ/CNET placement
+
+MEDIUM PRIORITY:
+[ ] OpenTools.ai — opentools.ai
+[ ] SourceForge — sourceforge.net/software/vendors
+[ ] Peerlist — peerlist.io
+[ ] BetaList — betalist.com
+[ ] MicroLaunch — microlaunch.net
+[ ] DiscoverCloud — discovercloud.com
+[ ] FeaturedCustomers — featuredcustomers.com
+[ ] The Rundown AI newsletter sponsorship
+[ ] Ben's Bites newsletter sponsorship
+[ ] Extension Radar — extensionradar.com
+
+================================================================
+END OF KIT
+================================================================
+Last updated: 2026-03-06

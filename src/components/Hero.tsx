@@ -90,7 +90,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: 0.28 }}
             >
-              AI meeting intelligence that detects buyer signals, surfaces coaching insights, and auto-generates battle cards — so every rep sells like your best rep. The Gong alternative built for startup sales teams.
+              AI meeting intelligence that detects buyer signals, surfaces real-time coaching insights, and auto-generates battle cards — so every rep sells like your best rep. Starting from $149/seat/month. Setup in 30 minutes. No enterprise contract.
             </motion.p>
 
             <motion.div

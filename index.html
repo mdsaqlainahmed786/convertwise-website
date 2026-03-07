@@ -1,110 +1,96 @@
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      
-      <!-- Primary Meta Tags -->
-      <title>Nimitai — AI Meeting Intelligence for Sales Teams | Gong Alternative</title>
-      <meta name="description" content="Nimitai records your sales calls and uses AI to surface coaching insights, objection patterns, and deal risks. Purpose-built for B2B SaaS founders and early-stage teams. $149/mo, setup in 30 minutes." />
-      <meta name="keywords" content="AI meeting intelligence, sales call recording software, gong alternative, conversation intelligence software, sales coaching AI, meeting intelligence for startups" />
-      <meta name="author" content="Nimitai" />
-      <meta name="theme-color" content="#E89422" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-      <!-- Open Graph -->
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://nimitai.com/" />
-      <meta property="og:title" content="Nimitai — AI Meeting Intelligence for Sales Teams" />
-      <meta property="og:description" content="Records your sales calls and uses AI to surface coaching insights, objection patterns, and deal risks. Purpose-built for B2B SaaS founders. $149/mo." />
-      <meta property="og:image" content="https://nimitai.com/og-image.png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Nimitai AI meeting intelligence dashboard" />
-      <meta property="og:site_name" content="Nimitai" />
+    <!-- Fallback title — react-helmet-async overrides per page -->
+    <title>Nimitai — AI Meeting Intelligence for Sales Teams</title>
+    <meta name="theme-color" content="#E89422" />
 
-      <!-- Twitter -->
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@NimitaiHQ" />
-      <meta name="twitter:title" content="Nimitai — AI Meeting Intelligence for Sales Teams" />
-      <meta name="twitter:description" content="Records your sales calls and uses AI to surface coaching insights, objection patterns, and deal risks. $149/mo, setup in 30 minutes." />
-      <meta name="twitter:image" content="https://nimitai.com/og-image.png" />
-      
-      <!-- Favicon -->
-      <link rel="icon" type="image/png" href="/nimitai-logo.png" />
-      <link rel="apple-touch-icon" href="/nimitai-logo.png" />
-      
-      <!-- Google Search Console Verification -->
-      <meta name="google-site-verification" content="google5802f6d76e018dd1" />
+    <!-- Preconnect to critical third-party origins -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <!-- YouTube (video modal — lazy connection is fine, dns-prefetch is enough) -->
+    <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+    <!-- Fazier badge in footer -->
+    <link rel="dns-prefetch" href="https://fazier.com" />
 
-      <!-- Canonical URL -->
-      <link rel="canonical" href="https://nimitai.com" />
+    <!-- Preload the two most critical brand font weights only -->
+    <link rel="preload" href="/fonts/axiforma-medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/axiforma-regular.woff2" as="font" type="font/woff2" crossorigin />
 
-      <!-- Sitemap discovery -->
-      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-      
-      <link rel="dns-prefetch" href="https://nimitai.com" />
-      
-      <!-- Additional Meta Tags -->
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      
-      <!-- Permissions Policy for YouTube Embed -->
-      <meta http-equiv="Permissions-Policy" content="autoplay=*, fullscreen=*, picture-in-picture=*" />
+    <!-- Preload nav logo — LCP element on every page -->
+    <link rel="preload" href="/logo-light-nimitai-cropped.webp" as="image" type="image/webp" />
 
-      <!-- Google Analytics 4 -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TP0Q6ZX5D"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9TP0Q6ZX5D', {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      </script>
-    </head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/chrome-logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/chrome-logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/chrome-logo.png" />
 
-    <body>
-      <script>
-        (function() {
-          try {
-            const theme = localStorage.getItem('nimitai-theme') || 'light';
-            const root = document.documentElement;
-            root.classList.remove('light', 'dark');
-            if (theme === 'dark' || theme === 'light') {
-              root.classList.add(theme);
-              root.setAttribute('data-theme', theme);
-            } else {
-              root.classList.add('light');
-              root.setAttribute('data-theme', 'light');
-            }
-          } catch (e) {
-            // Fallback if localStorage fails
-            document.documentElement.classList.add('light');
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="google5802f6d76e018dd1" />
+
+    <!-- Sitemap discovery -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Additional Meta Tags -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Permissions Policy for YouTube Embed -->
+    <meta http-equiv="Permissions-Policy" content="autoplay=*, fullscreen=*, picture-in-picture=*" />
+
+    <!-- Google Analytics 4 — async so it never blocks rendering -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TP0Q6ZX5D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9TP0Q6ZX5D', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- Inline theme init — runs synchronously to avoid flash of wrong theme.
+         Keep it tiny: no external deps, no network requests. -->
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('nimitai-theme') || 'light';
+          var root = document.documentElement;
+          root.classList.remove('light', 'dark');
+          root.classList.add(theme === 'dark' ? 'dark' : 'light');
+          root.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light');
+        } catch (e) {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- SPA route change tracking for GA4 — deferred to after page load -->
+    <script defer>
+      (function() {
+        var _pushState = history.pushState;
+        history.pushState = function() {
+          _pushState.apply(this, arguments);
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+              page_title: document.title,
+              page_location: window.location.href,
+            });
           }
-        })();
-      </script>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-
-      <!-- SPA route change tracking for GA4 -->
-      <script>
-        // Track route changes in the React SPA
-        (function() {
-          var _pushState = history.pushState;
-          history.pushState = function() {
-            _pushState.apply(this, arguments);
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'page_view', {
-                page_title: document.title,
-                page_location: window.location.href,
-              });
-            }
-          };
-        })();
-      </script>
-    </body>
-  </html>
-  
+        };
+      })();
+    </script>
+  </body>
+</html>

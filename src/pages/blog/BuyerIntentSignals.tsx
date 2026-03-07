@@ -234,7 +234,7 @@ export function BuyerIntentSignals() {
 
         <p><Link to="/blog/conversation-intelligence-guide">Conversation intelligence</Link> operating in real time detects buying signals through a combination of keyword pattern matching, semantic analysis, and contextual modeling — each layer adding precision the previous one lacks.</p>
 
-        <p>Keyword matching catches explicit signals — "implementation," "budget," "timeline" — with reasonable accuracy. Semantic analysis goes further, identifying signal patterns even when the buyer uses different phrasing. Contextual modeling is the most sophisticated layer: it understands that the same question means something very different at minute 5 versus minute 45 of a call.</p>
+        <p>Keyword matching catches explicit signals — "implementation," "budget," "timeline" — with reasonable accuracy. Semantic analysis goes further, identifying signal patterns even when the buyer uses different phrasing. Contextual modeling is the most sophisticated layer: it understands that the same question means something very different at minute 5 versus minute 45 of a call. Tools listed in <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a> — including <Link to="/alternatives/gong-alternative">Gong alternative</Link> options like Nimitai — compete heavily on the quality of this contextual layer.</p>
 
         <Callout emoji="⚡" title="Why real-time matters more than post-call">
           Post-call analysis tells you a signal was present. Real-time intelligence tells you <strong>while the buyer is still on the line</strong> — giving you seconds to respond, not hours. The difference between a flagged moment and a lost deal is usually the rep's ability to act before the conversation moves on.
@@ -244,7 +244,7 @@ export function BuyerIntentSignals() {
 
         <h2 id="training">Training yourself to catch signals manually</h2>
 
-        <p>Before real-time AI coaching was available, experienced reps trained signal recognition the hard way — deliberately watching for the moments they missed and mentally noting the patterns over dozens of calls. This works, but it takes 6–12 months to meaningfully shift habits.</p>
+        <p>Before real-time AI coaching was available, experienced reps trained signal recognition the hard way — deliberately watching for the moments they missed and mentally noting the patterns over dozens of calls. This works, but it takes 6–12 months to meaningfully shift habits. <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales research</a> confirms that top-performing reps are significantly more likely to use AI tools to surface insights they would otherwise miss.</p>
 
         <p>Some techniques that accelerate this while you're building the skill:</p>
 
@@ -258,11 +258,36 @@ export function BuyerIntentSignals() {
           Signal recognition is a trainable skill. The fastest path to developing it is exposure to patterns — either through years of calls or through real-time AI coaching that names the pattern for you in the moment it occurs.
         </KeyTakeaway>
 
+        <p>Nimitai surfaces buyer intent signals in real time during every call and is available <Link to="/pricing">from $149/seat/month</Link> with a 30-minute setup.</p>
+
+        <h2 id="faq" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {[
+            { q: 'What are buyer intent signals in sales calls?', a: 'Buyer intent signals are verbal cues, question patterns, and language choices that indicate a prospect is actively evaluating or ready to buy — such as asking about implementation timelines, mentioning budget cycles, or bringing up stakeholders who need to approve a decision.' },
+            { q: 'How does AI detect buyer intent signals in real time?', a: 'AI uses a combination of keyword matching, semantic analysis, and contextual modeling to identify intent signals as the conversation happens. Contextual modeling is the most powerful layer — understanding that the same phrase signals something very different at different stages of a call.' },
+            { q: 'What is the strongest buyer intent signal?', a: 'Timeline anchoring — when a prospect mentions a specific deadline or date — is the single strongest buying signal in B2B sales. In our analysis of 350+ calls, it correlated with closed-won outcomes more reliably than any other signal type.' },
+            { q: 'What should a rep do when they detect a buying signal?', a: 'Slow down, not speed up. Acknowledge the signal explicitly, explore it with a follow-up question, and use it to anchor the next step. For example, if a prospect mentions a Q3 deadline, respond with a question that connects your solution to that specific timeline.' },
+          ].map(({ q, a }) => (
+            <div key={q} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">{q}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+          <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist
+          </a>
+        </div>
+
         <RelatedArticles links={[
+          { to: '/ai-meeting-copilot', label: 'AI Meeting Co-Pilot — Real-Time Coaching During Calls' },
+          { to: '/ai-meeting-assistant', label: 'AI Meeting Assistant — Nimitai' },
           { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time AI Sales Coaching: Why Post-Call Review Is Too Late' },
           { to: '/blog/how-to-increase-close-rate', label: 'How to Increase Close Rate: 9 Strategies from 350+ Calls' },
-          { to: '/blog/sales-call-analytics', label: 'Sales Call Analytics: 7 Metrics That Predict Revenue' },
-          { to: '/blog/ai-objection-handling', label: 'AI Objection Handling: Win the Moments That Lose Deals' },
         ]} />
       </BlogShell>
     </>

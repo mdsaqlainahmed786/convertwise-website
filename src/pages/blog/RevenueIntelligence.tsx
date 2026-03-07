@@ -68,7 +68,7 @@ export function RevenueIntelligence() {
         ]} />
 
         <h2 id="what-it-means">What revenue intelligence actually means</h2>
-        <p>Revenue intelligence is the practice of capturing, analyzing, and acting on data from every customer-facing interaction — primarily sales calls, but also emails, meetings, and CRM activity — to predict deal outcomes, identify coaching opportunities, and surface patterns that drive revenue.</p>
+        <p>Revenue intelligence is the practice of capturing, analyzing, and acting on data from every customer-facing interaction — primarily sales calls, but also emails, meetings, and CRM activity — to predict deal outcomes, identify coaching opportunities, and surface patterns that drive revenue. It is now one of the fastest-growing categories in sales tech: see <a href="https://www.g2.com/categories/conversation-intelligence" target="_blank" rel="noopener noreferrer">G2's conversation intelligence category</a> for a full market view. According to the <a href="https://www.salesforce.com/resources/research-reports/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce State of Sales</a>, teams using AI-powered revenue intelligence close deals 28% faster than those relying on CRM data alone.</p>
         <p>It differs from a CRM in that CRMs store what reps enter. Revenue intelligence captures what actually happens — automatically, from the conversation itself. It differs from an <Link to="/blog/ai-notetaker-vs-conversation-intelligence">AI notetaker</Link> in that notetakers document conversations; revenue intelligence platforms analyze them for patterns, predictions, and coaching opportunities.</p>
         <p>The best revenue intelligence platforms in 2026 operate across three layers:</p>
         <ul>
@@ -122,15 +122,38 @@ export function RevenueIntelligence() {
 
         <h2 id="how-to-choose">How to choose a revenue intelligence platform for your team size</h2>
         <p><strong>Under 20 reps:</strong> You need a tool that is live in days, not weeks. You can't dedicate a RevOps team to configuring an enterprise platform. Look for a platform with self-serve onboarding, monthly billing, and real-time coaching — Nimitai was built specifically for this segment.</p>
-        <p><strong>20–100 reps:</strong> You need coaching at scale. Look for deal risk scoring, manager dashboards, and win/loss pattern analysis. Gong or Nimitai both work at this scale — evaluate based on whether you need enterprise Salesforce integration (Gong wins) or fast time-to-value and lower cost (Nimitai wins).</p>
+        <p><strong>20–100 reps:</strong> You need coaching at scale. Look for deal risk scoring, manager dashboards, and win/loss pattern analysis. <Link to="/alternatives/gong-alternative">Gong alternative</Link> or Nimitai both work at this scale — evaluate based on whether you need enterprise Salesforce integration (Gong wins) or fast time-to-value and lower cost (Nimitai wins).</p>
         <p><strong>100+ reps:</strong> You likely need enterprise revenue intelligence with territory management, complex CRM integrations, and organizational reporting. Gong and Clari were designed for this.</p>
         <p>One underrated factor: implementation time. Enterprise platforms often take 4–8 weeks to deploy properly. In that time, your team is losing deals that could have been won with better intelligence. <Link to="/pricing">Nimitai is live in 48 hours</Link>. For many teams, that speed advantage alone changes the ROI calculation.</p>
 
+        <h2 id="faq" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {[
+            { q: 'What is a revenue intelligence platform?', a: 'A revenue intelligence platform captures, analyzes, and acts on data from sales conversations and customer interactions to predict deal outcomes, surface coaching opportunities, and help reps perform better. It goes beyond CRM data by analyzing what actually happens on calls.' },
+            { q: 'How is revenue intelligence different from conversation intelligence?', a: 'Conversation intelligence is a subset of revenue intelligence focused on call analysis. Revenue intelligence is broader — it includes pre-call prep, deal risk scoring, pipeline forecasting, and real-time coaching in addition to call analytics.' },
+            { q: 'Is Nimitai a revenue intelligence platform?', a: 'Yes. Nimitai operates across all three layers of revenue intelligence: pre-call intelligence briefing, real-time coaching during the call, and automatic post-call summaries and CRM updates. It starts at $149/seat/month with no call recording required.' },
+            { q: 'How does Nimitai compare to Gong for revenue intelligence?', a: 'Gong is built for large enterprise teams (100+ reps) with complex Salesforce integrations. Nimitai is built for startups and mid-market teams (2–50 reps) with faster setup (48 hours vs 4–8 weeks), lower cost, and real-time coaching rather than post-call review.' },
+          ].map(({ q, a }) => (
+            <div key={q} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">{q}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-center">
+          <p className="font-semibold text-gray-900 dark:text-white mb-2">See Nimitai in action</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">Built for B2B SaaS sales teams. <Link to="/pricing">From $149/seat/month</Link>, 30-minute setup.</p>
+          <a href="https://nilanshgupta.typeform.com/to/UNvZIrgu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#E89422] to-orange-500 text-white font-semibold rounded-full hover:from-[#C47010] hover:to-orange-600 transition-colors">
+            Join the Waitlist
+          </a>
+        </div>
+
         <RelatedArticles links={[
+          { to: '/ai-sales-coaching', label: 'AI Sales Coaching Software — Nimitai' },
+          { to: '/pricing', label: 'Nimitai Pricing — $149/seat/month' },
           { to: '/blog/conversation-intelligence-guide', label: 'Conversation Intelligence: The Complete Guide' },
           { to: '/blog/gong-vs-nimitai', label: 'Gong vs Nimitai: Full 2026 Comparison' },
-          { to: '/blog/ai-notetaker-vs-conversation-intelligence', label: 'AI Notetaker vs Conversation Intelligence' },
-          { to: '/blog/gong-pricing-2026', label: 'Gong Pricing in 2026: Real Numbers' },
         ]} />
       </BlogShell>
     </>

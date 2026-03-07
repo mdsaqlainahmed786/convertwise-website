@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 import {
   Zap,
@@ -18,14 +19,14 @@ import {
 
 const siteUrl = 'https://nimitai.com';
 const pageUrl = `${siteUrl}/ai-meeting-assistant`;
-const ogImage = `${siteUrl}/og-image.jpg`;
+const ogImage = `${siteUrl}/og-image.png`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Best AI Meeting Assistant for Sales Teams 2026 — Nimitai',
   description:
-    'Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. $149/month for your whole team.',
+    'AI meeting assistant for B2B sales teams. Real-time coaching, objection detection, deal risk alerts. from $149/seat/month. A product of REN AI Technologies.',
   url: pageUrl,
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -55,12 +56,12 @@ const faqs = [
   {
     question: 'How much does an AI meeting assistant cost?',
     answer:
-      'AI meeting assistant pricing varies widely. Otter.ai starts free with limited minutes. Fathom has a free tier for basic notes. Nimitai costs $149/month for the entire team with no per-seat pricing — and includes full sales intelligence on top of standard meeting assistant features.',
+      'AI meeting assistant pricing varies widely. Otter.ai starts free with limited minutes. Fathom has a free tier for basic notes. Nimitai costs $149/user/month — and includes full sales intelligence on top of standard meeting assistant features.',
   },
   {
     question: 'Can an AI meeting assistant replace Gong?',
     answer:
-      "Nimitai is a full AI meeting assistant and conversation intelligence platform that replaces Gong for startup and SMB teams. It delivers Gong's core features — call recording, AI coaching, deal intelligence — at $149/month vs Gong's $1,200+/seat/year enterprise pricing.",
+      "Nimitai is a full AI meeting assistant and conversation intelligence platform that replaces Gong for startup and SMB teams. It delivers Gong's core features — call recording, AI coaching, deal intelligence — at $149/user/month vs Gong's $1,200+/seat/year enterprise pricing.",
   },
 ];
 
@@ -156,7 +157,7 @@ const comparisonRows = [
   },
   {
     feature: 'Price',
-    cw: '$149/mo (team)',
+    cw: 'from $149/seat/mo',
     otter: 'Free–$20/user',
     fathom: 'Free–$19/user',
     fireflies: 'Free–$18/user',
@@ -210,7 +211,7 @@ export function AiMeetingAssistant() {
         <title>Best AI Meeting Assistant for Sales Teams 2026 — Nimitai</title>
         <meta
           name="description"
-          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. $149/month for your whole team."
+          content="AI meeting assistant for B2B sales teams. Real-time coaching, objection detection, deal risk alerts. from $149/seat/month. A product of REN AI Technologies."
         />
         <meta
           name="keywords"
@@ -224,7 +225,7 @@ export function AiMeetingAssistant() {
         <meta property="og:title" content="Best AI Meeting Assistant for Sales Teams 2026 — Nimitai" />
         <meta
           property="og:description"
-          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. $149/month for your whole team."
+          content="AI meeting assistant for B2B sales teams. Real-time coaching, objection detection, deal risk alerts. from $149/seat/month. A product of REN AI Technologies."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
@@ -238,11 +239,11 @@ export function AiMeetingAssistant() {
         <meta name="twitter:title" content="Best AI Meeting Assistant for Sales Teams 2026 — Nimitai" />
         <meta
           name="twitter:description"
-          content="Nimitai is the AI meeting assistant built for B2B sales teams. Records every sales call, provides real-time coaching, detects objection patterns, and surfaces deal risks automatically. $149/month for your whole team."
+          content="AI meeting assistant for B2B sales teams. Real-time coaching, objection detection, deal risk alerts. from $149/seat/month. A product of REN AI Technologies."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:creator" content="@Nimitai" />
-        <meta name="twitter:site" content="@Nimitai" />
+        <meta name="twitter:creator" content="@Nimit_ai" />
+        <meta name="twitter:site" content="@Nimit_ai" />
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#E89422" />
@@ -485,6 +486,24 @@ export function AiMeetingAssistant() {
         </div>
       </section>
 
+      {/* From the blog */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/30 transition-colors">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-sm font-black uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mb-6">From the blog</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { to: '/blog/real-time-sales-coaching-ai', label: 'Real-Time AI Sales Coaching: How It Works' },
+              { to: '/blog/ai-notetaker-vs-conversation-intelligence', label: 'AI Notetaker vs Conversation Intelligence' },
+              { to: '/blog/buyer-intent-signals-sales-calls', label: 'Buyer Intent Signals on Sales Calls' },
+            ].map((link) => (
+              <Link key={link.to} to={link.to} className="flex items-center gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-[#E89422]/50 bg-white dark:bg-gray-800 hover:bg-amber-50 dark:hover:bg-amber-900/10 transition-colors group">
+                <span className="text-sm text-gray-700 dark:text-gray-300 font-medium group-hover:text-[#E89422] transition-colors leading-snug">{link.label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 6. FINAL CTA ────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-7xl mx-auto">
@@ -498,7 +517,7 @@ export function AiMeetingAssistant() {
             </div>
 
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-xl mx-auto">
-              Join 47+ B2B sales teams. $149/month, 30-minute setup, cancel anytime.
+              Join 47+ B2B sales teams. from $149/seat/month, 30-minute setup, cancel anytime.
             </p>
 
             <a

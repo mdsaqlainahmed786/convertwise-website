@@ -1,30 +1,29 @@
 import { Helmet } from 'react-helmet-async';
 
-export function BreadcrumbListSchema() {
+interface BreadcrumbItem {
+  name: string;
+  item: string;
+}
+
+interface BreadcrumbListSchemaProps {
+  items?: BreadcrumbItem[];
+}
+
+export function BreadcrumbListSchema({ items = [] }: BreadcrumbListSchemaProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://nimitai.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About",
-        "item": "https://nimitai.com/about"
-      }
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.name,
+      item: crumb.item,
+    })),
   };
 
   return (
     <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
     </Helmet>
   );
 }

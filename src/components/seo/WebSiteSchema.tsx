@@ -7,7 +7,7 @@ export function WebSiteSchema() {
     "name": "Nimitai",
     "alternateName": "Nimitai AI Meeting Intelligence",
     "url": "https://nimitai.com",
-    "description": "AI meeting intelligence and conversation intelligence software for B2B SaaS sales teams. The Gong alternative at $149/month flat.",
+    "description": "AI meeting intelligence and conversation intelligence software for B2B SaaS sales teams. The Gong alternative starting from $149/seat/month.",
     "publisher": {
       "@type": "Organization",
       "name": "Nimitai",
